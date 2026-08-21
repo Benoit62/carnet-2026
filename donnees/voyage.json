@@ -1,0 +1,2184 @@
+{
+ "version": 3,
+ "titre": "Inde 2026",
+ "debut": "2026-08-24",
+ "fin": "2026-09-12",
+ "fuseau": "Asia/Kolkata",
+ "a_reserver": [
+  {
+   "titre": "Billets du Taj Mahal",
+   "lien": "asi.payumoney.com",
+   "detail": "Deux entrées par personne — un billet ne vaut qu'un passage — plus 200 ₹ une seule fois pour le mausolée, à garder pour l'aube du 10."
+  },
+  {
+   "titre": "Wildlife SOS",
+   "lien": "wildlifesos.org",
+   "detail": "Réservation obligatoire, sans elle la visite est impossible. C'est la sortie du 10 au matin, après le Taj."
+  },
+  {
+   "titre": "Hébergement à Rishikesh",
+   "lien": "",
+   "detail": "Deux nuits à Tapovan, les 06 et 07/09. Demander la distance à la route et une consigne jusqu'à 20h15 le 08."
+  },
+  {
+   "titre": "Hébergement à Agra",
+   "lien": "",
+   "detail": "Trois nuits à Taj Ganj côté porte Est, du 08 au 11/09. Demander le dépôt des sacs dès 8h30 le 09 et un taxi à 6h45 le 11."
+  },
+  {
+   "titre": "Chambre à la journée à Delhi",
+   "lien": "",
+   "detail": "Le 11/09, day use jusqu'à 20h-21h."
+  },
+  {
+   "titre": "Safari de Jhalana",
+   "lien": "jhalanasafari.in",
+   "detail": "Si retenu. Passeport requis, paiement intégral, jusqu'à 90 jours à l'avance."
+  }
+ ],
+ "urgence": {
+  "numeros": [
+   {
+    "libelle": "Urgences en Inde",
+    "tel": "112"
+   },
+   {
+    "libelle": "Ambassade de France, New Delhi",
+    "tel": "+911143196100"
+   },
+   {
+    "libelle": "Assurance Heymondo — police 2295559",
+    "tel": ""
+   }
+  ],
+  "hotels": [
+   {
+    "libelle": "Town Square Suites, Hyderabad",
+    "tel": "+919133303059"
+   },
+   {
+    "libelle": "Umaid Bhawan, Jaipur",
+    "tel": "+911412201276"
+   },
+   {
+    "libelle": "Manuscript Jhilwara Haveli, Udaipur",
+    "tel": "+917073031166"
+   }
+  ],
+  "transports": [
+   {
+    "libelle": "Laxmi Holidays — bus du 06/09",
+    "tel": "+911144446900"
+   },
+   {
+    "libelle": "Shri Krishna Travels — bus du 08/09",
+    "tel": "+919720001155"
+   }
+  ],
+  "note": "Prévenir Heymondo rapidement : la plupart des contrats l'exigent avant d'engager des frais."
+ },
+ "villes": [
+  {
+   "slug": "hyderabad",
+   "nom": "Hyderabad",
+   "region": "Telangana",
+   "presentation": "Ville musulmane du Deccan, d'une identité tout autre que le Rajasthan. Capitale des Qutb Shahi puis des Nizams, longtemps comptés parmi les hommes les plus riches du monde. Vous n'avez qu'une demi-journée : Golconde, ou le duo Charminar et musées.",
+   "sejour": "Une demi-journée le 29/08, sacs dans le coffre, dépose finale à l'aéroport.",
+   "tables": [
+    "Paradise à Secunderabad pour le biryani canonique",
+    "Shah Ghouse, plus local",
+    "Chutneys, végétarien sud-indien"
+   ],
+   "conseil": "Demander « medium spicy » : le seuil local est élevé. Le biryani se sert avec mirchi ka salan et raita.",
+   "photo": "photos/ville-hyderabad.jpg",
+   "position": null
+  },
+  {
+   "slug": "jaipur",
+   "nom": "Jaipur",
+   "region": "Rajasthan",
+   "presentation": "La ville rose, fondée en 1727 sur un plan en damier — une des premières villes planifiées d'Inde. Grande et étalée, mais Uber fonctionne bien partout depuis Bani Park.",
+   "sejour": "Trois jours pleins, du 30/08 au 01/09.",
+   "tables": [
+    "Laxmi Misthan Bhandar, thalis et sucreries depuis 1727",
+    "Rawat Mishtan Bhandar pour le pyaaz kachori à 40 ₹",
+    "Tapri Central, café en terrasse fréquenté par la jeunesse locale",
+    "Handi pour le laal maas"
+   ],
+   "conseil": "À goûter : dal-baati-churma, laal maas, mawa kachori, mirchi bada.",
+   "photo": "photos/ville-jaipur.jpg",
+   "position": {
+    "lat": 26.920789,
+    "lng": 75.786654
+   }
+  },
+  {
+   "slug": "udaipur",
+   "nom": "Udaipur",
+   "region": "Rajasthan",
+   "presentation": "La ville des lacs, capitale du Mewar depuis 1559. En fin de mousson les lacs sont pleins, ce qui n'est pas le cas une grande partie de l'année. Tout se fait à pied dans la vieille ville.",
+   "sejour": "Deux nuits seulement, du 02 au 04/09. Les excursions demandent une journée entière.",
+   "tables": [
+    "Ambrai, la table avec vue sur le City Palace illuminé — à réserver",
+    "Jheel's Ginger Coffee Bar au petit-déjeuner",
+    "Millets of Mewar"
+   ],
+   "conseil": "Uber est peu fiable ici : autos devant la gare, 150-250 ₹ à négocier. Les voitures n'entrent pas dans les ruelles, dépose à 100-200 m.",
+   "photo": "photos/ville-udaipur.jpg",
+   "position": {
+    "lat": 24.567493,
+    "lng": 73.699553
+   }
+  },
+  {
+   "slug": "delhi",
+   "nom": "Delhi",
+   "region": "Territoire de la capitale",
+   "presentation": "Sept villes superposées sur deux mille ans, du Qutb Minar de 1193 au New Delhi de Lutyens. Deux passages : le samedi 5, et le vendredi 11 en demi-journée.",
+   "sejour": "Deux escales, dont une journée complète le 05/09 avec ta sœur.",
+   "tables": [
+    "Karim's, cuisine moghole derrière la Jama Masjid depuis 1913",
+    "Saravana Bhavan à Connaught Place, sud-indien impeccable",
+    "Khan Chacha pour les rolls"
+   ],
+   "conseil": "Le métro est rapide, climatisé et très bon marché. Une voiture réservée aux femmes se trouve en tête de rame.",
+   "photo": "photos/ville-delhi.jpg",
+   "position": null
+  },
+  {
+   "slug": "rishikesh",
+   "nom": "Rishikesh",
+   "region": "Uttarakhand",
+   "presentation": "Ville sainte au point où le Gange sort de l'Himalaya, capitale mondiale autoproclamée du yoga. Ville sèche et végétarienne : ni alcool ni viande, légalement. La plus tranquille du voyage.",
+   "sejour": "Deux nuits, trois demi-journées, du 06 au 08/09. Vous logez à Tapovan.",
+   "tables": [
+    "Little Buddha Café, structure en bois au-dessus du Gange",
+    "Ramana's Organic Café",
+    "Freedom Café"
+   ],
+   "conseil": "Les ruelles de Tapovan sont étroites et en pente, sombres et glissantes en mousson : lampe frontale utile. La baignade dans le Gange est à proscrire, le courant est très fort en crue.",
+   "photo": "photos/ville-rishikesh.jpg",
+   "position": null
+  },
+  {
+   "slug": "agra",
+   "nom": "Agra",
+   "region": "Uttar Pradesh",
+   "presentation": "Capitale moghole avant Delhi, et bien plus que le seul Taj : le fort où Shah Jahan fut emprisonné par son fils, et le tombeau qui a servi de prototype au Taj vingt ans plus tôt.",
+   "sejour": "Deux nuits, du 08 au 11/09, à Taj Ganj côté porte Est.",
+   "tables": [
+    "Pinch of Spice, la meilleure table",
+    "Sheroes Hangout",
+    "Joney's Place, minuscule et culte depuis 1978"
+   ],
+   "conseil": "C'est la ville d'Inde où le harcèlement commercial est le plus organisé. Ce n'est pas un enjeu de sécurité mais de fatigue. Réponse : « Nahin chahiye », sans s'arrêter de marcher.",
+   "photo": "photos/ville-agra.jpg",
+   "position": null
+  }
+ ],
+ "activites": [
+  {
+   "slug": "golconde",
+   "ville": "hyderabad",
+   "nom": "Fort de Golconde",
+   "etoile": 1,
+   "categorie": "monument",
+   "description": "Citadelle du XVIᵉ siècle sur une colline de granit, ceinte de 11 km de remparts. L'acoustique du portail transmet un claquement de mains jusqu'au sommet, à un kilomètre : le système d'alerte d'origine, toujours fonctionnel.",
+   "pratique": "9h-17h30 · ~300 ₹ · 2 à 3 h de montée",
+   "reservation": null,
+   "photo": "photos/golconde.jpg",
+   "position": {
+    "lat": 17.383367,
+    "lng": 78.401099
+   },
+   "recherche": null
+  },
+  {
+   "slug": "charminar",
+   "ville": "hyderabad",
+   "nom": "Charminar",
+   "etoile": 1,
+   "categorie": "monument",
+   "description": "L'arc à quatre minarets de 1591, au cœur du bazar. Montée possible.",
+   "pratique": "6h-18h · ~250 ₹",
+   "reservation": null,
+   "photo": "photos/charminar.jpg",
+   "position": {
+    "lat": 17.361602,
+    "lng": 78.474642
+   },
+   "recherche": null
+  },
+  {
+   "slug": "laad-bazaar",
+   "ville": "hyderabad",
+   "nom": "Laad Bazaar",
+   "etoile": 1,
+   "categorie": "quartier",
+   "description": "La rue des bracelets de verre, autour du Charminar.",
+   "pratique": "Gratuit",
+   "reservation": null,
+   "photo": "photos/laad-bazaar.jpg",
+   "position": {
+    "lat": 17.362509,
+    "lng": 78.472975
+   },
+   "recherche": null
+  },
+  {
+   "slug": "mecca-masjid",
+   "ville": "hyderabad",
+   "nom": "Mecca Masjid",
+   "etoile": 0,
+   "categorie": "monument",
+   "description": "Mosquée monumentale accolée au Charminar, dont certaines briques ont été rapportées de La Mecque.",
+   "pratique": "Gratuit",
+   "reservation": null,
+   "photo": "photos/mecca-masjid.jpg",
+   "position": {
+    "lat": 17.3606,
+    "lng": 78.4733
+   },
+   "recherche": null
+  },
+  {
+   "slug": "qutb-shahi",
+   "ville": "hyderabad",
+   "nom": "Tombes Qutb Shahi",
+   "etoile": 0,
+   "categorie": "monument",
+   "description": "Nécropole royale de sept tombes à dômes, à 2 km de Golconde, récemment restaurée. Beaucoup plus calme que les sites du centre.",
+   "pratique": "~200 ₹",
+   "reservation": null,
+   "photo": "photos/qutb-shahi.jpg",
+   "position": {
+    "lat": 17.397371,
+    "lng": 78.400162
+   },
+   "recherche": null
+  },
+  {
+   "slug": "chowmahalla",
+   "ville": "hyderabad",
+   "nom": "Chowmahalla Palace",
+   "etoile": 0,
+   "categorie": "monument",
+   "description": "Palais des Nizams : salle du Durbar et collection de voitures.",
+   "pratique": "Fermé le vendredi · ~200 ₹",
+   "reservation": null,
+   "photo": "photos/chowmahalla.jpg",
+   "position": {
+    "lat": 17.357582,
+    "lng": 78.471705
+   },
+   "recherche": null
+  },
+  {
+   "slug": "salar-jung",
+   "ville": "hyderabad",
+   "nom": "Salar Jung Museum",
+   "etoile": 0,
+   "categorie": "musée",
+   "description": "Collection réunie par un seul homme, une des plus vastes au monde. La Veiled Rebecca et l'horloge musicale en sont les pièces les plus connues.",
+   "pratique": "Fermé le vendredi · ~500 ₹",
+   "reservation": null,
+   "photo": "photos/salar-jung.jpg",
+   "position": {
+    "lat": 17.371392,
+    "lng": 78.48015
+   },
+   "recherche": null
+  },
+  {
+   "slug": "tombes-paigah",
+   "ville": "hyderabad",
+   "nom": "Tombes Paigah",
+   "etoile": 0,
+   "categorie": "monument",
+   "description": "Méconnues, stucs géométriques remarquables, presque personne.",
+   "pratique": "Gratuit ou symbolique",
+   "reservation": null,
+   "photo": null,
+   "position": {
+    "lat": 17.343989,
+    "lng": 78.503876
+   },
+   "recherche": null
+  },
+  {
+   "slug": "nizam-museum",
+   "ville": "hyderabad",
+   "nom": "Nizam's Museum",
+   "etoile": 0,
+   "categorie": "musée",
+   "description": "Dans Purani Haveli. Abrite la plus longue penderie du monde, 73 m, avec son ascenseur en bois.",
+   "pratique": null,
+   "reservation": null,
+   "photo": null,
+   "position": {
+    "lat": 17.36649,
+    "lng": 78.48285
+   },
+   "recherche": null
+  },
+  {
+   "slug": "birla-mandir",
+   "ville": "hyderabad",
+   "nom": "Birla Mandir",
+   "etoile": 0,
+   "categorie": "temple",
+   "description": "Temple de marbre blanc sur une colline, vue panoramique sur la ville.",
+   "pratique": "Gratuit",
+   "reservation": null,
+   "photo": null,
+   "position": {
+    "lat": 17.405698,
+    "lng": 78.469259
+   },
+   "recherche": null
+  },
+  {
+   "slug": "hussain-sagar",
+   "ville": "hyderabad",
+   "nom": "Hussain Sagar",
+   "etoile": 0,
+   "categorie": "nature",
+   "description": "Lac au Bouddha monolithique, accessible en bateau. Lumbini Park à côté.",
+   "pratique": null,
+   "reservation": null,
+   "photo": null,
+   "position": {
+    "lat": 17.422911,
+    "lng": 78.475421
+   },
+   "recherche": null
+  },
+  {
+   "slug": "taj-falaknuma",
+   "ville": "hyderabad",
+   "nom": "Taj Falaknuma Palace",
+   "etoile": 0,
+   "categorie": "expérience",
+   "description": "Ancien palais du Nizam. Le high tea permet d'entrer pour ~2 500-4 000 ₹ par personne au lieu de 30 000 la nuit : accueil en calèche, table de 101 couverts.",
+   "pratique": "Sur réservation",
+   "reservation": "High tea à réserver au +91 40 6629 8585.",
+   "photo": "photos/chowmahalla.jpg",
+   "position": {
+    "lat": 17.330928,
+    "lng": 78.467262
+   },
+   "recherche": null
+  },
+  {
+   "slug": "ramoji",
+   "ville": "hyderabad",
+   "nom": "Ramoji Film City",
+   "etoile": 0,
+   "categorie": "expérience",
+   "description": "À 30 km. Le plus grand complexe de studios de cinéma du monde.",
+   "pratique": "Journée entière",
+   "reservation": null,
+   "photo": null,
+   "position": {
+    "lat": 17.252137,
+    "lng": 78.679817
+   },
+   "recherche": null
+  },
+  {
+   "slug": "amber-fort",
+   "ville": "jaipur",
+   "nom": "Amber Fort",
+   "etoile": 1,
+   "categorie": "monument",
+   "description": "Grès et marbre, cours superposées. Le Sheesh Mahal et ses milliers de miroirs convexes s'illuminent à la lumière d'une seule bougie.",
+   "pratique": "8h-17h30 · ~600 ₹ · y aller à 8h · les balades à dos d'éléphant sont à refuser",
+   "reservation": null,
+   "photo": "photos/amber-fort.jpg",
+   "position": {
+    "lat": 26.98631,
+    "lng": 75.850661
+   },
+   "recherche": null
+  },
+  {
+   "slug": "jaigarh",
+   "ville": "jaipur",
+   "nom": "Jaigarh Fort",
+   "etoile": 0,
+   "categorie": "monument",
+   "description": "Au-dessus d'Amber, relié par un souterrain. Abrite Jaivana, le plus grand canon sur roues du monde. Bien moins fréquenté qu'Amber.",
+   "pratique": "~200 ₹",
+   "reservation": null,
+   "photo": null,
+   "position": {
+    "lat": 26.983715,
+    "lng": 75.845247
+   },
+   "recherche": null
+  },
+  {
+   "slug": "panna-meena",
+   "ville": "jaipur",
+   "nom": "Panna Meena ka Kund",
+   "etoile": 0,
+   "categorie": "monument",
+   "description": "Puits à degrés du XVIᵉ siècle à 400 m d'Amber, aux escaliers géométriques croisés.",
+   "pratique": "Gratuit · 10 min",
+   "reservation": null,
+   "photo": "photos/panna-meena.jpg",
+   "position": null,
+   "recherche": "Panna Meena ka Kund Jaipur"
+  },
+  {
+   "slug": "nahargarh",
+   "ville": "jaipur",
+   "nom": "Nahargarh Fort",
+   "etoile": 1,
+   "categorie": "monument",
+   "description": "Sur la crête nord. La meilleure vue sur Jaipur au coucher du soleil.",
+   "pratique": "Jusqu'à 22h · ~200 ₹ · Padao Restaurant en terrasse",
+   "reservation": null,
+   "photo": "photos/nahargarh.jpg",
+   "position": {
+    "lat": 26.940034,
+    "lng": 75.81653
+   },
+   "recherche": null
+  },
+  {
+   "slug": "city-palace-jaipur",
+   "ville": "jaipur",
+   "nom": "City Palace",
+   "etoile": 0,
+   "categorie": "monument",
+   "description": "Résidence royale toujours occupée. La cour de Pritam Niwas Chowk et ses quatre portes saisonnières en sont le point fort.",
+   "pratique": "~700 ₹ · le billet « Royal Grandeur » à 3 000 ₹ n'apporte pas grand-chose",
+   "reservation": null,
+   "photo": "photos/city-palace-jaipur.jpg",
+   "position": {
+    "lat": 26.92621,
+    "lng": 75.823835
+   },
+   "recherche": null
+  },
+  {
+   "slug": "jantar-mantar",
+   "ville": "jaipur",
+   "nom": "Jantar Mantar",
+   "etoile": 1,
+   "categorie": "monument",
+   "description": "Observatoire de 1734 classé UNESCO, avec le plus grand cadran solaire du monde, précis à deux secondes.",
+   "pratique": "~200 ₹ · prendre un guide, sinon ce ne sont que des formes en pierre",
+   "reservation": null,
+   "photo": "photos/jantar-mantar.jpg",
+   "position": {
+    "lat": 26.924739,
+    "lng": 75.824466
+   },
+   "recherche": null
+  },
+  {
+   "slug": "hawa-mahal",
+   "ville": "jaipur",
+   "nom": "Hawa Mahal",
+   "etoile": 0,
+   "categorie": "monument",
+   "description": "La façade aux 953 fenêtres, conçue pour que les femmes de la cour voient la rue sans être vues.",
+   "pratique": "La photographier depuis un café d'en face avant 9h ; l'intérieur déçoit",
+   "reservation": null,
+   "photo": "photos/hawa-mahal.jpg",
+   "position": {
+    "lat": 26.923932,
+    "lng": 75.826865
+   },
+   "recherche": null
+  },
+  {
+   "slug": "albert-hall",
+   "ville": "jaipur",
+   "nom": "Albert Hall Museum",
+   "etoile": 0,
+   "categorie": "musée",
+   "description": "Architecture indo-sarrasine, collections éclectiques. Superbe éclairé la nuit.",
+   "pratique": null,
+   "reservation": null,
+   "photo": "photos/albert-hall.jpg",
+   "position": {
+    "lat": 26.911693,
+    "lng": 75.819502
+   },
+   "recherche": null
+  },
+  {
+   "slug": "gaitor",
+   "ville": "jaipur",
+   "nom": "Gaitor ki Chhatriyan",
+   "etoile": 0,
+   "categorie": "monument",
+   "description": "Cénotaphes royaux en marbre sculpté, au pied de Nahargarh. Presque personne.",
+   "pratique": null,
+   "reservation": null,
+   "photo": null,
+   "position": null,
+   "recherche": "Gaitor ki Chhatriyan Jaipur"
+  },
+  {
+   "slug": "patrika-gate",
+   "ville": "jaipur",
+   "nom": "Patrika Gate",
+   "etoile": 0,
+   "categorie": "monument",
+   "description": "Porte peinte de Jawahar Circle, chaque arche d'une couleur différente.",
+   "pratique": "Gratuit · le spot photo de Jaipur",
+   "reservation": null,
+   "photo": "photos/patrika-gate.jpg",
+   "position": {
+    "lat": 26.841504,
+    "lng": 75.801377
+   },
+   "recherche": null
+  },
+  {
+   "slug": "galtaji",
+   "ville": "jaipur",
+   "nom": "Galtaji",
+   "etoile": 0,
+   "categorie": "temple",
+   "description": "Le « temple des singes », dans une gorge, avec ses bassins sacrés.",
+   "pratique": "À 10 km",
+   "reservation": null,
+   "photo": null,
+   "position": {
+    "lat": 26.917056,
+    "lng": 75.85822
+   },
+   "recherche": null
+  },
+  {
+   "slug": "jal-mahal",
+   "ville": "jaipur",
+   "nom": "Jal Mahal",
+   "etoile": 0,
+   "categorie": "monument",
+   "description": "Palais au milieu du lac, visible depuis la route d'Amber. On ne le visite pas, on le photographie. Plein en mousson.",
+   "pratique": null,
+   "reservation": null,
+   "photo": "photos/jal-mahal.jpg",
+   "position": {
+    "lat": 26.953467,
+    "lng": 75.846131
+   },
+   "recherche": null
+  },
+  {
+   "slug": "anokhi-museum",
+   "ville": "jaipur",
+   "nom": "Anokhi Museum",
+   "etoile": 0,
+   "categorie": "musée",
+   "description": "Musée du block-print dans une haveli restaurée à Amber. Petit, excellent, démonstrations en direct.",
+   "pratique": null,
+   "reservation": null,
+   "photo": null,
+   "position": {
+    "lat": 26.992521,
+    "lng": 75.850482
+   },
+   "recherche": null
+  },
+  {
+   "slug": "rajmandir",
+   "ville": "jaipur",
+   "nom": "Rajmandir Cinema",
+   "etoile": 1,
+   "categorie": "expérience",
+   "description": "Cinéma art déco de 1976, un des plus beaux d'Asie. Voir un film hindi ici est une expérience en soi : le public réagit, applaudit, chante.",
+   "pratique": "~150-400 ₹",
+   "reservation": null,
+   "photo": null,
+   "position": {
+    "lat": 26.915425,
+    "lng": 75.810083
+   },
+   "recherche": null
+  },
+  {
+   "slug": "masala-chowk",
+   "ville": "jaipur",
+   "nom": "Masala Chowk",
+   "etoile": 0,
+   "categorie": "restaurant",
+   "description": "Food court en plein air : la street food de Jaipur en version propre.",
+   "pratique": null,
+   "reservation": null,
+   "photo": null,
+   "position": {
+    "lat": 26.9103,
+    "lng": 75.82059
+   },
+   "recherche": null
+  },
+  {
+   "slug": "johari-bazaar",
+   "ville": "jaipur",
+   "nom": "Bazars",
+   "etoile": 0,
+   "categorie": "quartier",
+   "description": "Johari pour les bijoux, Bapu pour les textiles, Tripolia pour les bracelets. Anokhi pratique le block-print à prix fixes.",
+   "pratique": null,
+   "reservation": null,
+   "photo": null,
+   "position": {
+    "lat": 26.915456,
+    "lng": 75.824735
+   },
+   "recherche": null
+  },
+  {
+   "slug": "jhalana",
+   "ville": "jaipur",
+   "nom": "Jhalana Leopard Reserve",
+   "etoile": 1,
+   "categorie": "nature",
+   "description": "23 km² à 12 km du centre. Première réserve de léopards d'Inde, 35 à 45 individus, observations régulières toute l'année.",
+   "pratique": "Gypsy 4×4, matin ou soir · 1 650-3 000 ₹/pers",
+   "reservation": "Réservation sur jhalanasafari.in, jusqu'à 90 jours à l'avance, paiement intégral et passeport requis.",
+   "photo": null,
+   "position": null,
+   "recherche": "Jhalana Leopard Reserve Jaipur"
+  },
+  {
+   "slug": "chand-baori",
+   "ville": "jaipur",
+   "nom": "Chand Baori, Abhaneri",
+   "etoile": 0,
+   "categorie": "monument",
+   "description": "À 95 km, sur la route d'Agra. 3 500 marches en escaliers croisés sur treize étages : un des plus grands puits à degrés du monde.",
+   "pratique": null,
+   "reservation": null,
+   "photo": "photos/chand-baori.jpg",
+   "position": {
+    "lat": 27.007269,
+    "lng": 76.606635
+   },
+   "recherche": null
+  },
+  {
+   "slug": "bhangarh",
+   "ville": "jaipur",
+   "nom": "Bhangarh Fort",
+   "etoile": 0,
+   "categorie": "monument",
+   "description": "À 85 km. Le « fort hanté » d'Inde, officiellement interdit d'accès la nuit. Ruines dans un vallon.",
+   "pratique": null,
+   "reservation": null,
+   "photo": null,
+   "position": {
+    "lat": 27.095489,
+    "lng": 76.28775
+   },
+   "recherche": null
+  },
+  {
+   "slug": "city-palace-udaipur",
+   "ville": "udaipur",
+   "nom": "City Palace",
+   "etoile": 1,
+   "categorie": "monument",
+   "description": "Le plus grand complexe palatial du Rajasthan, quatre siècles de construction par vingt-deux maharanas.",
+   "pratique": "9h30-17h30 · ~400 ₹ · 2 à 3 h · entrée par Badi Pol",
+   "reservation": null,
+   "photo": "photos/city-palace-udaipur.jpg",
+   "position": {
+    "lat": 24.57606,
+    "lng": 73.683567
+   },
+   "recherche": null
+  },
+  {
+   "slug": "lac-pichola",
+   "ville": "udaipur",
+   "nom": "Lac Pichola en bateau",
+   "etoile": 1,
+   "categorie": "expérience",
+   "description": "Au coucher du soleil, avec arrêt à Jag Mandir et vue sur le Lake Palace.",
+   "pratique": "Départ Rameshwar Ghat · ~700-900 ₹ au couchant, moitié prix en journée",
+   "reservation": null,
+   "photo": "photos/lac-pichola.jpg",
+   "position": {
+    "lat": 24.572,
+    "lng": 73.679
+   },
+   "recherche": null
+  },
+  {
+   "slug": "jagdish-temple",
+   "ville": "udaipur",
+   "nom": "Jagdish Temple",
+   "etoile": 0,
+   "categorie": "temple",
+   "description": "Temple de Vishnu de 1651, trente-deux marches, sculptures denses.",
+   "pratique": "Gratuit · aarti à 7h30, 10h30 et 19h30",
+   "reservation": null,
+   "photo": "photos/jagdish-temple.jpg",
+   "position": {
+    "lat": 24.578292,
+    "lng": 73.683729
+   },
+   "recherche": null
+  },
+  {
+   "slug": "bagore-ki-haveli",
+   "ville": "udaipur",
+   "nom": "Bagore-ki-Haveli",
+   "etoile": 1,
+   "categorie": "expérience",
+   "description": "Haveli du XVIIIᵉ siècle. Le spectacle de danses et de marionnettes de 19h y est authentique.",
+   "pratique": "~150 ₹ + ~200 ₹ · arriver 30 min avant",
+   "reservation": null,
+   "photo": "photos/bagore-ki-haveli.jpg",
+   "position": {
+    "lat": 24.579736,
+    "lng": 73.682397
+   },
+   "recherche": null
+  },
+  {
+   "slug": "monsoon-palace",
+   "ville": "udaipur",
+   "nom": "Monsoon Palace",
+   "etoile": 1,
+   "categorie": "monument",
+   "description": "Palais perché à 944 m, construit précisément pour observer les nuages de mousson. Vue à 360°.",
+   "pratique": "~300 ₹ + taxi ~800 ₹ aller-retour · au coucher du soleil",
+   "reservation": null,
+   "photo": "photos/monsoon-palace.jpg",
+   "position": null,
+   "recherche": "Monsoon Palace Udaipur"
+  },
+  {
+   "slug": "saheliyon-ki-bari",
+   "ville": "udaipur",
+   "nom": "Saheliyon-ki-Bari",
+   "etoile": 0,
+   "categorie": "jardin",
+   "description": "« Le jardin des demoiselles d'honneur » : fontaines et bassins de lotus. Agréable le matin.",
+   "pratique": "~100 ₹",
+   "reservation": null,
+   "photo": "photos/saheliyon-ki-bari.jpg",
+   "position": {
+    "lat": 24.603066,
+    "lng": 73.685463
+   },
+   "recherche": null
+  },
+  {
+   "slug": "ahar-cenotaphs",
+   "ville": "udaipur",
+   "nom": "Ahar Cenotaphs",
+   "etoile": 0,
+   "categorie": "monument",
+   "description": "À 2 km. Une cinquantaine de chhatris des maharanas de Mewar dans un champ. Presque désert.",
+   "pratique": null,
+   "reservation": null,
+   "photo": null,
+   "position": null,
+   "recherche": "Ahar Cenotaphs Udaipur"
+  },
+  {
+   "slug": "fateh-sagar",
+   "ville": "udaipur",
+   "nom": "Fateh Sagar Lake",
+   "etoile": 0,
+   "categorie": "nature",
+   "description": "Le second lac, avec sa promenade et le Nehru Garden sur son île.",
+   "pratique": null,
+   "reservation": null,
+   "photo": null,
+   "position": {
+    "lat": 24.6,
+    "lng": 73.67
+   },
+   "recherche": null
+  },
+  {
+   "slug": "doodh-talai",
+   "ville": "udaipur",
+   "nom": "Doodh Talai et téléphérique",
+   "etoile": 0,
+   "categorie": "nature",
+   "description": "Le point de vue classique sur la ville et les lacs au coucher du soleil.",
+   "pratique": null,
+   "reservation": null,
+   "photo": null,
+   "position": null,
+   "recherche": "Doodh Talai et téléphérique Udaipur"
+  },
+  {
+   "slug": "vintage-car-museum",
+   "ville": "udaipur",
+   "nom": "Vintage Car Museum",
+   "etoile": 0,
+   "categorie": "musée",
+   "description": "La collection du maharana, dont les Rolls et la Cadillac d'Octopussy.",
+   "pratique": null,
+   "reservation": null,
+   "photo": null,
+   "position": {
+    "lat": 24.576052,
+    "lng": 73.694532
+   },
+   "recherche": null
+  },
+  {
+   "slug": "cours-cuisine-udaipur",
+   "ville": "udaipur",
+   "nom": "Cours de cuisine",
+   "etoile": 1,
+   "categorie": "expérience",
+   "description": "Chez Shashi notamment : quatre heures, huit plats, livret de recettes. Une des activités les mieux notées de la ville.",
+   "pratique": "~1 800 ₹/pers",
+   "reservation": "À caler la veille auprès de la guesthouse.",
+   "photo": null,
+   "position": null,
+   "recherche": "Cours de cuisine Udaipur"
+  },
+  {
+   "slug": "ranakpur",
+   "ville": "udaipur",
+   "nom": "Ranakpur",
+   "etoile": 1,
+   "categorie": "excursion",
+   "description": "Temple jaïn du XVᵉ siècle aux 1 444 piliers, tous différents. Se combine avec Kumbhalgarh sur une journée.",
+   "pratique": "N'ouvre aux non-jaïns qu'à partir de midi environ · aucun objet en cuir · journée complète ~3 000-3 500 ₹",
+   "reservation": "Voiture avec chauffeur à réserver via la guesthouse d'Udaipur.",
+   "photo": "photos/ranakpur.jpg",
+   "position": null,
+   "recherche": "Ranakpur Udaipur"
+  },
+  {
+   "slug": "kumbhalgarh",
+   "ville": "udaipur",
+   "nom": "Kumbhalgarh",
+   "etoile": 1,
+   "categorie": "excursion",
+   "description": "36 km de remparts, la deuxième plus longue muraille continue du monde. Spectaculaire dans la brume de mousson.",
+   "pratique": "Se combine avec Ranakpur",
+   "reservation": "Voiture avec chauffeur à réserver via la guesthouse d'Udaipur.",
+   "photo": "photos/kumbhalgarh.jpg",
+   "position": {
+    "lat": 25.152677,
+    "lng": 73.586285
+   },
+   "recherche": null
+  },
+  {
+   "slug": "chittorgarh",
+   "ville": "udaipur",
+   "nom": "Chittorgarh",
+   "etoile": 0,
+   "categorie": "excursion",
+   "description": "À 115 km. Le plus grand fort d'Inde : 280 hectares sur un plateau, tours de la victoire, et l'histoire des trois jauhar.",
+   "pratique": "Journée entière",
+   "reservation": null,
+   "photo": "photos/chittorgarh.jpg",
+   "position": {
+    "lat": 24.881714,
+    "lng": 74.646695
+   },
+   "recherche": null
+  },
+  {
+   "slug": "eklingji",
+   "ville": "udaipur",
+   "nom": "Eklingji et Nagda",
+   "etoile": 1,
+   "categorie": "excursion",
+   "description": "À 22 km seulement. Complexe de temples du VIIIᵉ au XVᵉ siècle, encore en culte, et les temples jumeaux de Nagda au bord d'un lac.",
+   "pratique": "Demi-journée · Eklingji ferme entre les créneaux de puja",
+   "reservation": null,
+   "photo": "photos/eklingji.jpg",
+   "position": {
+    "lat": 24.745956,
+    "lng": 73.722238
+   },
+   "recherche": null
+  },
+  {
+   "slug": "humayun",
+   "ville": "delhi",
+   "nom": "Humayun's Tomb",
+   "etoile": 1,
+   "categorie": "monument",
+   "description": "Classé UNESCO, prototype direct du Taj trente ans plus tôt, jardins moghols superbement restaurés. Le plus beau monument de Delhi, et à 2 km de Nizamuddin.",
+   "pratique": "~600 ₹",
+   "reservation": null,
+   "photo": "photos/humayun.jpg",
+   "position": {
+    "lat": 28.593286,
+    "lng": 77.250647
+   },
+   "recherche": null
+  },
+  {
+   "slug": "qutb-minar",
+   "ville": "delhi",
+   "nom": "Qutb Minar",
+   "etoile": 1,
+   "categorie": "monument",
+   "description": "Minaret de 73 m élevé en 1193, plus ancien monument islamique d'Inde. Le pilier de fer voisin, vieux de seize siècles, ne rouille pas.",
+   "pratique": "~600 ₹",
+   "reservation": null,
+   "photo": "photos/qutb-minar.jpg",
+   "position": {
+    "lat": 28.524413,
+    "lng": 77.18545
+   },
+   "recherche": null
+  },
+  {
+   "slug": "mehrauli-park",
+   "ville": "delhi",
+   "nom": "Mehrauli Archaeological Park",
+   "etoile": 0,
+   "categorie": "monument",
+   "description": "À côté du Qutb : deux cents monuments dans un parc en friche, presque personne.",
+   "pratique": "Gratuit",
+   "reservation": null,
+   "photo": null,
+   "position": {
+    "lat": 28.521238,
+    "lng": 77.185862
+   },
+   "recherche": null
+  },
+  {
+   "slug": "lodhi-garden",
+   "ville": "delhi",
+   "nom": "Lodhi Garden",
+   "etoile": 0,
+   "categorie": "jardin",
+   "description": "Tombeaux du XVᵉ siècle dans un parc. Très agréable au petit matin.",
+   "pratique": "Gratuit",
+   "reservation": null,
+   "photo": null,
+   "position": {
+    "lat": 28.5963,
+    "lng": 77.22155
+   },
+   "recherche": null
+  },
+  {
+   "slug": "lodhi-art",
+   "ville": "delhi",
+   "nom": "Lodhi Art District",
+   "etoile": 1,
+   "categorie": "quartier",
+   "description": "Le premier quartier de street art d'Inde : une cinquantaine de fresques monumentales dans Lodhi Colony.",
+   "pratique": "Gratuit · à faire à pied",
+   "reservation": null,
+   "photo": "photos/lodhi-art.jpg",
+   "position": {
+    "lat": 28.579754,
+    "lng": 77.216873
+   },
+   "recherche": null
+  },
+  {
+   "slug": "safdarjung",
+   "ville": "delhi",
+   "nom": "Safdarjung Tomb",
+   "etoile": 0,
+   "categorie": "monument",
+   "description": "Le dernier grand tombeau moghol, 1754. Calme et sous-visité.",
+   "pratique": null,
+   "reservation": null,
+   "photo": null,
+   "position": {
+    "lat": 28.589286,
+    "lng": 77.213164
+   },
+   "recherche": null
+  },
+  {
+   "slug": "hauz-khas",
+   "ville": "delhi",
+   "nom": "Hauz Khas Village",
+   "etoile": 0,
+   "categorie": "quartier",
+   "description": "Ruines médiévales et lac, entourés de cafés et de boutiques.",
+   "pratique": "Bon en fin d'après-midi",
+   "reservation": null,
+   "photo": "photos/hauz-khas.jpg",
+   "position": {
+    "lat": 28.553317,
+    "lng": 77.193865
+   },
+   "recherche": null
+  },
+  {
+   "slug": "dilli-haat",
+   "ville": "delhi",
+   "nom": "Dilli Haat",
+   "etoile": 0,
+   "categorie": "quartier",
+   "description": "Marché artisanal des États indiens, à prix fixes et sans harcèlement.",
+   "pratique": "~30 ₹",
+   "reservation": null,
+   "photo": null,
+   "position": {
+    "lat": 28.574159,
+    "lng": 77.209331
+   },
+   "recherche": null
+  },
+  {
+   "slug": "musee-national",
+   "ville": "delhi",
+   "nom": "Musée national",
+   "etoile": 0,
+   "categorie": "musée",
+   "description": "La meilleure synthèse si vous voulez du contexte historique.",
+   "pratique": null,
+   "reservation": null,
+   "photo": null,
+   "position": {
+    "lat": 28.611915,
+    "lng": 77.219639
+   },
+   "recherche": null
+  },
+  {
+   "slug": "india-gate",
+   "ville": "delhi",
+   "nom": "India Gate",
+   "etoile": 0,
+   "categorie": "monument",
+   "description": "L'axe cérémoniel de Lutyens, animé le soir.",
+   "pratique": "Gratuit",
+   "reservation": null,
+   "photo": "photos/india-gate.jpg",
+   "position": {
+    "lat": 28.612933,
+    "lng": 77.229493
+   },
+   "recherche": null
+  },
+  {
+   "slug": "jama-masjid",
+   "ville": "delhi",
+   "nom": "Jama Masjid",
+   "etoile": 1,
+   "categorie": "monument",
+   "description": "La plus grande mosquée d'Inde, bâtie par Shah Jahan en 1656, capable d'accueillir 25 000 fidèles. Montée du minaret sud pour la vue.",
+   "pratique": "~300 ₹ + 300 ₹ pour l'appareil photo · tenue couvrante",
+   "reservation": null,
+   "photo": "photos/jama-masjid.jpg",
+   "position": {
+    "lat": 28.650682,
+    "lng": 77.232961
+   },
+   "recherche": null
+  },
+  {
+   "slug": "chandni-chowk",
+   "ville": "delhi",
+   "nom": "Chandni Chowk",
+   "etoile": 1,
+   "categorie": "quartier",
+   "description": "Le bazar du XVIIᵉ siècle.",
+   "pratique": "À faire en cyclo-pousse, ~200 ₹ pour 45 min ; à pied c'est éprouvant",
+   "reservation": null,
+   "photo": "photos/chandni-chowk.jpg",
+   "position": {
+    "lat": 28.655983,
+    "lng": 77.232194
+   },
+   "recherche": null
+  },
+  {
+   "slug": "khari-baoli",
+   "ville": "delhi",
+   "nom": "Khari Baoli",
+   "etoile": 0,
+   "categorie": "quartier",
+   "description": "Le plus grand marché d'épices en gros d'Asie, dans Chandni Chowk.",
+   "pratique": null,
+   "reservation": null,
+   "photo": null,
+   "position": {
+    "lat": 28.657137,
+    "lng": 77.220988
+   },
+   "recherche": null
+  },
+  {
+   "slug": "paranthe-wali-gali",
+   "ville": "delhi",
+   "nom": "Paranthe Wali Gali",
+   "etoile": 0,
+   "categorie": "restaurant",
+   "description": "La ruelle des parathas frits, boutiques centenaires.",
+   "pratique": null,
+   "reservation": null,
+   "photo": null,
+   "position": {
+    "lat": 28.656082,
+    "lng": 77.230481
+   },
+   "recherche": null
+  },
+  {
+   "slug": "red-fort",
+   "ville": "delhi",
+   "nom": "Red Fort",
+   "etoile": 0,
+   "categorie": "monument",
+   "description": "Fort rouge moghol. Massif, un peu vide à l'intérieur.",
+   "pratique": "~600 ₹",
+   "reservation": null,
+   "photo": "photos/red-fort.jpg",
+   "position": {
+    "lat": 28.656081,
+    "lng": 77.240796
+   },
+   "recherche": null
+  },
+  {
+   "slug": "bangla-sahib",
+   "ville": "delhi",
+   "nom": "Gurudwara Bangla Sahib",
+   "etoile": 1,
+   "categorie": "temple",
+   "description": "Temple sikh dont le langar sert dix mille repas gratuits par jour. Les cuisines se visitent. Un des moments les plus forts de Delhi.",
+   "pratique": "Gratuit · couvre-chef fourni · épaules et jambes couvertes",
+   "reservation": null,
+   "photo": "photos/bangla-sahib.jpg",
+   "position": {
+    "lat": 28.62523,
+    "lng": 77.209419
+   },
+   "recherche": null
+  },
+  {
+   "slug": "agrasen-ki-baoli",
+   "ville": "delhi",
+   "nom": "Agrasen ki Baoli",
+   "etoile": 0,
+   "categorie": "monument",
+   "description": "Puits à degrés en plein centre, entre les tours de Connaught Place.",
+   "pratique": "Gratuit · surréaliste",
+   "reservation": null,
+   "photo": "photos/agrasen-ki-baoli.jpg",
+   "position": {
+    "lat": 28.626024,
+    "lng": 77.225012
+   },
+   "recherche": null
+  },
+  {
+   "slug": "nizamuddin-dargah",
+   "ville": "delhi",
+   "nom": "Nizamuddin Dargah",
+   "etoile": 0,
+   "categorie": "temple",
+   "description": "Sanctuaire soufi. Le qawwali du jeudi soir est une des expériences les plus intenses de Delhi.",
+   "pratique": "Vos deux passages tombent un samedi et un vendredi, mais le lieu vaut la visite en journée",
+   "reservation": null,
+   "photo": null,
+   "position": {
+    "lat": 28.59138,
+    "lng": 77.241976
+   },
+   "recherche": null
+  },
+  {
+   "slug": "akshardham",
+   "ville": "delhi",
+   "nom": "Akshardham",
+   "etoile": 1,
+   "categorie": "temple",
+   "description": "Temple hindou monumental de 2005, sculpté de fond en comble. Spectaculaire et très fréquenté.",
+   "pratique": "Fermé le lundi · téléphones et sacs interdits, consigne obligatoire à l'entrée",
+   "reservation": null,
+   "photo": "photos/akshardham.jpg",
+   "position": {
+    "lat": 28.612517,
+    "lng": 77.277318
+   },
+   "recherche": null
+  },
+  {
+   "slug": "lotus-temple",
+   "ville": "delhi",
+   "nom": "Lotus Temple",
+   "etoile": 0,
+   "categorie": "temple",
+   "description": "Temple bahá'í en forme de fleur de lotus. Silence obligatoire à l'intérieur.",
+   "pratique": "Gratuit",
+   "reservation": null,
+   "photo": "photos/lotus-temple.jpg",
+   "position": {
+    "lat": 28.553359,
+    "lng": 77.258601
+   },
+   "recherche": null
+  },
+  {
+   "slug": "rail-museum",
+   "ville": "delhi",
+   "nom": "National Rail Museum",
+   "etoile": 0,
+   "categorie": "musée",
+   "description": "Locomotives à vapeur et train royal du Maharaja.",
+   "pratique": null,
+   "reservation": null,
+   "photo": null,
+   "position": {
+    "lat": 28.58511,
+    "lng": 77.18101
+   },
+   "recherche": null
+  },
+  {
+   "slug": "anand-prakash",
+   "ville": "rishikesh",
+   "nom": "Anand Prakash Ashram",
+   "etoile": 1,
+   "categorie": "yoga",
+   "description": "À Tapovan. Akhanda Yoga, accueillant pour les débutants. La meilleure option pour un cours à la carte, et la seule sûre le dimanche.",
+   "pratique": "~300 ₹, 500 ₹ avec Yogrishi Vishvketu · créneaux 6h30-8h30 et 16h-18h",
+   "reservation": null,
+   "photo": null,
+   "position": null,
+   "recherche": "Anand Prakash Ashram Rishikesh"
+  },
+  {
+   "slug": "parmarth-niketan",
+   "ville": "rishikesh",
+   "nom": "Parmarth Niketan",
+   "etoile": 0,
+   "categorie": "yoga",
+   "description": "À Swarg Ashram. Cours contre donation, en principe du lundi au samedi.",
+   "pratique": "Vérifier les horaires du jour à la réception",
+   "reservation": null,
+   "photo": null,
+   "position": null,
+   "recherche": "Parmarth Niketan Rishikesh"
+  },
+  {
+   "slug": "divine-life",
+   "ville": "rishikesh",
+   "nom": "Divine Life Society",
+   "etoile": 0,
+   "categorie": "yoga",
+   "description": "À Muni Ki Reti. Cours quotidiens gratuits ouverts aux visiteurs.",
+   "pratique": null,
+   "reservation": null,
+   "photo": null,
+   "position": null,
+   "recherche": "Divine Life Society Rishikesh"
+  },
+  {
+   "slug": "omkarananda",
+   "ville": "rishikesh",
+   "nom": "Omkarananda Ganga Sadan",
+   "etoile": 0,
+   "categorie": "yoga",
+   "description": "À Muni Ki Reti. Spécialisé Iyengar.",
+   "pratique": "Ouvert à tous sauf le dimanche",
+   "reservation": null,
+   "photo": null,
+   "position": null,
+   "recherche": "Omkarananda Ganga Sadan Rishikesh"
+  },
+  {
+   "slug": "ganga-aarti",
+   "ville": "rishikesh",
+   "nom": "Ganga Aarti à Parmarth Niketan",
+   "etoile": 1,
+   "categorie": "expérience",
+   "description": "Cérémonie du feu au coucher du soleil sur les ghats : chants et lampes flottantes.",
+   "pratique": "Gratuit · vers 18h, arriver à 17h30 · 25-35 min depuis Tapovan",
+   "reservation": null,
+   "photo": "photos/ganga-aarti.jpg",
+   "position": null,
+   "recherche": "Ganga Aarti à Parmarth Niketan Rishikesh"
+  },
+  {
+   "slug": "triveni-ghat",
+   "ville": "rishikesh",
+   "nom": "Ganga Aarti à Triveni Ghat",
+   "etoile": 0,
+   "categorie": "expérience",
+   "description": "La version locale de la cérémonie : moins touristique, plus dense.",
+   "pratique": null,
+   "reservation": null,
+   "photo": "photos/triveni-ghat.jpg",
+   "position": {
+    "lat": 30.103608,
+    "lng": 78.30486
+   },
+   "recherche": null
+  },
+  {
+   "slug": "beatles-ashram",
+   "ville": "rishikesh",
+   "nom": "Beatles Ashram",
+   "etoile": 1,
+   "categorie": "monument",
+   "description": "Chaurasi Kutia, où les Beatles ont séjourné en 1968 et écrit une grande partie du White Album. Abandonné trente ans, repris par la jungle, couvert de fresques ; les huttes de méditation en dôme sont intactes.",
+   "pratique": "~600 ₹ · 9h-16h30 · 2 h",
+   "reservation": null,
+   "photo": "photos/beatles-ashram.jpg",
+   "position": null,
+   "recherche": "Beatles Ashram Rishikesh"
+  },
+  {
+   "slug": "ram-jhula",
+   "ville": "rishikesh",
+   "nom": "Les ponts",
+   "etoile": 0,
+   "categorie": "monument",
+   "description": "Lakshman Jhula est fermé depuis 2019. Bajrang Setu, le nouveau pont à plancher de verre au même endroit, devait ouvrir en 2026. Ram Jhula et Janki Setu sont ouverts.",
+   "pratique": "À confirmer sur place",
+   "reservation": null,
+   "photo": "photos/lakshman-jhula.jpg",
+   "position": {
+    "lat": 30.114973,
+    "lng": 78.310664
+   },
+   "recherche": null
+  },
+  {
+   "slug": "tera-manzil",
+   "ville": "rishikesh",
+   "nom": "Tera Manzil Temple",
+   "etoile": 0,
+   "categorie": "temple",
+   "description": "Temple de treize étages, montée pour la vue sur le Gange.",
+   "pratique": null,
+   "reservation": null,
+   "photo": null,
+   "position": null,
+   "recherche": "Tera Manzil Temple Rishikesh"
+  },
+  {
+   "slug": "neer-garh",
+   "ville": "rishikesh",
+   "nom": "Neer Garh Waterfall",
+   "etoile": 0,
+   "categorie": "nature",
+   "description": "Trente minutes de marche. En mousson, torrent spectaculaire.",
+   "pratique": "Sentier glissant et sangsues : chaussures fermées",
+   "reservation": null,
+   "photo": null,
+   "position": null,
+   "recherche": "Neer Garh Waterfall Rishikesh"
+  },
+  {
+   "slug": "kunjapuri",
+   "ville": "rishikesh",
+   "nom": "Kunjapuri Devi Temple",
+   "etoile": 1,
+   "categorie": "excursion",
+   "description": "À 25 km. Lever de soleil sur les sommets himalayens si le ciel se dégage — rare en mousson, mais possible après une nuit de pluie.",
+   "pratique": "Départ 4h30 · ~1 500 ₹ en taxi",
+   "reservation": null,
+   "photo": "photos/kunjapuri.jpg",
+   "position": null,
+   "recherche": "Kunjapuri Devi Temple Rishikesh"
+  },
+  {
+   "slug": "neelkanth",
+   "ville": "rishikesh",
+   "nom": "Neelkanth Mahadev",
+   "etoile": 1,
+   "categorie": "excursion",
+   "description": "À 32 km par la forêt. Temple de Shiva très fréquenté par les pèlerins, et une route de montagne remarquable.",
+   "pratique": "Demi-journée",
+   "reservation": null,
+   "photo": "photos/neelkanth.jpg",
+   "position": null,
+   "recherche": "Neelkanth Mahadev Rishikesh"
+  },
+  {
+   "slug": "vashishta-gufa",
+   "ville": "rishikesh",
+   "nom": "Vashishta Gufa",
+   "etoile": 0,
+   "categorie": "excursion",
+   "description": "À 22 km. Grotte de méditation au bord du Gange, silence total.",
+   "pratique": "Une heure sur place",
+   "reservation": null,
+   "photo": null,
+   "position": null,
+   "recherche": "Vashishta Gufa Rishikesh"
+  },
+  {
+   "slug": "jumpin-heights",
+   "ville": "rishikesh",
+   "nom": "Bungee — Jumpin Heights",
+   "etoile": 0,
+   "categorie": "expérience",
+   "description": "83 m, encadrement néo-zélandais. Giant swing et flying fox au même endroit.",
+   "pratique": "~4 000 ₹ · généralement ouvert en mousson mais dépend de la météo du jour : appeler avant",
+   "reservation": null,
+   "photo": null,
+   "position": null,
+   "recherche": "Bungee — Jumpin Heights Rishikesh"
+  },
+  {
+   "slug": "har-ki-pauri",
+   "ville": "rishikesh",
+   "nom": "Haridwar",
+   "etoile": 1,
+   "categorie": "excursion",
+   "description": "À 25 km, 45 min. La Ganga Aarti de Har Ki Pauri y est bien plus grande et plus intense qu'à Rishikesh, avec des milliers de pèlerins. Ville sainte majeure, très peu touristique au sens occidental.",
+   "pratique": "Une soirée entière",
+   "reservation": null,
+   "photo": "photos/haridwar.jpg",
+   "position": {
+    "lat": 29.947471,
+    "lng": 78.154325
+   },
+   "recherche": null
+  },
+  {
+   "slug": "taj-mahal",
+   "ville": "agra",
+   "nom": "Taj Mahal",
+   "etoile": 2,
+   "categorie": "monument",
+   "description": "Mausolée élevé par Shah Jahan pour Mumtaz Mahal, morte en 1631 en donnant naissance à leur quatorzième enfant. Vingt-deux ans de chantier, vingt mille ouvriers. Le marbre change de teinte selon l'heure : rose à l'aube, blanc à midi, ocre doré en fin d'après-midi.",
+   "pratique": "Fermé le vendredi · 1 300 ₹ étranger, −50 ₹ en ligne · +200 ₹ pour le mausolée, à garder pour l'aube · porte Sud en sortie uniquement",
+   "reservation": "À acheter avant le départ sur asi.payumoney.com. Un billet = une entrée : il en faut deux par personne pour les deux passages, plus 200 ₹ une seule fois pour le mausolée.",
+   "photo": "photos/taj-mahal.jpg",
+   "position": {
+    "lat": 27.175007,
+    "lng": 78.042101
+   },
+   "recherche": null
+  },
+  {
+   "slug": "fort-agra",
+   "ville": "agra",
+   "nom": "Fort d'Agra",
+   "etoile": 1,
+   "categorie": "monument",
+   "description": "Souvent survolé, à tort. C'est là que Shah Jahan a été emprisonné par son fils Aurangzeb, et qu'il a passé ses huit dernières années à regarder depuis la tour Musamman Burj le Taj qu'il avait bâti pour sa femme, à 2,5 km.",
+   "pratique": "6h-18h · ~650 ₹ · 2 h",
+   "reservation": null,
+   "photo": "photos/fort-agra.jpg",
+   "position": {
+    "lat": 27.179826,
+    "lng": 78.020822
+   },
+   "recherche": null
+  },
+  {
+   "slug": "mehtab-bagh",
+   "ville": "agra",
+   "nom": "Mehtab Bagh",
+   "etoile": 1,
+   "categorie": "jardin",
+   "description": "Jardin sur l'autre rive, dans l'alignement frontal du Taj. Le meilleur coucher de soleil, et vous n'êtes pas dedans : vous le regardez.",
+   "pratique": "~300 ₹",
+   "reservation": null,
+   "photo": "photos/mehtab-bagh.jpg",
+   "position": {
+    "lat": 27.179047,
+    "lng": 78.042083
+   },
+   "recherche": null
+  },
+  {
+   "slug": "itmad-ud-daulah",
+   "ville": "agra",
+   "nom": "Itimad-ud-Daulah",
+   "etoile": 0,
+   "categorie": "monument",
+   "description": "Le « bébé Taj » : tombeau de marbre incrusté, prototype du Taj vingt ans plus tôt, beaucoup plus calme.",
+   "pratique": "~350 ₹",
+   "reservation": null,
+   "photo": "photos/itmad-ud-daulah.jpg",
+   "position": {
+    "lat": 27.1925,
+    "lng": 78.031944
+   },
+   "recherche": null
+  },
+  {
+   "slug": "akbar-sikandra",
+   "ville": "agra",
+   "nom": "Akbar's Tomb, Sikandra",
+   "etoile": 0,
+   "categorie": "monument",
+   "description": "À 10 km sur la route de Delhi. Tombeau d'Akbar dans un immense jardin peuplé de cerfs et de singes.",
+   "pratique": "~350 ₹",
+   "reservation": null,
+   "photo": null,
+   "position": {
+    "lat": 27.22042,
+    "lng": 77.950398
+   },
+   "recherche": null
+  },
+  {
+   "slug": "chini-ka-rauza",
+   "ville": "agra",
+   "nom": "Chini ka Rauza",
+   "etoile": 0,
+   "categorie": "monument",
+   "description": "Tombeau persan aux carreaux de faïence, en ruine, presque jamais visité.",
+   "pratique": "Gratuit",
+   "reservation": null,
+   "photo": null,
+   "position": {
+    "lat": 27.200861,
+    "lng": 78.034385
+   },
+   "recherche": null
+  },
+  {
+   "slug": "kinari-bazaar",
+   "ville": "agra",
+   "nom": "Kinari Bazaar",
+   "etoile": 0,
+   "categorie": "quartier",
+   "description": "Le bazar derrière la Jama Masjid : tissus, bijoux, chaussures. Dense.",
+   "pratique": null,
+   "reservation": null,
+   "photo": null,
+   "position": {
+    "lat": 27.095922,
+    "lng": 77.663851
+   },
+   "recherche": null
+  },
+  {
+   "slug": "taj-nature-walk",
+   "ville": "agra",
+   "nom": "Taj Nature Walk",
+   "etoile": 0,
+   "categorie": "nature",
+   "description": "Petit parc à 500 m de la porte Est, avec sentiers et point de vue sur le Taj. Calme, presque personne.",
+   "pratique": null,
+   "reservation": null,
+   "photo": null,
+   "position": {
+    "lat": 27.170296,
+    "lng": 78.048576
+   },
+   "recherche": null
+  },
+  {
+   "slug": "sheroes",
+   "ville": "agra",
+   "nom": "Sheroes Hangout",
+   "etoile": 1,
+   "categorie": "restaurant",
+   "description": "Café tenu par des survivantes d'attaques à l'acide.",
+   "pratique": "Prix libre",
+   "reservation": null,
+   "photo": null,
+   "position": {
+    "lat": 27.161864,
+    "lng": 78.040234
+   },
+   "recherche": null
+  },
+  {
+   "slug": "wildlife-sos",
+   "ville": "agra",
+   "nom": "Wildlife SOS — centre des éléphants",
+   "etoile": 2,
+   "categorie": "nature",
+   "description": "À 60 km au nord, près de Mathura. Plus de trente éléphants sauvés de la mendicité, des cirques et des promenades touristiques. Visite guidée par le personnel, aucun contact direct avec les animaux — c'est le gage de sérieux. C'est l'expérience la plus singulière de la région, et elle correspond exactement à votre position sur les balades à dos d'éléphant.",
+   "pratique": "10h-16h · donation 1 500-2 000 ₹/pers · 1h15 à 1h30 de route · compatible avec un Taj au lever du soleil",
+   "reservation": "Réservation obligatoire sur wildlifesos.org, à faire avant le départ. Sans elle, la visite n'est pas possible.",
+   "photo": "photos/wildlife-sos.jpg",
+   "position": null,
+   "recherche": "Wildlife SOS — centre des éléphants Agra"
+  },
+  {
+   "slug": "sur-sarovar",
+   "ville": "agra",
+   "nom": "Sur Sarovar — Keetham",
+   "etoile": 1,
+   "categorie": "nature",
+   "description": "À 20 km sur la route de Mathura. Sanctuaire ornithologique autour d'un lac, qui abrite le centre de secours pour ours lippus de Wildlife SOS — des ours sauvés des montreurs d'ours.",
+   "pratique": "Se combine parfaitement avec le centre des éléphants, sur la route du retour",
+   "reservation": null,
+   "photo": null,
+   "position": {
+    "lat": 27.25296,
+    "lng": 77.847805
+   },
+   "recherche": null
+  },
+  {
+   "slug": "fatehpur-sikri",
+   "ville": "agra",
+   "nom": "Fatehpur Sikri",
+   "etoile": 1,
+   "categorie": "excursion",
+   "description": "À 40 km. Capitale impériale construite par Akbar en 1571 et abandonnée quatorze ans plus tard faute d'eau : une ville moghole intacte, en grès rouge. Panch Mahal, Diwan-i-Khas et son pilier central, Buland Darwaza qui culmine à 54 m.",
+   "pratique": "6h-18h · ~600 ₹ · 2 h · prendre un guide badgé ASI, le site est illisible sans explication · rabatteurs insistants à l'entrée",
+   "reservation": "Voiture avec chauffeur à réserver la veille via l'hôtel d'Agra.",
+   "photo": "photos/fatehpur-sikri.jpg",
+   "position": {
+    "lat": 27.091165,
+    "lng": 77.662398
+   },
+   "recherche": null
+  },
+  {
+   "slug": "keoladeo",
+   "ville": "agra",
+   "nom": "Keoladeo — Bharatpur",
+   "etoile": 1,
+   "categorie": "nature",
+   "description": "À 55 km à l'ouest. Classé UNESCO, 29 km² de zones humides, plus de 370 espèces. Août-octobre est sa meilleure saison : c'est la nidification des espèces résidentes. À l'opposé de Wildlife SOS, mais les deux tiennent dans une journée chargée si vous y renoncez au Taj à l'aube.",
+   "pratique": "~400-500 ₹ · cyclo-pousse avec guide ornithologue badgé, 200-300 ₹/h · le créneau qui compte est 6h-9h",
+   "reservation": "Pas de réservation pour le parc, mais la voiture avec chauffeur est à réserver la veille via l'hôtel d'Agra.",
+   "photo": "photos/keoladeo.jpg",
+   "position": {
+    "lat": 27.165057,
+    "lng": 77.51865
+   },
+   "recherche": null
+  },
+  {
+   "slug": "chambal",
+   "ville": "agra",
+   "nom": "National Chambal Sanctuary",
+   "etoile": 0,
+   "categorie": "nature",
+   "description": "À 70 km. Safari en barque sur la Chambal : gharials, dauphins du Gange, tortues, becs-en-ciseaux. Une des sorties nature les plus originales d'Inde du Nord.",
+   "pratique": "Demi-journée à journée",
+   "reservation": null,
+   "photo": null,
+   "position": {
+    "lat": 26.768198,
+    "lng": 78.644579
+   },
+   "recherche": null
+  },
+  {
+   "slug": "mathura",
+   "ville": "agra",
+   "nom": "Mathura et Vrindavan",
+   "etoile": 0,
+   "categorie": "excursion",
+   "description": "À 55-70 km au nord. Lieu de naissance de Krishna et ville de ses milliers de temples. Pèlerinage majeur, très peu de touristes occidentaux.",
+   "pratique": "Journée entière",
+   "reservation": null,
+   "photo": "photos/wildlife-sos.jpg",
+   "position": {
+    "lat": 27.495554,
+    "lng": 77.685555
+   },
+   "recherche": null
+  }
+ ],
+ "etapes": [
+  {
+   "id": "j1-vol-paris",
+   "type": "vol",
+   "titre": "Paris → Delhi",
+   "depart": "2026-08-24T10:50",
+   "arrivee": "2026-08-24T22:50",
+   "de": "Paris CDG",
+   "vers": "Delhi T3",
+   "lieu_depart": "aeroport-cdg",
+   "lieu_arrivee": "aeroport-delhi-t3",
+   "operateur": "Air France",
+   "statut": "réservé",
+   "note": "Avant de sortir de la zone internationale : comptoirs UPI One World, compter 30 à 45 min.",
+   "position_depart": {
+    "lat": 49.009722,
+    "lng": 2.547778
+   },
+   "position_arrivee": {
+    "lat": 28.553886,
+    "lng": 77.088077
+   },
+   "a_des_details": true
+  },
+  {
+   "id": "j1-hotel-delhi",
+   "type": "hotel",
+   "titre": "Holiday Inn New Delhi Aerocity",
+   "depart": "2026-08-24T23:30",
+   "arrivee": "2026-08-25T08:30",
+   "lieu": "hotel-delhi-aerocity",
+   "ville": "delhi",
+   "statut": "réservé",
+   "note": "Navette gratuite depuis le T3, environ 10 min.",
+   "position": {
+    "lat": 28.550432,
+    "lng": 77.122673
+   },
+   "a_des_details": true
+  },
+  {
+   "id": "j2-vol-hyderabad",
+   "type": "vol",
+   "titre": "Delhi → Hyderabad",
+   "depart": "2026-08-25T11:45",
+   "arrivee": "2026-08-25T14:00",
+   "de": "Delhi",
+   "vers": "Hyderabad",
+   "lieu_depart": "aeroport-delhi-t3",
+   "lieu_arrivee": "aeroport-hyderabad",
+   "operateur": "IndiGo",
+   "statut": "réservé",
+   "note": "Vérifier le terminal de départ. Partir de l'hôtel 3 h avant.",
+   "position_depart": {
+    "lat": 28.553886,
+    "lng": 77.088077
+   },
+   "position_arrivee": {
+    "lat": 17.23,
+    "lng": 78.431944
+   },
+   "a_des_details": true
+  },
+  {
+   "id": "j3-mariage",
+   "type": "etape",
+   "titre": "Mariage",
+   "depart": "2026-08-26T00:00",
+   "arrivee": "2026-08-28T19:00",
+   "ville": "hyderabad",
+   "statut": "pris en charge",
+   "note": "Hébergement pris en charge par la famille. Dépose à Hyderabad vers 19h le 28. Les horaires glissent d'une heure ou deux, c'est normal. Haldi : vêtements à sacrifier, le curcuma ne part jamais, prévoir une rechange complète. Cadeau en espèces dans une enveloppe, montant se terminant par 1. Chaussures faciles à retirer.",
+   "a_des_details": false
+  },
+  {
+   "id": "j5-hotel-hyderabad",
+   "type": "hotel",
+   "titre": "Town Square Suites",
+   "depart": "2026-08-28T19:30",
+   "arrivee": "2026-08-29T11:00",
+   "lieu": "hotel-hyderabad",
+   "ville": "hyderabad",
+   "statut": "réservé",
+   "tel": "+919133303059",
+   "prix": "47 €",
+   "adresse": "Shamshabad",
+   "note": "À 7-8 km du terminal et pas dans la ville : demander à la famille de déposer directement à l'hôtel. Check-in de 13h à minuit.",
+   "position": {
+    "lat": 17.259972,
+    "lng": 78.401556
+   },
+   "a_des_details": true
+  },
+  {
+   "id": "j6-hyderabad",
+   "type": "etape",
+   "titre": "Journée à Hyderabad",
+   "depart": "2026-08-29T09:00",
+   "arrivee": "2026-08-29T16:00",
+   "ville": "hyderabad",
+   "statut": "libre",
+   "note": "Vous partez avec les sacs et ne revenez pas : voiture avec chauffeur à la journée réservée la veille, ~2 500-3 500 ₹, sacs dans le coffre, dépose finale à l'aéroport. Une journée possible : Golconde à l'ouverture, Charminar et Laad Bazaar avec un déjeuner biryani, puis Chowmahalla ou Salar Jung. Version reposante après trois jours de mariage : Chowmahalla et Salar Jung seulement, sans la montée de Golconde.",
+   "a_des_details": false
+  },
+  {
+   "id": "j6-vol-jaipur",
+   "type": "vol",
+   "titre": "Hyderabad → Jaipur",
+   "depart": "2026-08-29T19:30",
+   "arrivee": "2026-08-29T21:25",
+   "de": "Hyderabad",
+   "vers": "Jaipur",
+   "lieu_depart": "aeroport-hyderabad",
+   "lieu_arrivee": "aeroport-jaipur",
+   "operateur": "IndiGo",
+   "numero": "6E6638",
+   "statut": "réservé",
+   "note": "Aéroport à 7-8 km de l'hôtel, mais partir à 16h : circulation imprévisible, comptoir à 18h.",
+   "position_depart": {
+    "lat": 17.23,
+    "lng": 78.431944
+   },
+   "position_arrivee": {
+    "lat": 26.828109,
+    "lng": 75.807989
+   },
+   "a_des_details": true
+  },
+  {
+   "id": "j6-taxi-jaipur",
+   "type": "transfert",
+   "titre": "Aéroport de Jaipur → Umaid Bhawan",
+   "depart": "2026-08-29T21:40",
+   "arrivee": "2026-08-29T22:15",
+   "lieu_depart": "aeroport-jaipur",
+   "lieu_arrivee": "hotel-jaipur",
+   "statut": "réservé",
+   "operateur": "Via Booking",
+   "note": "Offert par Booking. Chauffeur en arrivées, ~35 min. Le numéro de vol est déjà renseigné.",
+   "position_depart": {
+    "lat": 26.828109,
+    "lng": 75.807989
+   },
+   "position_arrivee": {
+    "lat": 26.92868,
+    "lng": 75.792428
+   },
+   "a_des_details": false
+  },
+  {
+   "id": "j6-hotel-jaipur",
+   "type": "hotel",
+   "titre": "Umaid Bhawan",
+   "depart": "2026-08-29T22:15",
+   "arrivee": "2026-09-01T12:00",
+   "lieu": "hotel-jaipur",
+   "ville": "jaipur",
+   "statut": "réservé",
+   "tel": "+911412201276",
+   "prix": "163 €",
+   "adresse": "D1-2A Behari Marg, Bani Park",
+   "note": "Piscine — un vrai maillot est exigé. Travel desk sur place. Spectacle de danse rajasthanie de 19h à 21h tous les soirs. Check-out 12h le 01/09, sacs laissables à l'hôtel, dépose à la gare par l'hôtel 1 h avant.",
+   "position": {
+    "lat": 26.92868,
+    "lng": 75.792428
+   },
+   "a_des_details": true
+  },
+  {
+   "id": "j7-jaipur",
+   "type": "etape",
+   "titre": "Jaipur",
+   "depart": "2026-08-30T08:00",
+   "arrivee": "2026-09-01T18:00",
+   "ville": "jaipur",
+   "statut": "libre",
+   "note": "Trois jours pleins. Uber et Uber Auto fonctionnent bien depuis Bani Park. Deux contraintes de timing seulement : Amber Fort mérite d'être fait à 8h, et Nahargarh est le meilleur point de vue au coucher du soleil.",
+   "a_des_details": false
+  },
+  {
+   "id": "j9-train-udaipur",
+   "type": "train",
+   "titre": "Jaipur → Udaipur",
+   "depart": "2026-09-01T22:50",
+   "arrivee": "2026-09-02T06:55",
+   "de": "Jaipur Jn",
+   "vers": "Udaipur City",
+   "lieu_depart": "gare-jaipur",
+   "lieu_arrivee": "gare-udaipur",
+   "numero": "19665",
+   "classe": "1A",
+   "statut": "réservé",
+   "note": "Attendez du retard : ce train part de Khajuraho la veille à 9h25 et fait 1 092 km. Il roule depuis treize heures quand il atteint Jaipur. Une arrivée entre 8h et 10h est plausible. Suivi sur Where is my Train. Passeport original obligatoire à bord, pas une photocopie.",
+   "position_depart": {
+    "lat": 26.920789,
+    "lng": 75.786654
+   },
+   "position_arrivee": {
+    "lat": 24.567493,
+    "lng": 73.699553
+   },
+   "a_des_details": true
+  },
+  {
+   "id": "j10-hotel-udaipur",
+   "type": "hotel",
+   "titre": "Manuscript — Jhilwara Haveli",
+   "depart": "2026-09-02T07:00",
+   "arrivee": "2026-09-04T11:00",
+   "lieu": "hotel-udaipur",
+   "ville": "udaipur",
+   "statut": "réservé",
+   "tel": "+917073031166",
+   "adresse": "City Palace Road",
+   "note": "Check-in de 14h à 23h. La demande de dépôt des sacs à 7h a été envoyée. Check-out 11h le 04/09, sacs à l'hôtel, départ 17h30.",
+   "position": {
+    "lat": 24.576902,
+    "lng": 73.685151
+   },
+   "a_des_details": true
+  },
+  {
+   "id": "j10-udaipur",
+   "type": "etape",
+   "titre": "Udaipur",
+   "depart": "2026-09-02T09:00",
+   "arrivee": "2026-09-04T17:00",
+   "ville": "udaipur",
+   "statut": "libre",
+   "note": "Mercredi : sacs déposés le matin, City Palace et vieille ville l'après-midi, bateau au coucher du soleil ou spectacle de Bagore-ki-Haveli à 19h. Jeudi : journée d'excursion si vous en voulez une. Vendredi : matinée libre.",
+   "a_des_details": false
+  },
+  {
+   "id": "j12-train-delhi",
+   "type": "train",
+   "titre": "Udaipur → Delhi",
+   "depart": "2026-09-04T18:30",
+   "arrivee": "2026-09-05T06:50",
+   "de": "Udaipur City",
+   "vers": "H. Nizamuddin",
+   "lieu_depart": "gare-udaipur",
+   "lieu_arrivee": "gare-nizamuddin",
+   "numero": "12964",
+   "nom_train": "Mewar Express",
+   "classe": "3A",
+   "statut": "réservé",
+   "note": "Emporter de quoi dîner, un pull — la climatisation est glaciale — et un cadenas pour attacher les sacs sous la couchette basse.",
+   "position_depart": {
+    "lat": 24.567493,
+    "lng": 73.699553
+   },
+   "position_arrivee": {
+    "lat": 28.586413,
+    "lng": 77.252982
+   },
+   "a_des_details": true
+  },
+  {
+   "id": "j13-delhi",
+   "type": "etape",
+   "titre": "Delhi — journée avec ta sœur",
+   "depart": "2026-09-05T07:00",
+   "arrivee": "2026-09-05T22:00",
+   "ville": "delhi",
+   "statut": "libre",
+   "note": "Prévenir ta sœur du bus de 7h le lendemain pour que la soirée se termine tôt. Sacs faits avant de dormir, deux alarmes sur deux téléphones : l'établissement n'a pas de groupe électrogène.",
+   "a_des_details": false
+  },
+  {
+   "id": "j13-hotel-delhi",
+   "type": "hotel",
+   "titre": "The Hosteller",
+   "depart": "2026-09-05T22:00",
+   "arrivee": "2026-09-06T05:00",
+   "lieu": "hotel-delhi-hosteller",
+   "ville": "delhi",
+   "statut": "réservé",
+   "adresse": "Mathura Road, près d'Ashram Chowk",
+   "note": "À 2,4 km de Nizamuddin. Le tableau des réservations indique « Saket », c'est une erreur : la position confirme Mathura Road.",
+   "position": {
+    "lat": 28.571085,
+    "lng": 77.259891
+   },
+   "a_des_details": true
+  },
+  {
+   "id": "j14-bus-rishikesh",
+   "type": "bus",
+   "titre": "Delhi → Rishikesh",
+   "depart": "2026-09-06T07:00",
+   "arrivee": "2026-09-06T12:10",
+   "de": "ISBT Kashmere Gate",
+   "vers": "Nepali Farm",
+   "lieu_depart": "isbt-kashmere-gate",
+   "lieu_arrivee": "nepali-farm",
+   "operateur": "Laxmi Holidays",
+   "tel": "+911144446900",
+   "statut": "réservé",
+   "note": "Réveil 5h, taxi réservé la veille vers 5h30 (~600-800 ₹, Uber en secours ~350-500 ₹), arrivée à l'ISBT vers 6h — 15-16 km sur des routes vides. Embarquement : sortir par la porte 8 du métro, entrer dans l'ISBT vers les quais d'arrivée 53 et 54, repérer le comptoir Laxmi Holidays.",
+   "position_depart": {
+    "lat": 28.668696,
+    "lng": 77.230423
+   },
+   "position_arrivee": {
+    "lat": 30.055648,
+    "lng": 78.217742
+   },
+   "a_des_details": true
+  },
+  {
+   "id": "j14-transfert-tapovan",
+   "type": "transfert",
+   "titre": "Nepali Farm → Tapovan",
+   "depart": "2026-09-06T12:15",
+   "arrivee": "2026-09-06T13:00",
+   "lieu_depart": "nepali-farm",
+   "lieu_arrivee": "tapovan",
+   "statut": "à organiser",
+   "note": "La dépose se fait sous le nouveau pont : un carrefour sur la nationale, à 12-13 km de Tapovan. Auto privé 500-700 ₹. Prévenir la guesthouse de votre heure d'arrivée.",
+   "position_depart": {
+    "lat": 30.055648,
+    "lng": 78.217742
+   },
+   "position_arrivee": {
+    "lat": 30.129922,
+    "lng": 78.319349
+   },
+   "a_des_details": false
+  },
+  {
+   "id": "j14-hotel-rishikesh",
+   "type": "hotel",
+   "titre": "Hébergement à Rishikesh",
+   "depart": "2026-09-06T13:00",
+   "arrivee": "2026-09-08T11:00",
+   "lieu": "tapovan",
+   "ville": "rishikesh",
+   "statut": "à réserver",
+   "note": "Deux nuits à Tapovan. À demander avant de réserver : la distance à la route où un taxi peut déposer, et une consigne à bagages jusqu'à 20h15 le 08 — c'est le plus long créneau sans chambre du voyage.",
+   "position": {
+    "lat": 30.129922,
+    "lng": 78.319349
+   },
+   "a_des_details": false
+  },
+  {
+   "id": "j14-rishikesh",
+   "type": "etape",
+   "titre": "Rishikesh",
+   "depart": "2026-09-06T14:00",
+   "arrivee": "2026-09-08T20:00",
+   "ville": "rishikesh",
+   "statut": "libre",
+   "note": "Le 6 septembre est un dimanche : plusieurs écoles de yoga réduisent ou suspendent leurs cours, caler la séance sur Anand Prakash. Retirer du liquide dans Rishikesh ville avant de monter : les distributeurs se raréfient vers Tapovan.",
+   "a_des_details": false
+  },
+  {
+   "id": "j16-bus-agra",
+   "type": "bus",
+   "titre": "Rishikesh → Agra",
+   "depart": "2026-09-08T21:30",
+   "arrivee": "2026-09-09T08:00",
+   "de": "Nepali Farm",
+   "vers": "Agra Chipitola",
+   "lieu_depart": "nepali-farm",
+   "lieu_arrivee": "arret-agra-chipitola",
+   "operateur": "Shri Krishna Travels",
+   "tel": "+919720001155",
+   "statut": "réservé",
+   "note": "Auto vers Nepali Farm à 20h15, réservé la veille, 30 à 40 min. Embarquement : Shri Krishna Travels, Nepali Farm, sous le pont, au carrefour en T. Arrivée chez Radhika Travels à Chipitola, près du Rakab Ganj Police Thana, à 3-4 km de Taj Ganj : auto ou e-rickshaw, 100-200 ₹, 15 min.",
+   "position_depart": {
+    "lat": 30.055648,
+    "lng": 78.217742
+   },
+   "position_arrivee": {
+    "lat": 27.175101,
+    "lng": 78.013529
+   },
+   "a_des_details": true
+  },
+  {
+   "id": "j17-hotel-agra",
+   "type": "hotel",
+   "titre": "Hébergement à Agra",
+   "depart": "2026-09-09T09:00",
+   "arrivee": "2026-09-11T06:45",
+   "lieu": "taj-ganj",
+   "ville": "agra",
+   "statut": "à réserver",
+   "note": "Trois nuits à Taj Ganj, côté porte Est : sortir de sa chambre à 5h20 et être dans la file à 5h35 vaut plus que la moquette. À demander : dépôt des sacs dès 8h30 le 09, et un taxi à 6h45 le 11.",
+   "position": {
+    "lat": 27.167102,
+    "lng": 78.043459
+   },
+   "a_des_details": false
+  },
+  {
+   "id": "j17-agra",
+   "type": "etape",
+   "titre": "Agra — premier passage au Taj",
+   "depart": "2026-09-09T09:00",
+   "arrivee": "2026-09-09T20:00",
+   "ville": "agra",
+   "statut": "libre",
+   "note": "Matin de repos après la nuit en bus. Premier passage au Taj en fin d'après-midi, de 15h à 18h30 : lumière rasante, le marbre vire à l'ocre doré, et l'affluence retombe après 17h. Puis Fort d'Agra, ou Mehtab Bagh au coucher du soleil.",
+   "a_des_details": false
+  },
+  {
+   "id": "j18-taj-aube",
+   "type": "etape",
+   "titre": "Taj au lever du soleil, puis Wildlife SOS",
+   "depart": "2026-09-10T05:20",
+   "arrivee": "2026-09-10T16:00",
+   "ville": "agra",
+   "statut": "libre",
+   "note": "5h20 : deuxième passage au Taj. Rose puis blanc, brume sur la Yamuna en mousson, et presque personne. Prendre ce jour-là le supplément mausolée, la queue à l'escalier est plus courte. Puis Wildlife SOS, ouvert de 10h à 16h, donc parfaitement compatible avec le Taj à l'aube — et Sur Sarovar au retour, sur la même route. Voiture avec chauffeur réservée la veille via l'hôtel. Si vous voulez aussi Keoladeo, c'est jouable mais dans l'autre sens : il faudrait partir à 5h30 vers Bharatpur et renoncer au Taj à l'aube.",
+   "a_des_details": false
+  },
+  {
+   "id": "j19-train-delhi",
+   "type": "train",
+   "titre": "Agra → Delhi",
+   "depart": "2026-09-11T07:32",
+   "arrivee": "2026-09-11T09:55",
+   "de": "Agra Cantt",
+   "vers": "H. Nizamuddin",
+   "lieu_depart": "gare-agra-cantt",
+   "lieu_arrivee": "gare-nizamuddin",
+   "numero": "22221",
+   "nom_train": "NZM Rajdhani",
+   "classe": "2A",
+   "statut": "réservé",
+   "note": "Check-out 6h45, taxi réservé la veille. Agra Cantt est à 5-6 km de Taj Ganj. Pas de petit-déjeuner à l'hôtel, mais il est servi à bord.",
+   "position_depart": {
+    "lat": 27.158953,
+    "lng": 77.990048
+   },
+   "position_arrivee": {
+    "lat": 28.586413,
+    "lng": 77.252982
+   },
+   "a_des_details": true
+  },
+  {
+   "id": "j19-delhi",
+   "type": "etape",
+   "titre": "Delhi — dernière journée",
+   "depart": "2026-09-11T10:00",
+   "arrivee": "2026-09-11T21:00",
+   "ville": "delhi",
+   "statut": "à réserver",
+   "note": "Chambre à la journée à réserver, day use jusqu'à 20h-21h : sacs déposés, douche. Journée libre.",
+   "a_des_details": false
+  },
+  {
+   "id": "j19-metro-t3",
+   "type": "transfert",
+   "titre": "Métro Airport Express → T3",
+   "depart": "2026-09-11T21:30",
+   "arrivee": "2026-09-11T21:50",
+   "lieu_depart": "gare-new-delhi",
+   "lieu_arrivee": "aeroport-delhi-t3",
+   "statut": "à faire",
+   "note": "New Delhi → T3 en 20 min. Dernier train à 23h30. Une fois entrés dans la zone départs du T3, on ne vous laisse plus ressortir : déposer ou récupérer les bagages en consigne avant d'entrer.",
+   "position_depart": {
+    "lat": 28.640282,
+    "lng": 77.22041
+   },
+   "position_arrivee": {
+    "lat": 28.553886,
+    "lng": 77.088077
+   },
+   "a_des_details": false
+  },
+  {
+   "id": "j20-vol-paris",
+   "type": "vol",
+   "titre": "Delhi → Paris",
+   "depart": "2026-09-12T01:05",
+   "arrivee": "2026-09-12T06:40",
+   "de": "Delhi T3",
+   "vers": "Paris CDG",
+   "lieu_depart": "aeroport-delhi-t3",
+   "lieu_arrivee": "aeroport-cdg",
+   "operateur": "Air France",
+   "statut": "réservé",
+   "note": "Départ dans la nuit du 11 au 12.",
+   "position_depart": {
+    "lat": 28.553886,
+    "lng": 77.088077
+   },
+   "position_arrivee": {
+    "lat": 49.009722,
+    "lng": 2.547778
+   },
+   "a_des_details": true
+  }
+ ]
+}

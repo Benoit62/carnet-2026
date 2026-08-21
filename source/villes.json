@@ -1,0 +1,81 @@
+[
+ {
+  "slug": "hyderabad",
+  "nom": "Hyderabad",
+  "region": "Telangana",
+  "presentation": "Ville musulmane du Deccan, d'une identité tout autre que le Rajasthan. Capitale des Qutb Shahi puis des Nizams, longtemps comptés parmi les hommes les plus riches du monde. Vous n'avez qu'une demi-journée : Golconde, ou le duo Charminar et musées.",
+  "sejour": "Une demi-journée le 29/08, sacs dans le coffre, dépose finale à l'aéroport.",
+  "tables": [
+   "Paradise à Secunderabad pour le biryani canonique",
+   "Shah Ghouse, plus local",
+   "Chutneys, végétarien sud-indien"
+  ],
+  "conseil": "Demander « medium spicy » : le seuil local est élevé. Le biryani se sert avec mirchi ka salan et raita."
+ },
+ {
+  "slug": "jaipur",
+  "nom": "Jaipur",
+  "region": "Rajasthan",
+  "presentation": "La ville rose, fondée en 1727 sur un plan en damier — une des premières villes planifiées d'Inde. Grande et étalée, mais Uber fonctionne bien partout depuis Bani Park.",
+  "sejour": "Trois jours pleins, du 30/08 au 01/09.",
+  "tables": [
+   "Laxmi Misthan Bhandar, thalis et sucreries depuis 1727",
+   "Rawat Mishtan Bhandar pour le pyaaz kachori à 40 ₹",
+   "Tapri Central, café en terrasse fréquenté par la jeunesse locale",
+   "Handi pour le laal maas"
+  ],
+  "conseil": "À goûter : dal-baati-churma, laal maas, mawa kachori, mirchi bada."
+ },
+ {
+  "slug": "udaipur",
+  "nom": "Udaipur",
+  "region": "Rajasthan",
+  "presentation": "La ville des lacs, capitale du Mewar depuis 1559. En fin de mousson les lacs sont pleins, ce qui n'est pas le cas une grande partie de l'année. Tout se fait à pied dans la vieille ville.",
+  "sejour": "Deux nuits seulement, du 02 au 04/09. Les excursions demandent une journée entière.",
+  "tables": [
+   "Ambrai, la table avec vue sur le City Palace illuminé — à réserver",
+   "Jheel's Ginger Coffee Bar au petit-déjeuner",
+   "Millets of Mewar"
+  ],
+  "conseil": "Uber est peu fiable ici : autos devant la gare, 150-250 ₹ à négocier. Les voitures n'entrent pas dans les ruelles, dépose à 100-200 m."
+ },
+ {
+  "slug": "delhi",
+  "nom": "Delhi",
+  "region": "Territoire de la capitale",
+  "presentation": "Sept villes superposées sur deux mille ans, du Qutb Minar de 1193 au New Delhi de Lutyens. Deux passages : le samedi 5, et le vendredi 11 en demi-journée.",
+  "sejour": "Deux escales, dont une journée complète le 05/09 avec ta sœur.",
+  "tables": [
+   "Karim's, cuisine moghole derrière la Jama Masjid depuis 1913",
+   "Saravana Bhavan à Connaught Place, sud-indien impeccable",
+   "Khan Chacha pour les rolls"
+  ],
+  "conseil": "Le métro est rapide, climatisé et très bon marché. Une voiture réservée aux femmes se trouve en tête de rame."
+ },
+ {
+  "slug": "rishikesh",
+  "nom": "Rishikesh",
+  "region": "Uttarakhand",
+  "presentation": "Ville sainte au point où le Gange sort de l'Himalaya, capitale mondiale autoproclamée du yoga. Ville sèche et végétarienne : ni alcool ni viande, légalement. La plus tranquille du voyage.",
+  "sejour": "Deux nuits, trois demi-journées, du 06 au 08/09. Vous logez à Tapovan.",
+  "tables": [
+   "Little Buddha Café, structure en bois au-dessus du Gange",
+   "Ramana's Organic Café",
+   "Freedom Café"
+  ],
+  "conseil": "Les ruelles de Tapovan sont étroites et en pente, sombres et glissantes en mousson : lampe frontale utile. La baignade dans le Gange est à proscrire, le courant est très fort en crue."
+ },
+ {
+  "slug": "agra",
+  "nom": "Agra",
+  "region": "Uttar Pradesh",
+  "presentation": "Capitale moghole avant Delhi, et bien plus que le seul Taj : le fort où Shah Jahan fut emprisonné par son fils, et le tombeau qui a servi de prototype au Taj vingt ans plus tôt.",
+  "sejour": "Deux nuits, du 08 au 11/09, à Taj Ganj côté porte Est.",
+  "tables": [
+   "Pinch of Spice, la meilleure table",
+   "Sheroes Hangout",
+   "Joney's Place, minuscule et culte depuis 1978"
+  ],
+  "conseil": "C'est la ville d'Inde où le harcèlement commercial est le plus organisé. Ce n'est pas un enjeu de sécurité mais de fatigue. Réponse : « Nahin chahiye », sans s'arrêter de marcher."
+ }
+]

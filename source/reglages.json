@@ -1,0 +1,79 @@
+{
+ "titre": "Inde 2026",
+ "debut": "2026-08-24",
+ "fin": "2026-09-12",
+ "fuseau": "Asia/Kolkata",
+ "a_reserver": [
+  {
+   "titre": "Billets du Taj Mahal",
+   "lien": "asi.payumoney.com",
+   "detail": "Deux entrées par personne — un billet ne vaut qu'un passage — plus 200 ₹ une seule fois pour le mausolée, à garder pour l'aube du 10."
+  },
+  {
+   "titre": "Wildlife SOS",
+   "lien": "wildlifesos.org",
+   "detail": "Réservation obligatoire, sans elle la visite est impossible. C'est la sortie du 10 au matin, après le Taj."
+  },
+  {
+   "titre": "Hébergement à Rishikesh",
+   "lien": "",
+   "detail": "Deux nuits à Tapovan, les 06 et 07/09. Demander la distance à la route et une consigne jusqu'à 20h15 le 08."
+  },
+  {
+   "titre": "Hébergement à Agra",
+   "lien": "",
+   "detail": "Trois nuits à Taj Ganj côté porte Est, du 08 au 11/09. Demander le dépôt des sacs dès 8h30 le 09 et un taxi à 6h45 le 11."
+  },
+  {
+   "titre": "Chambre à la journée à Delhi",
+   "lien": "",
+   "detail": "Le 11/09, day use jusqu'à 20h-21h."
+  },
+  {
+   "titre": "Safari de Jhalana",
+   "lien": "jhalanasafari.in",
+   "detail": "Si retenu. Passeport requis, paiement intégral, jusqu'à 90 jours à l'avance."
+  }
+ ],
+ "urgence": {
+  "numeros": [
+   {
+    "libelle": "Urgences en Inde",
+    "tel": "112"
+   },
+   {
+    "libelle": "Ambassade de France, New Delhi",
+    "tel": "+911143196100"
+   },
+   {
+    "libelle": "Assurance Heymondo — police 2295559",
+    "tel": ""
+   }
+  ],
+  "hotels": [
+   {
+    "libelle": "Town Square Suites, Hyderabad",
+    "tel": "+919133303059"
+   },
+   {
+    "libelle": "Umaid Bhawan, Jaipur",
+    "tel": "+911412201276"
+   },
+   {
+    "libelle": "Manuscript Jhilwara Haveli, Udaipur",
+    "tel": "+917073031166"
+   }
+  ],
+  "transports": [
+   {
+    "libelle": "Laxmi Holidays — bus du 06/09",
+    "tel": "+911144446900"
+   },
+   {
+    "libelle": "Shri Krishna Travels — bus du 08/09",
+    "tel": "+919720001155"
+   }
+  ],
+  "note": "Prévenir Heymondo rapidement : la plupart des contrats l'exigent avant d'engager des frais."
+ }
+}

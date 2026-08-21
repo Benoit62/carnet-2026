@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#14110f">
+<title>Inde 2026</title>
+<link rel="icon" href="icone-192.png">
+<link rel="apple-touch-icon" href="icone-192.png">
+<link rel="manifest" href="manifest.json">
+<style>
+:root{
+  --fond:#14110f; --fond2:#1e1a17; --carte:#231e1a; --carte2:#2c2621;
+  --trait:#3a322c; --texte:#f4efe9; --doux:#b3a79c; --faible:#7d726a;
+  --or:#e0a33e; --hotel:#e08a3c; --vol:#5aa9e6; --train:#5fbf8a;
+  --bus:#b98ae0; --transfert:#8e9aa8; --etape:#4fb3a8; --alerte:#e0603c;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;padding:0}
+body{
+  background:var(--fond); color:var(--texte);
+  font:17px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  padding-bottom:env(safe-area-inset-bottom);
+  overscroll-behavior-y:none;
+}
+a{color:inherit}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+.enveloppe{max-width:680px;margin:0 auto;padding:0 14px 90px}
+
+/* ---------- en-tête ---------- */
+header{
+  position:sticky;top:0;z-index:40;background:rgba(20,17,15,.94);
+  backdrop-filter:blur(12px);border-bottom:1px solid var(--trait);
+  padding:calc(env(safe-area-inset-top) + 10px) 14px 10px;
+}
+header .dedans{max-width:680px;margin:0 auto;display:flex;align-items:baseline;gap:10px}
+header h1{font-size:19px;margin:0;letter-spacing:.2px}
+header .horloge{margin-left:auto;font-size:13px;color:var(--doux);
+  font-variant-numeric:tabular-nums}
+header .horloge b{color:var(--or);font-weight:600}
+
+/* ---------- onglets ---------- */
+nav.onglets{display:flex;gap:6px;margin:14px 0 18px;overflow-x:auto;
+  scrollbar-width:none;padding-bottom:2px}
+nav.onglets::-webkit-scrollbar{display:none}
+nav.onglets button{
+  padding:9px 15px;border-radius:999px;background:var(--carte);
+  border:1px solid var(--trait);color:var(--doux);font-size:14.5px;
+  white-space:nowrap;font-weight:500}
+nav.onglets button[aria-selected=true]{background:var(--or);color:#241a08;
+  border-color:var(--or);font-weight:600}
+
+/* ---------- bandeau maintenant ---------- */
+.maintenant{
+  background:linear-gradient(150deg,#3a2d18,#241d15);
+  border:1px solid #5c4620;border-radius:16px;padding:16px;margin-bottom:20px}
+.maintenant .quoi{font-size:11.5px;letter-spacing:.9px;text-transform:uppercase;
+  color:var(--or);font-weight:700;margin-bottom:7px}
+.maintenant h2{margin:0 0 5px;font-size:21px;line-height:1.25}
+.maintenant .quand{color:var(--doux);font-size:14.5px}
+.maintenant .compte{color:var(--or);font-weight:600}
+
+/* ---------- carte d'étape ---------- */
+.jour{display:flex;align-items:center;gap:10px;margin:26px 0 12px}
+.jour span{font-size:12.5px;letter-spacing:1.1px;text-transform:uppercase;
+  color:var(--faible);font-weight:700}
+.jour i{flex:1;height:1px;background:var(--trait)}
+
+.etape{display:flex;gap:12px;margin-bottom:11px}
+.rail{width:12px;display:flex;flex-direction:column;align-items:center;padding-top:20px}
+.rail .pastille{width:11px;height:11px;border-radius:50%;background:var(--trait);
+  flex:none;border:2px solid var(--fond)}
+.rail .fil{flex:1;width:2px;background:var(--trait);margin-top:3px}
+.etape.actuelle .rail .pastille{background:var(--or);box-shadow:0 0 0 4px rgba(224,163,62,.2)}
+.etape.passee{opacity:.42}
+
+.carte{
+  flex:1;background:var(--carte);border:1px solid var(--trait);border-radius:14px;
+  overflow:hidden;display:flex;text-align:left;width:100%;transition:background .12s}
+.carte:active{background:var(--carte2)}
+.etape.actuelle .carte{border-color:var(--or)}
+.carte .vignette{width:82px;flex:none;background:var(--fond2);
+  background-size:cover;background-position:center;display:flex;
+  align-items:center;justify-content:center;font-size:26px}
+.carte .corps{padding:12px 13px;flex:1;min-width:0}
+.carte .haut{display:flex;align-items:center;gap:7px;margin-bottom:3px}
+.carte .type{font-size:10.5px;letter-spacing:.9px;text-transform:uppercase;font-weight:700}
+.carte h3{margin:0 0 3px;font-size:16.5px;line-height:1.3;font-weight:600}
+.carte .meta{font-size:13.5px;color:var(--doux);font-variant-numeric:tabular-nums}
+.carte .sous{font-size:13px;color:var(--faible);margin-top:3px}
+.t-hotel{color:var(--hotel)} .t-vol{color:var(--vol)} .t-train{color:var(--train)}
+.t-bus{color:var(--bus)} .t-transfert{color:var(--transfert)} .t-etape{color:var(--etape)}
+.b-hotel{background:var(--hotel)} .b-vol{background:var(--vol)} .b-train{background:var(--train)}
+.b-bus{background:var(--bus)} .b-transfert{background:var(--transfert)} .b-etape{background:var(--etape)}
+
+.puce{font-size:10.5px;padding:2.5px 8px;border-radius:999px;font-weight:700;
+  letter-spacing:.4px;background:var(--alerte);color:#fff;flex:none}
+.puce.douce{background:#3a322c;color:var(--doux)}
+
+/* ---------- grille villes / activités ---------- */
+.grille{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:11px}
+.tuile{background:var(--carte);border:1px solid var(--trait);border-radius:14px;
+  overflow:hidden;text-align:left;display:flex;flex-direction:column}
+.tuile:active{background:var(--carte2)}
+.tuile .img{aspect-ratio:4/3;background:var(--fond2);background-size:cover;
+  background-position:center;display:flex;align-items:center;justify-content:center;
+  font-size:30px;position:relative}
+.tuile .img .etoile{position:absolute;top:7px;right:8px;font-size:13px;
+  background:rgba(0,0,0,.55);border-radius:999px;padding:2px 7px}
+.tuile .txt{padding:10px 11px}
+.tuile h4{margin:0;font-size:14.5px;line-height:1.3;font-weight:600}
+.tuile p{margin:3px 0 0;font-size:12.5px;color:var(--faible)}
+
+/* ---------- fiche modale ---------- */
+.voile{position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:60;
+  display:none;align-items:flex-end;backdrop-filter:blur(3px)}
+.voile.ouvert{display:flex}
+.fiche{background:var(--fond2);width:100%;max-height:92vh;overflow-y:auto;
+  border-radius:20px 20px 0 0;border-top:1px solid var(--trait);
+  animation:monte .22s ease-out;padding-bottom:env(safe-area-inset-bottom)}
+@keyframes monte{from{transform:translateY(30px);opacity:.4}to{transform:none;opacity:1}}
+@media(min-width:680px){
+  .voile{align-items:center;justify-content:center}
+  .fiche{max-width:640px;border-radius:20px;border:1px solid var(--trait)}
+}
+.fiche .banniere{height:180px;background:var(--carte);background-size:cover;
+  background-position:center;display:flex;align-items:center;justify-content:center;
+  font-size:52px;position:relative}
+.fiche .fermer,.fiche .retour{position:absolute;top:12px;width:36px;height:36px;
+  border-radius:50%;background:rgba(0,0,0,.6);font-size:20px;line-height:36px;
+  text-align:center;color:#fff}
+.fiche .fermer{right:12px}
+.fiche .retour{left:12px;font-size:22px}
+.fiche .dedans{padding:18px 18px 24px}
+.fiche h2{margin:0 0 4px;font-size:23px;line-height:1.25}
+.fiche .chapeau{color:var(--doux);font-size:14.5px;margin-bottom:16px}
+.fiche p{margin:0 0 14px}
+.bloc{background:var(--carte);border:1px solid var(--trait);border-radius:12px;
+  padding:13px;margin-bottom:12px}
+.bloc .titre{font-size:11px;letter-spacing:.9px;text-transform:uppercase;
+  color:var(--faible);font-weight:700;margin-bottom:7px}
+.bloc.attention{border-color:#6b4028;background:#2a1d16}
+.bloc.attention .titre{color:var(--alerte)}
+
+.paire{display:flex;justify-content:space-between;gap:12px;padding:9px 0;
+  border-bottom:1px solid var(--trait);font-size:15px}
+.paire:last-child{border-bottom:0}
+.paire .cle{color:var(--doux);flex:none}
+.paire .val{text-align:right;font-weight:600;font-variant-numeric:tabular-nums;
+  word-break:break-word}
+.copiable{cursor:pointer;border-bottom:1px dashed var(--faible)}
+.copiable:active{color:var(--or)}
+
+.actions{display:flex;gap:9px;flex-wrap:wrap;margin:4px 0 16px}
+.bouton{flex:1;min-width:132px;padding:13px;border-radius:12px;text-align:center;
+  font-weight:600;font-size:15px;background:var(--carte2);
+  border:1px solid var(--trait);text-decoration:none;display:block}
+.bouton.fort{background:var(--or);color:#241a08;border-color:var(--or)}
+.bouton.urgence{background:var(--alerte);color:#fff;border-color:var(--alerte)}
+
+.liste-nue{margin:0;padding-left:19px}
+.liste-nue li{margin-bottom:6px}
+.vide{color:var(--faible);text-align:center;padding:40px 0}
+.note-bas{color:var(--faible);font-size:12.5px;text-align:center;margin-top:28px;
+  padding-top:16px;border-top:1px solid var(--trait)}
+.rappel{position:fixed;left:50%;transform:translateX(-50%);bottom:26px;
+  background:var(--or);color:#241a08;padding:11px 20px;border-radius:999px;
+  font-weight:600;font-size:14.5px;z-index:90;opacity:0;pointer-events:none;
+  transition:opacity .2s}
+.rappel.vu{opacity:1}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="dedans">
+    <h1>Inde 2026</h1>
+    <div class="horloge"><b id="heure">—</b> <span id="jourvoyage"></span></div>
+  </div>
+</header>
+
+<div class="enveloppe">
+  <nav class="onglets" id="onglets"></nav>
+  <main id="vue"><div class="vide">Chargement…</div></main>
+  <div class="note-bas" id="pied"></div>
+</div>
+
+<div class="voile" id="voile"><div class="fiche" id="fiche"></div></div>
+<div class="rappel" id="rappel"></div>
+
+<script>
+const IC={hotel:"🛏",vol:"✈️",train:"🚆",bus:"🚌",transfert:"🚕",etape:"📍",
+  monument:"🏛",temple:"🛕",musée:"🖼",quartier:"🏘",nature:"🌿",jardin:"🌳",
+  restaurant:"🍽",expérience:"✨",excursion:"🚗",yoga:"🧘"};
+const JOURS=["dimanche","lundi","mardi","mercredi","jeudi","vendredi","samedi"];
+const MOIS=["janvier","février","mars","avril","mai","juin","juillet","août",
+  "septembre","octobre","novembre","décembre"];
+let D=null, prive=null, onglet="fil";
+
+/* ---------- heure indienne ---------- */
+const IST=5.5*3600e3;
+function maintenant(){return new Date(Date.now()+IST)}
+function quand(s){return new Date(s+"Z")}          /* les données sont déjà en IST */
+function hhmm(d){return String(d.getUTCHours()).padStart(2,"0")+"h"
+  +String(d.getUTCMinutes()).padStart(2,"0")}
+function dateLongue(d){return JOURS[d.getUTCDay()]+" "+d.getUTCDate()+" "+MOIS[d.getUTCMonth()]}
+function cleJour(d){return d.toISOString().slice(0,10)}
+
+function duree(ms){
+  const m=Math.round(ms/60000);
+  if(m<60) return "dans "+m+" min";
+  const h=Math.round(m/60);
+  if(h<36) return "dans "+h+" h";
+  return "dans "+Math.round(h/24)+" jours";
+}
+
+/* ---------- utilitaires ---------- */
+const ech=s=>String(s==null?"":s).replace(/[&<>"]/g,c=>
+  ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function fond(url){return url?`background-image:url('${url}')`:""}
+function itineraire(p,nom){
+  if(p) return `https://www.google.com/maps/dir/?api=1&destination=${p.lat},${p.lng}`;
+  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(nom)}`;
+}
+function dire(t){const r=document.getElementById("rappel");
+  r.textContent=t;r.classList.add("vu");clearTimeout(r._t);
+  r._t=setTimeout(()=>r.classList.remove("vu"),1600)}
+async function copier(t){
+  try{await navigator.clipboard.writeText(t)}
+  catch(e){const z=document.createElement("textarea");z.value=t;document.body.appendChild(z);
+    z.select();try{document.execCommand("copy")}catch(_){}z.remove()}
+  dire("Copié");
+}
+document.addEventListener("click",e=>{
+  const c=e.target.closest("[data-copier]");
+  if(c){copier(c.dataset.copier);e.stopPropagation()}
+});
+
+/* ---------- horloge ---------- */
+function horloge(){
+  const n=maintenant();
+  document.getElementById("heure").textContent=hhmm(n)+" IST";
+  const d0=quand(D?D.debut+"T00:00":"2026-08-24T00:00");
+  const j=Math.floor((n-d0)/864e5)+1;
+  document.getElementById("jourvoyage").textContent =
+    (j>=1&&j<=20)?("· J"+j):(j<1?("· J"+(1-j)+" avant"):"");
+}
+
+/* ---------- état d'une étape ---------- */
+function etat(e){
+  const n=maintenant(), a=quand(e.depart), b=quand(e.arrivee);
+  return n>b?"passee":(n>=a?"actuelle":"avenir");
+}
+
+/* ================= VUE : LE FIL ================= */
+function vueFil(){
+  const n=maintenant();
+  let h="";
+
+  /* à réserver, tant que le voyage n'a pas commencé */
+  if(n<quand(D.debut+"T00:00") && D.a_reserver.length){
+    h+=`<div class="bloc attention"><div class="titre">Avant de partir</div>`;
+    h+=D.a_reserver.map(r=>`<div class="paire"><span class="cle">${ech(r.titre)}</span>`
+      +`<span class="val">${r.lien?`<a href="https://${r.lien}" target="_blank" rel="noopener">${ech(r.lien)}</a>`:"—"}</span></div>`).join("");
+    h+=`</div>`;
+  }
+
+  /* bandeau : étape en cours, ou la prochaine */
+  const cour=D.etapes.find(e=>etat(e)==="actuelle");
+  const suiv=D.etapes.find(e=>etat(e)==="avenir");
+  const v=cour||suiv;
+  if(v){
+    const dep=quand(v.depart);
+    h+=`<button class="maintenant" style="width:100%;text-align:left;display:block"
+        data-etape="${v.id}">
+      <div class="quoi">${cour?"En ce moment":"Prochaine étape"}</div>
+      <h2>${ech(v.titre)}</h2>
+      <div class="quand">${dateLongue(dep)} · ${hhmm(dep)}
+        ${cour?"":`<span class="compte">— ${duree(dep-n)}</span>`}</div>
+    </button>`;
+  }
+
+  /* le fil, groupé par jour */
+  let jour="";
+  D.etapes.forEach((e,i)=>{
+    const dep=quand(e.depart), k=cleJour(dep);
+    if(k!==jour){jour=k;h+=`<div class="jour"><span>${dateLongue(dep)}</span><i></i></div>`}
+    h+=carteEtape(e,i===D.etapes.length-1);
+  });
+  return h;
+}
+
+function carteEtape(e,dernier){
+  const st=etat(e), dep=quand(e.depart), arr=quand(e.arrivee);
+  const ville=D.villes.find(v=>v.slug===e.ville);
+  const img=e.type==="hotel"||e.type==="etape" ? (ville&&ville.photo) : null;
+  let meta=hhmm(dep);
+  if(["vol","train","bus","transfert"].includes(e.type))
+    meta=`${hhmm(dep)} → ${hhmm(arr)}`+(cleJour(arr)!==cleJour(dep)?" (+1)":"");
+  let sous="";
+  if(e.de) sous=`${ech(e.de)} → ${ech(e.vers)}`;
+  else if(e.adresse) sous=ech(e.adresse);
+  else if(ville) sous=ech(ville.nom);
+  const alerte=(e.statut==="à réserver"||e.statut==="à organiser"||e.statut==="à faire");
+  return `<div class="etape ${st}">
+    <div class="rail"><div class="pastille"></div>${dernier?"":'<div class="fil"></div>'}</div>
+    <button class="carte" data-etape="${e.id}">
+      <div class="vignette" style="${fond(img)}">${img?"":(IC[e.type]||"📍")}</div>
+      <div class="corps">
+        <div class="haut">
+          <span class="type t-${e.type}">${e.type==="etape"?"étape":e.type}</span>
+          ${alerte?`<span class="puce">${ech(e.statut)}</span>`:""}
+        </div>
+        <h3>${ech(e.titre)}</h3>
+        <div class="meta">${meta}</div>
+        ${sous?`<div class="sous">${sous}</div>`:""}
+      </div>
+    </button></div>`;
+}
+
+/* ================= VUE : VILLES ================= */
+function vueVilles(){
+  return `<div class="grille">`+D.villes.map(v=>{
+    const n=D.activites.filter(a=>a.ville===v.slug).length;
+    return `<button class="tuile" data-ville="${v.slug}">
+      <div class="img" style="${fond(v.photo)}">${v.photo?"":"🏙"}</div>
+      <div class="txt"><h4>${ech(v.nom)}</h4><p>${n} choses à voir</p></div></button>`;
+  }).join("")+`</div>`;
+}
+
+/* ================= VUE : À RÉSERVER ================= */
+function vueReserver(){
+  return D.a_reserver.map(r=>`<div class="bloc">
+    <div class="titre">à réserver</div>
+    <h3 style="margin:0 0 6px;font-size:17px">${ech(r.titre)}</h3>
+    <p style="margin:0 0 10px;color:var(--doux);font-size:14.5px">${ech(r.detail)}</p>
+    ${r.lien?`<a class="bouton fort" href="https://${r.lien}" target="_blank" rel="noopener">${ech(r.lien)}</a>`:""}
+  </div>`).join("");
+}
+
+/* ================= VUE : URGENCE ================= */
+function vueUrgence(){
+  const u=D.urgence;
+  const g=(t,l)=>`<div class="bloc"><div class="titre">${t}</div>`+l.map(x=>
+    `<div class="paire"><span class="cle">${ech(x.libelle)}</span>
+     <span class="val">${x.tel?`<a href="tel:${x.tel}">${ech(x.tel)}</a>`:"—"}</span></div>`
+  ).join("")+`</div>`;
+  return `<a class="bouton urgence" href="tel:112" style="margin-bottom:14px">
+      Appeler le 112 — urgences</a>`
+    +g("Essentiels",u.numeros)+g("Hôtels",u.hotels)+g("Transports",u.transports)
+    +`<div class="bloc attention"><div class="titre">à retenir</div>
+      <p style="margin:0">${ech(u.note)}</p></div>`;
+}
+
+/* ================= FICHES ================= */
+function ouvrir(html){
+  if(!document.getElementById("voile").classList.contains("ouvert"))
+    history.pushState({fiche:1},"");
+  document.getElementById("fiche").innerHTML=html;
+  document.getElementById("voile").classList.add("ouvert");
+  document.getElementById("fiche").scrollTop=0;
+  document.body.style.overflow="hidden";
+}
+function fermer(saut){
+  if(!document.getElementById("voile").classList.contains("ouvert")) return;
+  document.getElementById("voile").classList.remove("ouvert");
+  document.body.style.overflow="";
+  if(!saut && history.state && history.state.fiche) history.back();
+}
+addEventListener("popstate",()=>fermer(true));
+document.getElementById("voile").addEventListener("click",e=>{
+  if(e.target.id==="voile"||e.target.classList.contains("fermer")) fermer();
+});
+
+function ficheEtape(id){
+  const e=D.etapes.find(x=>x.id===id); if(!e) return;
+  const ville=D.villes.find(v=>v.slug===e.ville);
+  const img=(e.type==="hotel"||e.type==="etape")&&ville?ville.photo:null;
+  const dep=quand(e.depart), arr=quand(e.arrivee);
+  const s=prive&&prive.details[e.id];
+
+  let l=[];
+  const P=(c,v,cop)=>{if(v) l.push(`<div class="paire"><span class="cle">${c}</span>
+    <span class="val ${cop?"copiable":""}" ${cop?`data-copier="${ech(v)}"`:""}>${ech(v)}</span></div>`)};
+  if(["vol","train","bus","transfert"].includes(e.type)){
+    P("Départ",`${dateLongue(dep)} ${hhmm(dep)}`);
+    P("Arrivée",`${dateLongue(arr)} ${hhmm(arr)}`);
+    P("De",e.de); P("À",e.vers);
+  }else{
+    P("Du",`${dateLongue(dep)} ${hhmm(dep)}`);
+    P("Au",`${dateLongue(arr)} ${hhmm(arr)}`);
+  }
+  P("Opérateur",e.operateur);
+  P("N°",e.nom_train?`${e.numero} · ${e.nom_train}`:e.numero,true);
+  P("Classe",e.classe);
+  if(s){P("Places",s.sieges,true); P("PNR",s.pnr,true)}
+  else if(e.a_des_details) l.push(`<div class="paire"><span class="cle">PNR et places</span>
+    <span class="val" style="color:var(--faible);font-weight:400">verrouillés</span></div>`);
+  P("Adresse",e.adresse);
+  P("Téléphone",e.tel);
+  P("Prix",e.prix);
+  P("Statut",e.statut);
+
+  let act="";
+  const cible=e.position||e.position_depart;
+  if(cible||e.lieu) act+=`<a class="bouton fort" target="_blank" rel="noopener"
+     href="${itineraire(cible,(ville?ville.nom+" ":"")+e.titre)}">S'y rendre</a>`;
+  if(e.position_arrivee) act+=`<a class="bouton" target="_blank" rel="noopener"
+     href="${itineraire(e.position_arrivee,e.vers||"")}">Point d'arrivée</a>`;
+  if(e.tel) act+=`<a class="bouton" href="tel:${e.tel}">Appeler</a>`;
+
+  let docs="";
+  if(s&&s.docs&&s.docs.length){
+    docs=`<div class="bloc"><div class="titre">documents</div>`+s.docs.map(d=>
+      `<div class="paire"><span class="cle">${ech(d.libelle)}</span>
+       <span class="val" style="font-weight:400;font-size:13px;color:var(--doux)">${ech(d.fichier)}</span></div>`
+    ).join("")+`</div>`;
+  }
+
+  ouvrir(`<div class="banniere" style="${fond(img)}">${img?"":(IC[e.type]||"📍")}
+      <div class="fermer">×</div></div>
+    <div class="dedans">
+      <h2>${ech(e.titre)}</h2>
+      <div class="chapeau">${e.type==="etape"?"étape":e.type}${ville?" · "+ech(ville.nom):""}</div>
+      <div class="actions">${act}</div>
+      <div class="bloc">${l.join("")}</div>
+      ${e.note?`<div class="bloc"><div class="titre">à savoir</div>
+        <p style="margin:0">${ech(e.note)}</p></div>`:""}
+      ${docs}
+    </div>`);
+}
+
+function ficheVille(slug){
+  const v=D.villes.find(x=>x.slug===slug); if(!v) return;
+  const acts=D.activites.filter(a=>a.ville===slug)
+    .sort((a,b)=>b.etoile-a.etoile||a.nom.localeCompare(b.nom,"fr"));
+  const tuiles=acts.map(a=>`<button class="tuile" data-activite="${a.slug}" data-depuis="${slug}">
+      <div class="img" style="${fond(a.photo)}">${a.photo?"":(IC[a.categorie]||"📍")}
+        ${a.etoile?`<span class="etoile">${"★".repeat(a.etoile)}</span>`:""}</div>
+      <div class="txt"><h4>${ech(a.nom)}</h4><p>${ech(a.categorie)}</p></div></button>`).join("");
+  ouvrir(`<div class="banniere" style="${fond(v.photo)}">${v.photo?"":"🏙"}
+      <div class="fermer">×</div></div>
+    <div class="dedans">
+      <h2>${ech(v.nom)}</h2>
+      <div class="chapeau">${ech(v.region)} · ${ech(v.sejour)}</div>
+      <p>${ech(v.presentation)}</p>
+      ${v.conseil?`<div class="bloc attention"><div class="titre">sur place</div>
+        <p style="margin:0">${ech(v.conseil)}</p></div>`:""}
+      <div class="bloc"><div class="titre">où manger</div>
+        <ul class="liste-nue">${v.tables.map(t=>`<li>${ech(t)}</li>`).join("")}</ul></div>
+      <div class="titre" style="font-size:11px;letter-spacing:.9px;text-transform:uppercase;
+        color:var(--faible);font-weight:700;margin:20px 0 10px">
+        ${acts.length} choses à voir</div>
+      <div class="grille">${tuiles}</div>
+    </div>`);
+}
+
+function ficheActivite(slug,retour){
+  const a=D.activites.find(x=>x.slug===slug); if(!a) return;
+  const v=D.villes.find(x=>x.slug===a.ville);
+  ouvrir(`<div class="banniere" style="${fond(a.photo)}">${a.photo?"":(IC[a.categorie]||"📍")}
+      ${retour?`<div class="retour" data-retour="${ech(retour)}">‹</div>`:""}
+      <div class="fermer">×</div></div>
+    <div class="dedans">
+      <h2>${ech(a.nom)}${a.etoile?` <span style="color:var(--or)">${"★".repeat(a.etoile)}</span>`:""}</h2>
+      <div class="chapeau">${ech(a.categorie)} · ${ech(v?v.nom:"")}</div>
+      <div class="actions">
+        <a class="bouton fort" target="_blank" rel="noopener"
+           href="${itineraire(a.position,a.recherche||a.nom)}">S'y rendre</a></div>
+      <p>${ech(a.description)}</p>
+      ${a.pratique?`<div class="bloc"><div class="titre">pratique</div>
+        <p style="margin:0">${ech(a.pratique)}</p></div>`:""}
+      ${a.reservation?`<div class="bloc attention"><div class="titre">réservation</div>
+        <p style="margin:0">${ech(a.reservation)}</p></div>`:""}
+      ${a.position?"":`<div class="bloc"><div class="titre">position</div>
+        <p style="margin:0;color:var(--doux);font-size:14px">Pas de coordonnées exactes :
+        le bouton lance une recherche par nom, qui demande du réseau.</p></div>`}
+    </div>`);
+}
+
+/* ---------- navigation ---------- */
+document.addEventListener("click",e=>{
+  const a=e.target.closest("[data-etape]");    if(a) return ficheEtape(a.dataset.etape);
+  const b=e.target.closest("[data-ville]");    if(b) return ficheVille(b.dataset.ville);
+  const r=e.target.closest("[data-retour]");
+  if(r){e.stopPropagation(); return ficheVille(r.dataset.retour)}
+  const c=e.target.closest("[data-activite]");
+  if(c) return ficheActivite(c.dataset.activite, c.dataset.depuis||null);
+});
+
+const VUES={fil:["Le fil",vueFil],villes:["Villes",vueVilles],
+  reserver:["À réserver",vueReserver],urgence:["Urgence",vueUrgence]};
+function dessiner(){
+  document.getElementById("onglets").innerHTML=Object.entries(VUES).map(([k,[t]])=>
+    `<button data-onglet="${k}" aria-selected="${k===onglet}">${t}</button>`).join("");
+  document.getElementById("vue").innerHTML=VUES[onglet][1]();
+  horloge();
+}
+document.addEventListener("click",e=>{
+  const o=e.target.closest("[data-onglet]");
+  if(o){onglet=o.dataset.onglet;dessiner();scrollTo(0,0)}
+});
+
+/* ---------- démarrage ---------- */
+(async()=>{
+  try{
+    D=await (await fetch("donnees/voyage.json")).json();
+    try{prive=await (await fetch("donnees/prive.json")).json()}catch(_){prive=null}
+    dessiner();
+    document.getElementById("pied").textContent =
+      `${D.activites.length} lieux · ${D.etapes.length} étapes · heure indienne (UTC+5:30)`
+      + (prive?"":" · PNR non chargés");
+    setInterval(horloge,20000);
+    /* on repositionne le fil sur aujourd'hui */
+    const cour=document.querySelector(".etape.actuelle")||document.querySelector(".etape:not(.passee)");
+    if(cour&&onglet==="fil") setTimeout(()=>cour.scrollIntoView({block:"center"}),80);
+  }catch(err){
+    document.getElementById("vue").innerHTML =
+      `<div class="vide">Données illisibles.<br><small>${ech(err.message)}</small></div>`;
+  }
+})();
+if("serviceWorker" in navigator)
+  navigator.serviceWorker.register("sw.js").catch(()=>{});
+</script>
+</body>
+</html>

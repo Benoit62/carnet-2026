@@ -1,0 +1,10 @@
+# généré par outils/build.py — ne pas versionner
+hors-ligne.html
+donnees/prive.json
+
+# données sensibles : PNR, numéros de places, noms de billets
+source/prive.json
+
+__pycache__/
+*.pyc
+.DS_Store
