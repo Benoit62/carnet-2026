@@ -26,11 +26,6 @@
    "detail": "Trois nuits à Taj Ganj, du 8 au 11 septembre. Dépôt des sacs dès 8h30 le 9, taxi à 6h45 le 11."
   },
   {
-   "titre": "Chambre à la journée à Delhi",
-   "lien": "",
-   "detail": "Le 11 septembre, jusqu'à 20h ou 21h."
-  },
-  {
    "titre": "Safari de Jhalana",
    "lien": "jhalanasafari.in",
    "detail": "Passeport requis, paiement intégral, jusqu'à 90 jours à l'avance."
@@ -1964,9 +1959,11 @@
     "lng": 77.122673
    },
    "photos": [
-    "photos/ville-delhi.jpg"
+    "photos/hotel-delhi-aerocity.jpg",
+    "photos/hotel-delhi-aerocity-2.jpg",
+    "photos/hotel-delhi-aerocity-3.jpg"
    ],
-   "photo": "photos/ville-delhi.jpg",
+   "photo": "photos/hotel-delhi-aerocity.jpg",
    "a_des_details": true
   },
   {
