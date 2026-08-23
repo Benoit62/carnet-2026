@@ -33,7 +33,7 @@ body{background:var(--fond);color:var(--texte);
   font:17px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
   padding-bottom:env(safe-area-inset-bottom);overscroll-behavior-y:none}
 a{color:inherit}
-button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
+button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
 .enveloppe{max-width:680px;margin:0 auto;padding:0 14px 90px}
 
 header{position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--fond) 92%,transparent);
@@ -94,9 +94,9 @@ nav.onglets button[aria-selected=true]{background:var(--or);color:#fff;
   overflow:hidden;display:flex;text-align:left;width:100%;box-shadow:var(--ombre)}
 .carte:active{background:var(--carte2)}
 .etape.actuelle .carte{border-color:var(--or);border-width:2px}
-.carte .vignette{width:86px;flex:none;background:var(--fond2);background-size:cover;
-  background-position:center;display:flex;align-items:center;justify-content:center;
-  font-size:26px;position:relative}
+.carte .vignette{width:86px;flex:none;align-self:stretch;background:var(--fond2);
+  background-size:cover;background-position:center;display:flex;align-items:center;
+  justify-content:center;font-size:26px;position:relative}
 .carte .vignette .nb{position:absolute;bottom:5px;right:5px;font-size:10px;
   background:rgba(0,0,0,.6);color:#fff;border-radius:999px;padding:1px 6px}
 .carte .corps{padding:12px 13px;flex:1;min-width:0}
@@ -176,8 +176,8 @@ nav.onglets button[aria-selected=true]{background:var(--or);color:#fff;
   color:var(--faible);font-weight:800;margin-bottom:8px}
 .bloc.attention{border-color:var(--alerte);background:var(--alertefond)}
 .bloc.attention .titre{color:var(--alerte)}
-.bloc.tache{border-color:var(--or);background:var(--orfond)}
-.bloc.tache .titre{color:var(--or)}
+.bloc.todo{border-color:var(--or);background:var(--orfond)}
+.bloc.todo .titre{color:var(--or)}
 
 .paire{display:flex;justify-content:space-between;gap:12px;padding:9px 0;
   border-bottom:1px solid var(--trait);font-size:15px}
@@ -196,9 +196,9 @@ nav.onglets button[aria-selected=true]{background:var(--or);color:#fff;
 .bouton.urgence{background:var(--alerte);color:#fff;border-color:var(--alerte)}
 .bouton.wa{background:#25d366;color:#0b3d1f;border-color:#1fb457}
 
-.tache{display:flex;gap:11px;align-items:flex-start;padding:9px 0;
+.tache{display:flex;gap:11px;align-items:flex-start;padding:10px 0;
   border-bottom:1px solid var(--trait);font-size:15px;line-height:1.45;text-align:left;
-  width:100%}
+  width:100%;background:none}
 .tache:last-child{border-bottom:0}
 .tache .case{width:21px;height:21px;flex:none;border-radius:6px;margin-top:1px;
   border:2px solid var(--trait2);display:flex;align-items:center;justify-content:center;
@@ -364,12 +364,10 @@ function vueFil(){
       ${ville?`<span class="ici">${ech(ville.nom)}</span>`:""}<i></i></div>`;
 
     h+=`<div class="fil">`;
-    traversent.forEach(e=>{
-      const cl=e.type==="hotel"?"h":(e.type==="etape"?"e":"");
+    traversent.filter(e=>e.type==="hotel").forEach(e=>{
       const nuit=Math.round((debut-instant(e.depart))/864e5)+1;
-      h+=`<div class="suite ${cl}"><div class="barre"></div>
-        <span>${e.type==="hotel"?`<b>${ech(e.titre)}</b> · nuit ${nuit}`
-          :`<b>${ech(e.titre)}</b> · en cours`}</span></div>`;
+      h+=`<div class="suite h"><div class="barre"></div>
+        <span><b>${ech(e.titre)}</b> · nuit ${nuit}</span></div>`;
     });
     commencent.forEach(e=>h+=carteEtape(e));
     h+=`</div>`;
@@ -480,7 +478,7 @@ function banniere(photos,repli,retour){
 function blocTaches(e){
   if(!(e.instructions||[]).length) return "";
   const f=faits[e.id]||{};
-  return `<div class="bloc tache"><div class="titre">à faire — ${e.instructions.length} points</div>`
+  return `<div class="bloc todo"><div class="titre">à faire — ${e.instructions.length} points</div>`
     +e.instructions.map((t,i)=>
       `<button class="tache ${f[i]?"fait":""}" data-tache="${e.id}" data-i="${i}">
         <span class="case">${f[i]?"✓":""}</span><span class="txt">${ech(t)}</span>
@@ -528,19 +526,12 @@ function ficheEtape(id,niveau){
       ${m.tenue?`<div class="tenue"><b>Tenue —</b> ${ech(m.tenue)}</div>`:""}</div>`).join("")
     +`</div>`;
 
+  // un séjour renvoie vers la fiche ville plutôt que d'en recopier le contenu
   let lieux="";
-  if(ville){
-    const acts=D.activites.filter(a=>a.ville===ville.slug)
-      .sort((a,b)=>b.etoile-a.etoile||a.nom.localeCompare(b.nom,"fr"));
-    lieux=`<div class="titre" style="font-size:11px;letter-spacing:.9px;
-      text-transform:uppercase;color:var(--faible);font-weight:800;margin:22px 0 10px">
-      ${ech(ville.nom)} — ${acts.length} choses à voir</div>
-      <p style="color:var(--doux);font-size:14.5px">${ech(ville.presentation)}</p>
-      ${ville.conseil?`<div class="bloc attention"><div class="titre">sur place</div>
-        <p style="margin:0">${ech(ville.conseil)}</p></div>`:""}
-      <div class="bloc"><div class="titre">où manger</div>
-        <ul class="liste-nue">${ville.tables.map(t=>`<li>${ech(t)}</li>`).join("")}</ul></div>
-      <div class="grille">${acts.map(a=>tuileActivite(a,"etape:"+e.id)).join("")}</div>`;
+  if(ville && e.type!=="etape"){
+    const n=D.activites.filter(a=>a.ville===ville.slug).length;
+    lieux=`<button class="bouton" style="margin-top:4px" data-ville="${ville.slug}">
+      ${ech(ville.nom)} — ${n} choses à voir</button>`;
   }
 
   ouvrir(niveau, banniere(e.photos,IC[e.type]||"📍",null)+`<div class="dedans">
@@ -572,11 +563,11 @@ function ficheVille(slug,niveau){
       <p>${ech(v.presentation)}</p>
       ${v.conseil?`<div class="bloc attention"><div class="titre">sur place</div>
         <p style="margin:0">${ech(v.conseil)}</p></div>`:""}
-      <div class="bloc"><div class="titre">où manger</div>
-        <ul class="liste-nue">${v.tables.map(t=>`<li>${ech(t)}</li>`).join("")}</ul></div>
       <div class="titre" style="font-size:11px;letter-spacing:.9px;text-transform:uppercase;
         color:var(--faible);font-weight:800;margin:20px 0 10px">${acts.length} choses à voir</div>
       <div class="grille">${acts.map(a=>tuileActivite(a,"ville:"+slug)).join("")}</div>
+      <div class="bloc" style="margin-top:18px"><div class="titre">où manger</div>
+        <ul class="liste-nue">${v.tables.map(t=>`<li>${ech(t)}</li>`).join("")}</ul></div>
     </div>`);
 }
 
@@ -614,8 +605,13 @@ document.addEventListener("click",e=>{
   if(r){fermer(2);e.stopPropagation();return}
   const a=e.target.closest("[data-activite]");
   if(a){ficheActivite(a.dataset.activite,a.dataset.depuis);return}
-  const b=e.target.closest("[data-ville]");   if(b) return ficheVille(b.dataset.ville,1);
-  const s=e.target.closest("[data-etape]");   if(s) return ficheEtape(s.dataset.etape,1);
+  const b=e.target.closest("[data-ville]");
+  if(b) return ficheVille(b.dataset.ville,
+    document.getElementById("voile1").classList.contains("ouvert")?2:1);
+  const s=e.target.closest("[data-etape]");
+  if(s){const et=D.etapes.find(x=>x.id===s.dataset.etape);
+    if(et&&et.type==="etape"&&et.ville&&!et.deroule) return ficheVille(et.ville,1);
+    return ficheEtape(s.dataset.etape,1)}
   const o=e.target.closest("[data-onglet]");
   if(o){onglet=o.dataset.onglet;dessiner();scrollTo(0,0)}
 });

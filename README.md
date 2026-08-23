@@ -46,18 +46,69 @@ Le build s'interrompt s'il trouve un PNR, un numéro de place ou un nom de bille
 dans le fichier public. Il signale aussi les lieux sans coordonnées et les
 activités rattachées à une ville inconnue.
 
-## Modifier le contenu
+## Modifier une étape du fil
 
-Ajouter un hébergement : recopier un bloc voisin dans `source/etapes.json`, lui
-donner un `id` unique, et renseigner `lieu` avec une clé présente dans
-`source/lieux.json`. Les dates sont au format ISO, **en heure indienne**
-(UTC+5:30) — l'application n'applique aucune conversion.
+Tout se passe dans `source/etapes.json`, un bloc par étape. Les dates sont au
+format ISO et **en heure indienne** (UTC+5:30), l'application n'applique aucune
+conversion. Trois champs facultatifs enrichissent l'affichage :
 
-Ajouter un lieu à visiter : un bloc dans `source/activites.json`. Le champ
-`etoile` vaut 0, 1 ou 2 et pilote le classement dans la fiche ville. Une photo
-nommée `photos/<slug>.jpg` est reprise automatiquement.
+```json
+{
+ "id": "j1-vol-paris",
+ "type": "vol",
+ "titre": "Paris → Delhi",
+ "depart": "2026-08-24T10:50",
+ "arrivee": "2026-08-24T22:50",
+ "lieu": "hotel-jaipur",
+ "ville": "jaipur",
+ "note": "Texte libre, affiché dans le bloc « à savoir ».",
 
-Puis relancer le build et pousser.
+ "infos": [
+  {"libelle": "Terminal", "valeur": "2E"}
+ ],
+ "instructions": [
+  "Enregistrement en ligne",
+  "Photo des sacs avant dépôt"
+ ],
+ "deroule": [
+  {"quand": "Mer 26 · 11h", "titre": "Haldi",
+   "texte": "…", "tenue": "…"}
+ ]
+}
+```
+
+`infos` produit les étiquettes courtes sur la carte du fil, sous le titre.
+`instructions` produit une liste à cocher dans la fiche détaillée, et une
+pastille orange « N à faire » sur la carte ; les cases cochées sont mémorisées
+dans le navigateur du téléphone. `deroule` produit un programme détaillé, comme
+celui du mariage.
+
+Le champ `lieu` doit correspondre à une clé de `source/lieux.json`, c'est lui
+qui alimente le bouton « S'y rendre ».
+
+Ajouter un lieu à visiter se fait de la même façon dans `source/activites.json`.
+Le champ `etoile` vaut 0, 1 ou 2 et détermine l'ordre dans la fiche ville.
+
+Après toute modification, relancer `python outils/build.py` puis pousser.
+
+## Ajouter des photos
+
+Aucun fichier JSON à modifier. Il suffit de déposer les images dans `photos/` en
+les nommant d'après la clé du sujet, et le carrousel apparaît tout seul :
+
+```
+photos/hotel-jaipur.jpg      la principale, affichée en vignette
+photos/hotel-jaipur-2.jpg    les suivantes, dans l'ordre
+photos/hotel-jaipur-3.jpg
+```
+
+La clé est celle du champ `lieu` pour une étape, du champ `slug` pour un lieu à
+visiter, et `ville-<slug>` pour une ville. Les clés d'hébergement sont
+`hotel-delhi-aerocity`, `hotel-hyderabad`, `hotel-jaipur`, `hotel-udaipur`,
+`hotel-delhi-hosteller`, `tapovan` et `taj-ganj`.
+
+Format attendu : JPEG, 1000×667 environ. Le compteur en bas de la vignette
+indique le nombre d'images disponibles.
 
 ## Photos et coordonnées
 

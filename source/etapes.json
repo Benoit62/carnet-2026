@@ -11,14 +11,14 @@
   "lieu_arrivee": "aeroport-delhi-t3",
   "operateur": "Air France",
   "statut": "réservé",
-  "note": "Avant de sortir de la zone internationale : comptoirs UPI One World, compter 30 à 45 min.",
+  "note": "Les comptoirs UPI One World se trouvent avant la sortie de la zone internationale, à Delhi. Compter 30 à 45 min.",
   "instructions": [
-   "Sacs bouclés : ceinture ventrale serrée autour du sac, sangles rentrées",
-   "Passeports, visas et attestation Heymondo dans le sac cabine",
    "Enregistrement en ligne Air France",
-   "Photographier les sacs faits",
-   "Espèces en euros à changer sur place",
-   "À l'arrivée, comptoir UPI One World avant de sortir de la zone internationale"
+   "Sangles des sacs rentrées et housse de pluie",
+   "Passeports, visas et attestation d'assurance en cabine",
+   "Photo des sacs avant dépôt",
+   "Espèces en euros",
+   "Comptoir UPI One World à l'arrivée"
   ],
   "infos": [
    {
@@ -50,10 +50,10 @@
   "lieu_arrivee": "aeroport-hyderabad",
   "operateur": "IndiGo",
   "statut": "réservé",
-  "note": "Vérifier le terminal de départ. Partir de l'hôtel 3 h avant.",
+  "note": "Départ de l'hôtel 3 h avant.",
   "instructions": [
-   "Vérifier le terminal de départ la veille",
-   "Quitter l'hôtel 3 h avant"
+   "Terminal de départ vérifié",
+   "Départ de l'hôtel 3 h avant"
   ]
  },
  {
@@ -64,31 +64,31 @@
   "arrivee": "2026-08-28T19:00",
   "ville": "hyderabad",
   "statut": "pris en charge",
-  "note": "Deux jours, quatre temps forts. Le premier jour est réservé à la famille et aux proches, l'ensemble des invités n'est convié que le second. Les horaires glissent d'une heure ou deux, c'est normal.",
+  "note": "Deux jours et quatre temps forts. Le premier jour réunit la famille et les proches, l'ensemble des invités arrive le second.",
   "deroule": [
    {
     "quand": "Mer 26 · 11h-14h",
     "titre": "Haldi",
-    "texte": "Une pâte de curcuma est appliquée sur le visage, les bras et les jambes des mariés par les proches, puis tout le monde se rince à grands seaux d'eau. Le curcuma protège du mauvais œil et ouvre les festivités.",
-    "tenue": "Jaune ou orange, et des vêtements à sacrifier : le curcuma tache définitivement. Prévoir une rechange complète."
+    "texte": "Les proches appliquent une pâte de curcuma sur le visage, les bras et les jambes des mariés, puis rincent le tout à grands seaux d'eau. Le curcuma passe pour protéger du mauvais œil et ouvre les festivités.",
+    "tenue": "Jaune ou orange. Le curcuma tache définitivement, une rechange complète est utile."
    },
    {
     "quand": "Mer 26 · 19h-23h",
     "titre": "Mehendi et Sangeet",
-    "texte": "Henné dessiné à la main sur les invitées — compter 30 min à 1 h de séchage, et ne pas se laver les mains ensuite. Puis la soirée dansante : initiation à quelques pas, playlist télougou et française, quelques jeux.",
-    "tenue": "Libre, tenue de soirée semi-décontractée dans laquelle on peut danser."
+    "texte": "Une artiste dessine des motifs au henné sur les mains et les pieds de la mariée, et les invitées peuvent en recevoir également. Le séchage demande 30 min à 1 h. La soirée qui suit mêle une initiation à la danse indienne, une playlist télougou et française et quelques jeux.",
+    "tenue": "Libre, tenue de soirée dans laquelle on peut danser."
    },
    {
     "quand": "Jeu 27 · 19h-22h",
     "titre": "Réception",
-    "texte": "Plusieurs centaines d'invités. Les mariés se tiennent sur une estrade et chacun vient les saluer, prendre une photo et offrir son cadeau, puis passe au repas. En ouverture, un échange de guirlandes tient lieu d'entrée des mariés.",
+    "texte": "Plusieurs centaines d'invités se succèdent devant l'estrade où se tiennent les mariés, pour les saluer, faire une photo et offrir leur cadeau, avant de passer au repas. Un échange de guirlandes ouvre la soirée.",
     "tenue": "Tenue de cérémonie."
    },
    {
     "quand": "Jeu 27 · 22h-2h",
     "titre": "Cérémonie religieuse",
-    "texte": "Trois à quatre heures de rituels devant un autel, un prêtre récitant en sanskrit. Le basculement est le Muhurtham, fixé par calcul astrologique à 23h43 : les mariés, séparés par un rideau, s'appliquent simultanément une pâte de cumin et de sucre de canne sur la tête, et le rideau tombe. Suivent le nouage du mangalsutra, la bataille de riz du Talambralu, et l'échange final de guirlandes.",
-    "tenue": "Cercle restreint. Les gestes paraissent répétitifs de l'extérieur : se laisser porter plutôt que chercher à tout comprendre."
+    "texte": "Trois à quatre heures de rituels se déroulent devant un autel, un prêtre récitant les prières en sanskrit. Le Muhurtham, fixé par calcul astrologique à 23h43, en marque le basculement. Les mariés, séparés par un rideau, s'appliquent une pâte de cumin et de sucre de canne sur la tête, et le rideau tombe. Suivent le nouage du mangalsutra autour du cou de la mariée, le Talambralu où les mariés se versent du riz sur la tête, et un dernier échange de guirlandes.",
+    "tenue": "Cérémonie réservée à un cercle restreint."
    }
   ],
   "infos": [
@@ -97,8 +97,8 @@
     "valeur": "enveloppe, montant finissant par 1"
    },
    {
-    "libelle": "Chaussures",
-    "valeur": "faciles à retirer"
+    "libelle": "Muhurtham",
+    "valeur": "27 août, 23h43"
    }
   ]
  },
@@ -124,7 +124,7 @@
   "arrivee": "2026-08-29T16:00",
   "ville": "hyderabad",
   "statut": "libre",
-  "note": "Vous partez avec les sacs et ne revenez pas : voiture avec chauffeur à la journée réservée la veille, ~2 500-3 500 ₹, sacs dans le coffre, dépose finale à l'aéroport. Une journée possible : Golconde à l'ouverture, Charminar et Laad Bazaar avec un déjeuner biryani, puis Chowmahalla ou Salar Jung. Version reposante après trois jours de mariage : Chowmahalla et Salar Jung seulement, sans la montée de Golconde."
+  "note": "Journée avec les sacs, sans retour à l'hôtel. Voiture avec chauffeur à la journée, 2 500 à 3 500 ₹, dépose finale à l'aéroport. Golconde ouvre à 9h et demande 2 à 3 h ; Chowmahalla et Salar Jung sont voisins du Charminar et ferment le vendredi."
  },
  {
   "id": "j6-vol-jaipur",
@@ -139,11 +139,11 @@
   "operateur": "IndiGo",
   "numero": "6E6638",
   "statut": "réservé",
-  "note": "Aéroport à 7-8 km de l'hôtel, mais partir à 16h : circulation imprévisible, comptoir à 18h.",
+  "note": "Aéroport à 7-8 km de l'hôtel, comptoir à 18h. Départ de la ville à 16h, la circulation étant imprévisible.",
   "instructions": [
-   "Voiture avec chauffeur réservée la veille, sacs dans le coffre",
-   "Quitter la ville à 16h",
-   "Filmage plastique des sacs au comptoir bagages hors format"
+   "Voiture avec chauffeur réservée la veille",
+   "Départ de la ville à 16h",
+   "Filmage des sacs au comptoir bagages hors format"
   ],
   "infos": [
    {
@@ -162,7 +162,7 @@
   "lieu_arrivee": "hotel-jaipur",
   "statut": "réservé",
   "operateur": "Via Booking",
-  "note": "Offert par Booking. Chauffeur en arrivées, ~35 min. Le numéro de vol est déjà renseigné."
+  "note": "Transfert offert par Booking, environ 35 min. Le chauffeur attend en arrivées et le numéro de vol lui a été transmis."
  },
  {
   "id": "j6-hotel-jaipur",
@@ -176,7 +176,7 @@
   "tel": "+911412201276",
   "prix": "163 €",
   "adresse": "D1-2A Behari Marg, Bani Park",
-  "note": "Piscine — un vrai maillot est exigé. Travel desk sur place. Spectacle de danse rajasthanie de 19h à 21h tous les soirs. Check-out 12h le 01/09, sacs laissables à l'hôtel, dépose à la gare par l'hôtel 1 h avant."
+  "note": "Piscine, maillot exigé. Travel desk sur place. Spectacle de danse rajasthanie de 19h à 21h. Check-out à 12h le 1ᵉʳ septembre, bagagerie disponible, dépose à la gare assurée par l'hôtel."
  },
  {
   "id": "j7-jaipur",
@@ -186,7 +186,7 @@
   "arrivee": "2026-09-01T18:00",
   "ville": "jaipur",
   "statut": "libre",
-  "note": "Trois jours pleins. Uber et Uber Auto fonctionnent bien depuis Bani Park. Deux contraintes de timing seulement : Amber Fort mérite d'être fait à 8h, et Nahargarh est le meilleur point de vue au coucher du soleil."
+  "note": "Amber Fort ouvre à 8h, avant la chaleur et l'affluence. Nahargarh reste ouvert jusqu'à 22h et domine la ville au couchant. Uber et Uber Auto desservent bien Bani Park."
  },
  {
   "id": "j9-train-udaipur",
@@ -201,17 +201,17 @@
   "numero": "19665",
   "classe": "1A",
   "statut": "réservé",
-  "note": "Attendez du retard : ce train part de Khajuraho la veille à 9h25 et fait 1 092 km. Il roule depuis treize heures quand il atteint Jaipur. Une arrivée entre 8h et 10h est plausible. Suivi sur Where is my Train. Passeport original obligatoire à bord, pas une photocopie.",
+  "note": "Le train vient de Khajuraho, d'où il part la veille à 9h25, et parcourt 1 092 km. Il roule donc depuis treize heures en arrivant à Jaipur, et son retard dépasse souvent une heure. Le passeport original est demandé à bord.",
   "instructions": [
-   "Passeport original sur soi, une photocopie ne suffit pas",
-   "Suivre le train sur Where is my Train avant de partir",
-   "Repérer le numéro de voiture sur la liste collée 1 h avant"
+   "Passeport original sur soi",
+   "Position du train sur Where is my Train",
+   "Numéro de voiture sur la liste affichée 1 h avant"
   ]
  },
  {
   "id": "j10-hotel-udaipur",
   "type": "hotel",
-  "titre": "Manuscript — Jhilwara Haveli",
+  "titre": "Manuscript, Jhilwara Haveli",
   "depart": "2026-09-02T07:00",
   "arrivee": "2026-09-04T11:00",
   "lieu": "hotel-udaipur",
@@ -219,7 +219,7 @@
   "statut": "réservé",
   "tel": "+917073031166",
   "adresse": "City Palace Road",
-  "note": "Check-in de 14h à 23h. La demande de dépôt des sacs à 7h a été envoyée. Check-out 11h le 04/09, sacs à l'hôtel, départ 17h30."
+  "note": "Check-in de 14h à 23h. Dépôt des sacs demandé pour 7h. Check-out à 11h le 4 septembre, bagagerie jusqu'au départ de 17h30."
  },
  {
   "id": "j10-udaipur",
@@ -229,7 +229,7 @@
   "arrivee": "2026-09-04T17:00",
   "ville": "udaipur",
   "statut": "libre",
-  "note": "Mercredi : sacs déposés le matin, City Palace et vieille ville l'après-midi, bateau au coucher du soleil ou spectacle de Bagore-ki-Haveli à 19h. Jeudi : journée d'excursion si vous en voulez une. Vendredi : matinée libre."
+  "note": "Le City Palace et la vieille ville occupent une demi-journée. Le bateau sur le lac Pichola part au couchant et le spectacle de Bagore-ki-Haveli commence à 19h. La journée du jeudi laisse la place à une excursion."
  },
  {
   "id": "j12-train-delhi",
@@ -245,22 +245,22 @@
   "nom_train": "Mewar Express",
   "classe": "3A",
   "statut": "réservé",
-  "note": "Emporter de quoi dîner, un pull — la climatisation est glaciale — et un cadenas pour attacher les sacs sous la couchette basse.",
+  "note": "La climatisation des voitures 3A est froide. Le dîner ne se vend pas à bord.",
   "instructions": [
-   "Acheter de quoi dîner avant de monter",
-   "Pull accessible : la climatisation est glaciale",
-   "Cadenas pour attacher les sacs sous la couchette basse"
+   "Dîner acheté avant le départ",
+   "Pull accessible",
+   "Cadenas pour les sacs sous la couchette"
   ]
  },
  {
   "id": "j13-delhi",
   "type": "etape",
-  "titre": "Delhi — journée avec ta sœur",
+  "titre": "Journée à Delhi",
   "depart": "2026-09-05T07:00",
   "arrivee": "2026-09-05T22:00",
   "ville": "delhi",
   "statut": "libre",
-  "note": "Prévenir ta sœur du bus de 7h le lendemain pour que la soirée se termine tôt. Sacs faits avant de dormir, deux alarmes sur deux téléphones : l'établissement n'a pas de groupe électrogène."
+  "note": "Le bus du lendemain part à 7h. L'établissement n'a pas de groupe électrogène."
  },
  {
   "id": "j13-hotel-delhi",
@@ -272,7 +272,7 @@
   "ville": "delhi",
   "statut": "réservé",
   "adresse": "Mathura Road, près d'Ashram Chowk",
-  "note": "À 2,4 km de Nizamuddin. Le tableau des réservations indique « Saket », c'est une erreur : la position confirme Mathura Road."
+  "note": "À 2,4 km de la gare de Nizamuddin."
  },
  {
   "id": "j14-bus-rishikesh",
@@ -287,12 +287,12 @@
   "operateur": "Laxmi Holidays",
   "tel": "+911144446900",
   "statut": "réservé",
-  "note": "Réveil 5h, taxi réservé la veille vers 5h30 (~600-800 ₹, Uber en secours ~350-500 ₹), arrivée à l'ISBT vers 6h — 15-16 km sur des routes vides. Embarquement : sortir par la porte 8 du métro, entrer dans l'ISBT vers les quais d'arrivée 53 et 54, repérer le comptoir Laxmi Holidays.",
+  "note": "L'ISBT est à 15-16 km, environ 30 min sur des routes vides à cette heure. Taxi 600 à 800 ₹, Uber 350 à 500 ₹. L'embarquement se fait côté quais d'arrivée 53 et 54, au comptoir Laxmi Holidays, en sortant par la porte 8 du métro.",
   "instructions": [
-   "Deux alarmes sur deux téléphones, réveil 5h",
-   "Taxi réservé la veille au soir",
-   "Sortir par la porte 8 du métro, quais d'arrivée 53 et 54",
-   "Prévenir la guesthouse de l'heure d'arrivée à Nepali Farm"
+   "Deux réveils, 5h",
+   "Taxi réservé la veille",
+   "Porte 8 du métro, quais 53-54",
+   "Heure d'arrivée transmise à la guesthouse"
   ],
   "infos": [
    {
@@ -314,7 +314,7 @@
   "lieu_depart": "nepali-farm",
   "lieu_arrivee": "tapovan",
   "statut": "à organiser",
-  "note": "La dépose se fait sous le nouveau pont : un carrefour sur la nationale, à 12-13 km de Tapovan. Auto privé 500-700 ₹. Prévenir la guesthouse de votre heure d'arrivée."
+  "note": "La dépose se fait à un carrefour de la nationale, sous le nouveau pont, à 12-13 km de Tapovan. Auto privé 500 à 700 ₹."
  },
  {
   "id": "j14-hotel-rishikesh",
@@ -325,7 +325,7 @@
   "lieu": "tapovan",
   "ville": "rishikesh",
   "statut": "à réserver",
-  "note": "Deux nuits à Tapovan. À demander avant de réserver : la distance à la route où un taxi peut déposer, et une consigne à bagages jusqu'à 20h15 le 08 — c'est le plus long créneau sans chambre du voyage."
+  "note": "Deux nuits à Tapovan. Une consigne à bagages est nécessaire jusqu'à 20h15 le 8 septembre, et la distance à la route accessible en taxi varie beaucoup d'une adresse à l'autre."
  },
  {
   "id": "j14-rishikesh",
@@ -335,7 +335,7 @@
   "arrivee": "2026-09-08T20:00",
   "ville": "rishikesh",
   "statut": "libre",
-  "note": "Le 6 septembre est un dimanche : plusieurs écoles de yoga réduisent ou suspendent leurs cours, caler la séance sur Anand Prakash. Retirer du liquide dans Rishikesh ville avant de monter : les distributeurs se raréfient vers Tapovan."
+  "note": "Le 6 septembre tombe un dimanche, jour où plusieurs écoles de yoga suspendent leurs cours ; Anand Prakash reste ouvert. Les distributeurs de billets se raréfient en montant vers Tapovan."
  },
  {
   "id": "j16-bus-agra",
@@ -350,11 +350,11 @@
   "operateur": "Shri Krishna Travels",
   "tel": "+919720001155",
   "statut": "réservé",
-  "note": "Auto vers Nepali Farm à 20h15, réservé la veille, 30 à 40 min. Embarquement : Shri Krishna Travels, Nepali Farm, sous le pont, au carrefour en T. Arrivée chez Radhika Travels à Chipitola, près du Rakab Ganj Police Thana, à 3-4 km de Taj Ganj : auto ou e-rickshaw, 100-200 ₹, 15 min.",
+  "note": "L'embarquement se fait à Nepali Farm, sous le pont, au carrefour en T. L'arrivée a lieu chez Radhika Travels à Chipitola, près du Rakab Ganj Police Thana, à 3-4 km de Taj Ganj, soit 15 min en auto pour 100 à 200 ₹. La chambre est libérée à 11h et le bus part à 21h30.",
   "instructions": [
-   "Retirer du liquide dans Rishikesh ville avant de monter à Tapovan",
-   "Consigne à bagages de 11h à 20h15 — le plus long créneau du voyage",
-   "Auto vers Nepali Farm réservé la veille pour 20h15"
+   "Retrait d'espèces dans Rishikesh ville",
+   "Consigne à bagages de 11h à 20h15",
+   "Auto pour Nepali Farm réservé la veille"
   ],
   "infos": [
    {
@@ -372,17 +372,17 @@
   "lieu": "taj-ganj",
   "ville": "agra",
   "statut": "à réserver",
-  "note": "Trois nuits à Taj Ganj, côté porte Est : sortir de sa chambre à 5h20 et être dans la file à 5h35 vaut plus que la moquette. À demander : dépôt des sacs dès 8h30 le 09, et un taxi à 6h45 le 11."
+  "note": "Trois nuits à Taj Ganj, du côté de la porte Est, à 5 à 15 min à pied des entrées du Taj."
  },
  {
   "id": "j17-agra",
   "type": "etape",
-  "titre": "Agra — premier passage au Taj",
+  "titre": "Agra, premier passage au Taj",
   "depart": "2026-09-09T09:00",
   "arrivee": "2026-09-09T20:00",
   "ville": "agra",
   "statut": "libre",
-  "note": "Matin de repos après la nuit en bus. Premier passage au Taj en fin d'après-midi, de 15h à 18h30 : lumière rasante, le marbre vire à l'ocre doré, et l'affluence retombe après 17h. Puis Fort d'Agra, ou Mehtab Bagh au coucher du soleil."
+  "note": "Matinée de repos après la nuit en bus. Le Taj se visite en fin d'après-midi, entre 15h et 18h30, quand la lumière est rasante et que l'affluence retombe après 17h. Le Fort d'Agra et Mehtab Bagh occupent la fin de journée."
  },
  {
   "id": "j18-taj-aube",
@@ -392,12 +392,12 @@
   "arrivee": "2026-09-10T16:00",
   "ville": "agra",
   "statut": "libre",
-  "note": "5h20 : deuxième passage au Taj. Rose puis blanc, brume sur la Yamuna en mousson, et presque personne. Prendre ce jour-là le supplément mausolée, la queue à l'escalier est plus courte. Puis Wildlife SOS, ouvert de 10h à 16h, donc parfaitement compatible avec le Taj à l'aube — et Sur Sarovar au retour, sur la même route. Voiture avec chauffeur réservée la veille via l'hôtel. Si vous voulez aussi Keoladeo, c'est jouable mais dans l'autre sens : il faudrait partir à 5h30 vers Bharatpur et renoncer au Taj à l'aube.",
+  "note": "Le Taj ouvre à l'aube et la file se forme vers 5h30 à la porte Est. La brume de mousson se lève sur la Yamuna et la fréquentation reste faible. Le supplément mausolée s'utilise ce matin-là, la queue de l'escalier étant plus courte. Wildlife SOS ouvre de 10h à 16h, à 60 km au nord, et Sur Sarovar se trouve sur la route du retour.",
   "instructions": [
-   "Billets du Taj achetés à l'avance, un par passage",
-   "Supplément mausolée à prendre pour ce passage-ci",
+   "Billets du Taj imprimés, un par passage",
+   "Supplément mausolée pour ce passage",
    "Réservation Wildlife SOS confirmée",
-   "Voiture avec chauffeur réservée la veille via l'hôtel"
+   "Voiture avec chauffeur réservée la veille"
   ],
   "infos": [
    {
@@ -420,21 +420,21 @@
   "nom_train": "NZM Rajdhani",
   "classe": "2A",
   "statut": "réservé",
-  "note": "Check-out 6h45, taxi réservé la veille. Agra Cantt est à 5-6 km de Taj Ganj. Pas de petit-déjeuner à l'hôtel, mais il est servi à bord.",
+  "note": "Agra Cantt est à 5-6 km de Taj Ganj. Le petit-déjeuner est servi à bord.",
   "instructions": [
-   "Check-out 6h45, taxi réservé la veille",
-   "Petit-déjeuner servi à bord, rien à prévoir"
+   "Check-out 6h45",
+   "Taxi réservé la veille"
   ]
  },
  {
   "id": "j19-delhi",
   "type": "etape",
-  "titre": "Delhi — dernière journée",
+  "titre": "Dernière journée à Delhi",
   "depart": "2026-09-11T10:00",
   "arrivee": "2026-09-11T21:00",
   "ville": "delhi",
   "statut": "à réserver",
-  "note": "Chambre à la journée à réserver, day use jusqu'à 20h-21h : sacs déposés, douche. Journée libre."
+  "note": "Chambre à la journée jusqu'à 20h ou 21h, avec bagagerie et douche."
  },
  {
   "id": "j19-metro-t3",
@@ -445,7 +445,7 @@
   "lieu_depart": "gare-new-delhi",
   "lieu_arrivee": "aeroport-delhi-t3",
   "statut": "à faire",
-  "note": "New Delhi → T3 en 20 min. Dernier train à 23h30. Une fois entrés dans la zone départs du T3, on ne vous laisse plus ressortir : déposer ou récupérer les bagages en consigne avant d'entrer."
+  "note": "New Delhi → T3 en 20 min, dernier train à 23h30. La zone départs du T3 ne permet pas de ressortir une fois entré."
  },
  {
   "id": "j20-vol-paris",
@@ -461,8 +461,8 @@
   "statut": "réservé",
   "note": "Départ dans la nuit du 11 au 12.",
   "instructions": [
-   "Métro Airport Express avant 23h30, dernier départ",
-   "Récupérer les bagages en consigne avant d'entrer en zone départs"
+   "Métro Airport Express avant 23h30",
+   "Bagages récupérés en consigne avant la zone départs"
   ]
  }
 ]
