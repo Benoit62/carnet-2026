@@ -8,32 +8,27 @@
   {
    "titre": "Billets du Taj Mahal",
    "lien": "asi.payumoney.com",
-   "detail": "Deux entrées par personne — un billet ne vaut qu'un passage — plus 200 ₹ une seule fois pour le mausolée, à garder pour l'aube du 10."
+   "detail": "Deux entrées par personne + une fois le mausolée (200 ₹)"
   },
   {
    "titre": "Wildlife SOS",
    "lien": "wildlifesos.org",
-   "detail": "Réservation obligatoire, sans elle la visite est impossible. C'est la sortie du 10 au matin, après le Taj."
+   "detail": "Réservation obligatoire"
   },
   {
    "titre": "Hébergement à Rishikesh",
    "lien": "",
-   "detail": "Deux nuits à Tapovan, les 06 et 07/09. Demander la distance à la route et une consigne jusqu'à 20h15 le 08."
+   "detail": "Deux nuits à Tapovan, les 06 et 07/09"
   },
   {
    "titre": "Hébergement à Agra",
    "lien": "",
-   "detail": "Trois nuits à Taj Ganj côté porte Est, du 08 au 11/09. Demander le dépôt des sacs dès 8h30 le 09 et un taxi à 6h45 le 11."
-  },
-  {
-   "titre": "Chambre à la journée à Delhi",
-   "lien": "",
-   "detail": "Le 11/09, day use jusqu'à 20h-21h."
+   "detail": "Trois nuits à Taj Ganj côté porte Est, du 08 au 11/09. Demander le dépôt des sacs dès 8h30 le 09 et un taxi à 6h45 le 11 pour visite à l'aube."
   },
   {
    "titre": "Safari de Jhalana",
    "lien": "jhalanasafari.in",
-   "detail": "Si retenu. Passeport requis, paiement intégral, jusqu'à 90 jours à l'avance."
+   "detail": ""
   }
  ],
  "urgence": {
@@ -75,21 +70,21 @@
     "tel": "+919720001155"
    }
   ],
-  "note": "Prévenir Heymondo rapidement : la plupart des contrats l'exigent avant d'engager des frais."
+  "note": "Prévenir Heymondo rapidement avant d'engager des frais."
  },
  "villes": [
   {
    "slug": "hyderabad",
    "nom": "Hyderabad",
    "region": "Telangana",
-   "presentation": "Ville musulmane du Deccan, d'une identité tout autre que le Rajasthan. Capitale des Qutb Shahi puis des Nizams, longtemps comptés parmi les hommes les plus riches du monde. Vous n'avez qu'une demi-journée : Golconde, ou le duo Charminar et musées.",
+   "presentation": "Ville musulmane du Deccan, d'une identité tout autre que le Rajasthan. Capitale des Qutb Shahi puis des Nizams, longtemps comptés parmi les hommes les plus riches du monde.",
    "sejour": "Une demi-journée le 29/08, sacs dans le coffre, dépose finale à l'aéroport.",
    "tables": [
     "Paradise à Secunderabad pour le biryani canonique",
     "Shah Ghouse, plus local",
     "Chutneys, végétarien sud-indien"
    ],
-   "conseil": "Demander « medium spicy » : le seuil local est élevé. Le biryani se sert avec mirchi ka salan et raita.",
+   "conseil": "Demander « medium spicy » car le seuil local est élevé. Le biryani se sert avec mirchi ka salan et raita.",
    "photos": [
     "photos/ville-hyderabad.jpg"
    ],
@@ -100,7 +95,7 @@
    "slug": "jaipur",
    "nom": "Jaipur",
    "region": "Rajasthan",
-   "presentation": "La ville rose, fondée en 1727 sur un plan en damier — une des premières villes planifiées d'Inde. Grande et étalée, mais Uber fonctionne bien partout depuis Bani Park.",
+   "presentation": "La ville rose, fondée en 1727 sur un plan en damier, une des premières villes planifiées d'Inde. Grande et étalée, mais Uber fonctionne bien partout depuis Bani Park.",
    "sejour": "Trois jours pleins, du 30/08 au 01/09.",
    "tables": [
     "Laxmi Misthan Bhandar, thalis et sucreries depuis 1727",
@@ -123,13 +118,13 @@
    "nom": "Udaipur",
    "region": "Rajasthan",
    "presentation": "La ville des lacs, capitale du Mewar depuis 1559. En fin de mousson les lacs sont pleins, ce qui n'est pas le cas une grande partie de l'année. Tout se fait à pied dans la vieille ville.",
-   "sejour": "Deux nuits seulement, du 02 au 04/09. Les excursions demandent une journée entière.",
+   "sejour": "Deux nuits du 02 au 04/09",
    "tables": [
     "Ambrai, la table avec vue sur le City Palace illuminé — à réserver",
     "Jheel's Ginger Coffee Bar au petit-déjeuner",
     "Millets of Mewar"
    ],
-   "conseil": "Uber est peu fiable ici : autos devant la gare, 150-250 ₹ à négocier. Les voitures n'entrent pas dans les ruelles, dépose à 100-200 m.",
+   "conseil": "Uber est peu fiable ici, autos devant la gare, 150-250 ₹ à négocier. Les voitures n'entrent pas dans les ruelles.",
    "photos": [
     "photos/ville-udaipur.jpg"
    ],
@@ -143,8 +138,8 @@
    "slug": "delhi",
    "nom": "Delhi",
    "region": "Territoire de la capitale",
-   "presentation": "Sept villes superposées sur deux mille ans, du Qutb Minar de 1193 au New Delhi de Lutyens. Deux passages : le samedi 5, et le vendredi 11 en demi-journée.",
-   "sejour": "Deux escales, dont une journée complète le 05/09 avec ta sœur.",
+   "presentation": "Sept villes superposées sur deux mille ans, du Qutb Minar de 1193 au New Delhi de Lutyens.",
+   "sejour": "",
    "tables": [
     "Karim's, cuisine moghole derrière la Jama Masjid depuis 1913",
     "Saravana Bhavan à Connaught Place, sud-indien impeccable",
@@ -161,14 +156,14 @@
    "slug": "rishikesh",
    "nom": "Rishikesh",
    "region": "Uttarakhand",
-   "presentation": "Ville sainte au point où le Gange sort de l'Himalaya, capitale mondiale autoproclamée du yoga. Ville sèche et végétarienne : ni alcool ni viande, légalement. La plus tranquille du voyage.",
-   "sejour": "Deux nuits, trois demi-journées, du 06 au 08/09. Vous logez à Tapovan.",
+   "presentation": "Ville sainte au point où le Gange sort de l'Himalaya, capitale mondiale autoproclamée du yoga. Ville sèche et végétarienne : ni alcool ni viande.",
+   "sejour": "Deux nuits, trois demi-journées, du 06 au 08/09.",
    "tables": [
     "Little Buddha Café, structure en bois au-dessus du Gange",
     "Ramana's Organic Café",
     "Freedom Café"
    ],
-   "conseil": "Les ruelles de Tapovan sont étroites et en pente, sombres et glissantes en mousson : lampe frontale utile. La baignade dans le Gange est à proscrire, le courant est très fort en crue.",
+   "conseil": "Les ruelles de Tapovan sont étroites et en pente, sombres et glissantes en mousson donc lampe frontale utile. La baignade dans le Gange est à éviter, le courant est très fort en crue.",
    "photos": [
     "photos/ville-rishikesh.jpg"
    ],
@@ -179,14 +174,14 @@
    "slug": "agra",
    "nom": "Agra",
    "region": "Uttar Pradesh",
-   "presentation": "Capitale moghole avant Delhi, et bien plus que le seul Taj : le fort où Shah Jahan fut emprisonné par son fils, et le tombeau qui a servi de prototype au Taj vingt ans plus tôt.",
+   "presentation": "Capitale moghole avant Delhi, et bien plus que le seul Taj. Le fort où Shah Jahan fut emprisonné par son fils, et le tombeau qui a servi de prototype au Taj vingt ans plus tôt.",
    "sejour": "Deux nuits, du 08 au 11/09, à Taj Ganj côté porte Est.",
    "tables": [
     "Pinch of Spice, la meilleure table",
     "Sheroes Hangout",
     "Joney's Place, minuscule et culte depuis 1978"
    ],
-   "conseil": "C'est la ville d'Inde où le harcèlement commercial est le plus organisé. Ce n'est pas un enjeu de sécurité mais de fatigue. Réponse : « Nahin chahiye », sans s'arrêter de marcher.",
+   "conseil": "C'est la ville d'Inde où le harcèlement commercial est le plus organisé. Ce n'est pas un enjeu de sécurité mais de fatigue. Répondre : « Nahin chahiye » sans s'arrêter de marcher.",
    "photos": [
     "photos/ville-agra.jpg"
    ],
