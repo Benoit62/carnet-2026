@@ -3,160 +3,217 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#14110f">
+<meta name="theme-color" content="#faf7f2">
 <title>Inde 2026</title>
 <link rel="icon" href="icone-192.png">
 <link rel="apple-touch-icon" href="icone-192.png">
 <link rel="manifest" href="manifest.json">
 <style>
 :root{
-  --fond:#14110f; --fond2:#1e1a17; --carte:#231e1a; --carte2:#2c2621;
-  --trait:#3a322c; --texte:#f4efe9; --doux:#b3a79c; --faible:#7d726a;
-  --or:#e0a33e; --hotel:#e08a3c; --vol:#5aa9e6; --train:#5fbf8a;
-  --bus:#b98ae0; --transfert:#8e9aa8; --etape:#4fb3a8; --alerte:#e0603c;
+  --fond:#faf7f2; --fond2:#f2ece3; --carte:#ffffff; --carte2:#f6f1e9;
+  --trait:#e2d9cc; --trait2:#cfc3b2;
+  --texte:#241f1a; --doux:#6b6157; --faible:#948877;
+  --or:#b8791a; --orfond:#fdf3e0;
+  --hotel:#c2701f; --vol:#2b7fbf; --train:#2f8f63; --bus:#8256b8;
+  --transfert:#6b7785; --etape:#1f8a80; --alerte:#c2411f; --alertefond:#fdeee9;
+  --ombre:0 1px 2px rgba(60,45,25,.06),0 2px 8px rgba(60,45,25,.05);
+}
+[data-theme="sombre"]{
+  --fond:#14110f; --fond2:#1c1815; --carte:#231e1a; --carte2:#2c2621;
+  --trait:#3a322c; --trait2:#4a4038;
+  --texte:#f4efe9; --doux:#b3a79c; --faible:#7d726a;
+  --or:#e0a33e; --orfond:#31260f;
+  --hotel:#e08a3c; --vol:#5aa9e6; --train:#5fbf8a; --bus:#b98ae0;
+  --transfert:#8e9aa8; --etape:#4fb3a8; --alerte:#e0603c; --alertefond:#2a1d16;
+  --ombre:0 1px 3px rgba(0,0,0,.3);
 }
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
 html,body{margin:0;padding:0}
-body{
-  background:var(--fond); color:var(--texte);
+body{background:var(--fond);color:var(--texte);
   font:17px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
-  padding-bottom:env(safe-area-inset-bottom);
-  overscroll-behavior-y:none;
-}
+  padding-bottom:env(safe-area-inset-bottom);overscroll-behavior-y:none}
 a{color:inherit}
 button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .enveloppe{max-width:680px;margin:0 auto;padding:0 14px 90px}
 
-/* ---------- en-tête ---------- */
-header{
-  position:sticky;top:0;z-index:40;background:rgba(20,17,15,.94);
+header{position:sticky;top:0;z-index:40;background:color-mix(in srgb,var(--fond) 92%,transparent);
   backdrop-filter:blur(12px);border-bottom:1px solid var(--trait);
-  padding:calc(env(safe-area-inset-top) + 10px) 14px 10px;
-}
-header .dedans{max-width:680px;margin:0 auto;display:flex;align-items:baseline;gap:10px}
-header h1{font-size:19px;margin:0;letter-spacing:.2px}
-header .horloge{margin-left:auto;font-size:13px;color:var(--doux);
-  font-variant-numeric:tabular-nums}
-header .horloge b{color:var(--or);font-weight:600}
+  padding:calc(env(safe-area-inset-top) + 10px) 14px 10px}
+header .dedans{max-width:680px;margin:0 auto;display:flex;align-items:center;gap:10px}
+header h1{font-size:19px;margin:0;letter-spacing:.2px;font-weight:700}
+header .jv{font-size:13px;color:var(--faible)}
+.pendule{margin-left:auto;display:flex;align-items:center;gap:8px}
+.pendule button{padding:6px 11px;border-radius:999px;border:1px solid var(--trait);
+  background:var(--carte);font-size:13.5px;font-variant-numeric:tabular-nums;
+  display:flex;gap:6px;align-items:center;box-shadow:var(--ombre)}
+.pendule b{color:var(--or);font-weight:700}
+.pendule .zone{font-size:11px;color:var(--faible);text-transform:uppercase;letter-spacing:.5px}
+.pendule .theme{padding:6px 9px;font-size:15px}
 
-/* ---------- onglets ---------- */
 nav.onglets{display:flex;gap:6px;margin:14px 0 18px;overflow-x:auto;
   scrollbar-width:none;padding-bottom:2px}
 nav.onglets::-webkit-scrollbar{display:none}
-nav.onglets button{
-  padding:9px 15px;border-radius:999px;background:var(--carte);
+nav.onglets button{padding:9px 15px;border-radius:999px;background:var(--carte);
   border:1px solid var(--trait);color:var(--doux);font-size:14.5px;
-  white-space:nowrap;font-weight:500}
-nav.onglets button[aria-selected=true]{background:var(--or);color:#241a08;
+  white-space:nowrap;font-weight:500;box-shadow:var(--ombre)}
+nav.onglets button[aria-selected=true]{background:var(--or);color:#fff;
   border-color:var(--or);font-weight:600}
 
-/* ---------- bandeau maintenant ---------- */
-.maintenant{
-  background:linear-gradient(150deg,#3a2d18,#241d15);
-  border:1px solid #5c4620;border-radius:16px;padding:16px;margin-bottom:20px}
+.maintenant{background:var(--orfond);border:1px solid var(--or);border-radius:16px;
+  padding:16px;margin-bottom:22px;width:100%;text-align:left;display:block;
+  box-shadow:var(--ombre)}
 .maintenant .quoi{font-size:11.5px;letter-spacing:.9px;text-transform:uppercase;
-  color:var(--or);font-weight:700;margin-bottom:7px}
+  color:var(--or);font-weight:800;margin-bottom:7px}
 .maintenant h2{margin:0 0 5px;font-size:21px;line-height:1.25}
 .maintenant .quand{color:var(--doux);font-size:14.5px}
-.maintenant .compte{color:var(--or);font-weight:600}
+.maintenant .compte{color:var(--or);font-weight:700}
 
-/* ---------- carte d'étape ---------- */
-.jour{display:flex;align-items:center;gap:10px;margin:26px 0 12px}
-.jour span{font-size:12.5px;letter-spacing:1.1px;text-transform:uppercase;
-  color:var(--faible);font-weight:700}
+/* ----- bandeau de jour ----- */
+.jour{display:flex;align-items:center;gap:9px;margin:24px 0 12px;padding-left:2px}
+.jour .date{font-size:12.5px;letter-spacing:.8px;text-transform:uppercase;
+  color:var(--doux);font-weight:800}
+.jour .ici{font-size:12.5px;font-weight:700;color:var(--or);
+  background:var(--orfond);border:1px solid var(--trait);
+  padding:2px 9px;border-radius:999px;letter-spacing:.2px;text-transform:none}
 .jour i{flex:1;height:1px;background:var(--trait)}
+.jour.aujourdhui .date{color:var(--or)}
 
-.etape{display:flex;gap:12px;margin-bottom:11px}
-.rail{width:12px;display:flex;flex-direction:column;align-items:center;padding-top:20px}
-.rail .pastille{width:11px;height:11px;border-radius:50%;background:var(--trait);
-  flex:none;border:2px solid var(--fond)}
-.rail .fil{flex:1;width:2px;background:var(--trait);margin-top:3px}
-.etape.actuelle .rail .pastille{background:var(--or);box-shadow:0 0 0 4px rgba(224,163,62,.2)}
-.etape.passee{opacity:.42}
+/* ----- fil continu ----- */
+.fil{position:relative;padding-left:26px}
+.fil::before{content:"";position:absolute;left:5px;top:0;bottom:0;width:2px;
+  background:var(--trait2);border-radius:2px}
+.fil>*{position:relative}
+.pastille{position:absolute;left:-26px;top:22px;width:12px;height:12px;
+  border-radius:50%;background:var(--trait2);border:3px solid var(--fond);
+  box-sizing:content-box;margin-left:-1px}
+.etape.actuelle>.pastille{background:var(--or);box-shadow:0 0 0 4px color-mix(in srgb,var(--or) 22%,transparent)}
+.etape.passee{opacity:.5}
+.etape{margin-bottom:11px}
 
-.carte{
-  flex:1;background:var(--carte);border:1px solid var(--trait);border-radius:14px;
-  overflow:hidden;display:flex;text-align:left;width:100%;transition:background .12s}
+.carte{background:var(--carte);border:1px solid var(--trait);border-radius:14px;
+  overflow:hidden;display:flex;text-align:left;width:100%;box-shadow:var(--ombre)}
 .carte:active{background:var(--carte2)}
-.etape.actuelle .carte{border-color:var(--or)}
-.carte .vignette{width:82px;flex:none;background:var(--fond2);
-  background-size:cover;background-position:center;display:flex;
-  align-items:center;justify-content:center;font-size:26px}
+.etape.actuelle .carte{border-color:var(--or);border-width:2px}
+.carte .vignette{width:86px;flex:none;background:var(--fond2);background-size:cover;
+  background-position:center;display:flex;align-items:center;justify-content:center;
+  font-size:26px;position:relative}
+.carte .vignette .nb{position:absolute;bottom:5px;right:5px;font-size:10px;
+  background:rgba(0,0,0,.6);color:#fff;border-radius:999px;padding:1px 6px}
 .carte .corps{padding:12px 13px;flex:1;min-width:0}
-.carte .haut{display:flex;align-items:center;gap:7px;margin-bottom:3px}
-.carte .type{font-size:10.5px;letter-spacing:.9px;text-transform:uppercase;font-weight:700}
-.carte h3{margin:0 0 3px;font-size:16.5px;line-height:1.3;font-weight:600}
+.carte .haut{display:flex;align-items:center;gap:7px;margin-bottom:3px;flex-wrap:wrap}
+.carte .type{font-size:10.5px;letter-spacing:.9px;text-transform:uppercase;font-weight:800}
+.carte h3{margin:0 0 3px;font-size:16.5px;line-height:1.3;font-weight:650}
 .carte .meta{font-size:13.5px;color:var(--doux);font-variant-numeric:tabular-nums}
 .carte .sous{font-size:13px;color:var(--faible);margin-top:3px}
 .t-hotel{color:var(--hotel)} .t-vol{color:var(--vol)} .t-train{color:var(--train)}
 .t-bus{color:var(--bus)} .t-transfert{color:var(--transfert)} .t-etape{color:var(--etape)}
-.b-hotel{background:var(--hotel)} .b-vol{background:var(--vol)} .b-train{background:var(--train)}
-.b-bus{background:var(--bus)} .b-transfert{background:var(--transfert)} .b-etape{background:var(--etape)}
 
-.puce{font-size:10.5px;padding:2.5px 8px;border-radius:999px;font-weight:700;
-  letter-spacing:.4px;background:var(--alerte);color:#fff;flex:none}
-.puce.douce{background:#3a322c;color:var(--doux)}
+.puce{font-size:10.5px;padding:2.5px 8px;border-radius:999px;font-weight:800;
+  letter-spacing:.3px;background:var(--alerte);color:#fff;flex:none}
+.puce.taches{background:var(--orfond);color:var(--or);border:1px solid var(--or)}
+.infos{display:flex;gap:6px;flex-wrap:wrap;margin-top:7px}
+.infos span{font-size:12px;background:var(--fond2);border:1px solid var(--trait);
+  border-radius:7px;padding:2px 8px;color:var(--doux)}
+.infos span b{color:var(--texte);font-weight:650}
 
-/* ---------- grille villes / activités ---------- */
+/* ----- bande de continuité ----- */
+.suite{display:flex;align-items:center;gap:9px;font-size:13px;color:var(--faible);
+  padding:6px 0 6px 2px;margin-bottom:9px}
+.suite .barre{width:4px;align-self:stretch;min-height:22px;border-radius:3px;
+  background:var(--trait2)}
+.suite.h .barre{background:var(--hotel)} .suite.e .barre{background:var(--etape)}
+.suite b{font-weight:650;color:var(--doux)}
+
+/* ----- grilles ----- */
 .grille{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:11px}
 .tuile{background:var(--carte);border:1px solid var(--trait);border-radius:14px;
-  overflow:hidden;text-align:left;display:flex;flex-direction:column}
+  overflow:hidden;text-align:left;display:flex;flex-direction:column;box-shadow:var(--ombre)}
 .tuile:active{background:var(--carte2)}
 .tuile .img{aspect-ratio:4/3;background:var(--fond2);background-size:cover;
   background-position:center;display:flex;align-items:center;justify-content:center;
   font-size:30px;position:relative}
-.tuile .img .etoile{position:absolute;top:7px;right:8px;font-size:13px;
-  background:rgba(0,0,0,.55);border-radius:999px;padding:2px 7px}
+.tuile .img .etoile{position:absolute;top:7px;right:8px;font-size:12px;
+  background:rgba(0,0,0,.55);color:#fff;border-radius:999px;padding:2px 7px}
 .tuile .txt{padding:10px 11px}
-.tuile h4{margin:0;font-size:14.5px;line-height:1.3;font-weight:600}
+.tuile h4{margin:0;font-size:14.5px;line-height:1.3;font-weight:650}
 .tuile p{margin:3px 0 0;font-size:12.5px;color:var(--faible)}
 
-/* ---------- fiche modale ---------- */
-.voile{position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:60;
+/* ----- modales ----- */
+.voile{position:fixed;inset:0;background:rgba(35,25,10,.45);z-index:60;
   display:none;align-items:flex-end;backdrop-filter:blur(3px)}
 .voile.ouvert{display:flex}
-.fiche{background:var(--fond2);width:100%;max-height:92vh;overflow-y:auto;
+.voile.arriere{z-index:59}
+.fiche{background:var(--fond);width:100%;max-height:92vh;overflow-y:auto;
   border-radius:20px 20px 0 0;border-top:1px solid var(--trait);
   animation:monte .22s ease-out;padding-bottom:env(safe-area-inset-bottom)}
-@keyframes monte{from{transform:translateY(30px);opacity:.4}to{transform:none;opacity:1}}
+@keyframes monte{from{transform:translateY(28px);opacity:.5}to{transform:none;opacity:1}}
 @media(min-width:680px){
   .voile{align-items:center;justify-content:center}
   .fiche{max-width:640px;border-radius:20px;border:1px solid var(--trait)}
 }
-.fiche .banniere{height:180px;background:var(--carte);background-size:cover;
+.banniere{position:relative;background:var(--carte2)}
+.carrousel{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;
+  scrollbar-width:none;height:200px}
+.carrousel::-webkit-scrollbar{display:none}
+.carrousel .vue{flex:0 0 100%;scroll-snap-align:center;background-size:cover;
   background-position:center;display:flex;align-items:center;justify-content:center;
-  font-size:52px;position:relative}
-.fiche .fermer,.fiche .retour{position:absolute;top:12px;width:36px;height:36px;
-  border-radius:50%;background:rgba(0,0,0,.6);font-size:20px;line-height:36px;
-  text-align:center;color:#fff}
-.fiche .fermer{right:12px}
-.fiche .retour{left:12px;font-size:22px}
-.fiche .dedans{padding:18px 18px 24px}
+  font-size:52px}
+.points{position:absolute;bottom:9px;left:0;right:0;display:flex;justify-content:center;
+  gap:5px;pointer-events:none}
+.points i{width:6px;height:6px;border-radius:50%;background:rgba(255,255,255,.55);
+  box-shadow:0 0 2px rgba(0,0,0,.5)}
+.points i.on{background:#fff;width:16px;border-radius:3px}
+.fermer,.retour{position:absolute;top:12px;width:36px;height:36px;border-radius:50%;
+  background:rgba(20,15,8,.55);font-size:20px;line-height:36px;text-align:center;color:#fff}
+.fermer{right:12px} .retour{left:12px;font-size:22px}
+.fiche .dedans{padding:18px 18px 26px}
 .fiche h2{margin:0 0 4px;font-size:23px;line-height:1.25}
 .fiche .chapeau{color:var(--doux);font-size:14.5px;margin-bottom:16px}
 .fiche p{margin:0 0 14px}
 .bloc{background:var(--carte);border:1px solid var(--trait);border-radius:12px;
-  padding:13px;margin-bottom:12px}
+  padding:13px;margin-bottom:12px;box-shadow:var(--ombre)}
 .bloc .titre{font-size:11px;letter-spacing:.9px;text-transform:uppercase;
-  color:var(--faible);font-weight:700;margin-bottom:7px}
-.bloc.attention{border-color:#6b4028;background:#2a1d16}
+  color:var(--faible);font-weight:800;margin-bottom:8px}
+.bloc.attention{border-color:var(--alerte);background:var(--alertefond)}
 .bloc.attention .titre{color:var(--alerte)}
+.bloc.tache{border-color:var(--or);background:var(--orfond)}
+.bloc.tache .titre{color:var(--or)}
 
 .paire{display:flex;justify-content:space-between;gap:12px;padding:9px 0;
   border-bottom:1px solid var(--trait);font-size:15px}
 .paire:last-child{border-bottom:0}
 .paire .cle{color:var(--doux);flex:none}
-.paire .val{text-align:right;font-weight:600;font-variant-numeric:tabular-nums;
+.paire .val{text-align:right;font-weight:650;font-variant-numeric:tabular-nums;
   word-break:break-word}
 .copiable{cursor:pointer;border-bottom:1px dashed var(--faible)}
 .copiable:active{color:var(--or)}
 
 .actions{display:flex;gap:9px;flex-wrap:wrap;margin:4px 0 16px}
-.bouton{flex:1;min-width:132px;padding:13px;border-radius:12px;text-align:center;
-  font-weight:600;font-size:15px;background:var(--carte2);
-  border:1px solid var(--trait);text-decoration:none;display:block}
-.bouton.fort{background:var(--or);color:#241a08;border-color:var(--or)}
+.bouton{flex:1;min-width:130px;padding:13px;border-radius:12px;text-align:center;
+  font-weight:650;font-size:15px;background:var(--carte);border:1px solid var(--trait2);
+  text-decoration:none;display:block;box-shadow:var(--ombre)}
+.bouton.fort{background:var(--or);color:#fff;border-color:var(--or)}
 .bouton.urgence{background:var(--alerte);color:#fff;border-color:var(--alerte)}
+.bouton.wa{background:#25d366;color:#0b3d1f;border-color:#1fb457}
+
+.tache{display:flex;gap:11px;align-items:flex-start;padding:9px 0;
+  border-bottom:1px solid var(--trait);font-size:15px;line-height:1.45;text-align:left;
+  width:100%}
+.tache:last-child{border-bottom:0}
+.tache .case{width:21px;height:21px;flex:none;border-radius:6px;margin-top:1px;
+  border:2px solid var(--trait2);display:flex;align-items:center;justify-content:center;
+  font-size:13px;color:#fff}
+.tache.fait .case{background:var(--or);border-color:var(--or)}
+.tache.fait .txt{text-decoration:line-through;color:var(--faible)}
+
+.moment{padding:12px 0;border-bottom:1px solid var(--trait)}
+.moment:last-child{border-bottom:0}
+.moment .quand{font-size:12px;letter-spacing:.3px;color:var(--or);font-weight:800}
+.moment h4{margin:3px 0 6px;font-size:17px}
+.moment p{margin:0 0 7px;font-size:15px}
+.moment .tenue{font-size:13.5px;color:var(--doux);background:var(--fond2);
+  border-radius:8px;padding:7px 10px}
+.moment .tenue b{color:var(--texte)}
 
 .liste-nue{margin:0;padding-left:19px}
 .liste-nue li{margin-bottom:6px}
@@ -164,20 +221,21 @@ nav.onglets button[aria-selected=true]{background:var(--or);color:#241a08;
 .note-bas{color:var(--faible);font-size:12.5px;text-align:center;margin-top:28px;
   padding-top:16px;border-top:1px solid var(--trait)}
 .rappel{position:fixed;left:50%;transform:translateX(-50%);bottom:26px;
-  background:var(--or);color:#241a08;padding:11px 20px;border-radius:999px;
-  font-weight:600;font-size:14.5px;z-index:90;opacity:0;pointer-events:none;
+  background:var(--texte);color:var(--fond);padding:11px 20px;border-radius:999px;
+  font-weight:650;font-size:14.5px;z-index:90;opacity:0;pointer-events:none;
   transition:opacity .2s}
 .rappel.vu{opacity:1}
 </style>
 </head>
 <body>
 
-<header>
-  <div class="dedans">
-    <h1>Inde 2026</h1>
-    <div class="horloge"><b id="heure">—</b> <span id="jourvoyage"></span></div>
+<header><div class="dedans">
+  <h1>Inde 2026</h1><span class="jv" id="jourvoyage"></span>
+  <div class="pendule">
+    <button id="pendule"><b id="heure">—</b><span class="zone" id="zone"></span></button>
+    <button class="theme" id="theme" title="Thème">◐</button>
   </div>
-</header>
+</div></header>
 
 <div class="enveloppe">
   <nav class="onglets" id="onglets"></nav>
@@ -185,7 +243,8 @@ nav.onglets button[aria-selected=true]{background:var(--or);color:#241a08;
   <div class="note-bas" id="pied"></div>
 </div>
 
-<div class="voile" id="voile"><div class="fiche" id="fiche"></div></div>
+<div class="voile arriere" id="voile1"><div class="fiche" id="fiche1"></div></div>
+<div class="voile" id="voile2"><div class="fiche" id="fiche2"></div></div>
 <div class="rappel" id="rappel"></div>
 
 <script>
@@ -195,33 +254,46 @@ const IC={hotel:"🛏",vol:"✈️",train:"🚆",bus:"🚌",transfert:"🚕",eta
 const JOURS=["dimanche","lundi","mardi","mercredi","jeudi","vendredi","samedi"];
 const MOIS=["janvier","février","mars","avril","mai","juin","juillet","août",
   "septembre","octobre","novembre","décembre"];
-let D=null, prive=null, onglet="fil";
+const H=3600e3, IST=5.5;
+const ZONES={inde:{nom:"Inde",dec:5.5},paris:{nom:"Paris",dec:2}};
+let D=null, prive=null, onglet="fil", zone="paris", faits={};
 
-/* ---------- heure indienne ---------- */
-const IST=5.5*3600e3;
-function maintenant(){return new Date(Date.now()+IST)}
-function quand(s){return new Date(s+"Z")}          /* les données sont déjà en IST */
+/* ---------- préférences ---------- */
+const pref={
+  lire(c,d){try{const v=localStorage.getItem("carnet."+c);return v===null?d:JSON.parse(v)}catch(e){return d}},
+  ecrire(c,v){try{localStorage.setItem("carnet."+c,JSON.stringify(v))}catch(e){}}
+};
+
+/* ---------- temps ----------
+   Les dates des données sont l'heure murale indienne. On les lit comme de l'UTC
+   puis on décale à l'affichage. Les comparaisons se font en instant réel. */
+function instant(s){return new Date(s+"Z").getTime()-IST*H}
+function afficher(s){return new Date(instant(s)+ZONES[zone].dec*H)}
+function ici(){return new Date(Date.now()+ZONES[zone].dec*H)}
+/* le découpage en journées reste calé sur les jours indiens */
+function jourIST(s){return new Date(instant(s)+IST*H).toISOString().slice(0,10)}
 function hhmm(d){return String(d.getUTCHours()).padStart(2,"0")+"h"
   +String(d.getUTCMinutes()).padStart(2,"0")}
-function dateLongue(d){return JOURS[d.getUTCDay()]+" "+d.getUTCDate()+" "+MOIS[d.getUTCMonth()]}
-function cleJour(d){return d.toISOString().slice(0,10)}
-
-function duree(ms){
-  const m=Math.round(ms/60000);
-  if(m<60) return "dans "+m+" min";
-  const h=Math.round(m/60);
-  if(h<36) return "dans "+h+" h";
-  return "dans "+Math.round(h/24)+" jours";
-}
+function dateLongue(cle){const d=new Date(cle+"T12:00:00Z");
+  return JOURS[d.getUTCDay()]+" "+d.getUTCDate()+" "+MOIS[d.getUTCMonth()]}
+function duree(ms){const m=Math.round(ms/6e4);
+  if(m<60)return "dans "+m+" min";
+  const h=Math.round(m/60); if(h<36)return "dans "+h+" h";
+  return "dans "+Math.round(h/24)+" jours"}
+function etat(e){const n=Date.now();
+  return n>instant(e.arrivee)?"passee":(n>=instant(e.depart)?"actuelle":"avenir")}
 
 /* ---------- utilitaires ---------- */
 const ech=s=>String(s==null?"":s).replace(/[&<>"]/g,c=>
   ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-function fond(url){return url?`background-image:url('${url}')`:""}
-function itineraire(p,nom){
-  if(p) return `https://www.google.com/maps/dir/?api=1&destination=${p.lat},${p.lng}`;
-  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(nom)}`;
-}
+const fond=u=>u?`background-image:url('${u}')`:"";
+const itineraire=(p,nom)=>p
+  ?`https://www.google.com/maps/dir/?api=1&destination=${p.lat},${p.lng}`
+  :`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(nom)}`;
+const voirCarte=(p,nom)=>p
+  ?`https://www.google.com/maps/search/?api=1&query=${p.lat},${p.lng}`
+  :`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(nom)}`;
+const whatsapp=t=>"https://wa.me/"+String(t).replace(/[^0-9]/g,"");
 function dire(t){const r=document.getElementById("rappel");
   r.textContent=t;r.classList.add("vu");clearTimeout(r._t);
   r._t=setTimeout(()=>r.classList.remove("vu"),1600)}
@@ -229,218 +301,272 @@ async function copier(t){
   try{await navigator.clipboard.writeText(t)}
   catch(e){const z=document.createElement("textarea");z.value=t;document.body.appendChild(z);
     z.select();try{document.execCommand("copy")}catch(_){}z.remove()}
-  dire("Copié");
-}
-document.addEventListener("click",e=>{
-  const c=e.target.closest("[data-copier]");
-  if(c){copier(c.dataset.copier);e.stopPropagation()}
-});
+  dire("Copié")}
 
-/* ---------- horloge ---------- */
+/* ---------- en-tête ---------- */
 function horloge(){
-  const n=maintenant();
-  document.getElementById("heure").textContent=hhmm(n)+" IST";
-  const d0=quand(D?D.debut+"T00:00":"2026-08-24T00:00");
-  const j=Math.floor((n-d0)/864e5)+1;
-  document.getElementById("jourvoyage").textContent =
-    (j>=1&&j<=20)?("· J"+j):(j<1?("· J"+(1-j)+" avant"):"");
+  document.getElementById("heure").textContent=hhmm(ici());
+  document.getElementById("zone").textContent=ZONES[zone].nom;
+  const d0=new Date(D.debut+"T00:00:00Z").getTime()-IST*H;
+  const j=Math.floor((Date.now()-d0)/864e5)+1;
+  document.getElementById("jourvoyage").textContent=
+    j<1?("J−"+(1-j)):(j<=20?("J"+j):"");
 }
+document.getElementById("pendule").onclick=()=>{
+  zone=zone==="paris"?"inde":"paris"; pref.ecrire("zone",zone);
+  dessiner(); dire("Heure "+ZONES[zone].nom)};
+document.getElementById("theme").onclick=()=>{
+  const t=document.documentElement.getAttribute("data-theme")==="sombre"?"clair":"sombre";
+  document.documentElement.setAttribute("data-theme",t); pref.ecrire("theme",t)};
 
-/* ---------- état d'une étape ---------- */
-function etat(e){
-  const n=maintenant(), a=quand(e.depart), b=quand(e.arrivee);
-  return n>b?"passee":(n>=a?"actuelle":"avenir");
-}
-
-/* ================= VUE : LE FIL ================= */
+/* ================= LE FIL ================= */
 function vueFil(){
-  const n=maintenant();
   let h="";
+  const n=Date.now();
 
-  /* à réserver, tant que le voyage n'a pas commencé */
-  if(n<quand(D.debut+"T00:00") && D.a_reserver.length){
-    h+=`<div class="bloc attention"><div class="titre">Avant de partir</div>`;
-    h+=D.a_reserver.map(r=>`<div class="paire"><span class="cle">${ech(r.titre)}</span>`
-      +`<span class="val">${r.lien?`<a href="https://${r.lien}" target="_blank" rel="noopener">${ech(r.lien)}</a>`:"—"}</span></div>`).join("");
-    h+=`</div>`;
+  if(n<instant(D.debut+"T00:00") && D.a_reserver.length){
+    h+=`<div class="bloc attention"><div class="titre">Avant de partir</div>`
+      +D.a_reserver.map(r=>`<div class="paire"><span class="cle">${ech(r.titre)}</span>
+        <span class="val">${r.lien?`<a href="https://${ech(r.lien)}" target="_blank" rel="noopener">${ech(r.lien)}</a>`:"—"}</span></div>`).join("")
+      +`</div>`;
   }
 
-  /* bandeau : étape en cours, ou la prochaine */
   const cour=D.etapes.find(e=>etat(e)==="actuelle");
   const suiv=D.etapes.find(e=>etat(e)==="avenir");
   const v=cour||suiv;
   if(v){
-    const dep=quand(v.depart);
-    h+=`<button class="maintenant" style="width:100%;text-align:left;display:block"
-        data-etape="${v.id}">
+    h+=`<button class="maintenant" data-etape="${v.id}">
       <div class="quoi">${cour?"En ce moment":"Prochaine étape"}</div>
       <h2>${ech(v.titre)}</h2>
-      <div class="quand">${dateLongue(dep)} · ${hhmm(dep)}
-        ${cour?"":`<span class="compte">— ${duree(dep-n)}</span>`}</div>
+      <div class="quand">${dateLongue(jourIST(v.depart))} · ${hhmm(afficher(v.depart))}
+        ${cour?"":`<span class="compte">— ${duree(instant(v.depart)-n)}</span>`}</div>
     </button>`;
   }
 
-  /* le fil, groupé par jour */
-  let jour="";
-  D.etapes.forEach((e,i)=>{
-    const dep=quand(e.depart), k=cleJour(dep);
-    if(k!==jour){jour=k;h+=`<div class="jour"><span>${dateLongue(dep)}</span><i></i></div>`}
-    h+=carteEtape(e,i===D.etapes.length-1);
+  /* une bande par journée du voyage, même sans étape qui commence ce jour-là */
+  const jours=[];
+  for(let t=new Date(D.debut+"T00:00:00Z"); t<=new Date(D.fin+"T00:00:00Z");
+      t=new Date(t.getTime()+864e5)) jours.push(t.toISOString().slice(0,10));
+  const auj=new Date(Date.now()+IST*H).toISOString().slice(0,10);
+
+  jours.forEach(j=>{
+    const debut=instant(j+"T00:00"), fin=debut+864e5;
+    const commencent=D.etapes.filter(e=>jourIST(e.depart)===j);
+    const traversent=D.etapes.filter(e=>jourIST(e.depart)!==j
+      && instant(e.depart)<fin && instant(e.arrivee)>debut);
+    if(!commencent.length && !traversent.length) return;
+
+    /* où sommes-nous ce jour-là ? */
+    const situe=[...commencent,...traversent].find(e=>e.ville);
+    const ville=situe?D.villes.find(x=>x.slug===situe.ville):null;
+    h+=`<div class="jour${j===auj?" aujourdhui":""}">
+      <span class="date">${dateLongue(j)}</span>
+      ${ville?`<span class="ici">${ech(ville.nom)}</span>`:""}<i></i></div>`;
+
+    h+=`<div class="fil">`;
+    traversent.forEach(e=>{
+      const cl=e.type==="hotel"?"h":(e.type==="etape"?"e":"");
+      const nuit=Math.round((debut-instant(e.depart))/864e5)+1;
+      h+=`<div class="suite ${cl}"><div class="barre"></div>
+        <span>${e.type==="hotel"?`<b>${ech(e.titre)}</b> · nuit ${nuit}`
+          :`<b>${ech(e.titre)}</b> · en cours`}</span></div>`;
+    });
+    commencent.forEach(e=>h+=carteEtape(e));
+    h+=`</div>`;
   });
   return h;
 }
 
-function carteEtape(e,dernier){
-  const st=etat(e), dep=quand(e.depart), arr=quand(e.arrivee);
-  const ville=D.villes.find(v=>v.slug===e.ville);
-  const img=e.type==="hotel"||e.type==="etape" ? (ville&&ville.photo) : null;
+function carteEtape(e){
+  const st=etat(e);
+  const dep=afficher(e.depart), arr=afficher(e.arrivee);
   let meta=hhmm(dep);
-  if(["vol","train","bus","transfert"].includes(e.type))
-    meta=`${hhmm(dep)} → ${hhmm(arr)}`+(cleJour(arr)!==cleJour(dep)?" (+1)":"");
+  if(["vol","train","bus","transfert"].includes(e.type)){
+    meta=`${hhmm(dep)} → ${hhmm(arr)}`;
+    if(jourIST(e.arrivee)!==jourIST(e.depart)) meta+=" (+1)";
+  }
   let sous="";
-  if(e.de) sous=`${ech(e.de)} → ${ech(e.vers)}`;
+  if(e.de && e.titre!==`${e.de} → ${e.vers}`) sous=`${ech(e.de)} → ${ech(e.vers)}`;
   else if(e.adresse) sous=ech(e.adresse);
-  else if(ville) sous=ech(ville.nom);
-  const alerte=(e.statut==="à réserver"||e.statut==="à organiser"||e.statut==="à faire");
-  return `<div class="etape ${st}">
-    <div class="rail"><div class="pastille"></div>${dernier?"":'<div class="fil"></div>'}</div>
+  else if(e.operateur) sous=ech(e.operateur);
+  const alerte=["à réserver","à organiser","à faire"].includes(e.statut);
+  const nb=(e.photos||[]).length;
+  return `<div class="etape ${st}"><div class="pastille"></div>
     <button class="carte" data-etape="${e.id}">
-      <div class="vignette" style="${fond(img)}">${img?"":(IC[e.type]||"📍")}</div>
+      <div class="vignette" style="${fond(e.photo)}">${e.photo?"":(IC[e.type]||"📍")}
+        ${nb>1?`<span class="nb">${nb}</span>`:""}</div>
       <div class="corps">
         <div class="haut">
           <span class="type t-${e.type}">${e.type==="etape"?"étape":e.type}</span>
           ${alerte?`<span class="puce">${ech(e.statut)}</span>`:""}
+          ${(e.instructions||[]).length?`<span class="puce taches">${e.instructions.length} à faire</span>`:""}
         </div>
         <h3>${ech(e.titre)}</h3>
         <div class="meta">${meta}</div>
         ${sous?`<div class="sous">${sous}</div>`:""}
-      </div>
-    </button></div>`;
+        ${(e.infos||[]).length?`<div class="infos">${e.infos.map(i=>
+          `<span>${ech(i.libelle)} <b>${ech(i.valeur)}</b></span>`).join("")}</div>`:""}
+      </div></button></div>`;
 }
 
-/* ================= VUE : VILLES ================= */
+/* ================= AUTRES VUES ================= */
 function vueVilles(){
-  return `<div class="grille">`+D.villes.map(v=>{
-    const n=D.activites.filter(a=>a.ville===v.slug).length;
-    return `<button class="tuile" data-ville="${v.slug}">
+  return `<div class="grille">`+D.villes.map(v=>
+    `<button class="tuile" data-ville="${v.slug}">
       <div class="img" style="${fond(v.photo)}">${v.photo?"":"🏙"}</div>
-      <div class="txt"><h4>${ech(v.nom)}</h4><p>${n} choses à voir</p></div></button>`;
-  }).join("")+`</div>`;
+      <div class="txt"><h4>${ech(v.nom)}</h4>
+      <p>${D.activites.filter(a=>a.ville===v.slug).length} choses à voir</p></div>
+    </button>`).join("")+`</div>`;
 }
-
-/* ================= VUE : À RÉSERVER ================= */
 function vueReserver(){
   return D.a_reserver.map(r=>`<div class="bloc">
     <div class="titre">à réserver</div>
     <h3 style="margin:0 0 6px;font-size:17px">${ech(r.titre)}</h3>
     <p style="margin:0 0 10px;color:var(--doux);font-size:14.5px">${ech(r.detail)}</p>
-    ${r.lien?`<a class="bouton fort" href="https://${r.lien}" target="_blank" rel="noopener">${ech(r.lien)}</a>`:""}
+    ${r.lien?`<a class="bouton fort" href="https://${ech(r.lien)}" target="_blank" rel="noopener">${ech(r.lien)}</a>`:""}
   </div>`).join("");
 }
-
-/* ================= VUE : URGENCE ================= */
 function vueUrgence(){
   const u=D.urgence;
-  const g=(t,l)=>`<div class="bloc"><div class="titre">${t}</div>`+l.map(x=>
-    `<div class="paire"><span class="cle">${ech(x.libelle)}</span>
-     <span class="val">${x.tel?`<a href="tel:${x.tel}">${ech(x.tel)}</a>`:"—"}</span></div>`
-  ).join("")+`</div>`;
+  const g=(t,l,wa)=>`<div class="bloc"><div class="titre">${t}</div>`+l.map(x=>
+    `<div class="paire"><span class="cle">${ech(x.libelle)}</span><span class="val">`
+    +(x.tel?(wa?`<a href="${whatsapp(x.tel)}" target="_blank" rel="noopener">${ech(x.tel)}</a>`
+              :`<a href="tel:${ech(x.tel)}">${ech(x.tel)}</a>`):"—")
+    +`</span></div>`).join("")+`</div>`;
   return `<a class="bouton urgence" href="tel:112" style="margin-bottom:14px">
       Appeler le 112 — urgences</a>`
-    +g("Essentiels",u.numeros)+g("Hôtels",u.hotels)+g("Transports",u.transports)
+    +g("Essentiels",u.numeros,false)+g("Hôtels — WhatsApp",u.hotels,true)
+    +g("Transports — WhatsApp",u.transports,true)
     +`<div class="bloc attention"><div class="titre">à retenir</div>
       <p style="margin:0">${ech(u.note)}</p></div>`;
 }
 
-/* ================= FICHES ================= */
-function ouvrir(html){
-  if(!document.getElementById("voile").classList.contains("ouvert"))
-    history.pushState({fiche:1},"");
-  document.getElementById("fiche").innerHTML=html;
-  document.getElementById("voile").classList.add("ouvert");
-  document.getElementById("fiche").scrollTop=0;
+/* ================= MODALES EN CASCADE ================= */
+function ouvrir(n,html){
+  const v=document.getElementById("voile"+n), f=document.getElementById("fiche"+n);
+  if(!v.classList.contains("ouvert")) history.pushState({fiche:n},"");
+  f.innerHTML=html; v.classList.add("ouvert"); f.scrollTop=0;
   document.body.style.overflow="hidden";
+  f.querySelectorAll(".carrousel").forEach(c=>{
+    const pts=c.parentNode.querySelector(".points");
+    if(pts) c.onscroll=()=>{const i=Math.round(c.scrollLeft/c.clientWidth);
+      [...pts.children].forEach((p,k)=>p.classList.toggle("on",k===i))};
+  });
 }
-function fermer(saut){
-  if(!document.getElementById("voile").classList.contains("ouvert")) return;
-  document.getElementById("voile").classList.remove("ouvert");
-  document.body.style.overflow="";
+function fermer(n,saut){
+  const v=document.getElementById("voile"+n);
+  if(!v.classList.contains("ouvert")) return;
+  v.classList.remove("ouvert");
+  if(!document.querySelector(".voile.ouvert")) document.body.style.overflow="";
   if(!saut && history.state && history.state.fiche) history.back();
 }
-addEventListener("popstate",()=>fermer(true));
-document.getElementById("voile").addEventListener("click",e=>{
-  if(e.target.id==="voile"||e.target.classList.contains("fermer")) fermer();
-});
+addEventListener("popstate",()=>{
+  const n=document.getElementById("voile2").classList.contains("ouvert")?2:1;
+  fermer(n,true)});
+[1,2].forEach(n=>document.getElementById("voile"+n).addEventListener("click",e=>{
+  if(e.target.id==="voile"+n||e.target.classList.contains("fermer")) fermer(n)}));
 
-function ficheEtape(id){
+function banniere(photos,repli,retour){
+  const l=(photos&&photos.length)?photos:[null];
+  return `<div class="banniere">
+    <div class="carrousel">${l.map(p=>
+      `<div class="vue" style="${fond(p)}">${p?"":repli}</div>`).join("")}</div>
+    ${l.length>1?`<div class="points">${l.map((_,i)=>
+      `<i class="${i?"":"on"}"></i>`).join("")}</div>`:""}
+    ${retour?`<div class="retour" data-retour="${ech(retour)}">‹</div>`:""}
+    <div class="fermer">×</div></div>`;
+}
+
+function blocTaches(e){
+  if(!(e.instructions||[]).length) return "";
+  const f=faits[e.id]||{};
+  return `<div class="bloc tache"><div class="titre">à faire — ${e.instructions.length} points</div>`
+    +e.instructions.map((t,i)=>
+      `<button class="tache ${f[i]?"fait":""}" data-tache="${e.id}" data-i="${i}">
+        <span class="case">${f[i]?"✓":""}</span><span class="txt">${ech(t)}</span>
+      </button>`).join("")+`</div>`;
+}
+
+function ficheEtape(id,niveau){
+  niveau=niveau||1;
   const e=D.etapes.find(x=>x.id===id); if(!e) return;
   const ville=D.villes.find(v=>v.slug===e.ville);
-  const img=(e.type==="hotel"||e.type==="etape")&&ville?ville.photo:null;
-  const dep=quand(e.depart), arr=quand(e.arrivee);
+  const dep=afficher(e.depart), arr=afficher(e.arrivee);
   const s=prive&&prive.details[e.id];
 
   let l=[];
-  const P=(c,v,cop)=>{if(v) l.push(`<div class="paire"><span class="cle">${c}</span>
+  const P=(c,v,cop)=>{if(v)l.push(`<div class="paire"><span class="cle">${c}</span>
     <span class="val ${cop?"copiable":""}" ${cop?`data-copier="${ech(v)}"`:""}>${ech(v)}</span></div>`)};
-  if(["vol","train","bus","transfert"].includes(e.type)){
-    P("Départ",`${dateLongue(dep)} ${hhmm(dep)}`);
-    P("Arrivée",`${dateLongue(arr)} ${hhmm(arr)}`);
-    P("De",e.de); P("À",e.vers);
-  }else{
-    P("Du",`${dateLongue(dep)} ${hhmm(dep)}`);
-    P("Au",`${dateLongue(arr)} ${hhmm(arr)}`);
-  }
-  P("Opérateur",e.operateur);
+  const transport=["vol","train","bus","transfert"].includes(e.type);
+  P(transport?"Départ":"Du",`${dateLongue(jourIST(e.depart))} ${hhmm(dep)}`);
+  P(transport?"Arrivée":"Au",`${dateLongue(jourIST(e.arrivee))} ${hhmm(arr)}`);
+  P("De",e.de); P("À",e.vers); P("Opérateur",e.operateur);
   P("N°",e.nom_train?`${e.numero} · ${e.nom_train}`:e.numero,true);
   P("Classe",e.classe);
-  if(s){P("Places",s.sieges,true); P("PNR",s.pnr,true)}
+  if(s){P("Places",s.sieges,true);P("PNR",s.pnr,true)}
   else if(e.a_des_details) l.push(`<div class="paire"><span class="cle">PNR et places</span>
-    <span class="val" style="color:var(--faible);font-weight:400">verrouillés</span></div>`);
-  P("Adresse",e.adresse);
-  P("Téléphone",e.tel);
-  P("Prix",e.prix);
+    <span class="val" style="color:var(--faible);font-weight:400">non chargés</span></div>`);
+  P("Adresse",e.adresse); P("Prix",e.prix);
+  (e.infos||[]).forEach(i=>P(i.libelle,i.valeur));
   P("Statut",e.statut);
 
-  let act="";
   const cible=e.position||e.position_depart;
-  if(cible||e.lieu) act+=`<a class="bouton fort" target="_blank" rel="noopener"
-     href="${itineraire(cible,(ville?ville.nom+" ":"")+e.titre)}">S'y rendre</a>`;
+  const nom=(ville?ville.nom+" ":"")+e.titre;
+  let act=`<a class="bouton fort" target="_blank" rel="noopener"
+      href="${itineraire(cible,nom)}">S'y rendre</a>
+    <a class="bouton" target="_blank" rel="noopener"
+      href="${voirCarte(cible,nom)}">Voir sur la carte</a>`;
   if(e.position_arrivee) act+=`<a class="bouton" target="_blank" rel="noopener"
-     href="${itineraire(e.position_arrivee,e.vers||"")}">Point d'arrivée</a>`;
-  if(e.tel) act+=`<a class="bouton" href="tel:${e.tel}">Appeler</a>`;
+      href="${itineraire(e.position_arrivee,e.vers||"")}">Point d'arrivée</a>`;
+  if(e.tel) act+=`<a class="bouton wa" href="${whatsapp(e.tel)}" target="_blank" rel="noopener">WhatsApp</a>
+    <a class="bouton" href="tel:${ech(e.tel)}">Appeler</a>`;
 
-  let docs="";
-  if(s&&s.docs&&s.docs.length){
-    docs=`<div class="bloc"><div class="titre">documents</div>`+s.docs.map(d=>
-      `<div class="paire"><span class="cle">${ech(d.libelle)}</span>
-       <span class="val" style="font-weight:400;font-size:13px;color:var(--doux)">${ech(d.fichier)}</span></div>`
-    ).join("")+`</div>`;
+  let deroule="";
+  if((e.deroule||[]).length) deroule=`<div class="bloc"><div class="titre">déroulé</div>`
+    +e.deroule.map(m=>`<div class="moment"><div class="quand">${ech(m.quand)}</div>
+      <h4>${ech(m.titre)}</h4><p>${ech(m.texte)}</p>
+      ${m.tenue?`<div class="tenue"><b>Tenue —</b> ${ech(m.tenue)}</div>`:""}</div>`).join("")
+    +`</div>`;
+
+  let lieux="";
+  if(ville){
+    const acts=D.activites.filter(a=>a.ville===ville.slug)
+      .sort((a,b)=>b.etoile-a.etoile||a.nom.localeCompare(b.nom,"fr"));
+    lieux=`<div class="titre" style="font-size:11px;letter-spacing:.9px;
+      text-transform:uppercase;color:var(--faible);font-weight:800;margin:22px 0 10px">
+      ${ech(ville.nom)} — ${acts.length} choses à voir</div>
+      <p style="color:var(--doux);font-size:14.5px">${ech(ville.presentation)}</p>
+      ${ville.conseil?`<div class="bloc attention"><div class="titre">sur place</div>
+        <p style="margin:0">${ech(ville.conseil)}</p></div>`:""}
+      <div class="bloc"><div class="titre">où manger</div>
+        <ul class="liste-nue">${ville.tables.map(t=>`<li>${ech(t)}</li>`).join("")}</ul></div>
+      <div class="grille">${acts.map(a=>tuileActivite(a,"etape:"+e.id)).join("")}</div>`;
   }
 
-  ouvrir(`<div class="banniere" style="${fond(img)}">${img?"":(IC[e.type]||"📍")}
-      <div class="fermer">×</div></div>
-    <div class="dedans">
+  ouvrir(niveau, banniere(e.photos,IC[e.type]||"📍",null)+`<div class="dedans">
       <h2>${ech(e.titre)}</h2>
       <div class="chapeau">${e.type==="etape"?"étape":e.type}${ville?" · "+ech(ville.nom):""}</div>
       <div class="actions">${act}</div>
+      ${blocTaches(e)}
       <div class="bloc">${l.join("")}</div>
       ${e.note?`<div class="bloc"><div class="titre">à savoir</div>
         <p style="margin:0">${ech(e.note)}</p></div>`:""}
-      ${docs}
-    </div>`);
+      ${deroule}${lieux}</div>`);
 }
 
-function ficheVille(slug){
+function tuileActivite(a,depuis){
+  return `<button class="tuile" data-activite="${a.slug}" data-depuis="${ech(depuis)}">
+    <div class="img" style="${fond(a.photo)}">${a.photo?"":(IC[a.categorie]||"📍")}
+      ${a.etoile?`<span class="etoile">${"★".repeat(a.etoile)}</span>`:""}</div>
+    <div class="txt"><h4>${ech(a.nom)}</h4><p>${ech(a.categorie)}</p></div></button>`;
+}
+
+function ficheVille(slug,niveau){
+  niveau=niveau||1;
   const v=D.villes.find(x=>x.slug===slug); if(!v) return;
   const acts=D.activites.filter(a=>a.ville===slug)
     .sort((a,b)=>b.etoile-a.etoile||a.nom.localeCompare(b.nom,"fr"));
-  const tuiles=acts.map(a=>`<button class="tuile" data-activite="${a.slug}" data-depuis="${slug}">
-      <div class="img" style="${fond(a.photo)}">${a.photo?"":(IC[a.categorie]||"📍")}
-        ${a.etoile?`<span class="etoile">${"★".repeat(a.etoile)}</span>`:""}</div>
-      <div class="txt"><h4>${ech(a.nom)}</h4><p>${ech(a.categorie)}</p></div></button>`).join("");
-  ouvrir(`<div class="banniere" style="${fond(v.photo)}">${v.photo?"":"🏙"}
-      <div class="fermer">×</div></div>
-    <div class="dedans">
+  ouvrir(niveau, banniere(v.photos,"🏙",null)+`<div class="dedans">
       <h2>${ech(v.nom)}</h2>
       <div class="chapeau">${ech(v.region)} · ${ech(v.sejour)}</div>
       <p>${ech(v.presentation)}</p>
@@ -449,43 +575,49 @@ function ficheVille(slug){
       <div class="bloc"><div class="titre">où manger</div>
         <ul class="liste-nue">${v.tables.map(t=>`<li>${ech(t)}</li>`).join("")}</ul></div>
       <div class="titre" style="font-size:11px;letter-spacing:.9px;text-transform:uppercase;
-        color:var(--faible);font-weight:700;margin:20px 0 10px">
-        ${acts.length} choses à voir</div>
-      <div class="grille">${tuiles}</div>
+        color:var(--faible);font-weight:800;margin:20px 0 10px">${acts.length} choses à voir</div>
+      <div class="grille">${acts.map(a=>tuileActivite(a,"ville:"+slug)).join("")}</div>
     </div>`);
 }
 
-function ficheActivite(slug,retour){
+function ficheActivite(slug,depuis){
   const a=D.activites.find(x=>x.slug===slug); if(!a) return;
   const v=D.villes.find(x=>x.slug===a.ville);
-  ouvrir(`<div class="banniere" style="${fond(a.photo)}">${a.photo?"":(IC[a.categorie]||"📍")}
-      ${retour?`<div class="retour" data-retour="${ech(retour)}">‹</div>`:""}
-      <div class="fermer">×</div></div>
-    <div class="dedans">
+  ouvrir(2, banniere(a.photos,IC[a.categorie]||"📍",depuis||"")+`<div class="dedans">
       <h2>${ech(a.nom)}${a.etoile?` <span style="color:var(--or)">${"★".repeat(a.etoile)}</span>`:""}</h2>
       <div class="chapeau">${ech(a.categorie)} · ${ech(v?v.nom:"")}</div>
       <div class="actions">
         <a class="bouton fort" target="_blank" rel="noopener"
-           href="${itineraire(a.position,a.recherche||a.nom)}">S'y rendre</a></div>
+           href="${itineraire(a.position,a.recherche||a.nom)}">S'y rendre</a>
+        <a class="bouton" target="_blank" rel="noopener"
+           href="${voirCarte(a.position,a.recherche||a.nom)}">Voir sur la carte</a></div>
       <p>${ech(a.description)}</p>
       ${a.pratique?`<div class="bloc"><div class="titre">pratique</div>
         <p style="margin:0">${ech(a.pratique)}</p></div>`:""}
       ${a.reservation?`<div class="bloc attention"><div class="titre">réservation</div>
         <p style="margin:0">${ech(a.reservation)}</p></div>`:""}
-      ${a.position?"":`<div class="bloc"><div class="titre">position</div>
-        <p style="margin:0;color:var(--doux);font-size:14px">Pas de coordonnées exactes :
-        le bouton lance une recherche par nom, qui demande du réseau.</p></div>`}
     </div>`);
 }
 
 /* ---------- navigation ---------- */
 document.addEventListener("click",e=>{
-  const a=e.target.closest("[data-etape]");    if(a) return ficheEtape(a.dataset.etape);
-  const b=e.target.closest("[data-ville]");    if(b) return ficheVille(b.dataset.ville);
+  const c=e.target.closest("[data-copier]");
+  if(c){copier(c.dataset.copier);e.stopPropagation();return}
+  const t=e.target.closest("[data-tache]");
+  if(t){const id=t.dataset.tache,i=+t.dataset.i;
+    faits[id]=faits[id]||{}; faits[id][i]=!faits[id][i];
+    pref.ecrire("faits",faits);
+    t.classList.toggle("fait",faits[id][i]);
+    t.querySelector(".case").textContent=faits[id][i]?"✓":"";
+    e.stopPropagation();return}
   const r=e.target.closest("[data-retour]");
-  if(r){e.stopPropagation(); return ficheVille(r.dataset.retour)}
-  const c=e.target.closest("[data-activite]");
-  if(c) return ficheActivite(c.dataset.activite, c.dataset.depuis||null);
+  if(r){fermer(2);e.stopPropagation();return}
+  const a=e.target.closest("[data-activite]");
+  if(a){ficheActivite(a.dataset.activite,a.dataset.depuis);return}
+  const b=e.target.closest("[data-ville]");   if(b) return ficheVille(b.dataset.ville,1);
+  const s=e.target.closest("[data-etape]");   if(s) return ficheEtape(s.dataset.etape,1);
+  const o=e.target.closest("[data-onglet]");
+  if(o){onglet=o.dataset.onglet;dessiner();scrollTo(0,0)}
 });
 
 const VUES={fil:["Le fil",vueFil],villes:["Villes",vueVilles],
@@ -496,26 +628,24 @@ function dessiner(){
   document.getElementById("vue").innerHTML=VUES[onglet][1]();
   horloge();
 }
-document.addEventListener("click",e=>{
-  const o=e.target.closest("[data-onglet]");
-  if(o){onglet=o.dataset.onglet;dessiner();scrollTo(0,0)}
-});
 
 /* ---------- démarrage ---------- */
 (async()=>{
+  document.documentElement.setAttribute("data-theme",pref.lire("theme","clair"));
+  zone=pref.lire("zone","paris"); faits=pref.lire("faits",{});
   try{
     D=await (await fetch("donnees/voyage.json")).json();
     try{prive=await (await fetch("donnees/prive.json")).json()}catch(_){prive=null}
     dessiner();
-    document.getElementById("pied").textContent =
-      `${D.activites.length} lieux · ${D.etapes.length} étapes · heure indienne (UTC+5:30)`
-      + (prive?"":" · PNR non chargés");
+    document.getElementById("pied").textContent=
+      `${D.activites.length} lieux · ${D.etapes.length} étapes · journées indiennes`
+      +(prive?"":" · PNR non chargés");
     setInterval(horloge,20000);
-    /* on repositionne le fil sur aujourd'hui */
-    const cour=document.querySelector(".etape.actuelle")||document.querySelector(".etape:not(.passee)");
+    const cour=document.querySelector(".etape.actuelle")
+      ||document.querySelector(".jour.aujourdhui");
     if(cour&&onglet==="fil") setTimeout(()=>cour.scrollIntoView({block:"center"}),80);
   }catch(err){
-    document.getElementById("vue").innerHTML =
+    document.getElementById("vue").innerHTML=
       `<div class="vide">Données illisibles.<br><small>${ech(err.message)}</small></div>`;
   }
 })();

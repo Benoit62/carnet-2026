@@ -11,7 +11,21 @@
   "lieu_arrivee": "aeroport-delhi-t3",
   "operateur": "Air France",
   "statut": "réservé",
-  "note": "Avant de sortir de la zone internationale : comptoirs UPI One World, compter 30 à 45 min."
+  "note": "Avant de sortir de la zone internationale : comptoirs UPI One World, compter 30 à 45 min.",
+  "instructions": [
+   "Sacs bouclés : ceinture ventrale serrée autour du sac, sangles rentrées",
+   "Passeports, visas et attestation Heymondo dans le sac cabine",
+   "Enregistrement en ligne Air France",
+   "Photographier les sacs faits",
+   "Espèces en euros à changer sur place",
+   "À l'arrivée, comptoir UPI One World avant de sortir de la zone internationale"
+  ],
+  "infos": [
+   {
+    "libelle": "Terminal",
+    "valeur": "à vérifier la veille"
+   }
+  ]
  },
  {
   "id": "j1-hotel-delhi",
@@ -36,17 +50,57 @@
   "lieu_arrivee": "aeroport-hyderabad",
   "operateur": "IndiGo",
   "statut": "réservé",
-  "note": "Vérifier le terminal de départ. Partir de l'hôtel 3 h avant."
+  "note": "Vérifier le terminal de départ. Partir de l'hôtel 3 h avant.",
+  "instructions": [
+   "Vérifier le terminal de départ la veille",
+   "Quitter l'hôtel 3 h avant"
+  ]
  },
  {
   "id": "j3-mariage",
   "type": "etape",
-  "titre": "Mariage",
+  "titre": "Mariage d'Astrid et Prashanth",
   "depart": "2026-08-26T00:00",
   "arrivee": "2026-08-28T19:00",
   "ville": "hyderabad",
   "statut": "pris en charge",
-  "note": "Hébergement pris en charge par la famille. Dépose à Hyderabad vers 19h le 28. Les horaires glissent d'une heure ou deux, c'est normal. Haldi : vêtements à sacrifier, le curcuma ne part jamais, prévoir une rechange complète. Cadeau en espèces dans une enveloppe, montant se terminant par 1. Chaussures faciles à retirer."
+  "note": "Deux jours, quatre temps forts. Le premier jour est réservé à la famille et aux proches, l'ensemble des invités n'est convié que le second. Les horaires glissent d'une heure ou deux, c'est normal.",
+  "deroule": [
+   {
+    "quand": "Mer 26 · 11h-14h",
+    "titre": "Haldi",
+    "texte": "Une pâte de curcuma est appliquée sur le visage, les bras et les jambes des mariés par les proches, puis tout le monde se rince à grands seaux d'eau. Le curcuma protège du mauvais œil et ouvre les festivités.",
+    "tenue": "Jaune ou orange, et des vêtements à sacrifier : le curcuma tache définitivement. Prévoir une rechange complète."
+   },
+   {
+    "quand": "Mer 26 · 19h-23h",
+    "titre": "Mehendi et Sangeet",
+    "texte": "Henné dessiné à la main sur les invitées — compter 30 min à 1 h de séchage, et ne pas se laver les mains ensuite. Puis la soirée dansante : initiation à quelques pas, playlist télougou et française, quelques jeux.",
+    "tenue": "Libre, tenue de soirée semi-décontractée dans laquelle on peut danser."
+   },
+   {
+    "quand": "Jeu 27 · 19h-22h",
+    "titre": "Réception",
+    "texte": "Plusieurs centaines d'invités. Les mariés se tiennent sur une estrade et chacun vient les saluer, prendre une photo et offrir son cadeau, puis passe au repas. En ouverture, un échange de guirlandes tient lieu d'entrée des mariés.",
+    "tenue": "Tenue de cérémonie."
+   },
+   {
+    "quand": "Jeu 27 · 22h-2h",
+    "titre": "Cérémonie religieuse",
+    "texte": "Trois à quatre heures de rituels devant un autel, un prêtre récitant en sanskrit. Le basculement est le Muhurtham, fixé par calcul astrologique à 23h43 : les mariés, séparés par un rideau, s'appliquent simultanément une pâte de cumin et de sucre de canne sur la tête, et le rideau tombe. Suivent le nouage du mangalsutra, la bataille de riz du Talambralu, et l'échange final de guirlandes.",
+    "tenue": "Cercle restreint. Les gestes paraissent répétitifs de l'extérieur : se laisser porter plutôt que chercher à tout comprendre."
+   }
+  ],
+  "infos": [
+   {
+    "libelle": "Cadeau",
+    "valeur": "enveloppe, montant finissant par 1"
+   },
+   {
+    "libelle": "Chaussures",
+    "valeur": "faciles à retirer"
+   }
+  ]
  },
  {
   "id": "j5-hotel-hyderabad",
@@ -85,7 +139,18 @@
   "operateur": "IndiGo",
   "numero": "6E6638",
   "statut": "réservé",
-  "note": "Aéroport à 7-8 km de l'hôtel, mais partir à 16h : circulation imprévisible, comptoir à 18h."
+  "note": "Aéroport à 7-8 km de l'hôtel, mais partir à 16h : circulation imprévisible, comptoir à 18h.",
+  "instructions": [
+   "Voiture avec chauffeur réservée la veille, sacs dans le coffre",
+   "Quitter la ville à 16h",
+   "Filmage plastique des sacs au comptoir bagages hors format"
+  ],
+  "infos": [
+   {
+    "libelle": "Vol",
+    "valeur": "6E6638"
+   }
+  ]
  },
  {
   "id": "j6-taxi-jaipur",
@@ -136,7 +201,12 @@
   "numero": "19665",
   "classe": "1A",
   "statut": "réservé",
-  "note": "Attendez du retard : ce train part de Khajuraho la veille à 9h25 et fait 1 092 km. Il roule depuis treize heures quand il atteint Jaipur. Une arrivée entre 8h et 10h est plausible. Suivi sur Where is my Train. Passeport original obligatoire à bord, pas une photocopie."
+  "note": "Attendez du retard : ce train part de Khajuraho la veille à 9h25 et fait 1 092 km. Il roule depuis treize heures quand il atteint Jaipur. Une arrivée entre 8h et 10h est plausible. Suivi sur Where is my Train. Passeport original obligatoire à bord, pas une photocopie.",
+  "instructions": [
+   "Passeport original sur soi, une photocopie ne suffit pas",
+   "Suivre le train sur Where is my Train avant de partir",
+   "Repérer le numéro de voiture sur la liste collée 1 h avant"
+  ]
  },
  {
   "id": "j10-hotel-udaipur",
@@ -175,7 +245,12 @@
   "nom_train": "Mewar Express",
   "classe": "3A",
   "statut": "réservé",
-  "note": "Emporter de quoi dîner, un pull — la climatisation est glaciale — et un cadenas pour attacher les sacs sous la couchette basse."
+  "note": "Emporter de quoi dîner, un pull — la climatisation est glaciale — et un cadenas pour attacher les sacs sous la couchette basse.",
+  "instructions": [
+   "Acheter de quoi dîner avant de monter",
+   "Pull accessible : la climatisation est glaciale",
+   "Cadenas pour attacher les sacs sous la couchette basse"
+  ]
  },
  {
   "id": "j13-delhi",
@@ -212,7 +287,23 @@
   "operateur": "Laxmi Holidays",
   "tel": "+911144446900",
   "statut": "réservé",
-  "note": "Réveil 5h, taxi réservé la veille vers 5h30 (~600-800 ₹, Uber en secours ~350-500 ₹), arrivée à l'ISBT vers 6h — 15-16 km sur des routes vides. Embarquement : sortir par la porte 8 du métro, entrer dans l'ISBT vers les quais d'arrivée 53 et 54, repérer le comptoir Laxmi Holidays."
+  "note": "Réveil 5h, taxi réservé la veille vers 5h30 (~600-800 ₹, Uber en secours ~350-500 ₹), arrivée à l'ISBT vers 6h — 15-16 km sur des routes vides. Embarquement : sortir par la porte 8 du métro, entrer dans l'ISBT vers les quais d'arrivée 53 et 54, repérer le comptoir Laxmi Holidays.",
+  "instructions": [
+   "Deux alarmes sur deux téléphones, réveil 5h",
+   "Taxi réservé la veille au soir",
+   "Sortir par la porte 8 du métro, quais d'arrivée 53 et 54",
+   "Prévenir la guesthouse de l'heure d'arrivée à Nepali Farm"
+  ],
+  "infos": [
+   {
+    "libelle": "Quai",
+    "valeur": "arrivée 53-54"
+   },
+   {
+    "libelle": "Compagnie",
+    "valeur": "Laxmi Holidays"
+   }
+  ]
  },
  {
   "id": "j14-transfert-tapovan",
@@ -259,7 +350,18 @@
   "operateur": "Shri Krishna Travels",
   "tel": "+919720001155",
   "statut": "réservé",
-  "note": "Auto vers Nepali Farm à 20h15, réservé la veille, 30 à 40 min. Embarquement : Shri Krishna Travels, Nepali Farm, sous le pont, au carrefour en T. Arrivée chez Radhika Travels à Chipitola, près du Rakab Ganj Police Thana, à 3-4 km de Taj Ganj : auto ou e-rickshaw, 100-200 ₹, 15 min."
+  "note": "Auto vers Nepali Farm à 20h15, réservé la veille, 30 à 40 min. Embarquement : Shri Krishna Travels, Nepali Farm, sous le pont, au carrefour en T. Arrivée chez Radhika Travels à Chipitola, près du Rakab Ganj Police Thana, à 3-4 km de Taj Ganj : auto ou e-rickshaw, 100-200 ₹, 15 min.",
+  "instructions": [
+   "Retirer du liquide dans Rishikesh ville avant de monter à Tapovan",
+   "Consigne à bagages de 11h à 20h15 — le plus long créneau du voyage",
+   "Auto vers Nepali Farm réservé la veille pour 20h15"
+  ],
+  "infos": [
+   {
+    "libelle": "Compagnie",
+    "valeur": "Shri Krishna"
+   }
+  ]
  },
  {
   "id": "j17-hotel-agra",
@@ -290,7 +392,19 @@
   "arrivee": "2026-09-10T16:00",
   "ville": "agra",
   "statut": "libre",
-  "note": "5h20 : deuxième passage au Taj. Rose puis blanc, brume sur la Yamuna en mousson, et presque personne. Prendre ce jour-là le supplément mausolée, la queue à l'escalier est plus courte. Puis Wildlife SOS, ouvert de 10h à 16h, donc parfaitement compatible avec le Taj à l'aube — et Sur Sarovar au retour, sur la même route. Voiture avec chauffeur réservée la veille via l'hôtel. Si vous voulez aussi Keoladeo, c'est jouable mais dans l'autre sens : il faudrait partir à 5h30 vers Bharatpur et renoncer au Taj à l'aube."
+  "note": "5h20 : deuxième passage au Taj. Rose puis blanc, brume sur la Yamuna en mousson, et presque personne. Prendre ce jour-là le supplément mausolée, la queue à l'escalier est plus courte. Puis Wildlife SOS, ouvert de 10h à 16h, donc parfaitement compatible avec le Taj à l'aube — et Sur Sarovar au retour, sur la même route. Voiture avec chauffeur réservée la veille via l'hôtel. Si vous voulez aussi Keoladeo, c'est jouable mais dans l'autre sens : il faudrait partir à 5h30 vers Bharatpur et renoncer au Taj à l'aube.",
+  "instructions": [
+   "Billets du Taj achetés à l'avance, un par passage",
+   "Supplément mausolée à prendre pour ce passage-ci",
+   "Réservation Wildlife SOS confirmée",
+   "Voiture avec chauffeur réservée la veille via l'hôtel"
+  ],
+  "infos": [
+   {
+    "libelle": "Réveil",
+    "valeur": "5h20"
+   }
+  ]
  },
  {
   "id": "j19-train-delhi",
@@ -306,7 +420,11 @@
   "nom_train": "NZM Rajdhani",
   "classe": "2A",
   "statut": "réservé",
-  "note": "Check-out 6h45, taxi réservé la veille. Agra Cantt est à 5-6 km de Taj Ganj. Pas de petit-déjeuner à l'hôtel, mais il est servi à bord."
+  "note": "Check-out 6h45, taxi réservé la veille. Agra Cantt est à 5-6 km de Taj Ganj. Pas de petit-déjeuner à l'hôtel, mais il est servi à bord.",
+  "instructions": [
+   "Check-out 6h45, taxi réservé la veille",
+   "Petit-déjeuner servi à bord, rien à prévoir"
+  ]
  },
  {
   "id": "j19-delhi",
@@ -341,6 +459,10 @@
   "lieu_arrivee": "aeroport-cdg",
   "operateur": "Air France",
   "statut": "réservé",
-  "note": "Départ dans la nuit du 11 au 12."
+  "note": "Départ dans la nuit du 11 au 12.",
+  "instructions": [
+   "Métro Airport Express avant 23h30, dernier départ",
+   "Récupérer les bagages en consigne avant d'entrer en zone départs"
+  ]
  }
 ]

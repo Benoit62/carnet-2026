@@ -53,10 +53,18 @@ def main():
              "mathura": "wildlife-sos", "taj-falaknuma": "chowmahalla"}
 
     def img(slug):
-        for s in (slug, ALIAS.get(slug)):
-            if s and s in photos:
-                return f"photos/{s}.jpg"
-        return None
+        """Toutes les photos d'un sujet : <slug>.jpg, puis <slug>-2.jpg, -3.jpg…
+        Il suffit de déposer un fichier dans photos/ pour qu'il apparaisse."""
+        for base in (slug, ALIAS.get(slug)):
+            if not base or base not in photos:
+                continue
+            liste = [f"photos/{base}.jpg"]
+            n = 2
+            while f"{base}-{n}" in photos:
+                liste.append(f"photos/{base}-{n}.jpg")
+                n += 1
+            return liste
+        return []
 
     def pos(cle):
         return lieux.get(cle)
@@ -66,14 +74,16 @@ def main():
 
     # ---------- villes ----------
     for v in villes:
-        v["photo"] = img("ville-" + v["slug"])
+        v["photos"] = img("ville-" + v["slug"])
+        v["photo"] = v["photos"][0] if v["photos"] else None
         v["position"] = pos(v["slug"]) or pos("gare-" + v["slug"])
 
     # ---------- activités ----------
     for a in activites:
         if a["ville"] not in nomville:
             alertes.append(f"{a['slug']} : ville inconnue « {a['ville']} »")
-        a["photo"] = img(a["slug"])
+        a["photos"] = img(a["slug"])
+        a["photo"] = a["photos"][0] if a["photos"] else None
         a["position"] = pos(a["slug"])
         # sans coordonnées, le bouton bascule sur une recherche par nom
         a["recherche"] = None if a["position"] else \
@@ -88,6 +98,11 @@ def main():
                 e[cle] = pos(e[champ])
                 if not e[cle]:
                     alertes.append(f"{e['id']} : lieu « {e[champ]} » sans coordonnées")
+        # photos propres à l'étape : photos/<lieu>.jpg, sinon celles de la ville
+        e["photos"] = img(e.get("lieu") or "") or img("etape-" + e["id"])
+        if not e["photos"] and e.get("ville"):
+            e["photos"] = img("ville-" + e["ville"])
+        e["photo"] = e["photos"][0] if e["photos"] else None
         e["a_des_details"] = e["id"] in prive
     etapes.sort(key=lambda e: e["depart"])
 
@@ -114,7 +129,10 @@ def main():
         sys.exit(f"ARRÊT — donnée sensible dans le fichier public : {fuites}")
 
     print(f"\n  {len(villes)} villes · {len(activites)} lieux · {len(etapes)} étapes")
-    print(f"  photos    {sum(1 for a in activites if a['photo'])}/{len(activites)}")
+    nphotos = sum(len(a["photos"]) for a in activites) \
+            + sum(len(v["photos"]) for v in villes)
+    print(f"  photos    {sum(1 for a in activites if a['photo'])}/{len(activites)} "
+          f"lieux illustrés · {nphotos} fichiers utilisés")
     print(f"  positions {sum(1 for a in activites if a['position'])}/{len(activites)}")
     print("  étanchéité : aucune donnée sensible dans donnees/voyage.json")
     if alertes:
