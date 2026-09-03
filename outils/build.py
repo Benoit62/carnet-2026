@@ -16,7 +16,7 @@ Ne jamais éditer donnees/ ni hors-ligne.html : ils sont écrasés à chaque bui
 Pillow est nécessaire pour hors-ligne.html uniquement : pip install pillow
 """
 
-import base64, glob, io, json, os, sys
+import base64, glob, io, json, os, re, sys, unicodedata
 
 RACINE  = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SOURCE  = os.path.join(RACINE, "source")
@@ -40,7 +40,14 @@ def lire(nom, defaut=None):
         sys.exit(f"source/{nom} illisible ligne {e.lineno} : {e.msg}")
 
 
+def slugifier(nom):
+    """« Paradise Biryani | Charminar » donne « paradise-biryani-charminar »."""
+    s = unicodedata.normalize("NFKD", nom).encode("ascii", "ignore").decode().lower()
+    return re.sub(r"-+", "-", re.sub(r"[^a-z0-9]+", "-", s)).strip("-")
+
+
 def main():
+    alertes_tot = []
     villes    = lire("villes.json")
     activites = lire("activites.json")
     etapes    = lire("etapes.json")
@@ -48,7 +55,25 @@ def main():
     reglages  = lire("reglages.json")
     prive     = lire("prive.json", {})
     carte     = lire("fond.json", {"etats": [], "pays": [], "inde": ""})
-    faits     = set(lire("faits.json", {}).get("faits", []))
+    marques   = lire("faits.json", {})
+    faits     = set(marques.get("faits", []))
+    tables    = marques.get("tables", [])
+
+    # Une table essayée se déclare d'un seul bloc dans faits.json : elle
+    # devient un lieu à part entière, marqué fait, sans toucher aux autres
+    # fichiers. C'est le format à privilégier pendant le voyage.
+    for t in tables:
+        slug = t.get("slug") or slugifier(t["nom"])
+        if any(a["slug"] == slug for a in activites):
+            alertes_tot.append(f"tables : « {slug} » existe déjà dans activites.json")
+            continue
+        activites.append({"slug": slug, "ville": t["ville"], "nom": t["nom"],
+                          "etoile": t.get("etoile", 0), "categorie": "restaurant",
+                          "description": t.get("note") or "",
+                          "pratique": t.get("pratique"), "reservation": None,
+                          "fait": True})
+        if t.get("lat") is not None:
+            lieux.setdefault(slug, {"lat": t["lat"], "lng": t["lng"]})
 
     photos = {os.path.basename(p)[:-4] for p in glob.glob(PHOTOS + "/*.jpg")}
     # un sujet peut être illustré par un fichier portant un autre nom ; on
@@ -78,7 +103,7 @@ def main():
         return lieux.get(cle)
 
     nomville = {v["slug"]: v["nom"] for v in villes}
-    alertes = []
+    alertes = alertes_tot
 
     # ---------- villes ----------
     for v in villes:
