@@ -16,7 +16,9 @@
   --or:#b8791a; --orfond:#fdf3e0;
   --hotel:#c2701f; --vol:#2b7fbf; --train:#2f8f63; --bus:#8256b8;
   --transfert:#6b7785; --etape:#1f8a80; --alerte:#c2411f; --alertefond:#fdeee9;
-  --fait:#2f8f63;
+  --fait:#2f8f63; --nuit:#6c5c8c;
+  --mer:#e6edf3; --terre:#f5f0e7; --terre2:#e4e8ec; --frontiere:#ded5c5;
+  --large-carte:400px;
   --ombre:0 1px 2px rgba(60,45,25,.06),0 2px 8px rgba(60,45,25,.05);
 }
 [data-theme="sombre"]{
@@ -26,7 +28,8 @@
   --or:#e0a33e; --orfond:#31260f;
   --hotel:#e08a3c; --vol:#5aa9e6; --train:#5fbf8a; --bus:#b98ae0;
   --transfert:#8e9aa8; --etape:#4fb3a8; --alerte:#e0603c; --alertefond:#2a1d16;
-  --fait:#5fbf8a;
+  --fait:#5fbf8a; --nuit:#9c8cc0;
+  --mer:#11161c; --terre:#2a241e; --terre2:#1b1f25; --frontiere:#40382f;
   --ombre:0 1px 3px rgba(0,0,0,.3);
 }
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
@@ -246,6 +249,121 @@ nav.onglets button[aria-selected=true]{background:var(--or);color:#fff;
   font-weight:650;font-size:14.5px;z-index:90;opacity:0;pointer-events:none;
   transition:opacity .2s}
 .rappel.vu{opacity:1}
+
+/* ================= CARTE DE L'ITINÉRAIRE ================= */
+.atlas{position:fixed;z-index:55;background:var(--mer);display:none;
+  flex-direction:column;overscroll-behavior:contain}
+.atlas.ouvert{display:flex}
+.atlas .tete{display:flex;align-items:center;gap:10px;padding:12px 14px 10px;
+  border-bottom:1px solid var(--trait);background:var(--fond);flex:none}
+.atlas .tete h2{margin:0;font-size:16px;font-weight:700;letter-spacing:.2px}
+.atlas .tete .avance{font-size:12.5px;color:var(--doux);
+  font-variant-numeric:tabular-nums;margin-top:1px}
+.atlas .tete .clore{margin-left:auto;width:34px;height:34px;flex:none;border-radius:50%;
+  border:1px solid var(--trait);background:var(--carte);font-size:19px;line-height:1}
+.atlas .plan{position:relative;flex:1;min-height:0;overflow:hidden;touch-action:none}
+.atlas #toile{position:absolute;inset:0}
+.atlas svg{display:block;width:100%;height:100%;cursor:grab}
+.atlas svg.tire{cursor:grabbing}
+.atlas .pied{display:flex;align-items:center;gap:7px;flex-wrap:wrap;
+  padding:9px 12px calc(9px + env(safe-area-inset-bottom));
+  border-top:1px solid var(--trait);background:var(--fond);flex:none;font-size:11.5px}
+.atlas .pied .cle{display:flex;align-items:center;gap:4px;color:var(--doux)}
+.atlas .pied .cle i{width:10px;height:10px;border-radius:50%;display:block;flex:none}
+.atlas .pied .droite{margin-left:auto;display:flex;gap:6px}
+.atlas .pied button{width:30px;height:30px;border-radius:9px;border:1px solid var(--trait);
+  background:var(--carte);font-size:14px;line-height:1;flex:none}
+.atlas .pied button.large{width:auto;padding:0 11px;font-size:12.5px;font-weight:650}
+
+/* le fond : mer, terres voisines, États indiens, silhouette */
+.g-voisin{fill:var(--terre2);stroke:var(--frontiere);stroke-width:.9;
+  vector-effect:non-scaling-stroke;opacity:.75}
+.g-etat{fill:var(--terre);stroke:var(--frontiere);stroke-width:.8;
+  vector-effect:non-scaling-stroke;opacity:.85}
+.g-inde{fill:none;stroke:var(--trait2);stroke-width:1.6;stroke-linejoin:round;
+  vector-effect:non-scaling-stroke}
+
+/* les trajets */
+.t-fond{fill:none;stroke:var(--trait2);stroke-width:2;stroke-dasharray:5 6;
+  stroke-linecap:round;vector-effect:non-scaling-stroke;opacity:.8}
+.t-plein{fill:none;stroke-width:3.2;stroke-linecap:round;
+  vector-effect:non-scaling-stroke}
+.tete-avance{fill:var(--or);stroke:var(--fond);stroke-width:2.5;
+  vector-effect:non-scaling-stroke}
+@keyframes bat{0%{r:7;opacity:.55}70%{r:19;opacity:0}100%{r:19;opacity:0}}
+.halo{fill:var(--or);animation:bat 2.2s ease-out infinite}
+
+/* pastilles et pins, dessinés à taille écran constante */
+.jeton circle{stroke:var(--fond);stroke-width:2}
+.jeton text{text-anchor:middle;font-size:11px;dominant-baseline:central}
+.pin{cursor:pointer}
+.pin .socle{stroke:var(--fond);stroke-width:2.5}
+.pin .num{text-anchor:middle;dominant-baseline:central;font-weight:800;
+  font-size:12px;fill:#fff;pointer-events:none}
+.pin.avenir .socle{fill:var(--carte);stroke:var(--trait2);stroke-width:2.5;
+  stroke-dasharray:3 2.6}
+.pin.avenir .num{fill:var(--doux)}
+.pin .nom{font-size:11.5px;font-weight:700;fill:var(--texte);
+  paint-order:stroke;stroke:var(--mer);stroke-width:3.5;stroke-linejoin:round}
+.pin.avenir .nom{fill:var(--doux)}
+.pin .mini{stroke:var(--fond);stroke-width:2}
+.pin .etiq{font-size:10.5px;font-weight:650;fill:var(--doux);
+  paint-order:stroke;stroke:var(--mer);stroke-width:3;stroke-linejoin:round}
+
+/* l'aperçu au-dessus du pin */
+.apercu{position:absolute;z-index:5;width:206px;background:var(--carte);
+  border:1px solid var(--trait);border-radius:13px;box-shadow:0 6px 22px rgba(40,28,12,.18);
+  overflow:hidden;transform:translate(-50%,-100%);pointer-events:auto;
+  animation:pousse .16s ease-out}
+@keyframes pousse{from{opacity:0;transform:translate(-50%,calc(-100% + 8px))}}
+.apercu .fleche{position:absolute;left:50%;bottom:-6px;width:11px;height:11px;
+  margin-left:-5.5px;background:var(--carte);border-right:1px solid var(--trait);
+  border-bottom:1px solid var(--trait);transform:rotate(45deg)}
+.apercu .vue{height:88px;background:var(--fond2);background-size:cover;
+  background-position:center;display:flex;align-items:center;justify-content:center;
+  font-size:30px}
+.apercu .txt{padding:9px 11px 11px}
+.apercu .rang{font-size:10px;letter-spacing:.8px;text-transform:uppercase;
+  font-weight:800;color:var(--faible)}
+.apercu h4{margin:2px 0 2px;font-size:14.5px;line-height:1.25;font-weight:700}
+.apercu p{margin:0;font-size:12px;color:var(--doux);line-height:1.4}
+.apercu .ouvre{display:block;width:100%;margin-top:8px;padding:7px;border-radius:9px;
+  background:var(--or);color:#fff;font-size:12.5px;font-weight:700;text-align:center}
+.apercu .aussi{display:block;width:100%;margin-top:5px;padding:6px;border-radius:9px;
+  border:1px solid var(--trait2);background:var(--fond2);color:var(--doux);
+  font-size:11.5px;font-weight:650;text-align:center}
+.apercu .clore{position:absolute;top:6px;right:6px;width:24px;height:24px;
+  border-radius:50%;background:rgba(20,15,8,.5);color:#fff;font-size:14px;line-height:24px;
+  text-align:center}
+
+/* bouton flottant, mobile et tablette en portrait */
+.flottant{position:fixed;right:16px;bottom:calc(18px + env(safe-area-inset-bottom));
+  z-index:50;width:54px;height:54px;border-radius:50%;background:var(--or);color:#fff;
+  font-size:23px;line-height:54px;text-align:center;
+  box-shadow:0 3px 14px rgba(60,45,25,.3),0 1px 3px rgba(60,45,25,.2)}
+.flottant:active{transform:scale(.94)}
+
+/* plein écran en dessous de la bascule */
+.atlas{inset:0}
+@media(min-width:1000px) and (max-width:1240px){:root{--large-carte:344px}}
+@media(min-width:1000px){
+  .flottant{display:none}
+  /* la marge du corps suffit : l'en-tête est déjà contenu dedans */
+  body{padding-right:var(--large-carte)}
+  .atlas{display:flex;left:auto;right:0;top:0;bottom:0;width:var(--large-carte);
+    border-left:1px solid var(--trait)}
+  .atlas .tete .clore{display:none}
+  .rappel{margin-left:calc(var(--large-carte) / -2)}
+}
+
+/* règle d'échelle */
+.regle{position:absolute;left:11px;bottom:11px;z-index:4;pointer-events:none;
+  display:flex;align-items:center;gap:6px;font-size:10.5px;color:var(--doux);
+  font-variant-numeric:tabular-nums}
+.regle i{height:7px;border:1px solid var(--doux);border-top:0;display:block;
+  background:color-mix(in srgb,var(--mer) 55%,transparent)}
+.regle span{background:color-mix(in srgb,var(--mer) 75%,transparent);
+  padding:0 4px;border-radius:4px;font-weight:650}
 </style>
 </head>
 <body>
@@ -267,6 +385,28 @@ nav.onglets button[aria-selected=true]{background:var(--or);color:#fff;
 <div class="voile arriere" id="voile1"><div class="fiche" id="fiche1"></div></div>
 <div class="voile" id="voile2"><div class="fiche" id="fiche2"></div></div>
 <div class="rappel" id="rappel"></div>
+
+<button class="flottant" id="ouvrecarte" aria-label="Carte de l'itinéraire">🗺</button>
+<aside class="atlas" id="atlas">
+  <div class="tete">
+    <div><h2>Itinéraire</h2><div class="avance" id="avance"></div></div>
+    <button class="clore" id="clorecarte" aria-label="Fermer">×</button>
+  </div>
+  <div class="plan" id="plan">
+    <div id="toile"></div>
+    <div class="regle" id="regle"></div>
+    <div id="bulle"></div>
+  </div>
+  <div class="pied">
+    <span class="cle"><i style="background:var(--fait)"></i>fait</span><span class="cle"><i style="background:var(--or)"></i>en cours</span><span class="cle"><i style="background:var(--trait2)"></i>à venir</span><span class="cle"><i style="background:var(--nuit)"></i>hôtel</span><span class="cle"><i style="background:var(--hotel)"></i>table</span>
+    <span class="droite">
+      <button data-zoom="0.8" aria-label="Dézoomer">−</button>
+      <button data-zoom="1.25" aria-label="Zoomer">+</button>
+      <button class="large" id="ounous">Où on est</button>
+      <button class="large" id="recadrer">Tout voir</button>
+    </span>
+  </div>
+</aside>
 
 <script>
 const IC={hotel:"🛏",vol:"✈️",train:"🚆",bus:"🚌",transfert:"🚕",etape:"📍",
@@ -332,6 +472,7 @@ function horloge(){
   const j=Math.floor((Date.now()-d0)/864e5)+1;
   document.getElementById("jourvoyage").textContent=
     j<1?("J−"+(1-j)):(j<=20?("J"+j):"");
+  if(typeof battreCarte==="function") battreCarte();
 }
 document.getElementById("pendule").onclick=()=>{
   zone=zone==="paris"?"inde":"paris"; pref.ecrire("zone",zone);
@@ -643,6 +784,411 @@ function ficheActivite(slug,depuis){
     </div>`);
 }
 
+
+/* ================= LA CARTE ================= */
+/* Fond vectoriel Natural Earth, projection Mercator, unité = radian × 1000.
+   Aucun serveur de tuiles : la carte se dessine aussi en mode avion. */
+const PROJ=1000, TRANSPORTS=["vol","train","bus","transfert"];
+let atlas=null, IT=null, sel=null;
+const V={cx:0,cy:0,k:1,k0:1};
+
+function xy(p){return [p.lng*Math.PI/180*PROJ,
+  -Math.log(Math.tan(Math.PI/4+p.lat*Math.PI/360))*PROJ]}
+function km(a,b){const R=6371,r=Math.PI/180,
+  s=Math.sin((b.lat-a.lat)*r/2)**2
+   +Math.cos(a.lat*r)*Math.cos(b.lat*r)*Math.sin((b.lng-a.lng)*r/2)**2;
+  return 2*R*Math.asin(Math.sqrt(s))}
+/* part de trajet accomplie, 0 avant le départ, 1 après l'arrivée */
+function part(e){const n=Date.now(),d=instant(e.depart),a=instant(e.arrivee);
+  return n<=d?0:(n>=a?1:(n-d)/(a-d))}
+function arc(a,b){const[ax,ay]=a,[bx,by]=b,dx=bx-ax,dy=by-ay,
+  L=Math.hypot(dx,dy)||1,k=Math.min(.16,42/L);
+  return `M${ax.toFixed(1)} ${ay.toFixed(1)}Q${(ax+dx/2-dy*k).toFixed(1)} `
+    +`${(ay+dy/2+dx*k).toFixed(1)} ${bx.toFixed(1)} ${by.toFixed(1)}`}
+
+/* ---------- le modèle : trajets, villes, lieux ---------- */
+function batirItineraire(){
+  const trajets=D.etapes.filter(e=>TRANSPORTS.includes(e.type)
+      && e.position_depart && e.position_arrivee)
+    .map(e=>({e,a:xy(e.position_depart),b:xy(e.position_arrivee),
+              km:km(e.position_depart,e.position_arrivee)}));
+
+  const villes=D.villes.filter(v=>v.position).map(v=>{
+    const sejours=D.etapes.filter(e=>e.ville===v.slug
+      && (e.type==="hotel"||e.type==="etape"))
+      .sort((x,y)=>x.depart<y.depart?-1:1);
+    const n=Date.now();
+    const encours=sejours.some(s=>n>=instant(s.depart)&&n<=instant(s.arrivee));
+    const passe=sejours.some(s=>n>instant(s.arrivee));
+    return {v,sejours,p:xy(v.position),
+      etat:encours?"actuelle":(passe?"fait":"avenir"),
+      arrivee:sejours.length?sejours[0].depart:"9999"};
+  }).sort((a,b)=>a.arrivee<b.arrivee?-1:1);
+  villes.forEach((c,i)=>c.rang=i+1);
+
+  const hotels=D.etapes.filter(e=>e.type==="hotel"&&e.position)
+    .map(e=>({e,p:xy(e.position)}));
+  const lieux=D.activites.filter(a=>a.fait&&a.position)
+    .map(a=>({a,p:xy(a.position),resto:a.categorie==="restaurant"}));
+
+  const total=trajets.reduce((s,t)=>s+t.km,0);
+  const fait=trajets.reduce((s,t)=>s+t.km*part(t.e),0);
+  return {trajets,villes,hotels,lieux,total,fait};
+}
+
+/* ---------- cadrage ---------- */
+function boite(pts,marge){
+  const xs=pts.map(p=>p[0]),ys=pts.map(p=>p[1]);
+  const x0=Math.min(...xs)-marge,x1=Math.max(...xs)+marge;
+  const y0=Math.min(...ys)-marge,y1=Math.max(...ys)+marge;
+  return {cx:(x0+x1)/2,cy:(y0+y1)/2,w:x1-x0,h:y1-y0};
+}
+function plan(){return document.getElementById("plan")}
+function taille(){const r=plan().getBoundingClientRect();
+  return {w:Math.max(r.width,1),h:Math.max(r.height,1)}}
+function cadrer(pts,marge){
+  const {w,h}=taille(), b=boite(pts,marge);
+  V.k=Math.min(w/b.w,h/b.h); V.cx=b.cx; V.cy=b.cy;
+}
+let anim=null;
+function cadre(){
+  const b=vueBoite();
+  document.getElementById("atlas-svg").setAttribute("viewBox",
+    `${b.x.toFixed(1)} ${b.y.toFixed(1)} ${b.w.toFixed(1)} ${b.h.toFixed(1)}`);
+}
+function glisser(cx,cy,k){
+  if(anim) cancelAnimationFrame(anim);
+  const d={cx:V.cx,cy:V.cy,k:V.k}, t0=performance.now(), T=420;
+  const pas=t=>{
+    const u=Math.min(1,(t-t0)/T), e=1-Math.pow(1-u,3);
+    V.cx=d.cx+(cx-d.cx)*e; V.cy=d.cy+(cy-d.cy)*e;
+    V.k=d.k*Math.pow(k/d.k,e);           /* le zoom se lit en progression douce */
+    if(u<1){cadre(); anim=requestAnimationFrame(pas)} else {anim=null; majVue()}
+  };
+  anim=requestAnimationFrame(pas);
+  /* filet : si les trames sont suspendues, on pose quand même l'état final */
+  clearTimeout(glisser._t);
+  glisser._t=setTimeout(()=>{if(anim){cancelAnimationFrame(anim);anim=null;
+    V.cx=cx;V.cy=cy;V.k=k;majVue()}},T+120);
+}
+
+/* cadre sur une ville et sur tout ce qu'on y a marqué */
+function versVille(slug){
+  const c=IT.villes.find(x=>x.v.slug===slug); if(!c) return;
+  const marques=IT.lieux.filter(l=>l.a.ville===slug).map(l=>l.p);
+  const pts=marques.length?marques
+    :[c.p,...IT.hotels.filter(h=>h.e.ville===slug).map(h=>h.p)];
+  const {w,h}=taille(), etendu=boite(pts,0);
+  const ampleur=Math.max(etendu.w,etendu.h);
+  let marge=ampleur>0.05?ampleur*0.35:0.35;
+  if(ampleur+2*marge<0.19) marge=(0.19-ampleur)/2;
+  const b=boite(pts,marge);
+  glisser(b.cx,b.cy,bornerZoom(Math.min(w/b.w,h/b.h)));
+}
+function ouSommesNous(){
+  fermerApercu();
+  const i=IT.trajets.findIndex(t=>{const p=part(t.e);return p>0&&p<1});
+  if(i>=0){const ch=document.getElementById("tr"+i);
+    const q=ch.getPointAtLength(ch.getTotalLength()*part(IT.trajets[i].e));
+    return glisser(q.x,q.y,bornerZoom(V.k0*7))}
+  const c=IT.villes.find(c=>c.etat==="actuelle")
+    ||IT.villes.find(c=>c.etat==="avenir")||IT.villes[IT.villes.length-1];
+  if(c) versVille(c.v.slug);
+}
+
+function recentrer(){
+  /* on cadre sur les villes indiennes, Paris reste accessible au dézoom */
+  cadrer(IT.villes.map(c=>c.p),95); V.k0=V.k; majVue();
+}
+function vueBoite(){const {w,h}=taille();
+  return {x:V.cx-w/2/V.k,y:V.cy-h/2/V.k,w:w/V.k,h:h/V.k}}
+function versEcran(x,y){const b=vueBoite();return [(x-b.x)*V.k,(y-b.y)*V.k]}
+
+/* ---------- rendu ---------- */
+function dessinerFond(){
+  return `<g class="monde">`
+    +atlas.pays.map(p=>`<path class="g-voisin" d="${p.d}"/>`).join("")
+    +atlas.etats.map(p=>`<path class="g-etat" d="${p.d}"/>`).join("")
+    +`<path class="g-inde" d="${atlas.inde}"/></g>`;
+}
+function dessinerTrajets(){
+  return `<g class="trajets">`+IT.trajets.map((t,i)=>{
+    const d=arc(t.a,t.b);
+    return `<path class="t-fond" d="${d}"/>
+      <path class="t-plein" id="tr${i}" d="${d}" stroke="var(--${t.e.type})"/>`;
+  }).join("")+`</g><g id="tetes"></g><g id="jetons"></g>`;
+}
+
+function etiquette(cl,texte,dx,dy){
+  const t=texte.length>26?texte.slice(0,25)+"…":texte;
+  return `<text class="${cl}" x="${dx}" y="${dy}">${ech(t)}</text>`;
+}
+/* une étiquette qui déborde à droite bascule de l'autre côté du pin */
+function ajusterEtiquettes(){
+  const pr=plan().getBoundingClientRect();
+  document.querySelectorAll("#pins text.nom,#pins text.etiq").forEach(t=>{
+    const r=t.getBoundingClientRect();
+    if(r.right<=pr.right-4) return;
+    const dx=Math.abs(+t.getAttribute("x"));
+    if(r.left-2*dx-r.width<pr.left+4) return;   // pas mieux à gauche, on laisse
+    t.setAttribute("x",-dx); t.setAttribute("text-anchor","end");
+  });
+}
+
+function pinVille(c){
+  const s=(1/V.k).toFixed(4), cl=c.etat==="fait"?"fait":c.etat;
+  const remp=c.etat==="actuelle"?"var(--or)":(c.etat==="fait"?"var(--fait)":"");
+  return `<g class="pin ${cl}" transform="translate(${c.p[0]} ${c.p[1]}) scale(${s})"
+      data-pin="ville:${c.v.slug}">
+    ${c.etat==="actuelle"?`<circle class="halo" r="7"/>`:""}
+    <circle class="socle" r="13" ${remp?`fill="${remp}"`:""}/>
+    <text class="num" y="0.5">${c.rang}</text>
+    ${etiquette("nom",c.v.nom,18,4.5)}</g>`;
+}
+function pinLieu(o){
+  const s=(1/V.k).toFixed(4);
+  if(o.e){  /* hébergement */
+    return `<g class="pin" transform="translate(${o.p[0]} ${o.p[1]}) scale(${s})"
+        data-pin="etape:${o.e.id}">
+      <path class="mini" fill="var(--nuit)"
+        d="M0 1c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8z"/>
+      <path d="M-3.6-6.4v3.2h7.2v-3.2h1.4v5.6h-10v-5.6z" fill="#fff"/>
+      ${etiquette("etiq",o.e.titre,12,-3.5)}</g>`;
+  }
+  const c=o.resto?"var(--hotel)":"var(--fait)";
+  return `<g class="pin" transform="translate(${o.p[0]} ${o.p[1]}) scale(${s})"
+      data-pin="activite:${o.a.slug}">
+    ${etiquette("etiq",o.a.nom,11,4)}
+    <circle class="mini" r="7.5" fill="${c}"/>
+    ${o.resto
+      ?`<path d="M-2.6-3.4v2.6M-1.2-3.4v2.6M-1.9-.8v4.2M2.6-3.4c-1.1 0-1.7 1-1.7 2.2s.6 1.6 1.1 1.6l-.2 3" stroke="#fff" stroke-width="1.1" fill="none" stroke-linecap="round"/>`
+      :`<path d="M-3.2 0l2.2 2.3 4.2-4.6" stroke="#fff" stroke-width="1.9" fill="none" stroke-linecap="round" stroke-linejoin="round"/>`}</g>`;
+}
+function dessinerPins(){
+  const detail=V.k>=V.k0*2.4;
+  let h=IT.villes.map(pinVille).join("");
+  if(detail) h+=IT.hotels.map(pinLieu).join("")+IT.lieux.map(pinLieu).join("");
+  document.getElementById("pins").innerHTML=h;
+  ajusterEtiquettes();
+}
+
+/* pastille de transport, ramenée dans le cadre quand l'arc en sort */
+function dessinerJetons(){
+  const b=vueBoite(), s=(1/V.k).toFixed(4);
+  const dedans=(x,y)=>x>b.x+14/V.k&&x<b.x+b.w-14/V.k&&y>b.y+14/V.k&&y<b.y+b.h-14/V.k;
+  let h="";
+  IT.trajets.forEach((t,i)=>{
+    const ch=document.getElementById("tr"+i); if(!ch) return;
+    const L=ch.getTotalLength();
+    if(L*V.k<46) return;                    // trop court à ce niveau de zoom
+    let pt=ch.getPointAtLength(L/2);
+    if(!dedans(pt.x,pt.y)){
+      let ok=null;
+      for(let q=0.06;q<=0.94;q+=0.04){const c=ch.getPointAtLength(L*q);
+        if(dedans(c.x,c.y)){ok=c;break}}
+      if(!ok) return; pt=ok;
+    }
+    const p=part(t.e), c=p>0?`var(--${t.e.type})`:"var(--trait2)";
+    h+=`<g class="jeton pin" transform="translate(${pt.x} ${pt.y}) scale(${s})"
+        data-pin="etape:${t.e.id}">
+      <circle r="12" fill="var(--carte)" stroke="${c}"/>
+      <text y="0.5">${IC[t.e.type]||"→"}</text></g>`;
+  });
+  document.getElementById("jetons").innerHTML=h;
+}
+
+/* remplissage progressif et point de tête */
+function dessinerAvance(){
+  let tetes="";
+  IT.trajets.forEach((t,i)=>{
+    const ch=document.getElementById("tr"+i); if(!ch) return;
+    const L=ch.getTotalLength(), p=part(t.e);
+    ch.style.strokeDasharray=L; ch.style.strokeDashoffset=L*(1-p);
+    ch.style.opacity=p>=1?.9:1;
+    if(p>0&&p<1){const q=ch.getPointAtLength(L*p);
+      tetes+=`<g transform="translate(${q.x} ${q.y}) scale(${(1/V.k).toFixed(4)})">
+        <circle class="halo" r="7"/><circle class="tete-avance" r="6"/></g>`;}
+  });
+  /* à l'arrêt, la tête se pose sur la ville du moment */
+  if(!tetes){const c=IT.villes.find(c=>c.etat==="actuelle");
+    if(c) tetes=`<g transform="translate(${c.p[0]} ${c.p[1]}) scale(${(1/V.k).toFixed(4)})">
+      <circle class="halo" r="7"/></g>`;}
+  document.getElementById("tetes").innerHTML=tetes;
+}
+
+function majVue(){
+  const b=vueBoite();
+  document.getElementById("atlas-svg").setAttribute("viewBox",
+    `${b.x.toFixed(1)} ${b.y.toFixed(1)} ${b.w.toFixed(1)} ${b.h.toFixed(1)}`);
+  dessinerPins(); dessinerJetons(); dessinerAvance(); echelle(); placerApercu();
+}
+
+function echelle(){
+  const phi=2*Math.atan(Math.exp(-V.cy/PROJ))-Math.PI/2;
+  const kmParPx=6.371*Math.cos(phi)/V.k;
+  const cible=78*kmParPx;
+  const pas=[.05,.1,.25,.5,1,2,5,10,25,50,100,250,500,1000,2000];
+  const d=pas.find(x=>x>=cible)||2000;
+  const px=Math.round(d/kmParPx);
+  document.getElementById("regle").innerHTML=
+    `<i style="width:${px}px"></i><span>${d<1?d*1000+" m":d+" km"}</span>`;
+}
+
+function avancement(){
+  const n=D.etapes.filter(e=>etat(e)==="passee").length;
+  return `${Math.round(IT.fait).toLocaleString("fr-FR")} km sur `
+    +`${Math.round(IT.total).toLocaleString("fr-FR")} · ${n} étapes passées sur ${D.etapes.length}`;
+}
+
+function dessinerCarte(){
+  IT=batirItineraire();
+  document.getElementById("toile").innerHTML=
+    `<svg id="atlas-svg" xmlns="http://www.w3.org/2000/svg">
+       ${dessinerFond()}${dessinerTrajets()}<g id="pins"></g></svg>`;
+  document.getElementById("avance").textContent=avancement();
+  recentrer();
+}
+
+/* ---------- l'aperçu ---------- */
+function apercuHTML(cible){
+  const [k,id]=cible.split(":");
+  if(k==="ville"){
+    const c=IT.villes.find(x=>x.v.slug===id); if(!c) return null;
+    const n=D.activites.filter(a=>a.ville===id).length;
+    const f=faits_de(id).length;
+    const mot={actuelle:"on y est",fait:"déjà passé",avenir:"à venir"}[c.etat];
+    const nuits=c.sejours.filter(s=>s.type==="hotel").length;
+    return {p:c.p,photo:c.v.photo,repli:"🏙",rang:`étape ${c.rang} · ${mot}`,
+      titre:c.v.nom,ligne:`${n} choses à voir${f?` · ${f} fait${f>1?"s":""}`:""}`
+        +(nuits?` · ${nuits} hébergement${nuits>1?"s":""}`:""),
+      action:`data-ville="${id}"`,
+      second:f?`<span class="aussi" data-plonger="${id}">Voir les ${f} lieu${f>1?"x":""} sur la carte</span>`:""};
+  }
+  if(k==="etape"){
+    const e=D.etapes.find(x=>x.id===id); if(!e) return null;
+    const st=etat(e), mot={passee:"terminé",actuelle:"en cours",avenir:"à venir"}[st];
+    const p=xy(e.position||e.position_depart);
+    const t=TRANSPORTS.includes(e.type)
+      ? `${hhmm(afficher(e.depart))} → ${hhmm(afficher(e.arrivee))} ${ZONES[zone].nom}`
+      : `${dateLongue(jourIST(e.depart))} · ${hhmm(afficher(e.depart))}`;
+    return {p,photo:e.photo,repli:IC[e.type]||"📍",
+      rang:`${e.type==="etape"?"étape":e.type} · ${mot}`,titre:e.titre,ligne:t,
+      action:`data-etape="${id}"`};
+  }
+  const a=D.activites.find(x=>x.slug===id); if(!a) return null;
+  const v=D.villes.find(x=>x.slug===a.ville);
+  return {p:xy(a.position),photo:a.photo,repli:IC[a.categorie]||"📍",
+    rang:a.categorie==="restaurant"?"nous y avons mangé":"fait",
+    titre:a.nom,ligne:`${a.categorie} · ${v?v.nom:""}`,
+    action:`data-activite="${a.slug}" data-depuis=""`};
+}
+function ouvrirApercu(cible){
+  const o=apercuHTML(cible); if(!o) return;
+  sel=cible;
+  document.getElementById("bulle").innerHTML=`<div class="apercu">
+    <div class="vue" style="${fond(o.photo)}">${o.photo?"":o.repli}</div>
+    <div class="clore" data-clore-apercu>×</div>
+    <div class="txt"><div class="rang">${ech(o.rang)}</div>
+      <h4>${ech(o.titre)}</h4><p>${ech(o.ligne)}</p>
+      <span class="ouvre" ${o.action}>Ouvrir la fiche</span>${o.second||""}</div>
+    <div class="fleche"></div></div>`;
+  placerApercu();
+}
+function fermerApercu(){sel=null;document.getElementById("bulle").innerHTML=""}
+function placerApercu(){
+  if(!sel) return;
+  const o=apercuHTML(sel); const el=document.querySelector("#bulle .apercu");
+  if(!o||!el) return;
+  const {w,h}=taille(); const [x,y]=versEcran(o.p[0],o.p[1]);
+  if(x<-60||x>w+60||y<-60||y>h+60){fermerApercu();return}
+  el.style.left=Math.max(108,Math.min(w-108,x))+"px";
+  el.style.top=Math.max(el.offsetHeight+8,y-16)+"px";
+}
+
+/* ---------- gestes ---------- */
+function bornerZoom(k){return Math.max(V.k0*0.55,Math.min(V.k0*1500,k))}
+function zoomer(f,ax,ay){
+  const b=vueBoite();
+  const mx=ax==null?V.cx:b.x+ax/V.k, my=ay==null?V.cy:b.y+ay/V.k;
+  const k2=bornerZoom(V.k*f), r=V.k/k2;
+  V.cx=mx+(V.cx-mx)*r; V.cy=my+(V.cy-my)*r; V.k=k2; majVue();
+}
+function brancherGestes(){
+  const z=plan(); let tire=null, pince=null;
+  const pos=e=>{const r=z.getBoundingClientRect();
+    return [e.clientX-r.left,e.clientY-r.top]};
+  z.addEventListener("pointerdown",e=>{
+    if(e.target.closest(".apercu")) return;
+    z.setPointerCapture(e.pointerId);
+    const c=e.target.closest("[data-pin]");
+    tire={x:e.clientX,y:e.clientY,cx:V.cx,cy:V.cy,bouge:0,id:e.pointerId,
+          cible:c?c.dataset.pin:null};
+    z.querySelector("svg").classList.add("tire");
+  });
+  z.addEventListener("pointermove",e=>{
+    if(!tire||e.pointerId!==tire.id||pince) return;
+    const dx=e.clientX-tire.x, dy=e.clientY-tire.y;
+    tire.bouge=Math.max(tire.bouge,Math.hypot(dx,dy));
+    V.cx=tire.cx-dx/V.k; V.cy=tire.cy-dy/V.k; majVue();
+  });
+  const fin=e=>{
+    if(!tire||e.pointerId!==tire.id) return;
+    const bouge=tire.bouge, p=tire.cible; tire=null;
+    z.querySelector("svg").classList.remove("tire");
+    if(bouge>6) return;
+    if(!p){fermerApercu(); return}
+    const av=sel;
+    ouvrirApercu(p);
+    /* un second appui sur la même ville descend sur ses lieux */
+    if(p.startsWith("ville:") && av===p) versVille(p.slice(6));
+  };
+  z.addEventListener("pointerup",fin); z.addEventListener("pointercancel",fin);
+  z.addEventListener("wheel",e=>{e.preventDefault();
+    const [x,y]=pos(e); zoomer(e.deltaY<0?1.18:1/1.18,x,y)},{passive:false});
+  /* pincement à deux doigts */
+  z.addEventListener("touchstart",e=>{if(e.touches.length===2){tire=null;
+    pince=ecart(e)}},{passive:true});
+  z.addEventListener("touchmove",e=>{
+    if(e.touches.length!==2||!pince) return; e.preventDefault();
+    const d=ecart(e); const r=d.d/pince.d;
+    if(r>0.02) zoomer(r,d.x,d.y); pince=d;
+  },{passive:false});
+  z.addEventListener("touchend",e=>{if(e.touches.length<2) pince=null});
+  function ecart(e){const r=z.getBoundingClientRect();
+    const a=e.touches[0],b=e.touches[1];
+    return {d:Math.hypot(a.clientX-b.clientX,a.clientY-b.clientY)||1,
+            x:(a.clientX+b.clientX)/2-r.left,y:(a.clientY+b.clientY)/2-r.top}}
+}
+
+/* ---------- ouverture ---------- */
+async function chargerFond(){
+  if(atlas) return true;
+  try{atlas=window.EMBARQUE?EMBARQUE.fond
+        :await (await fetch("donnees/fond.json")).json();
+      return true}
+  catch(_){return false}
+}
+async function ouvrirCarte(){
+  const a=document.getElementById("atlas");
+  a.classList.add("ouvert");
+  if(!await chargerFond()){
+    document.getElementById("toile").innerHTML=
+      `<div class="vide">Fond de carte indisponible.</div>`; return;
+  }
+  if(!IT){dessinerCarte(); brancherGestes()} else majVue();
+}
+function fermerCarte(){document.getElementById("atlas").classList.remove("ouvert")}
+
+/* l'horloge fait avancer le trait sans redessiner toute la carte */
+function battreCarte(){
+  if(!IT||!document.getElementById("atlas").classList.contains("ouvert")) return;
+  IT.fait=IT.trajets.reduce((s,t)=>s+t.km*part(t.e),0);
+  dessinerAvance();
+  document.getElementById("avance").textContent=avancement();
+}
+addEventListener("resize",()=>{
+  if(IT&&document.getElementById("atlas").classList.contains("ouvert")) majVue()});
+
 /* ---------- navigation ---------- */
 document.addEventListener("click",e=>{
   const c=e.target.closest("[data-copier]");
@@ -669,7 +1215,16 @@ document.addEventListener("click",e=>{
     return ficheEtape(s.dataset.etape,1)}
   const o=e.target.closest("[data-onglet]");
   if(o){onglet=o.dataset.onglet;dessiner();scrollTo(0,0)}
+  const q=e.target.closest("[data-zoom]");
+  if(q){zoomer(+q.dataset.zoom,null,null);return}
+  if(e.target.closest("[data-clore-apercu]")){fermerApercu();return}
+  const pv=e.target.closest("[data-plonger]");
+  if(pv){versVille(pv.dataset.plonger);fermerApercu();return}
 });
+document.getElementById("ouvrecarte").onclick=ouvrirCarte;
+document.getElementById("clorecarte").onclick=fermerCarte;
+document.getElementById("recadrer").onclick=()=>{fermerApercu();recentrer()};
+document.getElementById("ounous").onclick=ouSommesNous;
 
 const VUES={fil:["Le fil",vueFil],villes:["Villes",vueVilles],
   reserver:["À réserver",vueReserver],urgence:["Urgence",vueUrgence]};
@@ -695,6 +1250,8 @@ function dessiner(){
     const cour=document.querySelector(".etape.actuelle")
       ||document.querySelector(".jour.aujourdhui");
     if(cour&&onglet==="fil") setTimeout(()=>cour.scrollIntoView({block:"center"}),80);
+    /* sur ordinateur et tablette en paysage, la carte est affichée en permanence */
+    if(matchMedia("(min-width:1000px)").matches) ouvrirCarte();
   }catch(err){
     document.getElementById("vue").innerHTML=
       `<div class="vide">Données illisibles.<br><small>${ech(err.message)}</small></div>`;
