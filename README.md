@@ -17,13 +17,15 @@ l'application fonctionne en mode avion.
       etapes.json        le fil : vols, trains, bus, hébergements
       lieux.json         coordonnées GPS, par identifiant de lieu
       reglages.json      dates, contacts d'urgence, choses à réserver
-      faits.json         slugs des lieux visités et des tables essayées
+      faits.json         lieux visités et tables essayées
+      fond.json          fond de carte vectoriel, Natural Earth
       prive.json         PNR et places — non versionné
 
     outils/          ← les scripts
       build.py           construit tout
       photos.py          télécharge les illustrations
       lieux.py           récupère les coordonnées GPS
+      fond.py            refabrique le fond de carte
 
     donnees/         ← généré, ne pas éditer
     photos/          les illustrations, 1000×667
@@ -37,6 +39,7 @@ l'application fonctionne en mode avion.
 Une seule commande, trois sorties cohérentes :
 
     donnees/voyage.json   le contenu public, servi par GitHub Pages
+    donnees/fond.json     le fond de carte, recopié tel quel
     donnees/prive.json    PNR et places, jamais poussé
     hors-ligne.html       fichier unique autonome, photos intégrées
 
@@ -113,22 +116,57 @@ signale un slug qui ne correspondrait à aucun lieu.
 Un `"fait": true` posé directement dans `source/activites.json` fonctionne
 aussi, les deux mécanismes se cumulent.
 
-Les tables se distinguent des visites par leur `categorie`, qui vaut
-`restaurant` : la coche devient une fourchette et l'encadré passe à l'orange.
-Pour ajouter une table, un bloc dans `source/activites.json` suffit.
+## Noter une table
+
+Une table essayée se déclare d'un seul bloc, dans la liste `tables` du même
+`source/faits.json`. Rien d'autre à toucher : ni `activites.json`, ni
+`lieux.json`. C'est le format à utiliser pendant le voyage.
 
 ```json
 {
- "slug": "ambrai",
- "ville": "udaipur",
- "nom": "Ambrai",
- "etoile": 0,
- "categorie": "restaurant",
- "description": "…",
- "pratique": null,
- "reservation": null
+ "faits": ["amber-fort", "nahargarh"],
+ "tables": [
+  {"nom": "Ambrai", "ville": "udaipur",
+   "lat": 24.5795, "lng": 73.6824,
+   "note": "Une phrase sur l'endroit.",
+   "pratique": "Réserver le soir pour la terrasse."}
+ ]
 }
 ```
+
+Seuls `nom` et `ville` sont obligatoires. Le slug se déduit du nom, et sans
+`lat`/`lng` la table apparaît quand même dans la fiche ville, simplement pas sur
+la carte. La coche verte devient une fourchette orange, dans le fil comme sur la
+carte.
+
+Une table déjà écrite dans `activites.json` avec `"categorie": "restaurant"`
+fonctionne toujours, il suffit alors d'ajouter son slug dans `faits`.
+
+## La carte
+
+Un panneau permanent à droite sur ordinateur et sur tablette en paysage, un
+bouton flottant en bas à droite sur téléphone.
+
+Rien à renseigner : la carte se construit toute seule à partir de
+`source/etapes.json` et de `source/lieux.json`. Chaque trajet devient un arc
+entre son `lieu_depart` et son `lieu_arrivee`, avec la pastille de son mode de
+transport au milieu. Un trajet en cours se remplit au fil des heures, et un
+point clignotant marque la position calculée sur l'arc. Les villes portent leur
+numéro d'ordre et passent du contour au vert une fois traversées.
+
+Les hébergements apparaissent en violet, les lieux marqués dans `faits.json` en
+vert et les tables en orange. Ces trois-là ne se montrent qu'une fois zoomé,
+sinon la vue d'ensemble devient illisible. Un appui sur une ville ouvre son
+aperçu, d'où l'on descend sur ses lieux ; « Où on est » ramène à la position du
+moment et « Tout voir » au trajet entier.
+
+Le fond vient de Natural Earth, dans le domaine public. Il est vectoriel et
+versionné dans le dépôt, donc la carte se dessine encore en mode avion, sans
+aucun serveur de tuiles. `python outils/fond.py` le refabrique, à ne relancer
+que pour changer la fenêtre ou le degré de simplification.
+
+Ajouter une ville à la carte demande sa clé dans `source/lieux.json`, du même
+nom que son `slug`. Sans coordonnées, elle est simplement ignorée.
 
 ## Ajouter des photos
 
@@ -157,6 +195,7 @@ indique le nombre d'images disponibles.
     python outils/photos.py               télécharge ce qui manque
     python outils/photos.py --reprendre   refait les images listées dans REPRENDRE
     python outils/lieux.py                complète les coordonnées
+    python outils/fond.py                 refabrique le fond de carte
 
 Les illustrations viennent de Wikipedia et Wikimedia Commons, sous licence
 libre ; auteurs et licences sont notés dans `photos/credits.json`.
