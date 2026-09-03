@@ -2225,7 +2225,7 @@
    "statut": "réservé",
    "tel": "+917073031166",
    "adresse": "City Palace Road",
-   "note": "Check-in de 14h à 23h. Dépôt des sacs demandé pour 7h. Check-out à 11h le 4 septembre, bagagerie jusqu'au départ de 17h30.",
+   "note": "Check-in de 14h à 23h. Dépôt des sacs demandé pour 7h. Check-out à 11h le 4 septembre, bagagerie jusqu'au départ pour l'aéroport.",
    "position": {
     "lat": 24.576902,
     "lng": 73.685151
@@ -2244,7 +2244,7 @@
    "type": "etape",
    "titre": "Udaipur",
    "depart": "2026-09-02T09:00",
-   "arrivee": "2026-09-04T17:00",
+   "arrivee": "2026-09-04T17:30",
    "ville": "udaipur",
    "statut": "libre",
    "note": "Le City Palace et la vieille ville occupent une demi-journée. Le bateau sur le lac Pichola part au couchant et le spectacle de Bagore-ki-Haveli commence à 19h. La journée du jeudi laisse la place à une excursion.",
@@ -2255,35 +2255,74 @@
    "a_des_details": false
   },
   {
-   "id": "j12-train-delhi",
-   "type": "train",
+   "id": "j12-vol-delhi",
+   "type": "vol",
    "titre": "Udaipur → Delhi",
-   "depart": "2026-09-04T18:30",
-   "arrivee": "2026-09-05T06:50",
-   "de": "Udaipur City",
-   "vers": "H. Nizamuddin",
-   "lieu_depart": "gare-udaipur",
-   "lieu_arrivee": "gare-nizamuddin",
-   "numero": "12964",
-   "nom_train": "Mewar Express",
-   "classe": "3A",
+   "depart": "2026-09-04T20:00",
+   "arrivee": "2026-09-04T21:20",
+   "de": "Udaipur UDR",
+   "vers": "Delhi T1",
+   "lieu_depart": "aeroport-udaipur",
+   "lieu_arrivee": "aeroport-delhi-t1",
+   "operateur": "IndiGo",
+   "numero": "6E6229",
    "statut": "réservé",
-   "note": "La climatisation des voitures 3A est froide. Le dîner ne se vend pas à bord.",
+   "note": "L'aéroport Maharana Pratap est à 22 km de la vieille ville, environ 40 min. L'enregistrement et le dépôt des bagages ferment à 19h. Bagage en soute limité à 15 kg par personne.",
    "instructions": [
-    "Dîner acheté avant le départ",
-    "Pull accessible",
-    "Cadenas pour les sacs sous la couchette"
+    "Départ de l'hôtel vers 17h30",
+    "Enregistrement fermé à 19h",
+    "Batteries externes en cabine, deux au maximum"
+   ],
+   "infos": [
+    {
+     "libelle": "Vol",
+     "valeur": "6E6229"
+    },
+    {
+     "libelle": "Arrivée",
+     "valeur": "Terminal 1"
+    }
    ],
    "position_depart": {
-    "lat": 24.567493,
-    "lng": 73.699553
+    "lat": 24.617,
+    "lng": 73.896
    },
    "position_arrivee": {
-    "lat": 28.586413,
-    "lng": 77.252982
+    "lat": 28.5562,
+    "lng": 77.1181
    },
    "photos": [],
    "photo": null,
+   "a_des_details": false
+  },
+  {
+   "id": "j12-hotel-delhi",
+   "type": "hotel",
+   "titre": "The Hosteller",
+   "depart": "2026-09-04T22:30",
+   "arrivee": "2026-09-05T11:00",
+   "lieu": "hotel-delhi-hosteller",
+   "ville": "delhi",
+   "statut": "réservé",
+   "tel": "+919810187717",
+   "prix": "4 853 ₹",
+   "adresse": "A-10 Mathura Road, New Friends Colony",
+   "note": "Première des deux nuits, réservée séparément de celle du 5. Le terminal 1 est à 22 km, comptez 45 min en taxi. Petit-déjeuner compris. Arrivée annoncée entre 22h et 23h.",
+   "infos": [
+    {
+     "libelle": "Code",
+     "valeur": "6725"
+    }
+   ],
+   "position": {
+    "lat": 28.571085,
+    "lng": 77.259891
+   },
+   "photos": [
+    "photos/hotel-delhi-hosteller.jpg",
+    "photos/hotel-delhi-hosteller-2.jpg"
+   ],
+   "photo": "photos/hotel-delhi-hosteller.jpg",
    "a_des_details": false
   },
   {
@@ -2310,8 +2349,9 @@
    "lieu": "hotel-delhi-hosteller",
    "ville": "delhi",
    "statut": "réservé",
-   "adresse": "Mathura Road, près d'Ashram Chowk",
-   "note": "À 2,4 km de la gare de Nizamuddin.",
+   "tel": "+919810187717",
+   "adresse": "A-10 Mathura Road, New Friends Colony",
+   "note": "Seconde nuit, réservée séparément de celle du 4. À 2,4 km de la gare de Nizamuddin.",
    "position": {
     "lat": 28.571085,
     "lng": 77.259891
@@ -2372,7 +2412,7 @@
    "depart": "2026-09-06T12:15",
    "arrivee": "2026-09-06T13:00",
    "lieu_depart": "nepali-farm",
-   "lieu_arrivee": "tapovan",
+   "lieu_arrivee": "hotel-rishikesh",
    "statut": "à organiser",
    "note": "La dépose se fait à un carrefour de la nationale, sous le nouveau pont, à 12-13 km de Tapovan. Auto privé 500 à 700 ₹.",
    "position_depart": {
@@ -2380,8 +2420,8 @@
     "lng": 78.217742
    },
    "position_arrivee": {
-    "lat": 30.129922,
-    "lng": 78.319349
+    "lat": 30.129417,
+    "lng": 78.32785
    },
    "photos": [],
    "photo": null,
@@ -2390,23 +2430,30 @@
   {
    "id": "j14-hotel-rishikesh",
    "type": "hotel",
-   "titre": "Hébergement à Rishikesh",
+   "titre": "Punyah Residency",
    "depart": "2026-09-06T13:00",
    "arrivee": "2026-09-08T11:00",
-   "lieu": "tapovan",
+   "lieu": "hotel-rishikesh",
    "ville": "rishikesh",
-   "statut": "à réserver",
-   "note": "Deux nuits à Tapovan. Une consigne à bagages est nécessaire jusqu'à 20h15 le 8 septembre, et la distance à la route accessible en taxi varie beaucoup d'une adresse à l'autre.",
+   "statut": "réservé",
+   "tel": "+917895367706",
+   "prix": "4 734 ₹",
+   "adresse": "Laxman Jhula, Tapovan",
+   "note": "Chambre double supérieure avec balcon, petit-déjeuner compris. Check-in de 13h à 23h30, check-out de 7h à 11h. Parking gratuit à proximité sur réservation.",
+   "infos": [
+    {
+     "libelle": "Code",
+     "valeur": "0559"
+    }
+   ],
    "position": {
-    "lat": 30.129922,
-    "lng": 78.319349
+    "lat": 30.129417,
+    "lng": 78.32785
    },
    "photos": [
-    "photos/tapovan.jpg",
-    "photos/tapovan-2.jpg",
-    "photos/tapovan-3.jpg"
+    "photos/ville-rishikesh.jpg"
    ],
-   "photo": "photos/tapovan.jpg",
+   "photo": "photos/ville-rishikesh.jpg",
    "a_des_details": false
   },
   {
