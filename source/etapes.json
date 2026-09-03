@@ -389,7 +389,7 @@
   "operateur": "Shri Krishna Travels",
   "tel": "+919720001155",
   "statut": "réservé",
-  "note": "L'embarquement se fait à Nepali Farm, sous le pont, au carrefour en T. L'arrivée a lieu chez Radhika Travels à Chipitola, près du Rakab Ganj Police Thana, à 3-4 km de Taj Ganj, soit 15 min en auto pour 100 à 200 ₹. La chambre est libérée à 11h et le bus part à 21h30.",
+  "note": "L'embarquement se fait à Nepali Farm, sous le pont, au carrefour en T. L'arrivée a lieu chez Radhika Travels à Chipitola, près du Rakab Ganj Police Thana, à 5 km de Fatehabad Road, soit 15 à 20 min en auto pour 150 à 250 ₹. La chambre est libérée à 11h et le bus part à 21h30.",
   "instructions": [
    "Retrait d'espèces dans Rishikesh ville",
    "Consigne à bagages de 11h à 20h15",
@@ -405,13 +405,22 @@
  {
   "id": "j17-hotel-agra",
   "type": "hotel",
-  "titre": "Hébergement à Agra",
+  "titre": "Golden Tulip",
   "depart": "2026-09-09T09:00",
   "arrivee": "2026-09-11T06:45",
-  "lieu": "taj-ganj",
+  "lieu": "hotel-agra",
   "ville": "agra",
-  "statut": "à réserver",
-  "note": "Trois nuits à Taj Ganj, du côté de la porte Est, à 5 à 15 min à pied des entrées du Taj."
+  "statut": "réservé",
+  "tel": "+917454802182",
+  "prix": "7 258 ₹",
+  "adresse": "Fatehabad Road",
+  "note": "Chambre double deluxe, petit-déjeuner compris, 10 % de remise sur la restauration. Check-in à partir de 14h, check-out avant 11h. Parking gratuit. L'hôtel est sur Fatehabad Road, à 2-3 km des portes du Taj, et non dans Taj Ganj même.",
+  "infos": [
+   {
+    "libelle": "Code",
+    "valeur": "2662"
+   }
+  ]
  },
  {
   "id": "j17-agra",
@@ -431,8 +440,9 @@
   "arrivee": "2026-09-10T16:00",
   "ville": "agra",
   "statut": "libre",
-  "note": "Le Taj ouvre à l'aube et la file se forme vers 5h30 à la porte Est. La brume de mousson se lève sur la Yamuna et la fréquentation reste faible. Le supplément mausolée s'utilise ce matin-là, la queue de l'escalier étant plus courte. Wildlife SOS ouvre de 10h à 16h, à 60 km au nord, et Sur Sarovar se trouve sur la route du retour.",
+  "note": "Le Taj ouvre à l'aube et la file se forme vers 5h30 à la porte Est. L'hôtel étant sur Fatehabad Road, il faut compter un transport commandé la veille. La brume de mousson se lève sur la Yamuna et la fréquentation reste faible. Le supplément mausolée s'utilise ce matin-là, la queue de l'escalier étant plus courte. Wildlife SOS ouvre de 10h à 16h, à 60 km au nord, et Sur Sarovar se trouve sur la route du retour.",
   "instructions": [
+   "Taxi commandé la veille pour 5h00, l'hôtel est à 2-3 km du Taj",
    "Billets du Taj imprimés, un par passage",
    "Supplément mausolée pour ce passage",
    "Réservation Wildlife SOS confirmée",
