@@ -2009,6 +2009,24 @@
     "lng": 77.685555
    },
    "recherche": null
+  },
+  {
+   "slug": "paradise-biryani-charminar",
+   "ville": "hyderabad",
+   "nom": "Paradise Biryani | Charminar",
+   "etoile": 0,
+   "categorie": "restaurant",
+   "description": "Ouverte en 1953 comme une petite cantine près d'un cinéma de Secunderabad, la maison est devenue la biryani la plus connue de Hyderabad et compte maintenant une dizaine d'adresses dans la ville. Celle-ci est la plus proche du Charminar.",
+   "pratique": "À une centaine de mètres du Charminar, vers le nord-est.",
+   "reservation": null,
+   "fait": true,
+   "photos": [],
+   "photo": null,
+   "position": {
+    "lat": 17.3620261,
+    "lng": 78.4750792
+   },
+   "recherche": null
   }
  ],
  "etapes": [
