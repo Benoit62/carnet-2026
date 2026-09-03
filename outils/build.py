@@ -6,8 +6,9 @@ Construit le carnet à partir des fichiers de source/.
     python outils/build.py
 
 Lit    source/villes.json, activites.json, etapes.json, lieux.json,
-       reglages.json, faits.json, prive.json
+       reglages.json, faits.json, fond.json, prive.json
 Écrit  donnees/voyage.json    contenu public, servi par GitHub Pages
+       donnees/fond.json      fond de carte vectoriel, recopié tel quel
        donnees/prive.json     PNR et places, jamais poussé
        hors-ligne.html        fichier unique autonome, photos intégrées
 
@@ -46,6 +47,7 @@ def main():
     lieux     = lire("lieux.json")
     reglages  = lire("reglages.json")
     prive     = lire("prive.json", {})
+    carte     = lire("fond.json", {"etats": [], "pays": [], "inde": ""})
     faits     = set(lire("faits.json", {}).get("faits", []))
 
     photos = {os.path.basename(p)[:-4] for p in glob.glob(PHOTOS + "/*.jpg")}
@@ -124,6 +126,7 @@ def main():
 
     os.makedirs(DONNEES, exist_ok=True)
     for nom, obj in (("voyage.json", public),
+                     ("fond.json", carte),
                      ("prive.json", dict(version=3, details=prive))):
         p = os.path.join(DONNEES, nom)
         json.dump(obj, open(p, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
@@ -140,6 +143,7 @@ def main():
         sys.exit(f"ARRÊT — donnée sensible dans le fichier public : {fuites}")
 
     print(f"\n  {len(villes)} villes · {len(activites)} lieux · {len(etapes)} étapes")
+    print(f"  carte     {len(carte['etats'])} États, {len(carte['pays'])} pays voisins")
     nphotos = sum(len(a["photos"]) for a in activites) \
             + sum(len(v["photos"]) for v in villes)
     print(f"  photos    {sum(1 for a in activites if a['photo'])}/{len(activites)} "
@@ -187,6 +191,7 @@ def main():
     html = html.replace("<script>",
         "<script>const EMBARQUE={voyage:" + json.dumps(public, ensure_ascii=False)
         + ",prive:" + json.dumps(dict(version=3, details=prive), ensure_ascii=False)
+        + ",fond:" + json.dumps(carte, ensure_ascii=False)
         + ",images:" + json.dumps(images) + "};</script>\n<script>", 1)
 
     out = os.path.join(RACINE, "hors-ligne.html")
