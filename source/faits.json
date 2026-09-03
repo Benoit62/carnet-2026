@@ -1,0 +1,4 @@
+{
+ "_comment": "Slugs des lieux visités et des tables essayées. Ajouter une ligne suffit : l'app coche l'élément, le remonte en tête de la fiche ville et l'affiche en mosaïque sur la carte du séjour dans le fil.",
+ "faits": []
+}
