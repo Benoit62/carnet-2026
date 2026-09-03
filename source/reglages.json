@@ -15,19 +15,9 @@
    "detail": "Réservation obligatoire. Visite du 10 septembre au matin."
   },
   {
-   "titre": "Hébergement à Rishikesh",
-   "lien": "",
-   "detail": "Deux nuits à Tapovan, les 6 et 7 septembre. Consigne à bagages jusqu'à 20h15 le 8."
-  },
-  {
    "titre": "Hébergement à Agra",
    "lien": "",
    "detail": "Trois nuits à Taj Ganj, du 8 au 11 septembre. Dépôt des sacs dès 8h30 le 9, taxi à 6h45 le 11."
-  },
-  {
-   "titre": "Safari de Jhalana",
-   "lien": "jhalanasafari.in",
-   "detail": "Passeport requis, paiement intégral, jusqu'à 90 jours à l'avance."
   }
  ],
  "urgence": {
@@ -57,6 +47,14 @@
    {
     "libelle": "Manuscript Jhilwara Haveli, Udaipur",
     "tel": "+917073031166"
+   },
+   {
+    "libelle": "The Hosteller, Delhi",
+    "tel": "+919810187717"
+   },
+   {
+    "libelle": "Punyah Residency, Rishikesh",
+    "tel": "+917895367706"
    }
   ],
   "transports": [

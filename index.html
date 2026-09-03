@@ -440,9 +440,11 @@ function vueUrgence(){
 }
 
 /* ================= MODALES EN CASCADE ================= */
+function estOuvert(n){
+  return document.getElementById("voile"+n).classList.contains("ouvert")}
 function ouvrir(n,html){
   const v=document.getElementById("voile"+n), f=document.getElementById("fiche"+n);
-  if(!v.classList.contains("ouvert")) history.pushState({fiche:n},"");
+  if(!estOuvert(n)) history.pushState({fiche:n},"");
   f.innerHTML=html; v.classList.add("ouvert"); f.scrollTop=0;
   document.body.style.overflow="hidden";
   f.querySelectorAll(".carrousel").forEach(c=>{
@@ -451,18 +453,21 @@ function ouvrir(n,html){
       [...pts.children].forEach((p,k)=>p.classList.toggle("on",k===i))};
   });
 }
-function fermer(n,saut){
-  const v=document.getElementById("voile"+n);
-  if(!v.classList.contains("ouvert")) return;
-  v.classList.remove("ouvert");
+function retirer(n){
+  document.getElementById("voile"+n).classList.remove("ouvert");
   if(!document.querySelector(".voile.ouvert")) document.body.style.overflow="";
-  if(!saut && history.state && history.state.fiche) history.back();
+}
+function fermer(n){
+  if(!estOuvert(n)) return;
+  if(history.state && history.state.fiche) history.back();  // popstate fera le retrait
+  else retirer(n);
 }
 addEventListener("popstate",()=>{
-  const n=document.getElementById("voile2").classList.contains("ouvert")?2:1;
-  fermer(n,true)});
+  const n=estOuvert(2)?2:(estOuvert(1)?1:0);
+  if(n) retirer(n);
+});
 [1,2].forEach(n=>document.getElementById("voile"+n).addEventListener("click",e=>{
-  if(e.target.id==="voile"+n||e.target.classList.contains("fermer")) fermer(n)}));
+  if(e.target.id==="voile"+n) fermer(n)}));
 
 function banniere(photos,repli,retour){
   const l=(photos&&photos.length)?photos:[null];
@@ -603,6 +608,8 @@ document.addEventListener("click",e=>{
     e.stopPropagation();return}
   const r=e.target.closest("[data-retour]");
   if(r){fermer(2);e.stopPropagation();return}
+  const x=e.target.closest(".fermer");
+  if(x){fermer(x.closest(".voile").id==="voile2"?2:1);e.stopPropagation();return}
   const a=e.target.closest("[data-activite]");
   if(a){ficheActivite(a.dataset.activite,a.dataset.depuis);return}
   const b=e.target.closest("[data-ville]");
