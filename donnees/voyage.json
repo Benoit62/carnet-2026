@@ -86,7 +86,10 @@
     "photos/ville-hyderabad.jpg"
    ],
    "photo": "photos/ville-hyderabad.jpg",
-   "position": null
+   "position": {
+    "lat": 17.385,
+    "lng": 78.4867
+   }
   },
   {
    "slug": "jaipur",
@@ -106,8 +109,8 @@
    ],
    "photo": "photos/ville-jaipur.jpg",
    "position": {
-    "lat": 26.920789,
-    "lng": 75.786654
+    "lat": 26.9124,
+    "lng": 75.7873
    }
   },
   {
@@ -127,8 +130,8 @@
    ],
    "photo": "photos/ville-udaipur.jpg",
    "position": {
-    "lat": 24.567493,
-    "lng": 73.699553
+    "lat": 24.5854,
+    "lng": 73.7125
    }
   },
   {
@@ -147,7 +150,10 @@
     "photos/ville-delhi.jpg"
    ],
    "photo": "photos/ville-delhi.jpg",
-   "position": null
+   "position": {
+    "lat": 28.6139,
+    "lng": 77.209
+   }
   },
   {
    "slug": "rishikesh",
@@ -165,7 +171,10 @@
     "photos/ville-rishikesh.jpg"
    ],
    "photo": "photos/ville-rishikesh.jpg",
-   "position": null
+   "position": {
+    "lat": 30.0869,
+    "lng": 78.2676
+   }
   },
   {
    "slug": "agra",
@@ -183,7 +192,10 @@
     "photos/ville-agra.jpg"
    ],
    "photo": "photos/ville-agra.jpg",
-   "position": null
+   "position": {
+    "lat": 27.1767,
+    "lng": 78.0081
+   }
   }
  ],
  "activites": [
@@ -216,7 +228,7 @@
    "description": "Arc à quatre minarets élevé en 1591 au centre de la vieille ville, au croisement des quatre grandes artères du plan d'origine. Les étages supérieurs se visitent.",
    "pratique": "6h-18h · ~250 ₹",
    "reservation": null,
-   "fait": false,
+   "fait": true,
    "photos": [
     "photos/charminar.jpg"
    ],
@@ -236,7 +248,7 @@
    "description": "Rue marchande partant du Charminar, spécialisée dans les bracelets de verre depuis l'époque des Nizams.",
    "pratique": "Gratuit",
    "reservation": null,
-   "fait": false,
+   "fait": true,
    "photos": [
     "photos/laad-bazaar.jpg"
    ],
@@ -256,7 +268,7 @@
    "description": "Mosquée du XVIIᵉ siècle voisine du Charminar, dont certaines briques ont été rapportées de La Mecque. Elle peut accueillir dix mille fidèles.",
    "pratique": "Gratuit",
    "reservation": null,
-   "fait": false,
+   "fait": true,
    "photos": [
     "photos/mecca-masjid.jpg"
    ],
@@ -296,7 +308,7 @@
    "description": "Palais des Nizams, construit au XVIIIᵉ siècle autour de quatre cours. Il abrite la salle du Durbar et une collection de voitures anciennes.",
    "pratique": "Fermé le vendredi · ~200 ₹",
    "reservation": null,
-   "fait": false,
+   "fait": true,
    "photos": [
     "photos/chowmahalla.jpg"
    ],
