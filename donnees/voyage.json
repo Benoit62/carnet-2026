@@ -196,6 +196,7 @@
    "description": "Citadelle du XVIᵉ siècle bâtie sur une colline de granit et entourée de 11 km de remparts. Un claquement de mains sous le portail d'entrée s'entend jusqu'au sommet, à un kilomètre de là, ce qui servait autrefois de système d'alerte.",
    "pratique": "9h-17h30 · ~300 ₹ · 2 à 3 h de montée",
    "reservation": null,
+   "fait": false,
    "photos": [
     "photos/golconde.jpg"
    ],
@@ -215,6 +216,7 @@
    "description": "Arc à quatre minarets élevé en 1591 au centre de la vieille ville, au croisement des quatre grandes artères du plan d'origine. Les étages supérieurs se visitent.",
    "pratique": "6h-18h · ~250 ₹",
    "reservation": null,
+   "fait": false,
    "photos": [
     "photos/charminar.jpg"
    ],
@@ -234,6 +236,7 @@
    "description": "Rue marchande partant du Charminar, spécialisée dans les bracelets de verre depuis l'époque des Nizams.",
    "pratique": "Gratuit",
    "reservation": null,
+   "fait": false,
    "photos": [
     "photos/laad-bazaar.jpg"
    ],
@@ -253,6 +256,7 @@
    "description": "Mosquée du XVIIᵉ siècle voisine du Charminar, dont certaines briques ont été rapportées de La Mecque. Elle peut accueillir dix mille fidèles.",
    "pratique": "Gratuit",
    "reservation": null,
+   "fait": false,
    "photos": [
     "photos/mecca-masjid.jpg"
    ],
@@ -272,6 +276,7 @@
    "description": "Nécropole des sultans Qutb Shahi, sept tombes à dômes réparties dans un parc à 2 km de Golconde, restaurées dans les années 2010.",
    "pratique": "~200 ₹",
    "reservation": null,
+   "fait": false,
    "photos": [
     "photos/qutb-shahi.jpg"
    ],
@@ -291,6 +296,7 @@
    "description": "Palais des Nizams, construit au XVIIIᵉ siècle autour de quatre cours. Il abrite la salle du Durbar et une collection de voitures anciennes.",
    "pratique": "Fermé le vendredi · ~200 ₹",
    "reservation": null,
+   "fait": false,
    "photos": [
     "photos/chowmahalla.jpg"
    ],
@@ -310,6 +316,7 @@
    "description": "Collection réunie par Mir Yousuf Ali Khan au début du XXᵉ siècle, l'une des plus vastes jamais rassemblées par un particulier. La Veiled Rebecca et l'horloge musicale en sont les pièces les plus connues.",
    "pratique": "Fermé le vendredi · ~500 ₹",
    "reservation": null,
+   "fait": false,
    "photos": [
     "photos/salar-jung.jpg"
    ],
@@ -329,6 +336,7 @@
    "description": "Tombes de la famille Paigah, alliée des Nizams, ornées de stucs géométriques du XVIIIᵉ siècle. Le site reste peu fréquenté.",
    "pratique": "Entrée libre ou symbolique",
    "reservation": null,
+   "fait": false,
    "photos": [],
    "photo": null,
    "position": {
@@ -346,6 +354,7 @@
    "description": "Musée installé dans le palais de Purani Haveli, qui conserve la garde-robe du sixième Nizam, longue de 73 m et desservie par un ascenseur en bois.",
    "pratique": null,
    "reservation": null,
+   "fait": false,
    "photos": [],
    "photo": null,
    "position": {
@@ -363,6 +372,7 @@
    "description": "Temple de marbre blanc achevé en 1976 sur une colline dominant le lac Hussain Sagar.",
    "pratique": "Gratuit",
    "reservation": null,
+   "fait": false,
    "photos": [],
    "photo": null,
    "position": {
@@ -380,6 +390,7 @@
    "description": "Lac artificiel creusé en 1563, au centre duquel se dresse une statue monolithique de Bouddha haute de 18 m. Des bateaux font la traversée.",
    "pratique": null,
    "reservation": null,
+   "fait": false,
    "photos": [],
    "photo": null,
    "position": {
@@ -397,6 +408,7 @@
    "description": "Ancien palais du Nizam, transformé en hôtel. Le high tea permet d'en visiter les salons, dont la salle à manger et sa table de 101 couverts. L'accueil se fait en calèche.",
    "pratique": "~2 500-4 000 ₹ par personne",
    "reservation": "High tea sur réservation, +91 40 6629 8585.",
+   "fait": false,
    "photos": [
     "photos/chowmahalla.jpg"
    ],
@@ -416,6 +428,7 @@
    "description": "Complexe de studios de cinéma ouvert en 1996, le plus vaste du monde avec presque 700 hectares de décors.",
    "pratique": "À 30 km · journée entière",
    "reservation": null,
+   "fait": false,
    "photos": [],
    "photo": null,
    "position": {
@@ -433,6 +446,7 @@
    "description": "Ancienne capitale des Kachwaha, bâtie en grès et en marbre à partir de 1592 et organisée en quatre cours successives. Le Sheesh Mahal est couvert de milliers de miroirs convexes qu'une seule bougie suffit à faire scintiller.",
    "pratique": "8h-17h30 · ~600 ₹",
    "reservation": null,
+   "fait": false,
    "photos": [
     "photos/amber-fort.jpg"
    ],
@@ -452,6 +466,7 @@
    "description": "Fort militaire dominant Amber, auquel il est relié par un passage souterrain. Il conserve Jaivana, fondu en 1720, le plus grand canon sur roues du monde.",
    "pratique": "~200 ₹",
    "reservation": null,
+   "fait": false,
    "photos": [],
    "photo": null,
    "position": {
@@ -469,6 +484,7 @@
    "description": "Puits à degrés du XVIᵉ siècle situé à 400 m d'Amber, dont les escaliers se croisent en damier sur huit niveaux.",
    "pratique": "Gratuit · 10 min",
    "reservation": null,
+   "fait": false,
    "photos": [
     "photos/panna-meena.jpg"
    ],
@@ -485,6 +501,7 @@
    "description": "Fort construit en 1734 sur la crête nord, qui servait de résidence d'été et de poste de guet. Il domine toute la ville.",
    "pratique": "Jusqu'à 22h · ~200 ₹",
    "reservation": null,
+   "fait": false,
    "photos": [
     "photos/nahargarh.jpg"
    ],
@@ -504,6 +521,7 @@
    "description": "Résidence de la famille royale depuis 1732, toujours occupée pour partie. La cour de Pritam Niwas Chowk ouvre sur quatre portes ornées, une par saison.",
    "pratique": "~700 ₹",
    "reservation": null,
+   "fait": false,
    "photos": [
     "photos/city-palace-jaipur.jpg"
    ],
@@ -523,6 +541,7 @@
    "description": "Observatoire astronomique construit en 1734 par Jai Singh II et classé au patrimoine mondial. Le Samrat Yantra, cadran solaire de 27 m, donne l'heure à deux secondes près.",
    "pratique": "~200 ₹ · guides sur place",
    "reservation": null,
+   "fait": false,
    "photos": [
     "photos/jantar-mantar.jpg"
    ],
@@ -542,6 +561,7 @@
    "description": "Façade de cinq étages percée de 953 fenêtres, élevée en 1799 pour que les femmes de la cour puissent observer la rue sans être vues. L'intérieur est réduit à un réseau de couloirs.",
    "pratique": "Vue d'ensemble depuis les cafés d'en face",
    "reservation": null,
+   "fait": false,
    "photos": [
     "photos/hawa-mahal.jpg"
    ],
@@ -561,6 +581,7 @@
    "description": "Musée ouvert en 1887 dans un bâtiment de style indo-sarrasin, qui rassemble textiles, armes, miniatures et une momie égyptienne.",
    "pratique": "Éclairé la nuit",
    "reservation": null,
+   "fait": false,
    "photos": [
     "photos/albert-hall.jpg"
    ],
@@ -580,6 +601,7 @@
    "description": "Cénotaphes de marbre sculpté des maharajas de Jaipur, au pied de la colline de Nahargarh.",
    "pratique": null,
    "reservation": null,
+   "fait": false,
    "photos": [],
    "photo": null,
    "position": null,
@@ -594,6 +616,7 @@
    "description": "Porte monumentale de Jawahar Circle, achevée en 2016, dont chaque arche est peinte dans une couleur et un motif différents.",
    "pratique": "Gratuit",
    "reservation": null,
+   "fait": false,
    "photos": [
     "photos/patrika-gate.jpg"
    ],
@@ -613,6 +636,7 @@
    "description": "Ensemble de temples logés dans une gorge à l'est de la ville, autour de bassins alimentés par une source. Des colonies de singes y vivent.",
    "pratique": "À 10 km",
    "reservation": null,
+   "fait": false,
    "photos": [],
    "photo": null,
    "position": {
@@ -630,6 +654,7 @@
    "description": "Palais du XVIIIᵉ siècle bâti au milieu du lac Man Sagar, dont quatre étages restent immergés. Il ne se visite pas et s'observe depuis la route d'Amber.",
    "pratique": null,
    "reservation": null,
+   "fait": false,
    "photos": [
     "photos/jal-mahal.jpg"
    ],
@@ -649,6 +674,7 @@
    "description": "Musée du block-print installé dans une haveli restaurée à Amber, avec démonstrations d'impression au tampon de bois.",
    "pratique": null,
    "reservation": null,
+   "fait": false,
    "photos": [],
    "photo": null,
    "position": {
@@ -666,6 +692,7 @@
    "description": "Salle de cinéma art déco inaugurée en 1976, à la façade en coquille et à l'intérieur meringué. Les séances de films hindi s'y accompagnent des réactions du public.",
    "pratique": "~150-400 ₹",
    "reservation": null,
+   "fait": false,
    "photos": [],
    "photo": null,
    "position": {
@@ -683,6 +710,7 @@
    "description": "Halle en plein air réunissant une vingtaine de stands de street food de Jaipur, dans le parc de Ram Niwas.",
    "pratique": null,
    "reservation": null,
+   "fait": false,
    "photos": [],
    "photo": null,
    "position": {
@@ -700,6 +728,7 @@
    "description": "Bazars du centre ancien, spécialisés rue par rue. Johari vend les bijoux, Bapu les textiles et Tripolia les bracelets.",
    "pratique": null,
    "reservation": null,
+   "fait": false,
    "photos": [],
    "photo": null,
    "position": {
@@ -717,6 +746,7 @@
    "description": "Première réserve de léopards d'Inde, ouverte en 2017 sur 23 km² à 12 km du centre. Elle abrite 35 à 45 individus, observables toute l'année depuis un 4×4.",
    "pratique": "Sorties le matin et le soir · 1 650-3 000 ₹ par personne",
    "reservation": "Sur jhalanasafari.in, jusqu'à 90 jours à l'avance. Passeport requis.",
+   "fait": false,
    "photos": [],
    "photo": null,
    "position": null,
@@ -731,6 +761,7 @@
    "description": "Puits à degrés du IXᵉ siècle creusé sur treize étages, avec 3 500 marches disposées en double escalier sur trois de ses faces.",
    "pratique": "À 95 km",
    "reservation": null,
+   "fait": false,
    "photos": [
     "photos/chand-baori.jpg"
    ],
@@ -750,6 +781,7 @@
    "description": "Cité fortifiée du XVIᵉ siècle, abandonnée au siècle suivant et réputée hantée. L'accès en est interdit entre le coucher et le lever du soleil.",
    "pratique": "À 85 km",
    "reservation": null,
+   "fait": false,
    "photos": [],
    "photo": null,
    "position": {
@@ -767,6 +799,7 @@
    "description": "Plus grand complexe palatial du Rajasthan, agrandi pendant quatre siècles par vingt-deux maharanas successifs. Les cours et les terrasses s'étagent au-dessus du lac Pichola.",
    "pratique": "9h30-17h30 · ~400 ₹ · entrée par Badi Pol",
    "reservation": null,
+   "fait": false,
    "photos": [
     "photos/city-palace-udaipur.jpg"
    ],
@@ -786,6 +819,7 @@
    "description": "Lac artificiel creusé en 1362, sur lequel se détachent le Lake Palace et l'île de Jag Mandir. La traversée en bateau dure environ une heure.",
    "pratique": "Départ Rameshwar Ghat · ~700-900 ₹ au couchant",
    "reservation": null,
+   "fait": false,
    "photos": [
     "photos/lac-pichola.jpg"
    ],
@@ -805,6 +839,7 @@
    "description": "Temple dédié à Vishnou, construit en 1651 dans le style nagara et précédé de trente-deux marches. Les aarti ont lieu à 7h30, 10h30 et 19h30.",
    "pratique": "Gratuit",
    "reservation": null,
+   "fait": false,
    "photos": [
     "photos/jagdish-temple.jpg"
    ],
@@ -824,6 +859,7 @@
    "description": "Haveli du XVIIIᵉ siècle transformée en musée, sur les ghats du lac. Un spectacle de danses et de marionnettes du Rajasthan s'y donne chaque soir à 19h.",
    "pratique": "~150 ₹ + ~200 ₹ pour le spectacle",
    "reservation": null,
+   "fait": false,
    "photos": [
     "photos/bagore-ki-haveli.jpg"
    ],
@@ -843,6 +879,7 @@
    "description": "Palais élevé en 1884 à 944 m d'altitude, sur une crête dominant la ville, dans le but d'observer l'arrivée des nuages de mousson. La vue porte à 360°.",
    "pratique": "~300 ₹ · taxi ~800 ₹ aller-retour",
    "reservation": null,
+   "fait": false,
    "photos": [
     "photos/monsoon-palace.jpg"
    ],
@@ -859,6 +896,7 @@
    "description": "Jardin aménagé au XVIIIᵉ siècle pour les suivantes d'une reine, avec bassins de lotus, fontaines et pavillons de marbre.",
    "pratique": "~100 ₹",
    "reservation": null,
+   "fait": false,
    "photos": [
     "photos/saheliyon-ki-bari.jpg"
    ],
@@ -878,6 +916,7 @@
    "description": "Une cinquantaine de chhatris marquant les crémations des maharanas du Mewar, groupés dans un champ à 2 km du centre.",
    "pratique": null,
    "reservation": null,
+   "fait": false,
    "photos": [],
    "photo": null,
    "position": null,
@@ -892,6 +931,7 @@
    "description": "Second lac de la ville, bordé d'une promenade, avec le Nehru Garden aménagé sur une île.",
    "pratique": null,
    "reservation": null,
+   "fait": false,
    "photos": [],
    "photo": null,
    "position": {
@@ -909,6 +949,7 @@
    "description": "Petit lac au sud du Pichola, d'où un téléphérique monte au temple de Karni Mata et à son point de vue sur la ville.",
    "pratique": null,
    "reservation": null,
+   "fait": false,
    "photos": [],
    "photo": null,
    "position": null,
@@ -923,6 +964,7 @@
    "description": "Collection automobile des maharanas du Mewar, dont plusieurs Rolls-Royce et la Cadillac décapotable filmée dans Octopussy.",
    "pratique": null,
    "reservation": null,
+   "fait": false,
    "photos": [],
    "photo": null,
    "position": {
@@ -940,6 +982,7 @@
    "description": "Cours de cuisine rajasthanie donnés chez l'habitant, autour de huit plats préparés en quatre heures, avec un livret de recettes.",
    "pratique": "~1 800 ₹ par personne",
    "reservation": "À réserver la veille.",
+   "fait": false,
    "photos": [],
    "photo": null,
    "position": null,
@@ -954,6 +997,7 @@
    "description": "Temple jaïn du XVᵉ siècle dédié à Adinatha, porté par 1 444 piliers de marbre dont aucun n'est identique.",
    "pratique": "Ouvert aux non-jaïns à partir de midi · aucun objet en cuir",
    "reservation": "Voiture avec chauffeur, via la guesthouse d'Udaipur.",
+   "fait": false,
    "photos": [
     "photos/ranakpur.jpg"
    ],
@@ -970,6 +1014,7 @@
    "description": "Forteresse du XVᵉ siècle ceinte de 36 km de remparts, deuxième plus longue muraille continue du monde après la Grande Muraille. Elle n'a été prise qu'une fois.",
    "pratique": null,
    "reservation": "Voiture avec chauffeur, via la guesthouse d'Udaipur.",
+   "fait": false,
    "photos": [
     "photos/kumbhalgarh.jpg"
    ],
@@ -989,6 +1034,7 @@
    "description": "Plus grand fort d'Inde, 280 hectares sur un plateau, capitale du Mewar jusqu'en 1568. Deux tours de la victoire y commémorent des batailles du XIIᵉ et du XVᵉ siècle.",
    "pratique": "À 115 km · journée entière",
    "reservation": null,
+   "fait": false,
    "photos": [
     "photos/chittorgarh.jpg"
    ],
@@ -1008,6 +1054,7 @@
    "description": "Complexe de 108 temples élevés entre le VIIIᵉ et le XVᵉ siècle, dédiés à Shiva et toujours en activité. Les temples jumeaux de Nagda, au bord d'un lac, se trouvent à 2 km.",
    "pratique": "À 22 km · fermé entre les créneaux de puja",
    "reservation": null,
+   "fait": false,
    "photos": [
     "photos/eklingji.jpg"
    ],
@@ -1027,6 +1074,7 @@
    "description": "Tombeau élevé en 1570 pour l'empereur Humayun, premier grand mausolée moghol à jardin et modèle direct du Taj Mahal construit quatre-vingts ans plus tard. Classé au patrimoine mondial.",
    "pratique": "~600 ₹",
    "reservation": null,
+   "fait": false,
    "photos": [
     "photos/humayun.jpg"
    ],
@@ -1046,6 +1094,7 @@
    "description": "Minaret de grès haut de 73 m, commencé en 1193, plus ancien monument islamique conservé en Inde. Le pilier de fer voisin, du IVᵉ siècle, ne présente aucune trace de rouille.",
    "pratique": "~600 ₹",
    "reservation": null,
+   "fait": false,
    "photos": [
     "photos/qutb-minar.jpg"
    ],
@@ -1065,6 +1114,7 @@
    "description": "Parc de 80 hectares voisin du Qutb, où subsistent environ deux cents monuments échelonnés sur mille ans.",
    "pratique": "Gratuit",
    "reservation": null,
+   "fait": false,
    "photos": [],
    "photo": null,
    "position": {
@@ -1082,6 +1132,7 @@
    "description": "Parc de 36 hectares où subsistent les tombeaux des dynasties Sayyid et Lodhi, élevés au XVᵉ siècle.",
    "pratique": "Gratuit",
    "reservation": null,
+   "fait": false,
    "photos": [],
    "photo": null,
    "position": {
@@ -1099,6 +1150,7 @@
    "description": "Premier quartier de street art d'Inde, aménagé à partir de 2015 dans les rues de Lodhi Colony, avec une cinquantaine de fresques monumentales.",
    "pratique": "Gratuit · parcours à pied",
    "reservation": null,
+   "fait": false,
    "photos": [
     "photos/lodhi-art.jpg"
    ],
@@ -1118,6 +1170,7 @@
    "description": "Dernier grand tombeau-jardin moghol, achevé en 1754 pour un vizir de l'empire finissant.",
    "pratique": null,
    "reservation": null,
+   "fait": false,
    "photos": [],
    "photo": null,
    "position": {
@@ -1135,6 +1188,7 @@
    "description": "Réservoir creusé au XIIIᵉ siècle, bordé d'une médersa et de tombeaux du XIVᵉ. Le village voisin s'est rempli de cafés et de boutiques.",
    "pratique": null,
    "reservation": null,
+   "fait": false,
    "photos": [
     "photos/hauz-khas.jpg"
    ],
@@ -1154,6 +1208,7 @@
    "description": "Marché artisanal permanent où les États indiens tiennent des stands à tour de rôle, à prix affichés.",
    "pratique": "~30 ₹",
    "reservation": null,
+   "fait": false,
    "photos": [],
    "photo": null,
    "position": {
@@ -1171,6 +1226,7 @@
    "description": "Principal musée du pays, qui couvre cinq mille ans d'histoire indienne, des sceaux de l'Indus aux miniatures moghols.",
    "pratique": null,
    "reservation": null,
+   "fait": false,
    "photos": [],
    "photo": null,
    "position": {
@@ -1188,6 +1244,7 @@
    "description": "Arc de 42 m élevé entre 1921 et 1931 à la mémoire des soldats indiens morts pendant la Première Guerre mondiale, au bout de l'axe cérémoniel de Lutyens.",
    "pratique": "Gratuit",
    "reservation": null,
+   "fait": false,
    "photos": [
     "photos/india-gate.jpg"
    ],
@@ -1207,6 +1264,7 @@
    "description": "Plus grande mosquée d'Inde, achevée en 1656 pour Shah Jahan, dont la cour peut recevoir vingt-cinq mille fidèles. Le minaret sud se monte.",
    "pratique": "~300 ₹ + 300 ₹ pour l'appareil photo · tenue couvrante",
    "reservation": null,
+   "fait": false,
    "photos": [
     "photos/jama-masjid.jpg"
    ],
@@ -1226,6 +1284,7 @@
    "description": "Artère principale d'Old Delhi, tracée au XVIIᵉ siècle par Jahanara Begum, avec un canal en son milieu aujourd'hui disparu. Les rues adjacentes sont spécialisées par corporation.",
    "pratique": "Cyclo-pousse ~200 ₹ pour 45 min",
    "reservation": null,
+   "fait": false,
    "photos": [
     "photos/chandni-chowk.jpg"
    ],
@@ -1245,6 +1304,7 @@
    "description": "Plus grand marché d'épices en gros d'Asie, en activité depuis le XVIIᵉ siècle, à l'extrémité de Chandni Chowk.",
    "pratique": null,
    "reservation": null,
+   "fait": false,
    "photos": [],
    "photo": null,
    "position": {
@@ -1262,6 +1322,7 @@
    "description": "Ruelle de Chandni Chowk où quelques boutiques centenaires ne servent que des parathas frits.",
    "pratique": null,
    "reservation": null,
+   "fait": false,
    "photos": [],
    "photo": null,
    "position": {
@@ -1279,6 +1340,7 @@
    "description": "Résidence impériale moghole construite entre 1638 et 1648, en grès rouge, d'où les empereurs ont gouverné pendant deux siècles.",
    "pratique": "~600 ₹",
    "reservation": null,
+   "fait": false,
    "photos": [
     "photos/red-fort.jpg"
    ],
@@ -1298,6 +1360,7 @@
    "description": "Temple sikh dont la cuisine communautaire sert environ dix mille repas gratuits par jour. Les cuisines et le bassin sacré se visitent.",
    "pratique": "Gratuit · couvre-chef fourni · épaules et jambes couvertes",
    "reservation": null,
+   "fait": false,
    "photos": [
     "photos/bangla-sahib.jpg"
    ],
@@ -1317,6 +1380,7 @@
    "description": "Puits à degrés de 60 m de long et 108 marches, d'origine incertaine et remanié au XIVᵉ siècle, encastré entre les immeubles du centre.",
    "pratique": "Gratuit",
    "reservation": null,
+   "fait": false,
    "photos": [
     "photos/agrasen-ki-baoli.jpg"
    ],
@@ -1336,6 +1400,7 @@
    "description": "Sanctuaire du saint soufi Nizamuddin Auliya, mort en 1325, au centre d'un quartier de ruelles. Des séances de qawwali s'y tiennent le jeudi soir.",
    "pratique": null,
    "reservation": null,
+   "fait": false,
    "photos": [],
    "photo": null,
    "position": {
@@ -1353,6 +1418,7 @@
    "description": "Temple hindou achevé en 2005, entièrement sculpté dans le grès rose et le marbre, sans structure métallique.",
    "pratique": "Fermé le lundi · téléphones et sacs interdits, consigne à l'entrée",
    "reservation": null,
+   "fait": false,
    "photos": [
     "photos/akshardham.jpg"
    ],
@@ -1372,6 +1438,7 @@
    "description": "Temple bahá'í ouvert en 1986, dont la forme reprend une fleur de lotus à vingt-sept pétales de marbre. Le silence est demandé à l'intérieur.",
    "pratique": "Gratuit",
    "reservation": null,
+   "fait": false,
    "photos": [
     "photos/lotus-temple.jpg"
    ],
@@ -1391,6 +1458,7 @@
    "description": "Musée en plein air rassemblant locomotives à vapeur et voitures princières, dont le train personnel du maharaja de Mysore.",
    "pratique": null,
    "reservation": null,
+   "fait": false,
    "photos": [],
    "photo": null,
    "position": {
@@ -1408,6 +1476,7 @@
    "description": "Ashram de Tapovan enseignant l'Akhanda Yoga, ouvert aux cours à l'unité et aux débutants. Les séances ont lieu tôt le matin et en fin d'après-midi.",
    "pratique": "~300 ₹, 500 ₹ avec Yogrishi Vishvketu · 6h30-8h30 et 16h-18h",
    "reservation": null,
+   "fait": false,
    "photos": [],
    "photo": null,
    "position": null,
@@ -1422,6 +1491,7 @@
    "description": "Le plus grand ashram de Rishikesh, à Swarg Ashram, avec un millier de chambres. Les cours se donnent contre donation, du lundi au samedi.",
    "pratique": null,
    "reservation": null,
+   "fait": false,
    "photos": [],
    "photo": null,
    "position": null,
@@ -1436,6 +1506,7 @@
    "description": "Ashram fondé en 1936 par Swami Sivananda, à Muni Ki Reti. Les cours quotidiens sont gratuits et ouverts aux visiteurs.",
    "pratique": null,
    "reservation": null,
+   "fait": false,
    "photos": [],
    "photo": null,
    "position": null,
@@ -1450,6 +1521,7 @@
    "description": "Centre de Muni Ki Reti spécialisé dans le yoga Iyengar.",
    "pratique": "Fermé le dimanche",
    "reservation": null,
+   "fait": false,
    "photos": [],
    "photo": null,
    "position": null,
@@ -1464,6 +1536,7 @@
    "description": "Cérémonie du feu célébrée chaque soir au coucher du soleil sur les ghats de Parmarth Niketan, avec chants et lampes déposées sur le fleuve.",
    "pratique": "Gratuit · vers 18h · 25-35 min depuis Tapovan",
    "reservation": null,
+   "fait": false,
    "photos": [
     "photos/ganga-aarti.jpg"
    ],
@@ -1480,6 +1553,7 @@
    "description": "Ghat principal de la ville basse, où se tient une aarti quotidienne plus fréquentée par les pèlerins que par les visiteurs.",
    "pratique": null,
    "reservation": null,
+   "fait": false,
    "photos": [
     "photos/triveni-ghat.jpg"
    ],
@@ -1499,6 +1573,7 @@
    "description": "Ancien ashram du Maharishi Mahesh Yogi, où les Beatles ont séjourné en 1968 et écrit une grande partie du White Album. Abandonné pendant trente ans, il a été repris par la forêt et couvert de fresques ; ses huttes de méditation en dôme sont intactes.",
    "pratique": "9h-16h30 · ~600 ₹ · 2 h",
    "reservation": null,
+   "fait": false,
    "photos": [
     "photos/beatles-ashram.jpg"
    ],
@@ -1515,6 +1590,7 @@
    "description": "Passerelles suspendues reliant les deux rives. Lakshman Jhula est fermé depuis 2019 et remplacé par Bajrang Setu, à plancher de verre. Ram Jhula et Janki Setu restent ouverts.",
    "pratique": null,
    "reservation": null,
+   "fait": false,
    "photos": [
     "photos/lakshman-jhula.jpg"
    ],
@@ -1534,6 +1610,7 @@
    "description": "Temple de treize étages sur la rive droite, dont les terrasses successives donnent sur le Gange.",
    "pratique": null,
    "reservation": null,
+   "fait": false,
    "photos": [],
    "photo": null,
    "position": null,
@@ -1548,6 +1625,7 @@
    "description": "Cascade accessible par trente minutes de marche depuis la route, abondante pendant la mousson.",
    "pratique": "Sentier glissant, chaussures fermées",
    "reservation": null,
+   "fait": false,
    "photos": [],
    "photo": null,
    "position": null,
@@ -1562,6 +1640,7 @@
    "description": "Temple perché à 1 676 m, à 25 km de la ville, d'où la chaîne himalayenne se découvre au lever du soleil quand le ciel est dégagé.",
    "pratique": "Départ 4h30 · taxi ~1 500 ₹",
    "reservation": null,
+   "fait": false,
    "photos": [
     "photos/kunjapuri.jpg"
    ],
@@ -1578,6 +1657,7 @@
    "description": "Temple dédié à Shiva, à 32 km par une route de montagne traversant la forêt, très fréquenté par les pèlerins.",
    "pratique": "Demi-journée",
    "reservation": null,
+   "fait": false,
    "photos": [
     "photos/neelkanth.jpg"
    ],
@@ -1594,6 +1674,7 @@
    "description": "Grotte de méditation au bord du Gange, à 22 km en amont, associée au sage Vashishta.",
    "pratique": "Une heure sur place",
    "reservation": null,
+   "fait": false,
    "photos": [],
    "photo": null,
    "position": null,
@@ -1608,6 +1689,7 @@
    "description": "Plateforme de saut à l'élastique de 83 m installée en 2010, encadrée par une équipe néo-zélandaise. Une balançoire géante et une tyrolienne fonctionnent au même endroit.",
    "pratique": "~4 000 ₹ · ouverture selon la météo",
    "reservation": null,
+   "fait": false,
    "photos": [],
    "photo": null,
    "position": null,
@@ -1622,6 +1704,7 @@
    "description": "Ghat principal de Haridwar, à 25 km, où une aarti rassemble chaque soir plusieurs milliers de pèlerins autour de l'empreinte attribuée à Vishnou.",
    "pratique": "45 min de route · une soirée",
    "reservation": null,
+   "fait": false,
    "photos": [
     "photos/haridwar.jpg"
    ],
@@ -1641,6 +1724,7 @@
    "description": "Mausolée élevé par Shah Jahan pour Mumtaz Mahal, morte en 1631 à la naissance de leur quatorzième enfant. Vingt mille ouvriers y ont travaillé pendant vingt-deux ans. Le marbre change de teinte au fil de la journée, rose à l'aube, blanc à midi et doré en fin d'après-midi.",
    "pratique": "Fermé le vendredi · 1 300 ₹ · +200 ₹ pour le mausolée · porte Sud en sortie seule",
    "reservation": "Deux entrées par personne + une fois le mausolée (200 ₹), sur asi.payumoney.com.",
+   "fait": false,
    "photos": [
     "photos/taj-mahal.jpg"
    ],
@@ -1660,6 +1744,7 @@
    "description": "Forteresse de grès rouge remaniée par Akbar à partir de 1565. Shah Jahan y fut retenu par son fils Aurangzeb pendant ses huit dernières années, dans la tour Musamman Burj d'où l'on voit le Taj, à 2,5 km.",
    "pratique": "6h-18h · ~650 ₹ · 2 h",
    "reservation": null,
+   "fait": false,
    "photos": [
     "photos/fort-agra.jpg"
    ],
@@ -1679,6 +1764,7 @@
    "description": "Jardin moghol situé sur l'autre rive de la Yamuna, dans l'axe exact du Taj Mahal, dont il constituait le pendant.",
    "pratique": "~300 ₹",
    "reservation": null,
+   "fait": false,
    "photos": [
     "photos/mehtab-bagh.jpg"
    ],
@@ -1698,6 +1784,7 @@
    "description": "Tombeau achevé en 1628 pour le grand-père de Mumtaz Mahal, premier monument moghol entièrement en marbre incrusté de pierres dures. Il annonce le Taj de vingt ans.",
    "pratique": "~350 ₹",
    "reservation": null,
+   "fait": false,
    "photos": [
     "photos/itmad-ud-daulah.jpg"
    ],
@@ -1717,6 +1804,7 @@
    "description": "Tombeau de l'empereur Akbar, achevé en 1613 dans un jardin de 48 hectares peuplé de cerfs et de singes.",
    "pratique": "À 10 km · ~350 ₹",
    "reservation": null,
+   "fait": false,
    "photos": [],
    "photo": null,
    "position": {
@@ -1734,6 +1822,7 @@
    "description": "Tombeau persan des années 1630, couvert de carreaux de faïence émaillée dont il subsiste des fragments.",
    "pratique": "Gratuit",
    "reservation": null,
+   "fait": false,
    "photos": [],
    "photo": null,
    "position": {
@@ -1751,6 +1840,7 @@
    "description": "Bazar en activité derrière la Jama Masjid, spécialisé dans les tissus, les bijoux et les chaussures.",
    "pratique": null,
    "reservation": null,
+   "fait": false,
    "photos": [],
    "photo": null,
    "position": {
@@ -1768,6 +1858,7 @@
    "description": "Parc de sentiers à 500 m de la porte Est, aménagé sur d'anciennes carrières, avec un point de vue sur le Taj.",
    "pratique": null,
    "reservation": null,
+   "fait": false,
    "photos": [],
    "photo": null,
    "position": {
@@ -1785,6 +1876,7 @@
    "description": "Café tenu par des survivantes d'attaques à l'acide, ouvert en 2014 dans le cadre de la campagne Stop Acid Attacks.",
    "pratique": "Prix libre",
    "reservation": null,
+   "fait": false,
    "photos": [],
    "photo": null,
    "position": {
@@ -1802,6 +1894,7 @@
    "description": "Centre de soins accueillant plus de trente éléphants retirés de la mendicité, des cirques et des promenades touristiques. La visite est guidée par les soigneurs et n'autorise aucun contact avec les animaux.",
    "pratique": "À 60 km · 10h-16h · donation 1 500-2 000 ₹ par personne",
    "reservation": "Réservation obligatoire sur wildlifesos.org.",
+   "fait": false,
    "photos": [
     "photos/wildlife-sos.jpg"
    ],
@@ -1818,6 +1911,7 @@
    "description": "Sanctuaire ornithologique aménagé autour du lac de Keetham, qui abrite aussi le centre de secours pour ours lippus de Wildlife SOS.",
    "pratique": "À 20 km",
    "reservation": null,
+   "fait": false,
    "photos": [],
    "photo": null,
    "position": {
@@ -1835,6 +1929,7 @@
    "description": "Capitale impériale construite par Akbar en 1571 et abandonnée quatorze ans plus tard faute d'eau, restée intacte depuis. Le Panch Mahal, le Diwan-i-Khas et son pilier central, et la Buland Darwaza haute de 54 m en forment les principaux édifices.",
    "pratique": "À 40 km · 6h-18h · ~600 ₹ · 2 h · guides badgés ASI à l'entrée",
    "reservation": "Voiture avec chauffeur à réserver la veille.",
+   "fait": false,
    "photos": [
     "photos/fatehpur-sikri.jpg"
    ],
@@ -1854,6 +1949,7 @@
    "description": "Ancienne réserve de chasse des maharajas de Bharatpur, devenue parc national et classée au patrimoine mondial. Ses 29 km² de zones humides accueillent plus de 370 espèces, et la nidification des espèces résidentes a lieu d'août à octobre.",
    "pratique": "À 55 km · ~400-500 ₹ · cyclo-pousse avec guide 200-300 ₹/h · 6h-9h",
    "reservation": "Entrée sans réservation. Voiture avec chauffeur à réserver la veille.",
+   "fait": false,
    "photos": [
     "photos/keoladeo.jpg"
    ],
@@ -1873,6 +1969,7 @@
    "description": "Sanctuaire fluvial de la Chambal, parcouru en barque, où vivent gavials, dauphins du Gange, tortues et becs-en-ciseaux.",
    "pratique": "À 70 km · demi-journée",
    "reservation": null,
+   "fait": false,
    "photos": [],
    "photo": null,
    "position": {
@@ -1890,6 +1987,7 @@
    "description": "Lieu de naissance de Krishna et ville de pèlerinage majeure, dont Vrindavan, à 10 km, concentre plusieurs milliers de temples.",
    "pratique": "À 55-70 km · journée",
    "reservation": null,
+   "fait": false,
    "photos": [
     "photos/wildlife-sos.jpg"
    ],
@@ -2451,9 +2549,11 @@
     "lng": 78.32785
    },
    "photos": [
-    "photos/ville-rishikesh.jpg"
+    "photos/hotel-tapovan.jpg",
+    "photos/hotel-tapovan-2.jpg",
+    "photos/hotel-tapovan-3.jpg"
    ],
-   "photo": "photos/ville-rishikesh.jpg",
+   "photo": "photos/hotel-tapovan.jpg",
    "a_des_details": false
   },
   {
