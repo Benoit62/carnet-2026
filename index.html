@@ -16,6 +16,7 @@
   --or:#b8791a; --orfond:#fdf3e0;
   --hotel:#c2701f; --vol:#2b7fbf; --train:#2f8f63; --bus:#8256b8;
   --transfert:#6b7785; --etape:#1f8a80; --alerte:#c2411f; --alertefond:#fdeee9;
+  --fait:#2f8f63;
   --ombre:0 1px 2px rgba(60,45,25,.06),0 2px 8px rgba(60,45,25,.05);
 }
 [data-theme="sombre"]{
@@ -25,6 +26,7 @@
   --or:#e0a33e; --orfond:#31260f;
   --hotel:#e08a3c; --vol:#5aa9e6; --train:#5fbf8a; --bus:#b98ae0;
   --transfert:#8e9aa8; --etape:#4fb3a8; --alerte:#e0603c; --alertefond:#2a1d16;
+  --fait:#5fbf8a;
   --ombre:0 1px 3px rgba(0,0,0,.3);
 }
 *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
@@ -116,6 +118,18 @@ nav.onglets button[aria-selected=true]{background:var(--or);color:#fff;
   border-radius:7px;padding:2px 8px;color:var(--doux)}
 .infos span b{color:var(--texte);font-weight:650}
 
+/* ----- ce qui a été fait, en petit sur la carte de la ville ----- */
+.mosaique{display:flex;gap:5px;flex-wrap:wrap;margin-top:9px}
+.mosaique i{width:32px;height:32px;border-radius:7px;background:var(--fond2);
+  background-size:cover;background-position:center;border:2px solid var(--fait);
+  display:flex;align-items:center;justify-content:center;font-style:normal;
+  font-size:7.5px;line-height:1.1;text-align:center;color:var(--doux);
+  overflow:hidden;padding:1px;flex:none}
+.mosaique i.resto{border-color:var(--hotel)}
+.mosaique i.plus{border-style:dashed;border-color:var(--trait2);font-size:11px;
+  font-weight:700;color:var(--faible)}
+.puce.fait{background:var(--fait);color:#fff}
+
 /* ----- bande de continuité ----- */
 .suite{display:flex;align-items:center;gap:9px;font-size:13px;color:var(--faible);
   padding:6px 0 6px 2px;margin-bottom:9px}
@@ -134,6 +148,13 @@ nav.onglets button[aria-selected=true]{background:var(--or);color:#fff;
   font-size:30px;position:relative}
 .tuile .img .etoile{position:absolute;top:7px;right:8px;font-size:12px;
   background:rgba(0,0,0,.55);color:#fff;border-radius:999px;padding:2px 7px}
+.tuile.fait{border-color:var(--fait);border-width:2px}
+.tuile .coche{position:absolute;top:7px;left:7px;width:23px;height:23px;
+  border-radius:50%;background:var(--fait);color:#fff;font-size:13px;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 1px 4px rgba(0,0,0,.35)}
+.tuile.resto.fait{border-color:var(--hotel)}
+.tuile.resto .coche{background:var(--hotel);font-size:11px}
 .tuile .txt{padding:10px 11px}
 .tuile h4{margin:0;font-size:14.5px;line-height:1.3;font-weight:650}
 .tuile p{margin:3px 0 0;font-size:12.5px;color:var(--faible)}
@@ -365,14 +386,30 @@ function vueFil(){
 
     h+=`<div class="fil">`;
     traversent.filter(e=>e.type==="hotel").forEach(e=>{
-      const nuit=Math.round((debut-instant(e.depart))/864e5)+1;
+      const arrivee=jourIST(e.arrivee);
+      if(j===arrivee) return;          // on part le matin, aucune nuit ce jour-là
+      const j0=jourIST(e.depart), jr=x=>new Date(x+"T00:00:00Z").getTime();
+      const total=Math.round((jr(arrivee)-jr(j0))/864e5);
+      const nuit=Math.round((jr(j)-jr(j0))/864e5)+1;
       h+=`<div class="suite h"><div class="barre"></div>
-        <span><b>${ech(e.titre)}</b> · nuit ${nuit}</span></div>`;
+        <span><b>${ech(e.titre)}</b> · nuit ${nuit} sur ${total}</span></div>`;
     });
     commencent.forEach(e=>h+=carteEtape(e));
     h+=`</div>`;
   });
   return h;
+}
+
+function faits_de(slug){
+  return D.activites.filter(a=>a.ville===slug && a.fait);
+}
+function mosaique(slug){
+  const l=faits_de(slug); if(!l.length) return "";
+  const vue=a=>{const r=a.categorie==="restaurant"?" resto":"";
+    return a.photo?`<i class="${r}" style="${fond(a.photo)}"></i>`
+                  :`<i class="${r}">${ech(a.nom.slice(0,16))}</i>`};
+  return `<div class="mosaique">${l.slice(0,9).map(vue).join("")}`
+    +(l.length>9?`<i class="plus">+${l.length-9}</i>`:"")+`</div>`;
 }
 
 function carteEtape(e){
@@ -398,12 +435,15 @@ function carteEtape(e){
           <span class="type t-${e.type}">${e.type==="etape"?"étape":e.type}</span>
           ${alerte?`<span class="puce">${ech(e.statut)}</span>`:""}
           ${(e.instructions||[]).length?`<span class="puce taches">${e.instructions.length} à faire</span>`:""}
+          ${e.type==="etape"&&e.ville&&faits_de(e.ville).length
+            ?`<span class="puce fait">${faits_de(e.ville).length} fait${faits_de(e.ville).length>1?"s":""}</span>`:""}
         </div>
         <h3>${ech(e.titre)}</h3>
         <div class="meta">${meta}</div>
         ${sous?`<div class="sous">${sous}</div>`:""}
         ${(e.infos||[]).length?`<div class="infos">${e.infos.map(i=>
           `<span>${ech(i.libelle)} <b>${ech(i.valeur)}</b></span>`).join("")}</div>`:""}
+        ${e.type==="etape"&&e.ville?mosaique(e.ville):""}
       </div></button></div>`;
 }
 
@@ -551,8 +591,11 @@ function ficheEtape(id,niveau){
 }
 
 function tuileActivite(a,depuis){
-  return `<button class="tuile" data-activite="${a.slug}" data-depuis="${ech(depuis)}">
+  const resto=a.categorie==="restaurant";
+  return `<button class="tuile${a.fait?" fait":""}${resto?" resto":""}"
+      data-activite="${a.slug}" data-depuis="${ech(depuis)}">
     <div class="img" style="${fond(a.photo)}">${a.photo?"":(IC[a.categorie]||"📍")}
+      ${a.fait?`<span class="coche">${resto?"🍽":"✓"}</span>`:""}
       ${a.etoile?`<span class="etoile">${"★".repeat(a.etoile)}</span>`:""}</div>
     <div class="txt"><h4>${ech(a.nom)}</h4><p>${ech(a.categorie)}</p></div></button>`;
 }
@@ -560,8 +603,10 @@ function tuileActivite(a,depuis){
 function ficheVille(slug,niveau){
   niveau=niveau||1;
   const v=D.villes.find(x=>x.slug===slug); if(!v) return;
-  const acts=D.activites.filter(a=>a.ville===slug)
-    .sort((a,b)=>b.etoile-a.etoile||a.nom.localeCompare(b.nom,"fr"));
+  const acts=D.activites.filter(a=>a.ville===slug).sort((a,b)=>
+    (b.fait?1:0)-(a.fait?1:0) || b.etoile-a.etoile
+    || a.nom.localeCompare(b.nom,"fr"));
+  const nfaits=acts.filter(a=>a.fait).length;
   ouvrir(niveau, banniere(v.photos,"🏙",null)+`<div class="dedans">
       <h2>${ech(v.nom)}</h2>
       <div class="chapeau">${ech(v.region)} · ${ech(v.sejour)}</div>
@@ -569,7 +614,8 @@ function ficheVille(slug,niveau){
       ${v.conseil?`<div class="bloc attention"><div class="titre">sur place</div>
         <p style="margin:0">${ech(v.conseil)}</p></div>`:""}
       <div class="titre" style="font-size:11px;letter-spacing:.9px;text-transform:uppercase;
-        color:var(--faible);font-weight:800;margin:20px 0 10px">${acts.length} choses à voir</div>
+        color:var(--faible);font-weight:800;margin:20px 0 10px">${acts.length} choses à voir${
+          nfaits?` · <span style="color:var(--fait)">${nfaits} fait${nfaits>1?"s":""}</span>`:""}</div>
       <div class="grille">${acts.map(a=>tuileActivite(a,"ville:"+slug)).join("")}</div>
       <div class="bloc" style="margin-top:18px"><div class="titre">où manger</div>
         <ul class="liste-nue">${v.tables.map(t=>`<li>${ech(t)}</li>`).join("")}</ul></div>
@@ -581,7 +627,9 @@ function ficheActivite(slug,depuis){
   const v=D.villes.find(x=>x.slug===a.ville);
   ouvrir(2, banniere(a.photos,IC[a.categorie]||"📍",depuis||"")+`<div class="dedans">
       <h2>${ech(a.nom)}${a.etoile?` <span style="color:var(--or)">${"★".repeat(a.etoile)}</span>`:""}</h2>
-      <div class="chapeau">${ech(a.categorie)} · ${ech(v?v.nom:"")}</div>
+      <div class="chapeau">${ech(a.categorie)} · ${ech(v?v.nom:"")}${
+        a.fait?` · <span style="color:var(--fait);font-weight:650">${
+          a.categorie==="restaurant"?"nous y avons mangé":"fait"}</span>`:""}</div>
       <div class="actions">
         <a class="bouton fort" target="_blank" rel="noopener"
            href="${itineraire(a.position,a.recherche||a.nom)}">S'y rendre</a>
