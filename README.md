@@ -17,6 +17,7 @@ l'application fonctionne en mode avion.
       etapes.json        le fil : vols, trains, bus, hébergements
       lieux.json         coordonnées GPS, par identifiant de lieu
       reglages.json      dates, contacts d'urgence, choses à réserver
+      faits.json         slugs des lieux visités et des tables essayées
       prive.json         PNR et places — non versionné
 
     outils/          ← les scripts
@@ -91,6 +92,44 @@ Le champ `etoile` vaut 0, 1 ou 2 et détermine l'ordre dans la fiche ville.
 
 Après toute modification, relancer `python outils/build.py` puis pousser.
 
+## Marquer ce qui a été fait
+
+Ajouter le slug du lieu dans `source/faits.json` :
+
+```json
+{
+ "faits": [
+  "amber-fort",
+  "nahargarh",
+  "masala-chowk"
+ ]
+}
+```
+
+L'élément est alors coché en vert dans la fiche ville, remonté en tête de la
+liste, et affiché en mosaïque sur la carte du séjour dans le fil. Le build
+signale un slug qui ne correspondrait à aucun lieu.
+
+Un `"fait": true` posé directement dans `source/activites.json` fonctionne
+aussi, les deux mécanismes se cumulent.
+
+Les tables se distinguent des visites par leur `categorie`, qui vaut
+`restaurant` : la coche devient une fourchette et l'encadré passe à l'orange.
+Pour ajouter une table, un bloc dans `source/activites.json` suffit.
+
+```json
+{
+ "slug": "ambrai",
+ "ville": "udaipur",
+ "nom": "Ambrai",
+ "etoile": 0,
+ "categorie": "restaurant",
+ "description": "…",
+ "pratique": null,
+ "reservation": null
+}
+```
+
 ## Ajouter des photos
 
 Aucun fichier JSON à modifier. Il suffit de déposer les images dans `photos/` en
@@ -105,7 +144,10 @@ photos/hotel-jaipur-3.jpg
 La clé est celle du champ `lieu` pour une étape, du champ `slug` pour un lieu à
 visiter, et `ville-<slug>` pour une ville. Les clés d'hébergement sont
 `hotel-delhi-aerocity`, `hotel-hyderabad`, `hotel-jaipur`, `hotel-udaipur`,
-`hotel-delhi-hosteller`, `tapovan` et `taj-ganj`.
+`hotel-delhi-hosteller`, `hotel-rishikesh` et `hotel-agra`.
+
+Si un fichier porte un autre nom, la table `ALIAS` en tête de `outils/build.py`
+fait le lien. Le build signale tout hébergement resté sans photo.
 
 Format attendu : JPEG, 1000×667 environ. Le compteur en bas de la vignette
 indique le nombre d'images disponibles.
