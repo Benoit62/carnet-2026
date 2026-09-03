@@ -6,7 +6,7 @@ Construit le carnet à partir des fichiers de source/.
     python outils/build.py
 
 Lit    source/villes.json, activites.json, etapes.json, lieux.json,
-       reglages.json, prive.json
+       reglages.json, faits.json, prive.json
 Écrit  donnees/voyage.json    contenu public, servi par GitHub Pages
        donnees/prive.json     PNR et places, jamais poussé
        hors-ligne.html        fichier unique autonome, photos intégrées
@@ -46,16 +46,22 @@ def main():
     lieux     = lire("lieux.json")
     reglages  = lire("reglages.json")
     prive     = lire("prive.json", {})
+    faits     = set(lire("faits.json", {}).get("faits", []))
 
     photos = {os.path.basename(p)[:-4] for p in glob.glob(PHOTOS + "/*.jpg")}
-    # une photo peut porter un nom différent du slug qu'elle illustre
-    ALIAS = {"har-ki-pauri": "haridwar", "ram-jhula": "lakshman-jhula",
-             "mathura": "wildlife-sos", "taj-falaknuma": "chowmahalla"}
+    # un sujet peut être illustré par un fichier portant un autre nom ; on
+    # essaie les variantes dans l'ordre jusqu'à en trouver une
+    ALIAS = {"har-ki-pauri": ["haridwar"],
+             "ram-jhula": ["lakshman-jhula"],
+             "mathura": ["wildlife-sos"],
+             "taj-falaknuma": ["chowmahalla"],
+             # l'hébergement de Rishikesh a été livré sous le nom du quartier
+             "hotel-rishikesh": ["hotel-tapovan", "tapovan"]}
 
     def img(slug):
         """Toutes les photos d'un sujet : <slug>.jpg, puis <slug>-2.jpg, -3.jpg…
         Il suffit de déposer un fichier dans photos/ pour qu'il apparaisse."""
-        for base in (slug, ALIAS.get(slug)):
+        for base in [slug] + ALIAS.get(slug, []):
             if not base or base not in photos:
                 continue
             liste = [f"photos/{base}.jpg"]
@@ -82,6 +88,8 @@ def main():
     for a in activites:
         if a["ville"] not in nomville:
             alertes.append(f"{a['slug']} : ville inconnue « {a['ville']} »")
+        # « fait » se renseigne soit dans source/faits.json, soit ici
+        a["fait"] = bool(a.get("fait")) or a["slug"] in faits
         a["photos"] = img(a["slug"])
         a["photo"] = a["photos"][0] if a["photos"] else None
         a["position"] = pos(a["slug"])
@@ -103,6 +111,9 @@ def main():
         if not e["photos"] and e.get("ville"):
             e["photos"] = img("ville-" + e["ville"])
         e["photo"] = e["photos"][0] if e["photos"] else None
+        if e["type"] == "hotel" and not e["photos"]:
+            alertes.append(f"{e['id']} : aucune photo, attendue en "
+                           f"photos/{e.get('lieu','?')}.jpg")
         e["a_des_details"] = e["id"] in prive
     etapes.sort(key=lambda e: e["depart"])
 
@@ -134,6 +145,9 @@ def main():
     print(f"  photos    {sum(1 for a in activites if a['photo'])}/{len(activites)} "
           f"lieux illustrés · {nphotos} fichiers utilisés")
     print(f"  positions {sum(1 for a in activites if a['position'])}/{len(activites)}")
+    print(f"  déjà faits {sum(1 for a in activites if a['fait'])}/{len(activites)}")
+    for s in faits - {a["slug"] for a in activites}:
+        alertes.append(f"faits.json : « {s} » ne correspond à aucun lieu")
     print("  étanchéité : aucune donnée sensible dans donnees/voyage.json")
     if alertes:
         print(f"\n  {len(alertes)} avertissements :")
