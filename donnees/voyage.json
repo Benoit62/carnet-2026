@@ -14,11 +14,6 @@
    "titre": "Wildlife SOS",
    "lien": "wildlifesos.org",
    "detail": "Réservation obligatoire. Visite du 10 septembre au matin."
-  },
-  {
-   "titre": "Hébergement à Agra",
-   "lien": "",
-   "detail": "Trois nuits à Taj Ganj, du 8 au 11 septembre. Dépôt des sacs dès 8h30 le 9, taxi à 6h45 le 11."
   }
  ],
  "urgence": {
@@ -56,6 +51,10 @@
    {
     "libelle": "Punyah Residency, Rishikesh",
     "tel": "+917895367706"
+   },
+   {
+    "libelle": "Golden Tulip, Agra",
+    "tel": "+917454802182"
    }
   ],
   "transports": [
