@@ -1,7 +1,8 @@
 /* Cache complet a la premiere visite : l'app doit fonctionner en mode avion. */
-const CACHE = "inde-2026-v1";
+const CACHE = "inde-2026-v2";
 const SOCLE = ["./", "./index.html", "./manifest.json",
-               "./donnees/voyage.json", "./donnees/prive.json"];
+               "./donnees/voyage.json", "./donnees/fond.json",
+               "./donnees/prive.json"];
 
 self.addEventListener("install", e => {
   e.waitUntil((async () => {

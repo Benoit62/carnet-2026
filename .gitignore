@@ -8,3 +8,6 @@ source/prive.json
 __pycache__/
 *.pyc
 .DS_Store
+
+# cache de Natural Earth, telecharge par outils/fond.py
+.cache-naturalearth/
