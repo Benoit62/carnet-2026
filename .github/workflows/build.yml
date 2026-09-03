@@ -1,5 +1,5 @@
-# Régénère donnees/voyage.json dès que les sources changent, pour que la version
-# publiée sur Pages ne puisse pas se désynchroniser de source/.
+# Régénère donnees/ dès que les sources changent, pour que la version publiée
+# sur Pages ne puisse pas se désynchroniser de source/.
 name: build
 
 on:
@@ -9,6 +9,7 @@ on:
       - 'source/**'
       - 'photos/**'
       - 'outils/build.py'
+      - 'outils/fond.py'
   workflow_dispatch:
 
 permissions:
@@ -20,6 +21,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Fabriquer le fond de carte s'il manque
+        run: |
+          if [ ! -f source/fond.json ]; then
+            python3 outils/fond.py
+          fi
+
       - name: Construire
         run: python3 outils/build.py
 
@@ -27,7 +34,7 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add donnees/voyage.json
+          git add donnees/voyage.json donnees/fond.json source/fond.json
           if git diff --staged --quiet; then
             echo "Rien à publier."
           else
