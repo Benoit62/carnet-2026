@@ -2062,9 +2062,10 @@
     "lng": 78.401556
    },
    "photos": [
-    "photos/ville-hyderabad.jpg"
+    "photos/hotel-hyderabad.jpg",
+    "photos/hotel-hyderabad-2.jpg"
    ],
-   "photo": "photos/ville-hyderabad.jpg",
+   "photo": "photos/hotel-hyderabad.jpg",
    "a_des_details": false
   },
   {
