@@ -2139,22 +2139,6 @@
    "lieu_depart": "aeroport-cdg",
    "lieu_arrivee": "aeroport-delhi-t3",
    "operateur": "Air France",
-   "statut": "réservé",
-   "note": "Les comptoirs UPI One World se trouvent avant la sortie de la zone internationale, à Delhi. Compter 30 à 45 min.",
-   "instructions": [
-    "Enregistrement en ligne Air France",
-    "Sangles des sacs rentrées et housse de pluie",
-    "Passeports, visas et attestation d'assurance en cabine",
-    "Photo des sacs avant dépôt",
-    "Espèces en euros",
-    "Comptoir UPI One World à l'arrivée"
-   ],
-   "infos": [
-    {
-     "libelle": "Terminal",
-     "valeur": "à vérifier la veille"
-    }
-   ],
    "position_depart": {
     "lat": 49.009722,
     "lng": 2.547778
@@ -2175,8 +2159,6 @@
    "arrivee": "2026-08-25T08:30",
    "lieu": "hotel-delhi-aerocity",
    "ville": "delhi",
-   "statut": "réservé",
-   "note": "Navette gratuite depuis le T3, environ 10 min.",
    "position": {
     "lat": 28.550432,
     "lng": 77.122673
@@ -2200,12 +2182,6 @@
    "lieu_depart": "aeroport-delhi-t3",
    "lieu_arrivee": "aeroport-hyderabad",
    "operateur": "IndiGo",
-   "statut": "réservé",
-   "note": "Départ de l'hôtel 3 h avant.",
-   "instructions": [
-    "Terminal de départ vérifié",
-    "Départ de l'hôtel 3 h avant"
-   ],
    "position_depart": {
     "lat": 28.553886,
     "lng": 77.088077
@@ -2224,9 +2200,9 @@
    "titre": "Mariage d'Astrid et Prashanth",
    "depart": "2026-08-26T00:00",
    "arrivee": "2026-08-28T19:00",
-   "ville": "hyderabad",
-   "statut": "pris en charge",
-   "note": "Deux jours et quatre temps forts. Le premier jour réunit la famille et les proches, l'ensemble des invités arrive le second.",
+   "ville": "kothagudem",
+   "lieu": "kothagudem",
+   "note": "Deux jours et quatre temps forts, chez la famille du marié. Le premier jour réunit les proches, l'ensemble des invités arrive le second.",
    "deroule": [
     {
      "quand": "Mer 26 · 11h-14h",
@@ -2255,18 +2231,16 @@
    ],
    "infos": [
     {
-     "libelle": "Cadeau",
-     "valeur": "enveloppe, montant finissant par 1"
-    },
-    {
      "libelle": "Muhurtham",
      "valeur": "27 août, 23h43"
     }
    ],
-   "photos": [
-    "photos/ville-hyderabad.jpg"
-   ],
-   "photo": "photos/ville-hyderabad.jpg",
+   "position": {
+    "lat": 17.55,
+    "lng": 80.63
+   },
+   "photos": [],
+   "photo": null,
    "a_des_details": false
   },
   {
@@ -2277,11 +2251,9 @@
    "arrivee": "2026-08-29T11:00",
    "lieu": "hotel-hyderabad",
    "ville": "hyderabad",
-   "statut": "réservé",
-   "tel": "+919133303059",
    "prix": "47 €",
    "adresse": "Shamshabad",
-   "note": "À 7-8 km du terminal, dépose par la famille. Check-in de 13h à minuit.",
+   "note": "Dépose par la famille, à 7-8 km du terminal.",
    "position": {
     "lat": 17.259972,
     "lng": 78.401556
@@ -2296,12 +2268,10 @@
   {
    "id": "j6-hyderabad",
    "type": "etape",
-   "titre": "Journée à Hyderabad",
+   "titre": "Hyderabad",
    "depart": "2026-08-29T09:00",
    "arrivee": "2026-08-29T16:00",
    "ville": "hyderabad",
-   "statut": "libre",
-   "note": "Journée avec les sacs, sans retour à l'hôtel. Voiture avec chauffeur à la journée, 2 500 à 3 500 ₹, dépose finale à l'aéroport. Golconde ouvre à 9h et demande 2 à 3 h ; Chowmahalla et Salar Jung sont voisins du Charminar et ferment le vendredi.",
    "photos": [
     "photos/ville-hyderabad.jpg"
    ],
@@ -2319,20 +2289,6 @@
    "lieu_depart": "aeroport-hyderabad",
    "lieu_arrivee": "aeroport-jaipur",
    "operateur": "IndiGo",
-   "numero": "6E6638",
-   "statut": "réservé",
-   "note": "Aéroport à 7-8 km de l'hôtel, comptoir à 18h. Départ de la ville à 16h, la circulation étant imprévisible.",
-   "instructions": [
-    "Voiture avec chauffeur réservée la veille",
-    "Départ de la ville à 16h",
-    "Filmage des sacs au comptoir bagages hors format"
-   ],
-   "infos": [
-    {
-     "libelle": "Vol",
-     "valeur": "6E6638"
-    }
-   ],
    "position_depart": {
     "lat": 17.23,
     "lng": 78.431944
@@ -2353,9 +2309,8 @@
    "arrivee": "2026-08-29T22:15",
    "lieu_depart": "aeroport-jaipur",
    "lieu_arrivee": "hotel-jaipur",
-   "statut": "réservé",
    "operateur": "Via Booking",
-   "note": "Transfert offert par Booking, environ 35 min. Le chauffeur attend en arrivées et le numéro de vol lui a été transmis.",
+   "note": "Transfert offert par Booking, une petite quarantaine de minutes.",
    "position_depart": {
     "lat": 26.828109,
     "lng": 75.807989
@@ -2376,11 +2331,9 @@
    "arrivee": "2026-09-01T12:00",
    "lieu": "hotel-jaipur",
    "ville": "jaipur",
-   "statut": "réservé",
-   "tel": "+911412201276",
    "prix": "163 €",
    "adresse": "D1-2A Behari Marg, Bani Park",
-   "note": "Piscine, maillot exigé. Travel desk sur place. Spectacle de danse rajasthanie de 19h à 21h. Check-out à 12h le 1ᵉʳ septembre, bagagerie disponible, dépose à la gare assurée par l'hôtel.",
+   "note": "Piscine et spectacle de danse rajasthanie le soir, de 19h à 21h.",
    "position": {
     "lat": 26.92868,
     "lng": 75.792428
@@ -2401,8 +2354,6 @@
    "depart": "2026-08-30T08:00",
    "arrivee": "2026-09-01T18:00",
    "ville": "jaipur",
-   "statut": "libre",
-   "note": "Amber Fort ouvre à 8h, avant la chaleur et l'affluence. Nahargarh reste ouvert jusqu'à 22h et domine la ville au couchant. Uber et Uber Auto desservent bien Bani Park.",
    "photos": [
     "photos/ville-jaipur.jpg"
    ],
@@ -2419,15 +2370,8 @@
    "vers": "Udaipur City",
    "lieu_depart": "gare-jaipur",
    "lieu_arrivee": "gare-udaipur",
-   "numero": "19665",
    "classe": "1A",
-   "statut": "réservé",
-   "note": "Le train vient de Khajuraho, d'où il part la veille à 9h25, et parcourt 1 092 km. Il roule donc depuis treize heures en arrivant à Jaipur, et son retard dépasse souvent une heure. Le passeport original est demandé à bord.",
-   "instructions": [
-    "Passeport original sur soi",
-    "Position du train sur Where is my Train",
-    "Numéro de voiture sur la liste affichée 1 h avant"
-   ],
+   "note": "Le train vient de Khajuraho, parti la veille à 9h25 pour 1 092 km. Il roulait donc depuis treize heures en passant par Jaipur.",
    "position_depart": {
     "lat": 26.920789,
     "lng": 75.786654
@@ -2448,10 +2392,7 @@
    "arrivee": "2026-09-04T11:00",
    "lieu": "hotel-udaipur",
    "ville": "udaipur",
-   "statut": "réservé",
-   "tel": "+917073031166",
    "adresse": "City Palace Road",
-   "note": "Check-in de 14h à 23h. Dépôt des sacs demandé pour 7h. Check-out à 11h le 4 septembre, bagagerie jusqu'au départ pour l'aéroport.",
    "position": {
     "lat": 24.576902,
     "lng": 73.685151
@@ -2472,8 +2413,6 @@
    "depart": "2026-09-02T09:00",
    "arrivee": "2026-09-04T17:30",
    "ville": "udaipur",
-   "statut": "libre",
-   "note": "Le City Palace et la vieille ville occupent une demi-journée. Le bateau sur le lac Pichola part au couchant et le spectacle de Bagore-ki-Haveli commence à 19h. La journée du jeudi laisse la place à une excursion.",
    "photos": [
     "photos/ville-udaipur.jpg"
    ],
@@ -2491,24 +2430,6 @@
    "lieu_depart": "aeroport-udaipur",
    "lieu_arrivee": "aeroport-delhi-t1",
    "operateur": "IndiGo",
-   "numero": "6E6229",
-   "statut": "réservé",
-   "note": "L'aéroport Maharana Pratap est à 22 km de la vieille ville, environ 40 min. L'enregistrement et le dépôt des bagages ferment à 19h. Bagage en soute limité à 15 kg par personne.",
-   "instructions": [
-    "Départ de l'hôtel vers 17h30",
-    "Enregistrement fermé à 19h",
-    "Batteries externes en cabine, deux au maximum"
-   ],
-   "infos": [
-    {
-     "libelle": "Vol",
-     "valeur": "6E6229"
-    },
-    {
-     "libelle": "Arrivée",
-     "valeur": "Terminal 1"
-    }
-   ],
    "position_depart": {
     "lat": 24.617,
     "lng": 73.896
@@ -2529,17 +2450,9 @@
    "arrivee": "2026-09-05T11:00",
    "lieu": "hotel-delhi-hosteller",
    "ville": "delhi",
-   "statut": "réservé",
-   "tel": "+919810187717",
    "prix": "4 853 ₹",
    "adresse": "A-10 Mathura Road, New Friends Colony",
-   "note": "Première des deux nuits, réservée séparément de celle du 5. Le terminal 1 est à 22 km, comptez 45 min en taxi. Petit-déjeuner compris. Arrivée annoncée entre 22h et 23h.",
-   "infos": [
-    {
-     "libelle": "Code",
-     "valeur": "6725"
-    }
-   ],
+   "note": "Première des trois nuits passées dans cet établissement.",
    "position": {
     "lat": 28.571085,
     "lng": 77.259891
@@ -2554,12 +2467,10 @@
   {
    "id": "j13-delhi",
    "type": "etape",
-   "titre": "Journée à Delhi",
+   "titre": "Delhi",
    "depart": "2026-09-05T07:00",
    "arrivee": "2026-09-05T22:00",
    "ville": "delhi",
-   "statut": "libre",
-   "note": "Le bus du lendemain part à 7h. L'établissement n'a pas de groupe électrogène.",
    "photos": [
     "photos/ville-delhi.jpg"
    ],
@@ -2574,10 +2485,8 @@
    "arrivee": "2026-09-06T05:00",
    "lieu": "hotel-delhi-hosteller",
    "ville": "delhi",
-   "statut": "réservé",
-   "tel": "+919810187717",
    "adresse": "A-10 Mathura Road, New Friends Colony",
-   "note": "Seconde nuit, réservée séparément de celle du 4. À 2,4 km de la gare de Nizamuddin.",
+   "note": "Deuxième nuit, réservée séparément de la première.",
    "position": {
     "lat": 28.571085,
     "lng": 77.259891
@@ -2600,25 +2509,6 @@
    "lieu_depart": "isbt-kashmere-gate",
    "lieu_arrivee": "nepali-farm",
    "operateur": "Laxmi Holidays",
-   "tel": "+911144446900",
-   "statut": "réservé",
-   "note": "L'ISBT est à 15-16 km, environ 30 min sur des routes vides à cette heure. Taxi 600 à 800 ₹, Uber 350 à 500 ₹. L'embarquement se fait côté quais d'arrivée 53 et 54, au comptoir Laxmi Holidays, en sortant par la porte 8 du métro.",
-   "instructions": [
-    "Deux réveils, 5h",
-    "Taxi réservé la veille",
-    "Porte 8 du métro, quais 53-54",
-    "Heure d'arrivée transmise à la guesthouse"
-   ],
-   "infos": [
-    {
-     "libelle": "Quai",
-     "valeur": "arrivée 53-54"
-    },
-    {
-     "libelle": "Compagnie",
-     "valeur": "Laxmi Holidays"
-    }
-   ],
    "position_depart": {
     "lat": 28.668696,
     "lng": 77.230423
@@ -2639,8 +2529,7 @@
    "arrivee": "2026-09-06T13:00",
    "lieu_depart": "nepali-farm",
    "lieu_arrivee": "hotel-rishikesh",
-   "statut": "à organiser",
-   "note": "La dépose se fait à un carrefour de la nationale, sous le nouveau pont, à 12-13 km de Tapovan. Auto privé 500 à 700 ₹.",
+   "note": "Dépose à un carrefour de la nationale, sous le nouveau pont, à une douzaine de kilomètres de Tapovan.",
    "position_depart": {
     "lat": 30.055648,
     "lng": 78.217742
@@ -2661,17 +2550,9 @@
    "arrivee": "2026-09-08T11:00",
    "lieu": "hotel-rishikesh",
    "ville": "rishikesh",
-   "statut": "réservé",
-   "tel": "+917895367706",
    "prix": "4 734 ₹",
    "adresse": "Laxman Jhula, Tapovan",
-   "note": "Chambre double supérieure avec balcon, petit-déjeuner compris. Check-in de 13h à 23h30, check-out de 7h à 11h. Parking gratuit à proximité sur réservation.",
-   "infos": [
-    {
-     "libelle": "Code",
-     "valeur": "0559"
-    }
-   ],
+   "note": "Chambre double supérieure avec balcon, petit-déjeuner compris.",
    "position": {
     "lat": 30.129417,
     "lng": 78.32785
@@ -2691,8 +2572,6 @@
    "depart": "2026-09-06T14:00",
    "arrivee": "2026-09-08T20:00",
    "ville": "rishikesh",
-   "statut": "libre",
-   "note": "Le 6 septembre tombe un dimanche, jour où plusieurs écoles de yoga suspendent leurs cours ; Anand Prakash reste ouvert. Les distributeurs de billets se raréfient en montant vers Tapovan.",
    "photos": [
     "photos/ville-rishikesh.jpg"
    ],
@@ -2700,37 +2579,70 @@
    "a_des_details": false
   },
   {
-   "id": "j16-bus-agra",
+   "id": "j16-bus-delhi",
    "type": "bus",
-   "titre": "Rishikesh → Agra",
-   "depart": "2026-09-08T21:30",
-   "arrivee": "2026-09-09T08:00",
+   "titre": "Rishikesh → Delhi",
+   "depart": "2026-09-08T15:00",
+   "arrivee": "2026-09-08T21:30",
    "de": "Nepali Farm",
-   "vers": "Agra Chipitola",
+   "vers": "ISBT Kashmere Gate",
    "lieu_depart": "nepali-farm",
-   "lieu_arrivee": "arret-agra-chipitola",
-   "operateur": "Shri Krishna Travels",
-   "tel": "+919720001155",
-   "statut": "réservé",
-   "note": "L'embarquement se fait à Nepali Farm, sous le pont, au carrefour en T. L'arrivée a lieu chez Radhika Travels à Chipitola, près du Rakab Ganj Police Thana, à 5 km de Fatehabad Road, soit 15 à 20 min en auto pour 150 à 250 ₹. La chambre est libérée à 11h et le bus part à 21h30.",
-   "instructions": [
-    "Retrait d'espèces dans Rishikesh ville",
-    "Consigne à bagages de 11h à 20h15",
-    "Auto pour Nepali Farm réservé la veille"
-   ],
-   "infos": [
-    {
-     "libelle": "Compagnie",
-     "valeur": "Shri Krishna"
-    }
-   ],
+   "lieu_arrivee": "isbt-kashmere-gate",
+   "operateur": "E Bus India",
+   "note": "Bus climatisé 2+1, moitié sièges moitié couchettes.",
    "position_depart": {
     "lat": 30.055648,
     "lng": 78.217742
    },
    "position_arrivee": {
-    "lat": 27.175101,
-    "lng": 78.013529
+    "lat": 28.668696,
+    "lng": 77.230423
+   },
+   "photos": [],
+   "photo": null,
+   "a_des_details": false
+  },
+  {
+   "id": "j16-hotel-delhi",
+   "type": "hotel",
+   "titre": "The Hosteller",
+   "depart": "2026-09-08T22:30",
+   "arrivee": "2026-09-09T09:00",
+   "lieu": "hotel-delhi-hosteller",
+   "ville": "delhi",
+   "adresse": "A-10 Mathura Road, New Friends Colony",
+   "note": "Troisième passage au même établissement, une nuit courte entre le bus et la route d'Agra.",
+   "position": {
+    "lat": 28.571085,
+    "lng": 77.259891
+   },
+   "photos": [
+    "photos/hotel-delhi-hosteller.jpg",
+    "photos/hotel-delhi-hosteller-2.jpg"
+   ],
+   "photo": "photos/hotel-delhi-hosteller.jpg",
+   "a_des_details": false
+  },
+  {
+   "id": "j17-uber-agra",
+   "type": "transfert",
+   "titre": "Delhi → Agra",
+   "depart": "2026-09-09T09:00",
+   "arrivee": "2026-09-09T12:01",
+   "de": "The Hosteller",
+   "vers": "Golden Tulip",
+   "lieu_depart": "hotel-delhi-hosteller",
+   "lieu_arrivee": "hotel-agra",
+   "operateur": "Uber Intercity",
+   "prix": "2 857 ₹",
+   "note": "Porte-à-porte en trois heures par l'autoroute Yamuna.",
+   "position_depart": {
+    "lat": 28.571085,
+    "lng": 77.259891
+   },
+   "position_arrivee": {
+    "lat": 27.152833,
+    "lng": 78.069533
    },
    "photos": [],
    "photo": null,
@@ -2740,7 +2652,7 @@
    "id": "j17-hotel-agra",
    "type": "hotel",
    "titre": "Golden Tulip",
-   "depart": "2026-09-09T09:00",
+   "depart": "2026-09-09T12:15",
    "arrivee": "2026-09-11T06:45",
    "lieu": "hotel-agra",
    "ville": "agra",
@@ -2771,12 +2683,10 @@
   {
    "id": "j17-agra",
    "type": "etape",
-   "titre": "Agra, premier passage au Taj",
-   "depart": "2026-09-09T09:00",
+   "titre": "Agra",
+   "depart": "2026-09-09T12:30",
    "arrivee": "2026-09-09T20:00",
    "ville": "agra",
-   "statut": "libre",
-   "note": "Matinée de repos après la nuit en bus. Le Taj se visite en fin d'après-midi, entre 15h et 18h30, quand la lumière est rasante et que l'affluence retombe après 17h. Le Fort d'Agra et Mehtab Bagh occupent la fin de journée.",
    "photos": [
     "photos/ville-agra.jpg"
    ],
@@ -2784,31 +2694,66 @@
    "a_des_details": false
   },
   {
-   "id": "j18-taj-aube",
+   "id": "j18-taj-mahal",
    "type": "etape",
-   "titre": "Taj au lever du soleil, puis Wildlife SOS",
-   "depart": "2026-09-10T05:20",
-   "arrivee": "2026-09-10T16:00",
-   "ville": "agra",
-   "statut": "libre",
-   "note": "Le Taj ouvre à l'aube et la file se forme vers 5h30 à la porte Est. L'hôtel étant sur Fatehabad Road, il faut compter un transport commandé la veille. La brume de mousson se lève sur la Yamuna et la fréquentation reste faible. Le supplément mausolée s'utilise ce matin-là, la queue de l'escalier étant plus courte. Wildlife SOS ouvre de 10h à 16h, à 60 km au nord, et Sur Sarovar se trouve sur la route du retour.",
-   "instructions": [
-    "Taxi commandé la veille pour 5h00, l'hôtel est à 2-3 km du Taj",
-    "Billets du Taj imprimés, un par passage",
-    "Supplément mausolée pour ce passage",
-    "Réservation Wildlife SOS confirmée",
-    "Voiture avec chauffeur réservée la veille"
-   ],
+   "titre": "Taj Mahal",
+   "depart": "2026-09-10T05:30",
+   "arrivee": "2026-09-10T09:30",
+   "lieu": "taj-mahal",
+   "statut": "réservé",
+   "note": "Billets valables le 10 de 4h30 à 12h, mausolée compris, et trois heures sur place à partir du passage au contrôle. L'hôtel est sur Fatehabad Road, à 2-3 km des portes. Les deux billets portent le même numéro de passeport, celui de Benoît, erreur de saisie au moment de la réservation.",
    "infos": [
     {
-     "libelle": "Réveil",
-     "valeur": "5h20"
+     "libelle": "Entrée",
+     "valeur": "1 250 ₹ par personne"
+    },
+    {
+     "libelle": "Validité",
+     "valeur": "4h30 à 12h"
     }
    ],
-   "photos": [
-    "photos/ville-agra.jpg"
+   "instructions": [
+    "Taxi commandé la veille pour 5h00",
+    "Passeports originaux, contrôle à l'entrée",
+    "Billets ouverts sur le téléphone",
+    "Rien à manger dans les sacs"
    ],
-   "photo": "photos/ville-agra.jpg",
+   "position": {
+    "lat": 27.175007,
+    "lng": 78.042101
+   },
+   "photos": [
+    "photos/taj-mahal.jpg"
+   ],
+   "photo": "photos/taj-mahal.jpg",
+   "a_des_details": false
+  },
+  {
+   "id": "j18-wildlife-sos",
+   "type": "etape",
+   "titre": "Wildlife SOS",
+   "depart": "2026-09-10T15:00",
+   "arrivee": "2026-09-10T17:00",
+   "lieu": "wildlife-sos",
+   "statut": "réservé",
+   "adresse": "Agra–Mathura Road NH2, Ghari Churmura, Farah, Mathura",
+   "note": "Conservation Tour de 120 minutes réservé pour deux. Le centre se trouve à Farah, sur la route d'Agra à Mathura, et Sur Sarovar est sur le trajet du retour. Les horaires d'ouverture ne sont pas publiés en ligne, le créneau est à confirmer auprès du centre.",
+   "infos": [
+    {
+     "libelle": "Visite",
+     "valeur": "120 min, 2 personnes"
+    }
+   ],
+   "instructions": [
+    "Voiture avec chauffeur pour l'aller-retour",
+    "Heure du créneau confirmée auprès du centre",
+    "Confirmation ouverte sur le téléphone"
+   ],
+   "position": null,
+   "photos": [
+    "photos/wildlife-sos.jpg"
+   ],
+   "photo": "photos/wildlife-sos.jpg",
    "a_des_details": false
   },
   {
@@ -2825,7 +2770,7 @@
    "nom_train": "NZM Rajdhani",
    "classe": "2A",
    "statut": "réservé",
-   "note": "Agra Cantt est à 5-6 km de Taj Ganj. Le petit-déjeuner est servi à bord.",
+   "note": "Agra Cantt est à 5-6 km de Taj Ganj. Le petit-déjeuner est servi à bord. Option à l'étude, garder la chambre et la piscine jusqu'en fin de journée et rejoindre l'aéroport directement en Uber Intercity.",
    "instructions": [
     "Check-out 6h45",
     "Taxi réservé la veille"
@@ -2845,7 +2790,7 @@
   {
    "id": "j19-delhi",
    "type": "etape",
-   "titre": "Dernière journée à Delhi",
+   "titre": "Delhi",
    "depart": "2026-09-11T10:00",
    "arrivee": "2026-09-11T21:00",
    "ville": "delhi",
