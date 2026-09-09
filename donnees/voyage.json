@@ -83,6 +83,23 @@
    }
   },
   {
+   "slug": "kothagudem",
+   "nom": "Kothagudem",
+   "region": "Telangana",
+   "presentation": "Kothagudem est une ville minière de l'est du Telangana, surnommée la ville du charbon, à quelque 230 km de Hyderabad. Elle ne figure sur aucun circuit et n'attend pas de voyageurs, ce qui a rendu les trois jours de mariage d'autant plus singuliers.",
+   "sejour": "Trois jours, du 26 au 28 août.",
+   "tables": [
+    "Les repas étaient assurés par la famille du marié."
+   ],
+   "conseil": null,
+   "photos": [],
+   "photo": null,
+   "position": {
+    "lat": 17.55,
+    "lng": 80.63
+   }
+  },
+  {
    "slug": "jaipur",
    "nom": "Jaipur",
    "region": "Rajasthan",
@@ -130,7 +147,7 @@
    "nom": "Delhi",
    "region": "Territoire de la capitale",
    "presentation": "Sept villes se sont succédé sur le site de Delhi en huit siècles, du Qutb Minar élevé en 1193 au New Delhi dessiné par Lutyens dans les années 1920. Le sud concentre les monuments moghols et les jardins, tandis qu'Old Delhi garde le tracé du bazar du XVIIᵉ siècle autour de la Jama Masjid.",
-   "sejour": "Deux passages, le 5 puis le 11 septembre.",
+   "sejour": "Quatre nuits, réparties du 24 août au 11 septembre.",
    "tables": [
     "Karim's, cuisine moghole derrière la Jama Masjid, ouvert depuis 1913",
     "Saravana Bhavan, à Connaught Place, cuisine du sud",
@@ -172,7 +189,7 @@
    "nom": "Agra",
    "region": "Uttar Pradesh",
    "presentation": "Agra fut la capitale de l'empire moghol pendant un siècle, avant que la cour ne s'installe à Delhi. Trois de ses sites sont classés au patrimoine mondial, le Taj Mahal, le fort où Shah Jahan finit ses jours et Fatehpur Sikri, à 40 km. Le tombeau d'Itimad-ud-Daulah, plus ancien, annonce l'architecture du Taj.",
-   "sejour": "Deux nuits, du 8 au 11 septembre, à Taj Ganj.",
+   "sejour": "Deux nuits, du 9 au 11 septembre, sur Fatehabad Road.",
    "tables": [
     "Pinch of Spice",
     "Sheroes Hangout",
