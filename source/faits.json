@@ -1,10 +1,24 @@
 {
- "_comment": "Lieux visités et tables essayées. Un slug dans « faits » coche un lieu déjà présent dans activites.json. Un bloc dans « tables » crée la table de toutes pièces, sans rien toucher d'autre.",
+ "_comment": "Lieux visités et tables essayées. Un slug dans « faits » coche un lieu déjà présent dans activites.json. Un bloc dans « tables » crée la table de toutes pièces, sans rien toucher d'autre ; lat et lng sont facultatifs, sans eux la table n'apparaît pas sur la carte.",
  "faits": [
   "charminar",
   "laad-bazaar",
   "chowmahalla",
-  "mecca-masjid"
+  "mecca-masjid",
+  "city-palace-jaipur",
+  "hawa-mahal",
+  "jantar-mantar",
+  "amber-fort",
+  "jal-mahal",
+  "gaitor",
+  "johari-bazaar",
+  "albert-hall",
+  "jhalana",
+  "jagdish-temple",
+  "city-palace-udaipur",
+  "saheliyon-ki-bari",
+  "monsoon-palace",
+  "lac-pichola"
  ],
  "tables": [
   {
@@ -14,6 +28,41 @@
    "lng": 78.4750792,
    "note": "Ouverte en 1953 comme une petite cantine près d'un cinéma de Secunderabad, la maison est devenue la biryani la plus connue de Hyderabad et compte maintenant une dizaine d'adresses dans la ville. Celle-ci est la plus proche du Charminar.",
    "pratique": "À une centaine de mètres du Charminar, vers le nord-est."
+  },
+  {
+   "nom": "Tatoo Cafe & Lounge",
+   "ville": "jaipur",
+   "note": "Terrasse en vis-à-vis du Hawa Mahal, sur le trottoir d'en face.",
+   "pratique": "Le 31 août."
+  },
+  {
+   "nom": "Le restaurant de la Jhilwara Haveli",
+   "ville": "udaipur",
+   "note": "La table de l'hôtel, le premier soir.",
+   "pratique": "Le 2 septembre."
+  },
+  {
+   "nom": "Chai chez l'habitant",
+   "ville": "udaipur",
+   "note": "Invitation reçue dans la vieille ville, au matin du Jagdish Temple.",
+   "pratique": "Le 2 septembre."
+  },
+  {
+   "nom": "Ambrai",
+   "ville": "udaipur",
+   "note": "Au bord du lac Pichola, face au City Palace et au Lake Palace.",
+   "pratique": "Déjeuner du 3 septembre."
+  },
+  {
+   "nom": "Sun N Moon Cafe & Restaurant",
+   "ville": "udaipur",
+   "pratique": "Dîner du 3 septembre."
+  },
+  {
+   "nom": "Millets of Mewar",
+   "ville": "udaipur",
+   "note": "Cuisine du Mewar à base de millets, sur la rive de Hanuman Ghat.",
+   "pratique": "Déjeuner du 4 septembre."
   }
  ]
 }

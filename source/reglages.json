@@ -5,14 +5,9 @@
  "fuseau": "Asia/Kolkata",
  "a_reserver": [
   {
-   "titre": "Billets du Taj Mahal",
-   "lien": "asi.payumoney.com",
-   "detail": "Deux entrées par personne + une fois le mausolée (200 ₹)."
-  },
-  {
-   "titre": "Wildlife SOS",
-   "lien": "wildlifesos.org",
-   "detail": "Réservation obligatoire. Visite du 10 septembre au matin."
+   "titre": "Retour d'Agra vers l'aéroport",
+   "lien": "",
+   "detail": "Le train du 11 au matin est réservé. Option à trancher : garder la chambre et la piscine jusqu'en fin de journée, puis rejoindre le T3 en Uber Intercity."
   }
  ],
  "urgence": {
@@ -58,12 +53,8 @@
   ],
   "transports": [
    {
-    "libelle": "Laxmi Holidays, bus du 6 septembre",
-    "tel": "+911144446900"
-   },
-   {
-    "libelle": "Shri Krishna Travels, bus du 8 septembre",
-    "tel": "+919720001155"
+    "libelle": "E Bus India, bus du 8 septembre",
+    "tel": "+918750100091"
    }
   ],
   "note": "La plupart des contrats d'assurance demandent d'être prévenus avant tout engagement de frais."
