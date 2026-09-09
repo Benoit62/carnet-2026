@@ -6,14 +6,9 @@
  "fuseau": "Asia/Kolkata",
  "a_reserver": [
   {
-   "titre": "Billets du Taj Mahal",
-   "lien": "asi.payumoney.com",
-   "detail": "Deux entrées par personne + une fois le mausolée (200 ₹)."
-  },
-  {
-   "titre": "Wildlife SOS",
-   "lien": "wildlifesos.org",
-   "detail": "Réservation obligatoire. Visite du 10 septembre au matin."
+   "titre": "Retour d'Agra vers l'aéroport",
+   "lien": "",
+   "detail": "Le train du 11 au matin est réservé. Option à trancher : garder la chambre et la piscine jusqu'en fin de journée, puis rejoindre le T3 en Uber Intercity."
   }
  ],
  "urgence": {
@@ -59,12 +54,8 @@
   ],
   "transports": [
    {
-    "libelle": "Laxmi Holidays, bus du 6 septembre",
-    "tel": "+911144446900"
-   },
-   {
-    "libelle": "Shri Krishna Travels, bus du 8 septembre",
-    "tel": "+919720001155"
+    "libelle": "E Bus India, bus du 8 septembre",
+    "tel": "+918750100091"
    }
   ],
   "note": "La plupart des contrats d'assurance demandent d'être prévenus avant tout engagement de frais."
@@ -458,7 +449,7 @@
    "description": "Ancienne capitale des Kachwaha, bâtie en grès et en marbre à partir de 1592 et organisée en quatre cours successives. Le Sheesh Mahal est couvert de milliers de miroirs convexes qu'une seule bougie suffit à faire scintiller.",
    "pratique": "8h-17h30 · ~600 ₹",
    "reservation": null,
-   "fait": false,
+   "fait": true,
    "photos": [
     "photos/amber-fort.jpg"
    ],
@@ -533,7 +524,7 @@
    "description": "Résidence de la famille royale depuis 1732, toujours occupée pour partie. La cour de Pritam Niwas Chowk ouvre sur quatre portes ornées, une par saison.",
    "pratique": "~700 ₹",
    "reservation": null,
-   "fait": false,
+   "fait": true,
    "photos": [
     "photos/city-palace-jaipur.jpg"
    ],
@@ -553,7 +544,7 @@
    "description": "Observatoire astronomique construit en 1734 par Jai Singh II et classé au patrimoine mondial. Le Samrat Yantra, cadran solaire de 27 m, donne l'heure à deux secondes près.",
    "pratique": "~200 ₹ · guides sur place",
    "reservation": null,
-   "fait": false,
+   "fait": true,
    "photos": [
     "photos/jantar-mantar.jpg"
    ],
@@ -573,7 +564,7 @@
    "description": "Façade de cinq étages percée de 953 fenêtres, élevée en 1799 pour que les femmes de la cour puissent observer la rue sans être vues. L'intérieur est réduit à un réseau de couloirs.",
    "pratique": "Vue d'ensemble depuis les cafés d'en face",
    "reservation": null,
-   "fait": false,
+   "fait": true,
    "photos": [
     "photos/hawa-mahal.jpg"
    ],
@@ -593,7 +584,7 @@
    "description": "Musée ouvert en 1887 dans un bâtiment de style indo-sarrasin, qui rassemble textiles, armes, miniatures et une momie égyptienne.",
    "pratique": "Éclairé la nuit",
    "reservation": null,
-   "fait": false,
+   "fait": true,
    "photos": [
     "photos/albert-hall.jpg"
    ],
@@ -613,7 +604,7 @@
    "description": "Cénotaphes de marbre sculpté des maharajas de Jaipur, au pied de la colline de Nahargarh.",
    "pratique": null,
    "reservation": null,
-   "fait": false,
+   "fait": true,
    "photos": [],
    "photo": null,
    "position": null,
@@ -666,7 +657,7 @@
    "description": "Palais du XVIIIᵉ siècle bâti au milieu du lac Man Sagar, dont quatre étages restent immergés. Il ne se visite pas et s'observe depuis la route d'Amber.",
    "pratique": null,
    "reservation": null,
-   "fait": false,
+   "fait": true,
    "photos": [
     "photos/jal-mahal.jpg"
    ],
@@ -740,7 +731,7 @@
    "description": "Bazars du centre ancien, spécialisés rue par rue. Johari vend les bijoux, Bapu les textiles et Tripolia les bracelets.",
    "pratique": null,
    "reservation": null,
-   "fait": false,
+   "fait": true,
    "photos": [],
    "photo": null,
    "position": {
@@ -758,7 +749,7 @@
    "description": "Première réserve de léopards d'Inde, ouverte en 2017 sur 23 km² à 12 km du centre. Elle abrite 35 à 45 individus, observables toute l'année depuis un 4×4.",
    "pratique": "Sorties le matin et le soir · 1 650-3 000 ₹ par personne",
    "reservation": "Sur jhalanasafari.in, jusqu'à 90 jours à l'avance. Passeport requis.",
-   "fait": false,
+   "fait": true,
    "photos": [],
    "photo": null,
    "position": null,
@@ -811,7 +802,7 @@
    "description": "Plus grand complexe palatial du Rajasthan, agrandi pendant quatre siècles par vingt-deux maharanas successifs. Les cours et les terrasses s'étagent au-dessus du lac Pichola.",
    "pratique": "9h30-17h30 · ~400 ₹ · entrée par Badi Pol",
    "reservation": null,
-   "fait": false,
+   "fait": true,
    "photos": [
     "photos/city-palace-udaipur.jpg"
    ],
@@ -831,7 +822,7 @@
    "description": "Lac artificiel creusé en 1362, sur lequel se détachent le Lake Palace et l'île de Jag Mandir. La traversée en bateau dure environ une heure.",
    "pratique": "Départ Rameshwar Ghat · ~700-900 ₹ au couchant",
    "reservation": null,
-   "fait": false,
+   "fait": true,
    "photos": [
     "photos/lac-pichola.jpg"
    ],
@@ -851,7 +842,7 @@
    "description": "Temple dédié à Vishnou, construit en 1651 dans le style nagara et précédé de trente-deux marches. Les aarti ont lieu à 7h30, 10h30 et 19h30.",
    "pratique": "Gratuit",
    "reservation": null,
-   "fait": false,
+   "fait": true,
    "photos": [
     "photos/jagdish-temple.jpg"
    ],
@@ -891,7 +882,7 @@
    "description": "Palais élevé en 1884 à 944 m d'altitude, sur une crête dominant la ville, dans le but d'observer l'arrivée des nuages de mousson. La vue porte à 360°.",
    "pratique": "~300 ₹ · taxi ~800 ₹ aller-retour",
    "reservation": null,
-   "fait": false,
+   "fait": true,
    "photos": [
     "photos/monsoon-palace.jpg"
    ],
@@ -908,7 +899,7 @@
    "description": "Jardin aménagé au XVIIIᵉ siècle pour les suivantes d'une reine, avec bassins de lotus, fontaines et pavillons de marbre.",
    "pratique": "~100 ₹",
    "reservation": null,
-   "fait": false,
+   "fait": true,
    "photos": [
     "photos/saheliyon-ki-bari.jpg"
    ],
@@ -2027,6 +2018,96 @@
     "lng": 78.4750792
    },
    "recherche": null
+  },
+  {
+   "slug": "tatoo-cafe-lounge",
+   "ville": "jaipur",
+   "nom": "Tatoo Cafe & Lounge",
+   "etoile": 0,
+   "categorie": "restaurant",
+   "description": "Terrasse en vis-à-vis du Hawa Mahal, sur le trottoir d'en face.",
+   "pratique": "Le 31 août.",
+   "reservation": null,
+   "fait": true,
+   "photos": [],
+   "photo": null,
+   "position": null,
+   "recherche": "Tatoo Cafe & Lounge Jaipur"
+  },
+  {
+   "slug": "le-restaurant-de-la-jhilwara-haveli",
+   "ville": "udaipur",
+   "nom": "Le restaurant de la Jhilwara Haveli",
+   "etoile": 0,
+   "categorie": "restaurant",
+   "description": "La table de l'hôtel, le premier soir.",
+   "pratique": "Le 2 septembre.",
+   "reservation": null,
+   "fait": true,
+   "photos": [],
+   "photo": null,
+   "position": null,
+   "recherche": "Le restaurant de la Jhilwara Haveli Udaipur"
+  },
+  {
+   "slug": "chai-chez-l-habitant",
+   "ville": "udaipur",
+   "nom": "Chai chez l'habitant",
+   "etoile": 0,
+   "categorie": "restaurant",
+   "description": "Invitation reçue dans la vieille ville, au matin du Jagdish Temple.",
+   "pratique": "Le 2 septembre.",
+   "reservation": null,
+   "fait": true,
+   "photos": [],
+   "photo": null,
+   "position": null,
+   "recherche": "Chai chez l'habitant Udaipur"
+  },
+  {
+   "slug": "ambrai",
+   "ville": "udaipur",
+   "nom": "Ambrai",
+   "etoile": 0,
+   "categorie": "restaurant",
+   "description": "Au bord du lac Pichola, face au City Palace et au Lake Palace.",
+   "pratique": "Déjeuner du 3 septembre.",
+   "reservation": null,
+   "fait": true,
+   "photos": [],
+   "photo": null,
+   "position": null,
+   "recherche": "Ambrai Udaipur"
+  },
+  {
+   "slug": "sun-n-moon-cafe-restaurant",
+   "ville": "udaipur",
+   "nom": "Sun N Moon Cafe & Restaurant",
+   "etoile": 0,
+   "categorie": "restaurant",
+   "description": "",
+   "pratique": "Dîner du 3 septembre.",
+   "reservation": null,
+   "fait": true,
+   "photos": [],
+   "photo": null,
+   "position": null,
+   "recherche": "Sun N Moon Cafe & Restaurant Udaipur"
+  },
+  {
+   "slug": "millets-of-mewar",
+   "ville": "udaipur",
+   "nom": "Millets of Mewar",
+   "etoile": 0,
+   "categorie": "restaurant",
+   "description": "Cuisine du Mewar à base de millets, sur la rive de Hanuman Ghat.",
+   "pratique": "Déjeuner du 4 septembre.",
+   "reservation": null,
+   "fait": true,
+   "photos": [],
+   "photo": null,
+   "position": null,
+   "recherche": "Millets of Mewar Udaipur"
   }
  ],
  "etapes": [
