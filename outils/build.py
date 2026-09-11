@@ -56,8 +56,12 @@ def main():
     prive     = lire("prive.json", {})
     carte     = lire("fond.json", {"etats": [], "pays": [], "inde": ""})
     marques   = lire("faits.json", {})
-    faits     = set(marques.get("faits", []))
+    brut      = marques.get("faits", [])
     tables    = marques.get("tables", [])
+    # soit {"2026-08-30": [slugs]}, soit une liste plate de slugs sans date
+    jours     = ({s: j for j, l in brut.items() for s in l}
+                 if isinstance(brut, dict) else {})
+    faits     = set(jours) if jours else set(brut)
 
     # Une table essayée se déclare d'un seul bloc dans faits.json : elle
     # devient un lieu à part entière, marqué fait, sans toucher aux autres
@@ -72,6 +76,7 @@ def main():
                           "description": t.get("note") or "",
                           "pratique": t.get("pratique"), "reservation": None,
                           "fait": True})
+        if t.get("date"): jours[slug] = t["date"]
         if t.get("lat") is not None:
             lieux.setdefault(slug, {"lat": t["lat"], "lng": t["lng"]})
 
@@ -117,6 +122,8 @@ def main():
             alertes.append(f"{a['slug']} : ville inconnue « {a['ville']} »")
         # « fait » se renseigne soit dans source/faits.json, soit ici
         a["fait"] = bool(a.get("fait")) or a["slug"] in faits
+        # la journée où le lieu a été vu, pour l'afficher au bon endroit du fil
+        a["jour"] = jours.get(a["slug"])
         a["photos"] = img(a["slug"])
         a["photo"] = a["photos"][0] if a["photos"] else None
         a["position"] = pos(a["slug"])
@@ -158,11 +165,11 @@ def main():
         print(f"  donnees/{nom:14} {os.path.getsize(p)/1024:6.1f} Ko")
 
     # ---------- contrôle d'étanchéité ----------
-    brut = json.dumps(public, ensure_ascii=False)
-    fuites = [m for m in INTERDITS if m in brut]
+    brut_json = json.dumps(public, ensure_ascii=False)
+    fuites = [m for m in INTERDITS if m in brut_json]
     for d in prive.values():
         for v in (d.get("pnr"), d.get("sieges")):
-            if v and v in brut:
+            if v and v in brut_json:
                 fuites.append(v)
     if fuites:
         sys.exit(f"ARRÊT — donnée sensible dans le fichier public : {fuites}")
