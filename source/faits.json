@@ -1,29 +1,47 @@
 {
- "_comment": "Lieux visités et tables essayées. Un slug dans « faits » coche un lieu déjà présent dans activites.json. Un bloc dans « tables » crée la table de toutes pièces, sans rien toucher d'autre ; lat et lng sont facultatifs, sans eux la table n'apparaît pas sur la carte.",
- "faits": [
-  "charminar",
-  "laad-bazaar",
-  "chowmahalla",
-  "mecca-masjid",
-  "city-palace-jaipur",
-  "hawa-mahal",
-  "jantar-mantar",
-  "amber-fort",
-  "jal-mahal",
-  "gaitor",
-  "johari-bazaar",
-  "albert-hall",
-  "jhalana",
-  "jagdish-temple",
-  "city-palace-udaipur",
-  "saheliyon-ki-bari",
-  "monsoon-palace",
-  "lac-pichola"
- ],
+ "_comment": "Ce qui a été fait, rangé par journée. Un slug sous une date coche le lieu et le place ce jour-là dans le fil ; une liste plate reste acceptée pour ce qui n'est pas daté. Un bloc dans « tables » crée la table de toutes pièces, sans toucher aux autres fichiers ; lat, lng et date y sont facultatifs.",
+ "faits": {
+  "2026-08-29": [
+   "charminar",
+   "laad-bazaar",
+   "mecca-masjid",
+   "chowmahalla"
+  ],
+  "2026-08-30": [
+   "amber-fort",
+   "jal-mahal",
+   "gaitor",
+   "city-palace-jaipur",
+   "hawa-mahal",
+   "jantar-mantar"
+  ],
+  "2026-08-31": [
+   "johari-bazaar"
+  ],
+  "2026-09-01": [
+   "albert-hall",
+   "jhalana"
+  ],
+  "2026-09-02": [
+   "jagdish-temple",
+   "city-palace-udaipur"
+  ],
+  "2026-09-03": [
+   "saheliyon-ki-bari"
+  ],
+  "2026-09-04": [
+   "monsoon-palace",
+   "lac-pichola"
+  ],
+  "2026-09-05": [
+   "red-fort"
+  ]
+ },
  "tables": [
   {
    "nom": "Paradise Biryani | Charminar",
    "ville": "hyderabad",
+   "date": "2026-08-29",
    "lat": 17.3620261,
    "lng": 78.4750792,
    "note": "Ouverte en 1953 comme une petite cantine près d'un cinéma de Secunderabad, la maison est devenue la biryani la plus connue de Hyderabad et compte maintenant une dizaine d'adresses dans la ville. Celle-ci est la plus proche du Charminar.",
@@ -32,37 +50,43 @@
   {
    "nom": "Tatoo Cafe & Lounge",
    "ville": "jaipur",
-   "note": "Terrasse en vis-à-vis du Hawa Mahal, sur le trottoir d'en face.",
-   "pratique": "Le 31 août."
+   "date": "2026-08-31",
+   "note": "Terrasse en vis-à-vis du Hawa Mahal, sur le trottoir d'en face."
   },
   {
    "nom": "Le restaurant de la Jhilwara Haveli",
    "ville": "udaipur",
-   "note": "La table de l'hôtel, le premier soir.",
-   "pratique": "Le 2 septembre."
+   "date": "2026-09-02",
+   "note": "La table de l'hôtel, le premier soir."
   },
   {
    "nom": "Chai chez l'habitant",
    "ville": "udaipur",
-   "note": "Invitation reçue dans la vieille ville, au matin du Jagdish Temple.",
-   "pratique": "Le 2 septembre."
+   "date": "2026-09-02",
+   "note": "Invitation reçue dans la vieille ville, au matin du Jagdish Temple."
   },
   {
    "nom": "Ambrai",
    "ville": "udaipur",
-   "note": "Au bord du lac Pichola, face au City Palace et au Lake Palace.",
-   "pratique": "Déjeuner du 3 septembre."
+   "date": "2026-09-03",
+   "note": "Au bord du lac Pichola, face au City Palace et au Lake Palace."
   },
   {
    "nom": "Sun N Moon Cafe & Restaurant",
    "ville": "udaipur",
-   "pratique": "Dîner du 3 septembre."
+   "date": "2026-09-03"
   },
   {
    "nom": "Millets of Mewar",
    "ville": "udaipur",
-   "note": "Cuisine du Mewar à base de millets, sur la rive de Hanuman Ghat.",
-   "pratique": "Déjeuner du 4 septembre."
+   "date": "2026-09-04",
+   "note": "Cuisine du Mewar à base de millets, sur la rive de Hanuman Ghat."
+  },
+  {
+   "nom": "Fat Lulu's",
+   "ville": "delhi",
+   "date": "2026-09-05",
+   "note": "Pizzas au feu de bois, à Khan Market."
   }
  ]
 }

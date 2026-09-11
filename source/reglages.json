@@ -3,13 +3,7 @@
  "debut": "2026-08-24",
  "fin": "2026-09-12",
  "fuseau": "Asia/Kolkata",
- "a_reserver": [
-  {
-   "titre": "Retour d'Agra vers l'aéroport",
-   "lien": "",
-   "detail": "Le train du 11 au matin est réservé. Option à trancher : garder la chambre et la piscine jusqu'en fin de journée, puis rejoindre le T3 en Uber Intercity."
-  }
- ],
+ "a_reserver": [],
  "urgence": {
   "numeros": [
    {
