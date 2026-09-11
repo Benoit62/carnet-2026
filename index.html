@@ -121,14 +121,18 @@ nav.onglets button[aria-selected=true]{background:var(--or);color:#fff;
   border-radius:7px;padding:2px 8px;color:var(--doux)}
 .infos span b{color:var(--texte);font-weight:650}
 
-/* ----- ce qui a été fait, en petit sur la carte de la ville ----- */
+/* ----- ce qui a été fait, en petit sous la journée ----- */
 .mosaique{display:flex;gap:5px;flex-wrap:wrap;margin-top:9px}
-.mosaique i{width:32px;height:32px;border-radius:7px;background:var(--fond2);
+.mosaique i,.mosaique button{width:32px;height:32px;border-radius:7px;background:var(--fond2);
   background-size:cover;background-position:center;border:2px solid var(--fait);
   display:flex;align-items:center;justify-content:center;font-style:normal;
   font-size:7.5px;line-height:1.1;text-align:center;color:var(--doux);
   overflow:hidden;padding:1px;flex:none}
-.mosaique i.resto{border-color:var(--hotel)}
+.mosaique i.resto,.mosaique button.resto{border-color:var(--hotel)}
+.mosaique button{cursor:pointer}
+.mosaique button:active{transform:scale(.92)}
+.suite .mosaique{margin-top:0}
+.suite.f .barre{background:var(--fait)}
 .mosaique i.plus{border-style:dashed;border-color:var(--trait2);font-size:11px;
   font-weight:700;color:var(--faible)}
 .puce.fait{background:var(--fait);color:#fff}
@@ -526,6 +530,8 @@ function vueFil(){
       ${ville?`<span class="ici">${ech(ville.nom)}</span>`:""}<i></i></div>`;
 
     h+=`<div class="fil">`;
+    commencent.forEach(e=>h+=carteEtape(e));
+    h+=bandeFaits(j);
     traversent.filter(e=>e.type==="hotel").forEach(e=>{
       const arrivee=jourIST(e.arrivee);
       if(j===arrivee) return;          // on part le matin, aucune nuit ce jour-là
@@ -535,7 +541,6 @@ function vueFil(){
       h+=`<div class="suite h"><div class="barre"></div>
         <span><b>${ech(e.titre)}</b> · nuit ${nuit} sur ${total}</span></div>`;
     });
-    commencent.forEach(e=>h+=carteEtape(e));
     h+=`</div>`;
   });
   return h;
@@ -544,13 +549,22 @@ function vueFil(){
 function faits_de(slug){
   return D.activites.filter(a=>a.ville===slug && a.fait);
 }
-function mosaique(slug){
-  const l=faits_de(slug); if(!l.length) return "";
-  const vue=a=>{const r=a.categorie==="restaurant"?" resto":"";
-    return a.photo?`<i class="${r}" style="${fond(a.photo)}"></i>`
-                  :`<i class="${r}">${ech(a.nom.slice(0,16))}</i>`};
-  return `<div class="mosaique">${l.slice(0,9).map(vue).join("")}`
-    +(l.length>9?`<i class="plus">+${l.length-9}</i>`:"")+`</div>`;
+function mosaique(l,clic){
+  if(!l.length) return "";
+  const vue=a=>{const r=a.categorie==="restaurant"?"resto":"";
+    const c=a.photo?"":ech(a.nom.slice(0,16));
+    return clic
+      ?`<button class="${r}" data-activite="${a.slug}" data-depuis="" title="${ech(a.nom)}"
+          style="${fond(a.photo)}">${c}</button>`
+      :`<i class="${r}" style="${fond(a.photo)}">${c}</i>`};
+  return `<div class="mosaique">${l.slice(0,12).map(vue).join("")}`
+    +(l.length>12?`<i class="plus">+${l.length-12}</i>`:"")+`</div>`;
+}
+/* ce qui a été vu ce jour-là, en bande discrète sous les cartes de la journée */
+function bandeFaits(j){
+  const l=D.activites.filter(a=>a.fait && a.jour===j);
+  if(!l.length) return "";
+  return `<div class="suite f"><div class="barre"></div>${mosaique(l,true)}</div>`;
 }
 
 function carteEtape(e){
@@ -576,15 +590,14 @@ function carteEtape(e){
           <span class="type t-${e.type}">${e.type==="etape"?"étape":e.type}</span>
           ${alerte?`<span class="puce">${ech(e.statut)}</span>`:""}
           ${(e.instructions||[]).length?`<span class="puce taches">${e.instructions.length} à faire</span>`:""}
-          ${e.type==="etape"&&e.ville&&faits_de(e.ville).length
-            ?`<span class="puce fait">${faits_de(e.ville).length} fait${faits_de(e.ville).length>1?"s":""}</span>`:""}
         </div>
         <h3>${ech(e.titre)}</h3>
         <div class="meta">${meta}</div>
         ${sous?`<div class="sous">${sous}</div>`:""}
         ${(e.infos||[]).length?`<div class="infos">${e.infos.map(i=>
           `<span>${ech(i.libelle)} <b>${ech(i.valeur)}</b></span>`).join("")}</div>`:""}
-        ${e.type==="etape"&&e.ville?mosaique(e.ville):""}
+        ${e.type==="etape"&&e.ville
+          ?mosaique(D.activites.filter(a=>a.ville===e.ville&&a.fait&&!a.jour),false):""}
       </div></button></div>`;
 }
 
@@ -598,6 +611,7 @@ function vueVilles(){
     </button>`).join("")+`</div>`;
 }
 function vueReserver(){
+  if(!D.a_reserver.length) return `<div class="vide">Tout est réservé.</div>`;
   return D.a_reserver.map(r=>`<div class="bloc">
     <div class="titre">à réserver</div>
     <h3 style="margin:0 0 6px;font-size:17px">${ech(r.titre)}</h3>
@@ -643,9 +657,13 @@ function fermer(n){
   if(history.state && history.state.fiche) history.back();  // popstate fera le retrait
   else retirer(n);
 }
+function carteFlottante(){
+  return !matchMedia("(min-width:1000px)").matches}
 addEventListener("popstate",()=>{
   const n=estOuvert(2)?2:(estOuvert(1)?1:0);
-  if(n) retirer(n);
+  if(n) return retirer(n);
+  const a=document.getElementById("atlas");
+  if(a.classList.contains("ouvert") && carteFlottante()) a.classList.remove("ouvert");
 });
 [1,2].forEach(n=>document.getElementById("voile"+n).addEventListener("click",e=>{
   if(e.target.id==="voile"+n) fermer(n)}));
@@ -1170,6 +1188,7 @@ async function chargerFond(){
 }
 async function ouvrirCarte(){
   const a=document.getElementById("atlas");
+  if(!a.classList.contains("ouvert") && carteFlottante()) history.pushState({carte:1},"");
   a.classList.add("ouvert");
   if(!await chargerFond()){
     document.getElementById("toile").innerHTML=
@@ -1177,7 +1196,12 @@ async function ouvrirCarte(){
   }
   if(!IT){dessinerCarte(); brancherGestes()} else majVue();
 }
-function fermerCarte(){document.getElementById("atlas").classList.remove("ouvert")}
+function fermerCarte(){
+  const a=document.getElementById("atlas");
+  if(!a.classList.contains("ouvert")) return;
+  if(history.state && history.state.carte) history.back();  // popstate ferme
+  else a.classList.remove("ouvert");
+}
 
 /* l'horloge fait avancer le trait sans redessiner toute la carte */
 function battreCarte(){
@@ -1241,7 +1265,8 @@ function dessiner(){
   zone=pref.lire("zone","paris"); faits=pref.lire("faits",{});
   try{
     D=await (await fetch("donnees/voyage.json")).json();
-    try{prive=await (await fetch("donnees/prive.json")).json()}catch(_){prive=null}
+    try{const j=await (await fetch("donnees/prive.json")).json();
+        prive=(j&&j.details)?j:null}catch(_){prive=null}
     dessiner();
     document.getElementById("pied").textContent=
       `${D.activites.length} lieux · ${D.etapes.length} étapes · journées indiennes`
