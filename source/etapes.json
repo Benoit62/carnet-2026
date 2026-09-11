@@ -296,14 +296,14 @@
   "type": "hotel",
   "titre": "Golden Tulip",
   "depart": "2026-09-09T12:15",
-  "arrivee": "2026-09-11T06:45",
+  "arrivee": "2026-09-11T15:00",
   "lieu": "hotel-agra",
   "ville": "agra",
   "statut": "réservé",
   "tel": "+917454802182",
   "prix": "7 258 ₹",
   "adresse": "Fatehabad Road",
-  "note": "Chambre double deluxe, petit-déjeuner compris, 10 % de remise sur la restauration. Check-in à partir de 14h, check-out avant 11h. Parking gratuit. L'hôtel est sur Fatehabad Road, à 2-3 km des portes du Taj, et non dans Taj Ganj même.",
+  "note": "Chambre double deluxe, petit-déjeuner compris, 10 % de remise sur la restauration. Check-out annoncé avant 11h, départ effectif à 15h avec la piscine et la bagagerie jusque-là. Parking gratuit. L'hôtel est sur Fatehabad Road, à 2-3 km des portes du Taj.",
   "infos": [
    {
     "libelle": "Code",
@@ -368,45 +368,33 @@
   ]
  },
  {
-  "id": "j19-train-delhi",
-  "type": "train",
-  "titre": "Agra → Delhi",
-  "depart": "2026-09-11T07:32",
-  "arrivee": "2026-09-11T09:55",
-  "de": "Agra Cantt",
-  "vers": "H. Nizamuddin",
-  "lieu_depart": "gare-agra-cantt",
-  "lieu_arrivee": "gare-nizamuddin",
-  "numero": "22221",
-  "nom_train": "NZM Rajdhani",
-  "classe": "2A",
-  "statut": "réservé",
-  "note": "Agra Cantt est à 5-6 km de Taj Ganj. Le petit-déjeuner est servi à bord. Option à l'étude, garder la chambre et la piscine jusqu'en fin de journée et rejoindre l'aéroport directement en Uber Intercity.",
-  "instructions": [
-   "Check-out 6h45",
-   "Taxi réservé la veille"
-  ]
- },
- {
-  "id": "j19-delhi",
+  "id": "j19-agra",
   "type": "etape",
-  "titre": "Delhi",
-  "depart": "2026-09-11T10:00",
-  "arrivee": "2026-09-11T21:00",
-  "ville": "delhi",
-  "statut": "à réserver",
-  "note": "Chambre à la journée jusqu'à 20h ou 21h, avec bagagerie et douche."
+  "titre": "Agra",
+  "depart": "2026-09-11T09:00",
+  "arrivee": "2026-09-11T14:45",
+  "ville": "agra",
+  "note": "Dernière matinée, piscine et repos avant quatre heures de route."
  },
  {
-  "id": "j19-metro-t3",
+  "id": "j19-uber-aeroport",
   "type": "transfert",
-  "titre": "Métro Airport Express → T3",
-  "depart": "2026-09-11T21:30",
-  "arrivee": "2026-09-11T21:50",
-  "lieu_depart": "gare-new-delhi",
+  "titre": "Agra → Delhi T3",
+  "depart": "2026-09-11T15:00",
+  "arrivee": "2026-09-11T18:59",
+  "de": "Golden Tulip",
+  "vers": "Delhi T3",
+  "lieu_depart": "hotel-agra",
   "lieu_arrivee": "aeroport-delhi-t3",
-  "statut": "à faire",
-  "note": "New Delhi → T3 en 20 min, dernier train à 23h30. La zone départs du T3 ne permet pas de ressortir une fois entré."
+  "operateur": "Uber Intercity",
+  "prix": "3 194 ₹",
+  "statut": "réservé",
+  "note": "Sedan Intercity, prise en charge à l'hôtel et dépose au terminal 3, côté Air France. Quinze minutes d'attente comprises, annulation sans frais jusqu'à une heure avant. Environ quatre heures de route, six heures d'avance sur le vol.",
+  "instructions": [
+   "Bagages prêts et chambre libérée avant 15h",
+   "Application Uber ouverte, le chauffeur appelle",
+   "Espèces pour les péages si le chauffeur les avance"
+  ]
  },
  {
   "id": "j20-vol-paris",
@@ -422,8 +410,8 @@
   "statut": "réservé",
   "note": "Départ dans la nuit du 11 au 12.",
   "instructions": [
-   "Métro Airport Express avant 23h30",
-   "Bagages récupérés en consigne avant la zone départs"
+   "Enregistrement Air France ouvert 3 h avant",
+   "Batteries externes en cabine"
   ]
  }
 ]
