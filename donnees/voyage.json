@@ -211,6 +211,7 @@
    "pratique": "9h-17h30 · ~300 ₹ · 2 à 3 h de montée",
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [
     "photos/golconde.jpg"
    ],
@@ -230,7 +231,8 @@
    "description": "Arc à quatre minarets élevé en 1591 au centre de la vieille ville, au croisement des quatre grandes artères du plan d'origine. Les étages supérieurs se visitent.",
    "pratique": "6h-18h · ~250 ₹",
    "reservation": null,
-   "fait": false,
+   "fait": true,
+   "jour": "2026-08-29",
    "photos": [
     "photos/charminar.jpg"
    ],
@@ -250,7 +252,8 @@
    "description": "Rue marchande partant du Charminar, spécialisée dans les bracelets de verre depuis l'époque des Nizams.",
    "pratique": "Gratuit",
    "reservation": null,
-   "fait": false,
+   "fait": true,
+   "jour": "2026-08-29",
    "photos": [
     "photos/laad-bazaar.jpg"
    ],
@@ -270,7 +273,8 @@
    "description": "Mosquée du XVIIᵉ siècle voisine du Charminar, dont certaines briques ont été rapportées de La Mecque. Elle peut accueillir dix mille fidèles.",
    "pratique": "Gratuit",
    "reservation": null,
-   "fait": false,
+   "fait": true,
+   "jour": "2026-08-29",
    "photos": [
     "photos/mecca-masjid.jpg"
    ],
@@ -291,6 +295,7 @@
    "pratique": "~200 ₹",
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [
     "photos/qutb-shahi.jpg"
    ],
@@ -310,7 +315,8 @@
    "description": "Palais des Nizams, construit au XVIIIᵉ siècle autour de quatre cours. Il abrite la salle du Durbar et une collection de voitures anciennes.",
    "pratique": "Fermé le vendredi · ~200 ₹",
    "reservation": null,
-   "fait": false,
+   "fait": true,
+   "jour": "2026-08-29",
    "photos": [
     "photos/chowmahalla.jpg"
    ],
@@ -331,6 +337,7 @@
    "pratique": "Fermé le vendredi · ~500 ₹",
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [
     "photos/salar-jung.jpg"
    ],
@@ -351,6 +358,7 @@
    "pratique": "Entrée libre ou symbolique",
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [],
    "photo": null,
    "position": {
@@ -369,6 +377,7 @@
    "pratique": null,
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [],
    "photo": null,
    "position": {
@@ -387,6 +396,7 @@
    "pratique": "Gratuit",
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [],
    "photo": null,
    "position": {
@@ -405,6 +415,7 @@
    "pratique": null,
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [],
    "photo": null,
    "position": {
@@ -423,6 +434,7 @@
    "pratique": "~2 500-4 000 ₹ par personne",
    "reservation": "High tea sur réservation, +91 40 6629 8585.",
    "fait": false,
+   "jour": null,
    "photos": [
     "photos/chowmahalla.jpg"
    ],
@@ -443,6 +455,7 @@
    "pratique": "À 30 km · journée entière",
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [],
    "photo": null,
    "position": {
@@ -460,7 +473,8 @@
    "description": "Ancienne capitale des Kachwaha, bâtie en grès et en marbre à partir de 1592 et organisée en quatre cours successives. Le Sheesh Mahal est couvert de milliers de miroirs convexes qu'une seule bougie suffit à faire scintiller.",
    "pratique": "8h-17h30 · ~600 ₹",
    "reservation": null,
-   "fait": false,
+   "fait": true,
+   "jour": "2026-08-30",
    "photos": [
     "photos/amber-fort.jpg"
    ],
@@ -481,6 +495,7 @@
    "pratique": "~200 ₹",
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [],
    "photo": null,
    "position": {
@@ -499,6 +514,7 @@
    "pratique": "Gratuit · 10 min",
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [
     "photos/panna-meena.jpg"
    ],
@@ -516,6 +532,7 @@
    "pratique": "Jusqu'à 22h · ~200 ₹",
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [
     "photos/nahargarh.jpg"
    ],
@@ -535,7 +552,8 @@
    "description": "Résidence de la famille royale depuis 1732, toujours occupée pour partie. La cour de Pritam Niwas Chowk ouvre sur quatre portes ornées, une par saison.",
    "pratique": "~700 ₹",
    "reservation": null,
-   "fait": false,
+   "fait": true,
+   "jour": "2026-08-30",
    "photos": [
     "photos/city-palace-jaipur.jpg"
    ],
@@ -555,7 +573,8 @@
    "description": "Observatoire astronomique construit en 1734 par Jai Singh II et classé au patrimoine mondial. Le Samrat Yantra, cadran solaire de 27 m, donne l'heure à deux secondes près.",
    "pratique": "~200 ₹ · guides sur place",
    "reservation": null,
-   "fait": false,
+   "fait": true,
+   "jour": "2026-08-30",
    "photos": [
     "photos/jantar-mantar.jpg"
    ],
@@ -575,7 +594,8 @@
    "description": "Façade de cinq étages percée de 953 fenêtres, élevée en 1799 pour que les femmes de la cour puissent observer la rue sans être vues. L'intérieur est réduit à un réseau de couloirs.",
    "pratique": "Vue d'ensemble depuis les cafés d'en face",
    "reservation": null,
-   "fait": false,
+   "fait": true,
+   "jour": "2026-08-30",
    "photos": [
     "photos/hawa-mahal.jpg"
    ],
@@ -595,7 +615,8 @@
    "description": "Musée ouvert en 1887 dans un bâtiment de style indo-sarrasin, qui rassemble textiles, armes, miniatures et une momie égyptienne.",
    "pratique": "Éclairé la nuit",
    "reservation": null,
-   "fait": false,
+   "fait": true,
+   "jour": "2026-09-01",
    "photos": [
     "photos/albert-hall.jpg"
    ],
@@ -615,7 +636,8 @@
    "description": "Cénotaphes de marbre sculpté des maharajas de Jaipur, au pied de la colline de Nahargarh.",
    "pratique": null,
    "reservation": null,
-   "fait": false,
+   "fait": true,
+   "jour": "2026-08-30",
    "photos": [],
    "photo": null,
    "position": null,
@@ -631,6 +653,7 @@
    "pratique": "Gratuit",
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [
     "photos/patrika-gate.jpg"
    ],
@@ -651,6 +674,7 @@
    "pratique": "À 10 km",
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [],
    "photo": null,
    "position": {
@@ -668,7 +692,8 @@
    "description": "Palais du XVIIIᵉ siècle bâti au milieu du lac Man Sagar, dont quatre étages restent immergés. Il ne se visite pas et s'observe depuis la route d'Amber.",
    "pratique": null,
    "reservation": null,
-   "fait": false,
+   "fait": true,
+   "jour": "2026-08-30",
    "photos": [
     "photos/jal-mahal.jpg"
    ],
@@ -689,6 +714,7 @@
    "pratique": null,
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [],
    "photo": null,
    "position": {
@@ -707,6 +733,7 @@
    "pratique": "~150-400 ₹",
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [],
    "photo": null,
    "position": {
@@ -725,6 +752,7 @@
    "pratique": null,
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [],
    "photo": null,
    "position": {
@@ -742,7 +770,8 @@
    "description": "Bazars du centre ancien, spécialisés rue par rue. Johari vend les bijoux, Bapu les textiles et Tripolia les bracelets.",
    "pratique": null,
    "reservation": null,
-   "fait": false,
+   "fait": true,
+   "jour": "2026-08-31",
    "photos": [],
    "photo": null,
    "position": {
@@ -760,7 +789,8 @@
    "description": "Première réserve de léopards d'Inde, ouverte en 2017 sur 23 km² à 12 km du centre. Elle abrite 35 à 45 individus, observables toute l'année depuis un 4×4.",
    "pratique": "Sorties le matin et le soir · 1 650-3 000 ₹ par personne",
    "reservation": "Sur jhalanasafari.in, jusqu'à 90 jours à l'avance. Passeport requis.",
-   "fait": false,
+   "fait": true,
+   "jour": "2026-09-01",
    "photos": [],
    "photo": null,
    "position": null,
@@ -776,6 +806,7 @@
    "pratique": "À 95 km",
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [
     "photos/chand-baori.jpg"
    ],
@@ -796,6 +827,7 @@
    "pratique": "À 85 km",
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [],
    "photo": null,
    "position": {
@@ -813,7 +845,8 @@
    "description": "Plus grand complexe palatial du Rajasthan, agrandi pendant quatre siècles par vingt-deux maharanas successifs. Les cours et les terrasses s'étagent au-dessus du lac Pichola.",
    "pratique": "9h30-17h30 · ~400 ₹ · entrée par Badi Pol",
    "reservation": null,
-   "fait": false,
+   "fait": true,
+   "jour": "2026-09-02",
    "photos": [
     "photos/city-palace-udaipur.jpg"
    ],
@@ -833,7 +866,8 @@
    "description": "Lac artificiel creusé en 1362, sur lequel se détachent le Lake Palace et l'île de Jag Mandir. La traversée en bateau dure environ une heure.",
    "pratique": "Départ Rameshwar Ghat · ~700-900 ₹ au couchant",
    "reservation": null,
-   "fait": false,
+   "fait": true,
+   "jour": "2026-09-04",
    "photos": [
     "photos/lac-pichola.jpg"
    ],
@@ -853,7 +887,8 @@
    "description": "Temple dédié à Vishnou, construit en 1651 dans le style nagara et précédé de trente-deux marches. Les aarti ont lieu à 7h30, 10h30 et 19h30.",
    "pratique": "Gratuit",
    "reservation": null,
-   "fait": false,
+   "fait": true,
+   "jour": "2026-09-02",
    "photos": [
     "photos/jagdish-temple.jpg"
    ],
@@ -874,6 +909,7 @@
    "pratique": "~150 ₹ + ~200 ₹ pour le spectacle",
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [
     "photos/bagore-ki-haveli.jpg"
    ],
@@ -893,7 +929,8 @@
    "description": "Palais élevé en 1884 à 944 m d'altitude, sur une crête dominant la ville, dans le but d'observer l'arrivée des nuages de mousson. La vue porte à 360°.",
    "pratique": "~300 ₹ · taxi ~800 ₹ aller-retour",
    "reservation": null,
-   "fait": false,
+   "fait": true,
+   "jour": "2026-09-04",
    "photos": [
     "photos/monsoon-palace.jpg"
    ],
@@ -910,7 +947,8 @@
    "description": "Jardin aménagé au XVIIIᵉ siècle pour les suivantes d'une reine, avec bassins de lotus, fontaines et pavillons de marbre.",
    "pratique": "~100 ₹",
    "reservation": null,
-   "fait": false,
+   "fait": true,
+   "jour": "2026-09-03",
    "photos": [
     "photos/saheliyon-ki-bari.jpg"
    ],
@@ -931,6 +969,7 @@
    "pratique": null,
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [],
    "photo": null,
    "position": null,
@@ -946,6 +985,7 @@
    "pratique": null,
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [],
    "photo": null,
    "position": {
@@ -964,6 +1004,7 @@
    "pratique": null,
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [],
    "photo": null,
    "position": null,
@@ -979,6 +1020,7 @@
    "pratique": null,
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [],
    "photo": null,
    "position": {
@@ -997,6 +1039,7 @@
    "pratique": "~1 800 ₹ par personne",
    "reservation": "À réserver la veille.",
    "fait": false,
+   "jour": null,
    "photos": [],
    "photo": null,
    "position": null,
@@ -1012,6 +1055,7 @@
    "pratique": "Ouvert aux non-jaïns à partir de midi · aucun objet en cuir",
    "reservation": "Voiture avec chauffeur, via la guesthouse d'Udaipur.",
    "fait": false,
+   "jour": null,
    "photos": [
     "photos/ranakpur.jpg"
    ],
@@ -1029,6 +1073,7 @@
    "pratique": null,
    "reservation": "Voiture avec chauffeur, via la guesthouse d'Udaipur.",
    "fait": false,
+   "jour": null,
    "photos": [
     "photos/kumbhalgarh.jpg"
    ],
@@ -1049,6 +1094,7 @@
    "pratique": "À 115 km · journée entière",
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [
     "photos/chittorgarh.jpg"
    ],
@@ -1069,6 +1115,7 @@
    "pratique": "À 22 km · fermé entre les créneaux de puja",
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [
     "photos/eklingji.jpg"
    ],
@@ -1089,6 +1136,7 @@
    "pratique": "~600 ₹",
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [
     "photos/humayun.jpg"
    ],
@@ -1109,6 +1157,7 @@
    "pratique": "~600 ₹",
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [
     "photos/qutb-minar.jpg"
    ],
@@ -1129,6 +1178,7 @@
    "pratique": "Gratuit",
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [],
    "photo": null,
    "position": {
@@ -1147,6 +1197,7 @@
    "pratique": "Gratuit",
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [],
    "photo": null,
    "position": {
@@ -1165,6 +1216,7 @@
    "pratique": "Gratuit · parcours à pied",
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [
     "photos/lodhi-art.jpg"
    ],
@@ -1185,6 +1237,7 @@
    "pratique": null,
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [],
    "photo": null,
    "position": {
@@ -1203,6 +1256,7 @@
    "pratique": null,
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [
     "photos/hauz-khas.jpg"
    ],
@@ -1223,6 +1277,7 @@
    "pratique": "~30 ₹",
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [],
    "photo": null,
    "position": {
@@ -1241,6 +1296,7 @@
    "pratique": null,
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [],
    "photo": null,
    "position": {
@@ -1259,6 +1315,7 @@
    "pratique": "Gratuit",
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [
     "photos/india-gate.jpg"
    ],
@@ -1279,6 +1336,7 @@
    "pratique": "~300 ₹ + 300 ₹ pour l'appareil photo · tenue couvrante",
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [
     "photos/jama-masjid.jpg"
    ],
@@ -1299,6 +1357,7 @@
    "pratique": "Cyclo-pousse ~200 ₹ pour 45 min",
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [
     "photos/chandni-chowk.jpg"
    ],
@@ -1319,6 +1378,7 @@
    "pratique": null,
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [],
    "photo": null,
    "position": {
@@ -1337,6 +1397,7 @@
    "pratique": null,
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [],
    "photo": null,
    "position": {
@@ -1354,7 +1415,8 @@
    "description": "Résidence impériale moghole construite entre 1638 et 1648, en grès rouge, d'où les empereurs ont gouverné pendant deux siècles.",
    "pratique": "~600 ₹",
    "reservation": null,
-   "fait": false,
+   "fait": true,
+   "jour": "2026-09-05",
    "photos": [
     "photos/red-fort.jpg"
    ],
@@ -1375,6 +1437,7 @@
    "pratique": "Gratuit · couvre-chef fourni · épaules et jambes couvertes",
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [
     "photos/bangla-sahib.jpg"
    ],
@@ -1395,6 +1458,7 @@
    "pratique": "Gratuit",
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [
     "photos/agrasen-ki-baoli.jpg"
    ],
@@ -1415,6 +1479,7 @@
    "pratique": null,
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [],
    "photo": null,
    "position": {
@@ -1433,6 +1498,7 @@
    "pratique": "Fermé le lundi · téléphones et sacs interdits, consigne à l'entrée",
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [
     "photos/akshardham.jpg"
    ],
@@ -1453,6 +1519,7 @@
    "pratique": "Gratuit",
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [
     "photos/lotus-temple.jpg"
    ],
@@ -1473,6 +1540,7 @@
    "pratique": null,
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [],
    "photo": null,
    "position": {
@@ -1491,6 +1559,7 @@
    "pratique": "~300 ₹, 500 ₹ avec Yogrishi Vishvketu · 6h30-8h30 et 16h-18h",
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [],
    "photo": null,
    "position": null,
@@ -1506,6 +1575,7 @@
    "pratique": null,
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [],
    "photo": null,
    "position": null,
@@ -1521,6 +1591,7 @@
    "pratique": null,
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [],
    "photo": null,
    "position": null,
@@ -1536,6 +1607,7 @@
    "pratique": "Fermé le dimanche",
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [],
    "photo": null,
    "position": null,
@@ -1551,6 +1623,7 @@
    "pratique": "Gratuit · vers 18h · 25-35 min depuis Tapovan",
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [
     "photos/ganga-aarti.jpg"
    ],
@@ -1568,6 +1641,7 @@
    "pratique": null,
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [
     "photos/triveni-ghat.jpg"
    ],
@@ -1588,6 +1662,7 @@
    "pratique": "9h-16h30 · ~600 ₹ · 2 h",
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [
     "photos/beatles-ashram.jpg"
    ],
@@ -1605,6 +1680,7 @@
    "pratique": null,
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [
     "photos/lakshman-jhula.jpg"
    ],
@@ -1625,6 +1701,7 @@
    "pratique": null,
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [],
    "photo": null,
    "position": null,
@@ -1640,6 +1717,7 @@
    "pratique": "Sentier glissant, chaussures fermées",
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [],
    "photo": null,
    "position": null,
@@ -1655,6 +1733,7 @@
    "pratique": "Départ 4h30 · taxi ~1 500 ₹",
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [
     "photos/kunjapuri.jpg"
    ],
@@ -1672,6 +1751,7 @@
    "pratique": "Demi-journée",
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [
     "photos/neelkanth.jpg"
    ],
@@ -1689,6 +1769,7 @@
    "pratique": "Une heure sur place",
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [],
    "photo": null,
    "position": null,
@@ -1704,6 +1785,7 @@
    "pratique": "~4 000 ₹ · ouverture selon la météo",
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [],
    "photo": null,
    "position": null,
@@ -1719,6 +1801,7 @@
    "pratique": "45 min de route · une soirée",
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [
     "photos/haridwar.jpg"
    ],
@@ -1739,6 +1822,7 @@
    "pratique": "Fermé le vendredi · 1 300 ₹ · +200 ₹ pour le mausolée · porte Sud en sortie seule",
    "reservation": "Deux entrées par personne + une fois le mausolée (200 ₹), sur asi.payumoney.com.",
    "fait": false,
+   "jour": null,
    "photos": [
     "photos/taj-mahal.jpg"
    ],
@@ -1759,6 +1843,7 @@
    "pratique": "6h-18h · ~650 ₹ · 2 h",
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [
     "photos/fort-agra.jpg"
    ],
@@ -1779,6 +1864,7 @@
    "pratique": "~300 ₹",
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [
     "photos/mehtab-bagh.jpg"
    ],
@@ -1799,6 +1885,7 @@
    "pratique": "~350 ₹",
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [
     "photos/itmad-ud-daulah.jpg"
    ],
@@ -1819,6 +1906,7 @@
    "pratique": "À 10 km · ~350 ₹",
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [],
    "photo": null,
    "position": {
@@ -1837,6 +1925,7 @@
    "pratique": "Gratuit",
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [],
    "photo": null,
    "position": {
@@ -1855,6 +1944,7 @@
    "pratique": null,
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [],
    "photo": null,
    "position": {
@@ -1873,6 +1963,7 @@
    "pratique": null,
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [],
    "photo": null,
    "position": {
@@ -1891,6 +1982,7 @@
    "pratique": "Prix libre",
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [],
    "photo": null,
    "position": {
@@ -1909,6 +2001,7 @@
    "pratique": "À 60 km · 10h-16h · donation 1 500-2 000 ₹ par personne",
    "reservation": "Réservation obligatoire sur wildlifesos.org.",
    "fait": false,
+   "jour": null,
    "photos": [
     "photos/wildlife-sos.jpg"
    ],
@@ -1926,6 +2019,7 @@
    "pratique": "À 20 km",
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [],
    "photo": null,
    "position": {
@@ -1944,6 +2038,7 @@
    "pratique": "À 40 km · 6h-18h · ~600 ₹ · 2 h · guides badgés ASI à l'entrée",
    "reservation": "Voiture avec chauffeur à réserver la veille.",
    "fait": false,
+   "jour": null,
    "photos": [
     "photos/fatehpur-sikri.jpg"
    ],
@@ -1964,6 +2059,7 @@
    "pratique": "À 55 km · ~400-500 ₹ · cyclo-pousse avec guide 200-300 ₹/h · 6h-9h",
    "reservation": "Entrée sans réservation. Voiture avec chauffeur à réserver la veille.",
    "fait": false,
+   "jour": null,
    "photos": [
     "photos/keoladeo.jpg"
    ],
@@ -1984,6 +2080,7 @@
    "pratique": "À 70 km · demi-journée",
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [],
    "photo": null,
    "position": {
@@ -2002,6 +2099,7 @@
    "pratique": "À 55-70 km · journée",
    "reservation": null,
    "fait": false,
+   "jour": null,
    "photos": [
     "photos/wildlife-sos.jpg"
    ],
@@ -2022,6 +2120,7 @@
    "pratique": "À une centaine de mètres du Charminar, vers le nord-est.",
    "reservation": null,
    "fait": true,
+   "jour": "2026-08-29",
    "photos": [],
    "photo": null,
    "position": {
@@ -2040,6 +2139,7 @@
    "pratique": null,
    "reservation": null,
    "fait": true,
+   "jour": "2026-08-31",
    "photos": [],
    "photo": null,
    "position": null,
@@ -2055,6 +2155,7 @@
    "pratique": null,
    "reservation": null,
    "fait": true,
+   "jour": "2026-09-02",
    "photos": [],
    "photo": null,
    "position": null,
@@ -2070,6 +2171,7 @@
    "pratique": null,
    "reservation": null,
    "fait": true,
+   "jour": "2026-09-02",
    "photos": [],
    "photo": null,
    "position": null,
@@ -2085,6 +2187,7 @@
    "pratique": null,
    "reservation": null,
    "fait": true,
+   "jour": "2026-09-03",
    "photos": [],
    "photo": null,
    "position": null,
@@ -2100,6 +2203,7 @@
    "pratique": null,
    "reservation": null,
    "fait": true,
+   "jour": "2026-09-03",
    "photos": [],
    "photo": null,
    "position": null,
@@ -2115,6 +2219,7 @@
    "pratique": null,
    "reservation": null,
    "fait": true,
+   "jour": "2026-09-04",
    "photos": [],
    "photo": null,
    "position": null,
@@ -2130,6 +2235,7 @@
    "pratique": null,
    "reservation": null,
    "fait": true,
+   "jour": "2026-09-05",
    "photos": [],
    "photo": null,
    "position": null,
